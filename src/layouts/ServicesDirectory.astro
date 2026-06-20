@@ -1,6 +1,6 @@
 ---
 /**
- * ServicesDirectory (§7, /relokatsiya/uslugi/) — директория «Услуги» для
+ * ServicesDirectory (§7, /relocation/services/) — директория «Услуги» для
  * живущих в Грузии (риелторы, клининг, переезд, ремонт, документы, переводчики).
  * Один компонент для ru/uk (язык пропсом, текст из словарей §12). Данные —
  * коллекция `services`, нужный язык, не draft (§11). Фильтр по рубрике —
@@ -105,11 +105,11 @@ const rubricOptions = SERVICE_RUBRIC_SLUGS.filter((s) => present.has(s)).map((s)
 }));
 const hasFilter = rubricOptions.length > 1;
 
-const relHref = sectionHref(lang, 'relokatsiya');
+const relHref = sectionHref(lang, 'relocation');
 ---
 
 <BaseLayout title={pageTitle} description={description} lang={lang} noindex={!hasRealItems}>
-  <div class="uslugi" data-catalog>
+  <div class="services" data-catalog>
     <div class="container">
       <Breadcrumbs
         lang={lang}

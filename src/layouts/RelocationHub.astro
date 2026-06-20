@@ -1,7 +1,7 @@
 ---
 /**
  * RelocationHub (§7, §8.3 — выделенный контент-хаб раздела «Релокация»,
- * паттерн InsuranceHub). Главная /relokatsiya/: практическое обустройство в
+ * паттерн InsuranceHub). Главная /relocation/: практическое обустройство в
  * Грузии. Фазовый запуск (решение владельца 2026-06-15):
  *  - НЕ-регуляторные шаги (жильё, связь, банк, транспорт, страховка) — наш текст;
  *  - регуляторика (виза/ВНЖ/налоги/бизнес) — НЕ перепечатываем меняющиеся правила
@@ -38,13 +38,13 @@ const description = clampDesc(rl.intro[0]);
 /** Видимая дата бейджа «Обновлено · {date}» (§9): updatedIso из словаря, UTC. */
 const updatedDate = formatDate(new Date(`${rl.updatedIso}T00:00:00Z`), lang);
 
-/** Детальные под-статьи релокации (category=relokatsiya) — перечень-секция в хабе. */
+/** Детальные под-статьи релокации (category=relocation) — перечень-секция в хабе. */
 const guides = (
   await getCollectionSafe(
     'articles',
     (e) =>
       e.data.lang === lang &&
-      e.data.category === 'relokatsiya' &&
+      e.data.category === 'relocation' &&
       e.data.draft !== true &&
       e.data.demo !== true,
   )
@@ -91,7 +91,7 @@ const guides = (
         </div>
       </section>
 
-      {/* Детальные гайды по обустройству — под-статьи category=relokatsiya. */}
+      {/* Детальные гайды по обустройству — под-статьи category=relocation. */}
       {
         guides.length > 0 && (
           <section class="block" data-reveal aria-labelledby="rel-guides-heading">
@@ -100,7 +100,7 @@ const guides = (
             <ul class="links">
               {guides.map((g) => (
                 <li>
-                  <a class="link" href={articleHref(lang, 'relokatsiya', g.data.slug)}>
+                  <a class="link" href={articleHref(lang, 'relocation', g.data.slug)}>
                     <span class="link__label">{g.data.title}</span>
                     <span class="link__text">{g.data.description}</span>
                     <Icon name="arrow-right" size={18} />
@@ -117,7 +117,7 @@ const guides = (
         <h2 id="rel-uslugi-heading" class="block__heading">{rl.uslugi.heading}</h2>
         <ul class="links">
           <li>
-            <a class="link" href={`${sectionHref(lang, 'relokatsiya')}uslugi/`}>
+            <a class="link" href={`${sectionHref(lang, 'relocation')}uslugi/`}>
               <span class="link__label">{rl.uslugi.cta}</span>
               <span class="link__text">{rl.uslugi.text}</span>
               <Icon name="arrow-right" size={18} />
@@ -131,7 +131,7 @@ const guides = (
         <AffiliateBox
           lang={lang}
           partner="trip-hotels"
-          slug="relokatsiya"
+          slug="relocation"
           title={rl.affiliate.title}
           label={rl.affiliate.label}
           note={rl.affiliate.note}
@@ -139,7 +139,7 @@ const guides = (
         <AffiliateBox
           lang={lang}
           partner="airalo"
-          slug="relokatsiya"
+          slug="relocation"
           title={rl.esim.title}
           label={rl.esim.label}
           note={rl.esim.note}
@@ -206,7 +206,7 @@ const guides = (
         </ul>
       </section>
 
-      {/* Как мы отбираем/проверяем + ссылка на /o-sajte/ (E-E-A-T, §9). */}
+      {/* Как мы отбираем/проверяем + ссылка на /about/ (E-E-A-T, §9). */}
       <AboutNote lang={lang} />
 
       {/* Источники (§14): регуляторная тема — первоисточники в подвале страницы. */}

@@ -1,7 +1,7 @@
 ---
 /**
  * InsuranceHub (§8.3 — выделенный контент-хаб раздела «Страховки»).
- * Главная /strahovka/: действующие правила страховки для въезда в Грузию +
+ * Главная /insurance/: действующие правила страховки для въезда в Грузию +
  * описание сервисов покупки. Тема регуляторная, поэтому:
  *  - заметный Callout «Действующие правила» с бейджем «Обновлено · {date}»
  *    (VerifiedBadge variant='updated') и явной оговоркой про актуальность;
@@ -44,9 +44,9 @@ const description = clampDesc(ins.intro[0]);
  */
 const updatedDate = formatDate(new Date(`${ins.updatedIso}T00:00:00Z`), lang);
 
-const rentalHref = sectionHref(lang, 'arenda-avto');
+const rentalHref = sectionHref(lang, 'car-rental');
 /** Мост хаб→подробный гайд-статья (перелинковка §14, аудит 2026-06-17 P0-3). */
-const guideHref = `${sectionHref(lang, 'strahovka')}kak-vybrat-strahovku/`;
+const guideHref = `${sectionHref(lang, 'insurance')}kak-vybrat-strahovku/`;
 ---
 
 <BaseLayout title={pageTitle} description={description} lang={lang}>
@@ -162,7 +162,7 @@ const guideHref = `${sectionHref(lang, 'strahovka')}kak-vybrat-strahovku/`;
         <AffiliateBox
           lang={lang}
           partner="safetywing"
-          slug="strahovka"
+          slug="insurance"
           title={ins.affiliate.title}
           label={ins.affiliate.label}
           note={ins.affiliate.note}
@@ -204,7 +204,7 @@ const guideHref = `${sectionHref(lang, 'strahovka')}kak-vybrat-strahovku/`;
         </ul>
       </section>
 
-      {/* Как мы отбираем/проверяем + ссылка на /o-sajte/ (E-E-A-T, §9). */}
+      {/* Как мы отбираем/проверяем + ссылка на /about/ (E-E-A-T, §9). */}
       <AboutNote lang={lang} />
 
       {/* Источники (§14): регуляторная тема — первоисточники в подвале страницы. */}

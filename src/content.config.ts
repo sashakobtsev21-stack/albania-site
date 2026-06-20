@@ -17,17 +17,17 @@ import { contentGlob } from './loaders/contentGlob';
 const LANGS = ['ru', 'uk', 'en'] as const;
 
 const CATEGORIES = [
-  'dostoprimechatelnosti',
-  'goroda',
-  'eda',
-  'razvlecheniya',
-  'marshruty',
+  'attractions',
+  'cities',
+  'food',
+  'entertainment',
+  'routes',
   'transport',
-  'arenda-avto',
-  'relokatsiya',
-  'strahovka',
-  'novosti',
-  'planirovanie',
+  'car-rental',
+  'relocation',
+  'insurance',
+  'news',
+  'planning',
 ] as const;
 
 /** Уровни цен для директории «Где поесть» (§8.6, §11). */

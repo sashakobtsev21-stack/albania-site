@@ -1,10 +1,10 @@
 ---
 /**
  * AboutNote (§9) — пара блоков внизу статьи/маршрута/хаба, ОДИНАКОВОГО размера:
- *  • слева — «как мы отбираем и проверяем места» (→ /o-sajte/);
- *  • справа — «Заметили неточность?» (→ /kontakty/, мост к обратной связи).
+ *  • слева — «как мы отбираем и проверяем места» (→ /about/);
+ *  • справа — «Заметили неточность?» (→ /contact/, мост к обратной связи).
  * 2 колонки на десктопе (равная высота), стек на мобайле. Раньше блок обратной
- * связи был только на /o-sajte/ — теперь он рядом на каждой статье. Строки — из
+ * связи был только на /about/ — теперь он рядом на каждой статье. Строки — из
  * словаря (§12); рендерится в ArticlePage/RoutePage/InsuranceHub/RelocationHub.
  */
 import { t, sectionHref, type Lang } from '../i18n';
@@ -15,8 +15,8 @@ interface Props {
 }
 const { lang } = Astro.props;
 const dict = t(lang);
-const aboutHref = sectionHref(lang, 'o-sajte');
-const feedbackHref = sectionHref(lang, 'kontakty');
+const aboutHref = sectionHref(lang, 'about');
+const feedbackHref = sectionHref(lang, 'contact');
 ---
 
 <div class="bottom-notes">
