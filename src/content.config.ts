@@ -39,7 +39,7 @@ const PRICE_LEVELS = ['₾', '₾₾', '₾₾₾'] as const;
  * карточка по-прежнему показывает полную строку `cuisine`.
  */
 const CUISINE_KEYS = [
-  'georgian',
+  'albanian',
   'seafood',
   'wine',
   'cafe',
@@ -67,22 +67,24 @@ const ATTRACTION_TYPES = [
 ] as const;
 
 /**
- * Регион (мхаре) Грузии (§7) — для фильтра каталога достопримечательностей.
- * Опционально (используют только достопримечательности). Слаги ↔ ru/uk лейблы
- * в i18n (`regions`). 11 мхаре + столица Тбилиси.
+ * Регион (qark) Албании (§7) — для фильтра каталога достопримечательностей.
+ * Опционально (используют только достопримечательности). Слаги ↔ en/ru/uk
+ * лейблы в i18n (`regions`). 12 qarks Албании (столица Тирана + 11), порядок:
+ * столица, далее по алфавиту = порядок опций фильтра.
  */
 const REGIONS = [
-  'tbilisi',
-  'adjara',
-  'guria',
-  'imereti',
-  'kakheti',
-  'kvemo-kartli',
-  'mtskheta-mtianeti',
-  'racha-lechkhumi',
-  'samegrelo-zemo-svaneti',
-  'samtskhe-javakheti',
-  'shida-kartli',
+  'tirane',
+  'berat',
+  'diber',
+  'durres',
+  'elbasan',
+  'fier',
+  'gjirokaster',
+  'korce',
+  'kukes',
+  'lezhe',
+  'shkoder',
+  'vlore',
 ] as const;
 
 /**
@@ -186,7 +188,7 @@ const articleBase = z.object({
    */
   attractionType: z.enum(ATTRACTION_TYPES).optional(),
   /**
-   * Регион (мхаре) Грузии (§7) — фильтр/чип каталога достопримечательностей.
+   * Регион (qark) Албании (§7) — фильтр/чип каталога достопримечательностей.
    * Опционально, как и `attractionType`.
    */
   region: z.enum(REGIONS).optional(),
