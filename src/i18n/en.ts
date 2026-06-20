@@ -5,8 +5,8 @@
 import type { UIDictionary } from './types';
 
 export const en: UIDictionary = {
-  siteName: 'Georgia Guidebook',
-  tagline: 'Georgia travel guide: vetted places',
+  siteName: 'Albania Guidebook',
+  tagline: 'Albania travel guide: vetted places',
   langName: 'English',
   skipToContent: 'Skip to content',
   backToTop: 'Back to top',
@@ -68,29 +68,29 @@ export const en: UIDictionary = {
     samplePlaceholder: 'date verified',
   },
   home: {
-    heroTitle: 'Georgia travel guide: vetted places',
+    heroTitle: 'Albania travel guide: vetted places',
     heroSubtitle:
-      'Plan your Georgia trip without the tourist traps: we pick places by rating and cross-check them with guides and locals. Updated regularly.',
+      'Plan your Albania trip without the tourist traps: we pick places by rating and cross-check them with guides and locals. Updated regularly.',
     heroCredit: 'Photo: Braveheart / Wikimedia Commons · CC BY-SA 4.0',
     photoPrefix: 'Photo',
     search: {
       label: 'Search the site',
-      placeholder: 'Where are you headed? Kazbegi, Tbilisi, car rental…',
+      placeholder: 'Where are you headed? Theth, Tirana, car rental…',
       emptyNoContent: 'Nothing found yet. Try another word — search runs over the articles already published.',
       emptyNoMatch: 'Nothing found. Try a different query.',
       hint: 'Search runs over already published articles, right in your browser.',
     },
     entriesHeading: 'Where to start',
     tiles: {
-      attractions: 'Nature, churches, fortresses, waterfalls, and canyons of Georgia',
+      attractions: 'Nature, churches, fortresses, waterfalls, and canyons of Albania',
       cities: 'City guides: what to see, where to eat, how to get around',
       food: 'What to try and where to eat honestly — without tourist markups',
       entertainment: 'Where to go out: clubs and bars, quizzes, beaches, casinos, and parks',
       routes: 'Ready-made road trips: a day-by-day plan, budget, and map',
     },
     showcase: {
-      heading: 'Georgia showcase',
-      lead: 'The best places, routes and vetted venues — Georgia at a glance.',
+      heading: 'Albania showcase',
+      lead: 'The best places, routes and vetted venues — Albania at a glance.',
       partnerNote: 'Includes partner placements.',
       aria: 'Showcase: featured places, routes and venues',
       adKicker: 'Advertising',
@@ -122,7 +122,7 @@ export const en: UIDictionary = {
     freshEmpty: 'Nothing to show here right now — please check back soon. We keep adding vetted, up-to-date guides.',
     about: {
       heading: 'About the project',
-      text: 'Georgia Guidebook is a travel guide to Georgia: attractions, cities, food, routes, and car rental. We pick places by rating, cross-check the facts, and date-stamp every article — here’s how we work.',
+      text: 'Albania Guidebook is a travel guide to Albania: attractions, cities, food, routes, and car rental. We pick places by rating, cross-check the facts, and date-stamp every article — here’s how we work.',
       link: 'More about the project',
     },
   },
@@ -146,56 +146,56 @@ export const en: UIDictionary = {
     sections: {
       attractions: {
         intro: [
-          'What to see in Georgia — from the snowy peaks of Kazbegi and the cave towns of Vardzia and Uplistsikhe to waterfalls, canyons, and ancient churches. In this section we gather the places worth traveling for: nature, fortresses, monasteries, and viewpoints across the country — from Kakheti in the east to Svaneti in the west.',
-          'For each attraction we try to honestly answer the main questions: what exactly to see, how to get there, how much time to set aside, and when to go so you’re not disappointed. Where it makes sense, the end of the article has tips on car rental and tours, because the most convenient way to reach many places in Georgia is by car.',
+          'What to see in Albania — from the peaks of the Albanian Alps and the UNESCO old towns of Berat and Gjirokastër to the ancient ruins of Butrint, waterfalls, canyons, and centuries-old churches. In this section we gather the places worth traveling for: nature, fortresses, monasteries, and viewpoints across the country — from the mountains of the north to the Riviera in the south.',
+          'For each attraction we try to honestly answer the main questions: what exactly to see, how to get there, how much time to set aside, and when to go so you’re not disappointed. Where it makes sense, the end of the article has tips on car rental and tours, because the most convenient way to reach many places in Albania is by car.',
         ],
       },
       cities: {
         intro: [
-          'Georgia’s cities are like different countries in miniature: multilayered Tbilisi, seaside Batumi, calm Kutaisi, the resort of Borjomi, mountainous Mestia, and wine-country Sighnaghi. This section has city guides: what to see, where to eat honestly, how to get there, and where to stay.',
+          'Albania’s cities are like different countries in miniature: lively, modern Tirana, the port and beaches of Durrës, seaside Sarandë on the Ionian, the stone UNESCO towns of Berat and Gjirokastër, and Shkodër at the gateway to the Alps. This section has city guides: what to see, where to eat honestly, how to get there, and where to stay.',
           'Cities are a handy starting point for planning: routes branch out from them, attractions are nearby, and this is where you book accommodation, pick up a car, and sort out connectivity. That’s why in the city guides we link to related sections — food, routes, and rental — to put your whole trip in one place.',
         ],
       },
       entertainment: {
         intro: [
-          'Entertainment in Georgia — where to go for experiences beyond ancient churches and mountains: Black Sea beaches, cable cars and parks, botanical gardens, museums, and casinos. In this section we gather places to relax and have fun across the country’s cities — with a focus on what matters in practice: where it is, how much admission costs, and when it’s open.',
+          'Entertainment in Albania — where to go for experiences beyond ancient churches and mountains: Adriatic and Ionian beaches, the Riviera, cable cars and parks, botanical gardens, museums, and casinos. In this section we gather places to relax and have fun across the country’s cities — with a focus on what matters in practice: where it is, how much admission costs, and when it’s open.',
           'We keep building the section out, city by city. Prices and opening hours are listed per place, so a night out or a day trip is easy to plan ahead.',
         ],
       },
       routes: {
         intro: [
-          'Ready-made road trips around Georgia: a day-by-day plan, a budget guideline, key stops, and a map. The country is compact but mountainous — a car opens up what’s hard to reach by public transport: passes, the wine villages of Kakheti, the canyons of Imereti, and the road to Svaneti.',
-          'How to choose a direction. East — wine-country Kakheti with the Alazani Valley and monasteries; north — the Georgian Military Road to Kazbegi and the Gergeti church; south — mineral-water Borjomi and the cave town of Vardzia; west — Imereti with its emerald canyons and caves; to the sea — the Tbilisi → Batumi corridor. And to see it all in one trip, there’s the “Grand Tour of Georgia,” roughly two weeks long.',
-          'Season and preparation. The best time for most routes is from late spring to autumn. In winter the mountain sections (the Georgian Military Road, the pass to Vardzia, the road to Svaneti) are harder, and passes are sometimes closed because of snow — check road conditions before setting off. For the high mountains and dirt roads, take an SUV. The mileage, days, and budget in the cards are guidelines, not exact measurements: it all depends on the number of stops, the season, and accommodation.',
+          'Ready-made road trips around Albania: a day-by-day plan, a budget guideline, key stops, and a map. The country is compact but mountainous — a car opens up what’s hard to reach by public transport: the passes of the Albanian Alps, the wine villages, the canyons, and the road to Theth and the Valbona valley.',
+          'How to choose a direction. North — the Albanian Alps with Theth, the Valbona valley, and Shkodër as the gateway; the stone UNESCO towns of Berat and Gjirokastër inland; south — the Albanian Riviera along the Ionian, from Sarandë and Ksamil to Himarë, Dhërmi, and Borsh, with the ruins of Butrint nearby; the coast — the Tirana → Durrës → Sarandë corridor. And to see it all in one trip, there’s the “Grand Tour of Albania,” roughly two weeks long.',
+          'Season and preparation. The best time for most routes is from late spring to autumn. In winter the mountain sections (the roads into the Albanian Alps, the pass to Theth, the road to Valbona) are harder, and passes are sometimes closed because of snow — check road conditions before setting off. For the high mountains and dirt roads, take an SUV. The mileage, days, and budget in the cards are guidelines, not exact measurements: it all depends on the number of stops, the season, and accommodation.',
         ],
       },
       transport: {
         intro: [
-          'Transport in Georgia — how to get around the country: airports, trains, marshrutkas, intercity buses, and transfers. This section has practical guides: how to get from point to point, roughly how long the trip takes, and what options there are.',
-          'Here you’ll find the country’s airports (Tbilisi, Kutaisi, Batumi), city transport, and popular routes like Tbilisi → Batumi (train, bus, car) — and we keep adding directions and modes of transport. It’s handy to plan transport together with the “Car rental” and “Routes” sections.',
+          'Transport in Albania — how to get around the country: the airport, ferries, furgon minibuses, intercity buses, and transfers. This section has practical guides: how to get from point to point, roughly how long the trip takes, and what options there are.',
+          'Here you’ll find Tirana International Airport (the main gateway), the ferry ports of Durrës (from Italy) and Sarandë (from Corfu), city transport, and popular routes like Tirana → Durrës → Sarandë (bus, car) — and we keep adding directions and modes of transport. It’s handy to plan transport together with the “Car rental” and “Routes” sections.',
         ],
       },
       'car-rental': {
         intro: [
-          'Car rental in Georgia is one of the most common questions before a trip: where to get a car, how much it costs, whether you need a deposit, and what catches there are in the contracts. In this section we break down rental by city and airport and compare the options — from international aggregators to local rental companies.',
+          'Car rental in Albania is one of the most common questions before a trip: where to get a car, how much it costs, whether you need a deposit, and what catches there are in the contracts. In this section we break down rental by city and airport and compare the options — from international aggregators to local rental companies.',
           'We write about rental from the perspective of a traveler who has personally dealt with deposits, surcharges, and “insurance on site.” Specific prices and terms are something that goes out of date fast, so we mark the date they’re current and don’t pass off old figures as fresh.',
         ],
       },
       insurance: {
         intro: [
-          'Insurance for a trip to Georgia and for living in the country is a topic that’s easy to put off and that people regret at the worst possible moment. In this section we break down which insurance policies actually work for travelers and relocators, how they differ, and what to look for when choosing.',
-          'Different readers need different solutions: a tourist staying a week needs one kind of insurance, someone living in Georgia for months needs another, with regular renewal. For Ukrainian travelers we call out options that still work, such as EKTA, since some of the standard policies are off-limits to them.',
+          'Insurance for a trip to Albania and for living in the country is a topic that’s easy to put off and that people regret at the worst possible moment. In this section we break down which insurance policies actually work for travelers and relocators, how they differ, and what to look for when choosing.',
+          'Different readers need different solutions: a tourist staying a week needs one kind of insurance, someone living in Albania for months needs another, with regular renewal. For Ukrainian travelers we call out options that still work, such as EKTA, since some of the standard policies are off-limits to them.',
         ],
       },
       planning: {
         intro: [
-          'Planning a trip to Georgia is what people look up before booking: do you need a visa, when to go, how much money to bring, and what about insurance and safety. This section gives short, practical answers with links to the sections that cover each topic in depth.',
+          'Planning a trip to Albania is what people look up before booking: do you need a visa, when to go, how much money to bring, and what about insurance and safety. This section gives short, practical answers with links to the sections that cover each topic in depth.',
           'We keep only what actually affects your prep here: visa and entry rules, seasons and weather, money and budget, the mandatory insurance. Regulatory things (visas, insurance) change fast — we mark the date and link the official source rather than passing off old facts as current.',
         ],
       },
       news: {
         intro: [
-          'News and updates to the guide: new vetted places, seasonal tips, and changes worth knowing before a trip. Georgia changes — venues open and close, prices and rental terms shift, new routes appear — and this section keeps the guide up to date.',
+          'News and updates to the guide: new vetted places, seasonal tips, and changes worth knowing before a trip. Albania changes — venues open and close, prices and rental terms shift, new routes appear — and this section keeps the guide up to date.',
           'We don’t chase “hot” news for the sake of traffic. What lands here is what actually affects trip planning: what we’ve re-checked, what we’ve updated by season, and which places we’ve added after cross-checking with locals and guides. The entries show a date — so you always know how current the information is.',
         ],
       },
@@ -236,7 +236,7 @@ export const en: UIDictionary = {
     heading: 'Search and book hotels',
     cta: 'Show hotel search',
     note: 'Trip.com partner widget. Loads on click. Prices and availability are on the service’s side.',
-    frameTitle: 'Hotel search in Georgia — Trip.com',
+    frameTitle: 'Hotel search in Albania — Trip.com',
   },
   article: {
     tocHeading: 'Contents',
@@ -295,7 +295,7 @@ export const en: UIDictionary = {
     heading: 'About the project',
     breadcrumb: 'About',
     intro: [
-      'Georgia Guidebook is a guide to all of Georgia, available in English, Russian and Ukrainian. We bring together in one place everything you need for a trip: attractions, cities, food, ready-made routes, car rental, insurance, and news. The goal is simple — to help you plan a trip without outdated advice and tourist traps.',
+      'Albania Guidebook is a guide to all of Albania, available in English, Russian and Ukrainian. We bring together in one place everything you need for a trip: attractions, cities, food, ready-made routes, car rental, insurance, and news. The goal is simple — to help you plan a trip without outdated advice and tourist traps.',
       'We don’t write “from memory” and we don’t retell other people’s articles. The guide has a clear principle: how we select places, how we verify facts, and why each article shows the date it was checked. More on that below.',
     ],
     sections: [
@@ -317,7 +317,7 @@ export const en: UIDictionary = {
         heading: 'Honest about figures and prices',
         paragraphs: [
           'We don’t reprint others’ ratings and review counts verbatim — that’s platform data, and their rules forbid such copying. For us a rating is a selection criterion, not content: to see the current rating and reviews, follow the link to the source or the map.',
-          'Prices, opening hours, and terms in our articles are guidelines as of the check date, not a guarantee. Georgia changes fast, so always verify the details that matter for your trip (the rental price, the deposit, the admission cost) on the other side before you pay.',
+          'Prices, opening hours, and terms in our articles are guidelines as of the check date, not a guarantee. Albania changes fast, so always verify the details that matter for your trip (the rental price, the deposit, the admission cost) on the other side before you pay.',
         ],
       },
       {
@@ -335,55 +335,55 @@ export const en: UIDictionary = {
     },
   },
   insurance: {
-    heading: 'Insurance for a trip to Georgia: rules and where to get it',
+    heading: 'Insurance for a trip to Albania: rules and where to get it',
     breadcrumb: 'Insurance',
     intro: [
-      'As of 2026, medical insurance has become mandatory for all foreign tourists entering Georgia. It used to be optional — now without a policy you may be refused entry at the border. Below are the current rules, the minimum requirements for a policy, and the services through which you can get one.',
-      'The topic is regulatory: the wording of the law and the border-check procedures may be refined. So we’ve gathered the key requirements into one block and advise verifying them against official sources before your trip — links to the primary sources are at the bottom of the page.',
+      'Travel medical insurance is strongly recommended for everyone visiting Albania, and for some travelers it may be required at the border or by their airline. Below are the practical points, the minimum you’d want a policy to cover, and the services through which you can get one.',
+      'The topic is regulatory: entry rules and border-check procedures can change. So we’ve gathered the key points into one block and advise verifying them against official sources before your trip — links to the primary sources are at the bottom of the page.',
     ],
     updatedIso: '2026-06-14',
     callout: {
-      heading: 'Current rules (from January 1, 2026)',
+      heading: 'Current rules — verify before your trip',
       disclaimer:
-        'As of January 1, 2026, medical insurance is mandatory for all foreign tourists entering Georgia. This is a regulatory requirement, and the details (wording, amounts, check procedures) may change — be sure to verify they’re current before your trip.',
+        'Entry and insurance requirements for Albania can differ by nationality and can change. Travel medical insurance is strongly recommended for everyone, and may be required at the border or by your airline — the details (wording, amounts, check procedures) may change, so be sure to verify they’re current before your trip.',
       sourceNote:
-        'The primary source is official resources: embassies, the Ministry of Foreign Affairs, and the Government of Georgia (Resolution No. 602 of 26.12.2025). Links to the sources are at the bottom of the page.',
+        'The primary source is official resources: embassies, the Ministry for Europe and Foreign Affairs, and the border authorities of Albania. Links to the sources are at the bottom of the page.',
     },
     guideLink: 'In depth: how to choose and buy a policy',
     requirements: {
       heading: 'What you need to know',
       items: [
-        'Insurance is mandatory for all foreign tourists — citizens of Russia, Ukraine, Kazakhstan, Belarus, and other countries. A policy is needed for children too.',
-        'The minimum coverage is 30,000 GEL.',
-        'The policy must cover the entire trip: from the entry date to the exit date.',
-        'The issuer can be either a Georgian or a foreign insurance company.',
-        'Coverage must include both medical expenses and accident insurance — by requirement it’s a “health and accident” policy. Medical evacuation and repatriation are additionally mentioned.',
-        'The policy language is English or Georgian. A policy only in Russian or Ukrainian without a translation may not be accepted at the border.',
-        'The policy is checked on entry: at airports — systematically, at land border crossings — selectively. Without it, entry may be refused. Airlines may check for a policy as early as check-in.',
-        'The legal basis is the Law of Georgia “On Tourism” (Art. 12) and Government of Georgia Resolution No. 602 of 26.12.2025.',
+        'Travel medical insurance is recommended for all foreign tourists, whatever their nationality — and it’s worth getting a policy for children too.',
+        'Aim for a comfortable coverage limit (many travelers choose at least €30,000) — check the exact figure that suits your trip.',
+        'The policy should cover the entire trip: from the entry date to the exit date.',
+        'The issuer can be either a local Albanian or a foreign insurance company.',
+        'Coverage is best when it includes both medical expenses and accident insurance — a “health and accident” policy. Medical evacuation and repatriation are worth having as well.',
+        'A policy in English is the safest choice; a policy only in Russian or Ukrainian without a translation may be harder to use at the border or with a clinic.',
+        'A policy may be checked on entry — at the airport or at land border crossings — and airlines may ask for one as early as check-in. Requirements vary by nationality, so verify the rules that apply to you.',
+        'Entry and insurance rules can change — confirm the current requirements with official Albanian sources before you travel.',
       ],
     },
     penalty: {
-      heading: 'Fine for not having a policy',
+      heading: 'What happens without a policy',
       paragraphs: [
-        'The base fine for not having mandatory insurance is 300 GEL. Besides the fine, entry may be refused, so it’s better to get a policy in advance rather than counting on “paying extra on site.”',
-        'For active travel — trekking, skiing, rafting, and other extreme activities — you need a separate coverage option: a basic tourist policy may not cover such cases. Verify the exact fine amounts and coverage terms for extreme activities with the insurer and in official sources before your trip.',
+        'Travelling without insurance is a gamble: if anything goes wrong, you pay for treatment out of pocket, and depending on your nationality entry may be harder — so it’s better to get a policy in advance rather than counting on “sorting it out on site.”',
+        'For active travel — trekking in the Albanian Alps, skiing, rafting, and other extreme activities — you need a separate coverage option: a basic tourist policy may not cover such cases. Verify the coverage terms for extreme activities with the insurer before your trip.',
       ],
     },
     services: {
       heading: 'Where to get a policy',
-      lead: 'Below are the services through which travelers most often get insurance for Georgia. Whichever option you choose, check that the policy meets the requirement: coverage of at least 30,000 GEL for the entire trip, the language is English or Georgian, and accident insurance is included (basic plans often don’t have it — it’s added as a separate option). Prices depend on age, duration, and the coverage set, so we give only guidelines, without exact amounts.',
+      lead: 'Below are the services through which travelers most often get insurance for Albania. Whichever option you choose, check that the policy fits your trip: a comfortable coverage limit for the entire stay, ideally a policy in English, and accident insurance included (basic plans often don’t have it — it’s added as a separate option). Prices depend on age, duration, and the coverage set, so we give only guidelines, without exact amounts.',
       ctaPlaceholder: 'Sign up on the service’s website. Before buying, verify the current terms and rate.',
       items: [
         {
           name: 'EKTA',
           note: 'a working option for everyone, including citizens of Ukraine',
-          text: 'Online insurance paid by card from anywhere in the world; the policy arrives by email. Coverage is easy to adjust, and the limit can be raised to 30,000 USD — well above the 30,000 GEL requirement. The service’s legal entity is registered in an offshore jurisdiction — this doesn’t affect how the policy works, but keep it in mind.',
+          text: 'Online insurance paid by card from anywhere in the world; the policy arrives by email. Coverage is easy to adjust, and the limit can be raised well above the level most travelers need. Check the provider’s terms and registration before buying.',
         },
         {
           name: 'SafetyWing (Nomad Insurance)',
           note: 'for digital nomads and long trips',
-          text: 'Subscription insurance billed monthly — convenient for those who live in Georgia or travel for a long time and don’t want to buy a policy for a fixed period. Suits a relocation and wintering scenario. The service has changed its terms and rates — verify the current ones before buying.',
+          text: 'Subscription insurance billed monthly — convenient for those who live in Albania or travel for a long time and don’t want to buy a policy for a fixed period. Suits a relocation and wintering scenario. The service has changed its terms and rates — verify the current ones before buying.',
         },
         {
           name: 'Cherehapa, Polis812',
@@ -391,24 +391,24 @@ export const en: UIDictionary = {
           text: 'Comparison services: they show offers from several insurers at once and help you pick a policy for the limit and duration you need. Handy when you want to compare terms in one place; the set of insurers and the service’s availability change over time — go by the current list on the service itself.',
         },
         {
-          name: 'TBC Insurance, Aldagi, GPI',
-          note: 'local Georgian insurers',
-          text: 'Georgian companies: the policy is issued from the start in English or Georgian and for the local 30,000 GEL limit. This is the most “risk-free” option for meeting the requirement — the policy is guaranteed to fit the local rules and the language of the check.',
+          name: 'Local Albanian insurers',
+          note: 'companies based in Albania',
+          text: 'Albanian companies issue policies on the spot, often with English-language documents. This can be a convenient option if you want a policy that fits local rules and is easy to use with a local clinic — compare the coverage and terms with the international services above.',
         },
       ],
     },
     affiliate: {
       title: 'Get SafetyWing insurance',
-      note: 'Nomad Insurance billed monthly — convenient for long trips and living in Georgia. Before buying, verify the current terms and that they meet the entry requirements.',
+      note: 'Nomad Insurance billed monthly — convenient for long trips and living in Albania. Before buying, verify the current terms and that they meet the entry requirements.',
       label: 'Sign up online',
     },
     notes: {
       heading: 'What’s important to keep in mind',
       items: [
-        'Check that the policy includes accident insurance. Georgia’s requirement is a “health and accident” policy, and in basic medical plans an accident often comes as a separate option: medical coverage alone may not be enough.',
+        'Check that the policy includes accident insurance. A solid travel policy is a “health and accident” one, and in basic medical plans an accident often comes as a separate option: medical coverage alone may not be enough.',
         'Citizens of Ukraine find it more convenient to get a policy through EKTA or Ukrainian services (for example, Green Travel, Finance.ua). This is a practical recommendation based on service availability, not a ban: “Russian insurance is banned for Ukrainians” is an unconfirmed claim, and we don’t present it as a rule.',
-        'Buy the policy before entering Georgia: some services have a 5–7 day “waiting period” — the insurance doesn’t take effect immediately after payment.',
-        'Visa-free entry (for many countries — up to 1 year) does not cancel the insurance requirement: these are different things.',
+        'Buy the policy before entering Albania: some services have a 5–7 day “waiting period” — the insurance doesn’t take effect immediately after payment.',
+        'Visa-free entry does not replace insurance: these are different things, and being allowed in without a visa doesn’t mean your medical costs are covered.',
         'Car rental insurance is a separate matter. A medical policy doesn’t cover damage to the car: for the rental you need your own insurance (CDW / collision), which is arranged together with the rental.',
       ],
       rentalLink: 'More about car rental and its insurance',
@@ -421,20 +421,20 @@ export const en: UIDictionary = {
         'Keep all documents: bills and payment receipts, discharge notes, diagnoses, referrals and prescriptions. Without supporting documents, reimbursement is difficult.',
         'Check how your policy works: the insurer either pays the clinic directly (direct billing) or you pay yourself and are reimbursed later against your receipts.',
         'Respect the deadline for filing a claim — it’s stated in your policy terms. Don’t delay: late claims are often rejected.',
-        'Georgia’s single emergency number is 112 (ambulance, police, rescue). In a serious situation, call for help first and sort things out with the insurer afterwards.',
+        'Albania uses the European emergency number 112 (ambulance, police, rescue). In a serious situation, call for help first and sort things out with the insurer afterwards.',
       ],
     },
     photos: [
       {
-        src: '/images/strahovka/g1.webp',
-        alt: 'A mountain pass and green valley in the mountains of Svaneti',
+        src: '/images/insurance/g1.webp',
+        alt: 'A mountain pass and green valley in the Albanian Alps',
         caption:
           'For active travel in remote mountains it’s well worth getting insurance with the right coverage: help can be a long way off here.',
         credit: 'Photo: Andrew Dubok / Wikimedia Commons, CC BY-SA 3.0',
       },
       {
-        src: '/images/strahovka/g2.webp',
-        alt: 'A forest trail towards Mount Ushba in Svaneti',
+        src: '/images/insurance/g2.webp',
+        alt: 'A forest trail in the Albanian Alps near Theth',
         caption:
           'A basic policy may not cover trekking, skiing or rafting — for active travel you need a separate option.',
         credit: 'Photo: FingerWiki / Wikimedia Commons, CC BY-SA 4.0',
@@ -443,10 +443,10 @@ export const en: UIDictionary = {
     sources: {
       heading: 'Sources',
       items: [
-        'U.S. Embassy in Georgia — the requirement for mandatory medical insurance for entry.',
-        'Government of Georgia Resolution No. 602 of 26.12.2025 and the Law “On Tourism” (Art. 12) — text at matsne.gov.ge/ka/document/view/6728816.',
-        'Ministry of Foreign Affairs of Georgia, Consular Service (entry rules) — geoconsul.gov.ge.',
-        'Georgian insurance companies (TBC Insurance, Aldagi, GPI) — coverage limit and policy language.',
+        'Your country’s embassy or foreign ministry travel advice for Albania — entry rules and whether insurance is required for your nationality.',
+        'Ministry for Europe and Foreign Affairs of Albania (entry and visa rules) — punetejashtme.gov.al.',
+        'Albanian Border and Migration Police — checks and documents required at entry.',
+        'Local Albanian insurance companies — coverage limits and policy language.',
       ],
     },
   },
@@ -468,27 +468,27 @@ export const en: UIDictionary = {
     channels: {
       heading: 'How to get in touch',
       emailLabel: 'Write to us by email:',
-      email: 'info@georgiaguidebook.com',
-      emailUrl: 'mailto:info@georgiaguidebook.com',
+      email: 'info@albaniaguidebook.com',
+      emailUrl: 'mailto:info@albaniaguidebook.com',
     },
   },
   relocation: {
-    heading: 'Relocating to Georgia: how to settle in',
+    heading: 'Relocating to Albania: how to settle in',
     breadcrumb: 'Relocation',
     uslugi: {
-      heading: 'Services for living in Georgia',
+      heading: 'Services for living in Albania',
       text: 'Real estate agents, cleaning, moving, repairs, documents, translators — a directory of vetted services so you don’t have to dig through chats.',
       cta: 'Open services',
     },
     intro: [
-      'Georgia is one of the easiest destinations for a long winter stay and relocation: visa-free entry for citizens of many countries for a long period, inexpensive living, fast internet, and large Russian- and Ukrainian-speaking communities. This section is a practical guide to settling in on the ground.',
+      'Albania is one of the easiest destinations for a long stay and relocation: visa-free or easy entry for citizens of many countries, inexpensive living, fast internet, a mild Mediterranean climate, and growing expat and digital-nomad communities. This section is a practical guide to settling in on the ground.',
       'We start with the non-regulatory things everyone needs: housing, connectivity, banking, transport, insurance. Documents, visas, and taxes are regulated by the state, and they change periodically — for those we give direct links to official sources and are preparing separate breakdowns.',
     ],
     updatedIso: '2026-06-15',
     callout: {
       heading: 'Documents and taxes change — verify with the primary source',
       disclaimer:
-        'The rules for entry, residence permits, business registration, and taxes in Georgia are revised periodically. Don’t rely on retellings in chats and outdated articles — verify the terms as of the time of your move directly with the government bodies (links below).',
+        'The rules for entry, residence permits, business registration, and taxes in Albania are revised periodically. Don’t rely on retellings in chats and outdated articles — verify the terms as of the time of your move directly with the government bodies (links below).',
       sourceNote:
         'That’s why we don’t fix specific deadlines, amounts, and requirements here as unchanging, but point you to the official sites — they always have the current version.',
     },
@@ -501,23 +501,23 @@ export const en: UIDictionary = {
       items: [
         {
           title: 'Housing for your first weeks',
-          text: 'For the first weeks it’s convenient to stay in a hotel, guesthouse, or apart-hotel, and look for a long-term rental on the ground, having seen the neighborhood in person. The largest local listing boards are myhome.ge and ss.ge; there are also many options through local chats and agencies.',
+          text: 'For the first weeks it’s convenient to stay in a hotel, guesthouse, or apart-hotel, and look for a long-term rental on the ground, having seen the neighborhood in person. Listings turn up on local property portals and international booking sites; there are also many options through local chats and agencies.',
         },
         {
           title: 'SIM card and internet',
-          text: 'A local SIM is sold with a passport at the airport and at operators’ offices — the main ones are Magti and Silknet. Mobile internet is fast and inexpensive, Wi-Fi is everywhere in the cities; this is one of Georgia’s strengths for remote work.',
+          text: 'A local SIM is sold with a passport at the airport and at the mobile operators’ shops; the main carriers cover the cities and the coast well. Mobile internet is fast and inexpensive, Wi-Fi is everywhere in the cities; this is one of Albania’s strengths for remote work.',
         },
         {
           title: 'Bank account',
-          text: 'An account and a card are opened for foreigners by the major banks — Bank of Georgia and TBC. Requirements and check times are periodically tightened, so verify the document set and terms at a branch in advance.',
+          text: 'An account and a card are opened for foreigners by the major banks operating in Albania. Requirements and check times are periodically tightened, so verify the document set and terms at a branch in advance.',
         },
         {
           title: 'Long-term rental',
-          text: 'The lease is usually for 6–12 months, with a deposit most often equal to one month. Prices depend on the city and season: in summer Batumi is more expensive, while in Tbilisi demand is steadier. Check the meters, the internet, and who pays for utilities.',
+          text: 'The lease is usually for 6–12 months, with a deposit most often equal to one month. Prices depend on the city and season: on the coast, places like Sarandë and Durrës get more expensive in summer, while in Tirana demand is steadier year-round. Check the meters, the internet, and who pays for utilities.',
         },
         {
           title: 'Transport and getting around',
-          text: 'In the cities — cheap public transport (in Tbilisi, the metro and buses with a Metromoney card); between cities — trains, buses, and marshrutkas. For freedom of movement many rent a car — how that works is in our rental section.',
+          text: 'In the cities — cheap public transport (in Tirana, a dense city bus network); between cities — buses and furgon minibuses, plus ferries along the coast. For freedom of movement many rent a car — how that works is in our rental section.',
         },
         {
           title: 'Health and insurance',
@@ -525,19 +525,19 @@ export const en: UIDictionary = {
         },
         {
           title: 'Daily life and community',
-          text: 'Lari (₾) — cash is needed in the regions, while in the cities cards are accepted almost everywhere. Tbilisi and Batumi have large Russian- and Ukrainian-speaking communities, and cafes and services often speak English — it’s easy to adapt even without Georgian.',
+          text: 'The lek (L) — cash is needed in smaller towns and the regions, while in the cities cards are accepted almost everywhere, and on the coast and in tourism many prices are quoted in euros. Tirana and the coastal towns have growing international communities, and cafes and services often speak English and Italian — it’s easy to adapt even without Albanian.',
         },
       ],
     },
     affiliate: {
       title: 'Where to stay the first weeks',
-      note: 'Hotels and apartments for your first weeks in Georgia — compare prices on Trip.com.',
+      note: 'Hotels and apartments for your first weeks in Albania — compare prices on Trip.com.',
       label: 'Find a place for your first weeks',
     },
     esim: {
       title: 'eSIM with internet for your first days',
       note: 'Mobile internet from arrival, until you get a local SIM — the eSIM activates online.',
-      label: 'Buy an eSIM for Georgia',
+      label: 'Buy an eSIM for Albania',
     },
     links: {
       heading: 'What’s already on the site',
@@ -546,7 +546,7 @@ export const en: UIDictionary = {
         { section: 'strahovka', text: 'medical insurance with coverage abroad' },
         { section: 'arenda-avto', text: 'car rental: how, where, and without overpaying' },
         { section: 'transport', text: 'how to get there and travel between cities' },
-        { section: 'goroda', text: 'Georgia’s cities — where to live and what’s nearby' },
+        { section: 'goroda', text: 'Albania’s cities — where to live and what’s nearby' },
         { section: 'eda', text: 'where to eat: vetted places by city' },
       ],
     },
@@ -556,28 +556,28 @@ export const en: UIDictionary = {
       items: [
         {
           topic: 'Visa, visa-free entry, and length of stay',
-          org: 'MFA of Georgia · Consular Service',
-          url: 'https://geoconsul.gov.ge/en',
+          org: 'Ministry for Europe and Foreign Affairs of Albania',
+          url: 'https://punetejashtme.gov.al/en/',
         },
         {
-          topic: 'Residence permit',
-          org: 'Public Service Development Agency',
-          url: 'https://sda.gov.ge/en/',
+          topic: 'Residence permit and public services',
+          org: 'e-Albania government services portal',
+          url: 'https://e-albania.al/',
         },
         {
-          topic: 'Sole proprietor and the “small business” tax (1%)',
-          org: 'Revenue Service of Georgia',
-          url: 'https://rs.ge/',
+          topic: 'Taxes and self-employment',
+          org: 'General Directorate of Taxes of Albania',
+          url: 'https://www.tatime.gov.al/',
         },
         {
           topic: 'Registering a company or sole proprietorship',
-          org: 'National Agency of Public Registry',
-          url: 'https://napr.gov.ge/en',
+          org: 'National Business Center (QKB)',
+          url: 'https://qkb.gov.al/',
         },
         {
           topic: 'Driver’s license and vehicle registration',
-          org: 'Service Agency of the Ministry of Internal Affairs',
-          url: 'https://sa.gov.ge/',
+          org: 'General Directorate of Road Transport Services',
+          url: 'https://e-albania.al/',
         },
       ],
       linkLabel: 'official site',
@@ -585,25 +585,25 @@ export const en: UIDictionary = {
     notes: {
       heading: 'Nuances people ask about',
       items: [
-        'The language is Georgian, but in the cities you can easily get by with English and Russian: signs and menus are often duplicated.',
-        'The money is the lari (₾). We show the current rate against the dollar, euro, ruble, and hryvnia on the home page in the “Right now in Georgia” block.',
-        'Internet and connectivity are cheap and fast, which is why remote workers love Georgia.',
-        'Housing in Batumi gets noticeably more expensive in the summer season — worth keeping in mind for a long-term rental.',
+        'The language is Albanian, but in the cities you can easily get by with English and Italian: signs and menus are often duplicated.',
+        'The money is the lek (L), and on the coast and in tourism many prices are quoted in euros. We show the current rate on the home page in the live block.',
+        'Internet and connectivity are cheap and fast, which is why remote workers love Albania.',
+        'Housing on the coast (Sarandë, Durrës) gets noticeably more expensive in the summer season — worth keeping in mind for a long-term rental.',
       ],
     },
     sources: {
       heading: 'Official sources',
       items: [
-        'MFA of Georgia, Consular Service (visa, entry) — geoconsul.gov.ge',
-        'Public Service Development Agency (residence permit, civil registry) — sda.gov.ge',
-        'Revenue Service of Georgia (taxes, small business status) — rs.ge',
-        'National Agency of Public Registry (business registration) — napr.gov.ge',
-        'Service Agency of the Ministry of Internal Affairs of Georgia (license, vehicle registration) — sa.gov.ge',
+        'Ministry for Europe and Foreign Affairs of Albania (visa, entry) — punetejashtme.gov.al',
+        'e-Albania government services portal (residence permit, civil registry) — e-albania.al',
+        'General Directorate of Taxes of Albania (taxes, self-employment) — tatime.gov.al',
+        'National Business Center, QKB (business registration) — qkb.gov.al',
+        'Road transport and licensing services via e-Albania (license, vehicle registration) — e-albania.al',
       ],
     },
   },
   eda: {
-    heading: 'Where to eat in Georgia',
+    heading: 'Where to eat in Albania',
     lead: 'Restaurants, cafes, wine bars, bakeries and markets — by city. Each place has its address, hours, our honest write-up and a link to the map.',
     breadcrumbHome: 'Home',
     filtersLegend: 'Place filters',
@@ -626,14 +626,14 @@ export const en: UIDictionary = {
       street: 'Street food',
       bar: 'Bar',
     },
-    priceHint: 'Price level: ₾ — cheap, ₾₾ — mid-range, ₾₾₾ — above average.',
+    priceHint: 'Price level: € — cheap, €€ — mid-range, €€€ — above average.',
     sponsoredBadge: 'Partner',
     illustrativeBadge: 'Illustration',
     dishesLabel: 'Prices for main dishes',
     dishesHint: 'a guideline, check on site',
     hoursLabel: 'Opening hours',
-    cuisineGuide: 'What to try in Georgia: a guide to the cuisine',
-    lodgingHeading: 'Where to stay in Georgia',
+    cuisineGuide: 'What to try in Albania: a guide to the cuisine',
+    lodgingHeading: 'Where to stay in Albania',
     lodgingInCity: 'Where to stay in {city}',
     lodgingNote: 'Hotels and apartments near the best places — compare on Trip.com.',
     onMap: 'On the map',
@@ -652,30 +652,30 @@ export const en: UIDictionary = {
       cityGuideLink: 'City guide',
       items: {
         tirana: {
-          cityName: 'Tbilisi',
-          heading: 'Tbilisi restaurants & cafes',
-          lead: 'Tbilisi is Georgia’s culinary capital: from old khinkali houses and family marani to signature restaurants and wine bars. We’ve gathered vetted places by district and occasion.',
+          cityName: 'Tirana',
+          heading: 'Tirana restaurants & cafes',
+          lead: 'Tirana is Albania’s culinary capital: from traditional taverns and byrek bakeries to signature restaurants and wine bars. We’ve gathered vetted places by district and occasion.',
           intro: [
-            'In Tbilisi people eat everywhere and in all sorts of ways. In the Old Town and Sololaki — atmospheric Georgian restaurants and wine bars; in Vera and on Rustaveli — coffee shops and breakfasts; at the Dezerter Bazaar — grocery color and street food. Prices rise toward the center and the tourist streets, and they’re noticeably cheaper in simple canteens.',
-            'Below are our vetted places: Georgian classics, signature cuisine, wine, vegan, and coffee. What exactly to order — khinkali, khachapuri, mtsvadi, qvevri wine — is in the guide to the cuisine. We verify each venue and note the check date.',
+            'In Tirana people eat everywhere and in all sorts of ways. Around the New Bazaar (Pazari i Ri) — traditional taverns and grills; in the Blloku district — coffee shops, breakfasts, and modern bistros; on the central squares — wine bars and signature restaurants. Prices rise toward the center and the tourist streets, and they’re noticeably cheaper in simple local canteens.',
+            'Below are our vetted places: Albanian classics, signature cuisine, wine, vegetarian, and coffee. What exactly to order — byrek, tavë kosi, fërgesë, grilled meats, local wine and raki — is in the guide to the cuisine. We verify each venue and note the check date.',
           ],
         },
         durres: {
-          cityName: 'Batumi',
-          heading: 'Batumi restaurants & cafes',
-          lead: 'Batumi is the sea and Adjarian cuisine: the famous boat-shaped khachapuri, fresh fish, and seaside terraces. Vetted places by the boulevard and in the old town.',
+          cityName: 'Durrës',
+          heading: 'Durrës restaurants & cafes',
+          lead: 'Durrës is the Adriatic and seafood: fresh fish, grilled catch, and seaside terraces along the beachfront. Vetted places by the promenade and in the old town.',
           intro: [
-            'In Batumi the gastronomy revolves around the sea and Adjara: fish restaurants, Adjarian khachapuri with egg and butter, seaside verandas. In the old town and by the boulevard there are more tourist spots and nightlife; a little off to the side it’s calmer and cheaper.',
-            'Below are our vetted places in Batumi. For the basic dishes of Georgian cuisine and what the region is famous for, take a look at the guide to the cuisine; each venue shows the check date.',
+            'In Durrës the gastronomy revolves around the sea: fish restaurants, fresh seafood, and seaside verandas, with Italian influence everywhere in the pasta, pizza, and coffee. By the promenade and the beaches there are more tourist spots and nightlife; a little off to the side it’s calmer and cheaper.',
+            'Below are our vetted places in Durrës. For the basic dishes of Albanian cuisine and what the coast is famous for, take a look at the guide to the cuisine; each venue shows the check date.',
           ],
         },
         sarande: {
-          cityName: 'Kutaisi',
-          heading: 'Kutaisi restaurants & cafes',
-          lead: 'Kutaisi is the gateway to Imereti with its greenery, spices, and cheese. Simple, vivid local cuisine and vetted places not far from the center.',
+          cityName: 'Sarandë',
+          heading: 'Sarandë restaurants & cafes',
+          lead: 'Sarandë is the gateway to the Albanian Riviera, with the turquoise water of Ksamil and the ruins of Butrint nearby. Fresh seafood and vetted places along the waterfront.',
           intro: [
-            'Imeretian cuisine is one of the most expressive in Georgia: Imeretian khachapuri, pkhali, spicy sauces, and cheese. Kutaisi has many family-run places with home-style serving, and at the central market — cheese, spices, and churchkhela.',
-            'Below are our vetted places in Kutaisi. What to try first is in the guide to the cuisine; each venue lists the check date.',
+            'On the Ionian coast the cuisine revolves around the sea: grilled fish and seafood, seaside terraces, and the laid-back rhythm of a resort town, with strong Greek and Mediterranean influence. Sarandë has many family-run places with home-style cooking, and along the promenade — cafes, fish restaurants, and ice cream.',
+            'Below are our vetted places in Sarandë. What to try first is in the guide to the cuisine; each venue lists the check date.',
           ],
         },
       },
@@ -729,14 +729,14 @@ export const en: UIDictionary = {
     emptyFiltered: 'Nothing yet for the selected type. Reset the filter.',
   },
   catalog: {
-    heading: 'What to see in Georgia',
+    heading: 'What to see in Albania',
     intro: [
-      'A catalog of Georgia’s attractions: nature and mountains, waterfalls and canyons, cave towns, ancient churches and monasteries, fortresses, and thermal resorts. Filter them by type and region below and open a card with the details.',
+      'A catalog of Albania’s attractions: nature and mountains, beaches and the Riviera, waterfalls and canyons, UNESCO old towns and ancient ruins, churches and monasteries, fortresses, and resorts. Filter them by type and region below and open a card with the details.',
       'Places make it into the catalog not “from an old blog from memory.” We select them by high ratings across several independent sources and check the details with experienced travelers, guides, and locals. Every article shows the date of its last check.',
     ],
     breadcrumbHome: 'Home',
     mapHeading: 'All places on the map',
-    mapAria: 'Interactive map of Georgia’s attractions',
+    mapAria: 'Interactive map of Albania’s attractions',
     mapHint: 'The map with all the markers loads on click — to keep the page lightweight.',
     filtersLegend: 'Attraction filters',
     typeLabel: 'Type',
@@ -749,10 +749,10 @@ export const en: UIDictionary = {
     emptyNoData: 'This section is being filled in: vetted places with honest descriptions and a check date will appear here soon.',
   },
   uslugi: {
-    heading: 'Services in Georgia: for living and relocating',
+    heading: 'Services in Albania: for living and relocating',
     breadcrumb: 'Services',
     intro: [
-      'Services that those living in Georgia and those relocating need: real estate agents and help with housing, cleaning, freight, repairs, paperwork, translators. Conveniently gathered in one place — by category and city.',
+      'Services that those living in Albania and those relocating need: real estate agents and help with housing, cleaning, freight, repairs, paperwork, translators. Conveniently gathered in one place — by category and city.',
       'We add to this section as requests come in. Paid placements are marked with a gold border; everything else we add once we’ve verified the service.',
     ],
     rubricLabel: 'Category',
@@ -765,9 +765,9 @@ export const en: UIDictionary = {
     siteLabel: 'Website',
     demoLabel: 'Sample',
     emptyFiltered: 'Nothing yet for the selected category. Reset the filter.',
-    emptyNoData: 'This section is being filled in: vetted services for living in Georgia will appear here soon.',
+    emptyNoData: 'This section is being filled in: vetted services for living in Albania will appear here soon.',
     ctaHeading: 'Is your service here?',
-    ctaText: 'Real estate agents, cleaning, tradespeople, and other services for those living in Georgia — write to us and we’ll tell you about placement.',
+    ctaText: 'Real estate agents, cleaning, tradespeople, and other services for those living in Albania — write to us and we’ll tell you about placement.',
     ctaLabel: 'Ask about placement',
   },
   coordCopy: {
@@ -778,20 +778,20 @@ export const en: UIDictionary = {
   },
   hubAffiliate: {
     'car-rental': {
-      title: 'Car rental in Georgia',
+      title: 'Car rental in Albania',
       note: 'Compare rental prices on Trip.com.',
     },
     transport: {
-      title: 'Flights to Georgia',
+      title: 'Flights to Albania',
       note: 'Search flights and fares on Trip.com.',
     },
     cities: {
       title: 'Where to stay',
-      note: 'Hotels and apartments across Georgia on Trip.com.',
+      note: 'Hotels and apartments across Albania on Trip.com.',
     },
     entertainment: {
       title: 'Tours & activities',
-      note: 'Find tours and activities across Georgia on Trip.com.',
+      note: 'Find tours and activities across Albania on Trip.com.',
     },
   },
 };
