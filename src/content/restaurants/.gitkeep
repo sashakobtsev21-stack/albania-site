@@ -1,0 +1,1 @@
+# Keep empty collection dir so Astro glob loader base path exists (engine builds empty by design, SPEC §11).
