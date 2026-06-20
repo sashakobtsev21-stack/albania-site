@@ -215,9 +215,9 @@ export const en: UIDictionary = {
     heading: 'Distance',
     km: 'km',
     origins: {
-      tbilisi: 'Tbilisi',
-      kutaisi: 'Kutaisi',
-      batumi: 'Batumi',
+      tirana: 'Tirana',
+      durres: 'Durrës',
+      sarande: 'Saranda',
     },
   },
   visit: {
@@ -651,7 +651,7 @@ export const en: UIDictionary = {
       backToAll: 'The whole “Where to eat” directory',
       cityGuideLink: 'City guide',
       items: {
-        tbilisi: {
+        tirana: {
           cityName: 'Tbilisi',
           heading: 'Tbilisi restaurants & cafes',
           lead: 'Tbilisi is Georgia’s culinary capital: from old khinkali houses and family marani to signature restaurants and wine bars. We’ve gathered vetted places by district and occasion.',
@@ -660,7 +660,7 @@ export const en: UIDictionary = {
             'Below are our vetted places: Georgian classics, signature cuisine, wine, vegan, and coffee. What exactly to order — khinkali, khachapuri, mtsvadi, qvevri wine — is in the guide to the cuisine. We verify each venue and note the check date.',
           ],
         },
-        batumi: {
+        durres: {
           cityName: 'Batumi',
           heading: 'Batumi restaurants & cafes',
           lead: 'Batumi is the sea and Adjarian cuisine: the famous boat-shaped khachapuri, fresh fish, and seaside terraces. Vetted places by the boulevard and in the old town.',
@@ -669,7 +669,7 @@ export const en: UIDictionary = {
             'Below are our vetted places in Batumi. For the basic dishes of Georgian cuisine and what the region is famous for, take a look at the guide to the cuisine; each venue shows the check date.',
           ],
         },
-        kutaisi: {
+        sarande: {
           cityName: 'Kutaisi',
           heading: 'Kutaisi restaurants & cafes',
           lead: 'Kutaisi is the gateway to Imereti with its greenery, spices, and cheese. Simple, vivid local cuisine and vetted places not far from the center.',

@@ -91,7 +91,7 @@ places.sort((a, b) => {
 const hasPlaces = places.length > 0;
 
 const priceRangeFor = (lvl: string): string =>
-  lvl === '₾' ? 'inexpensive' : lvl === '₾₾' ? 'moderate' : 'expensive';
+  lvl === '€' ? 'inexpensive' : lvl === '€€' ? 'moderate' : 'expensive';
 
 /** JSON-LD (§14): ItemList(Restaurant) этого города. Чужие рейтинги НЕ кладём (§15). */
 const itemListLd = {

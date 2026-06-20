@@ -49,15 +49,15 @@ export {
 };
 
 /**
- * Per-city страницы «Где поесть» (§8.6): ключ → URL-слаг страницы (`/eda/{slug}/`)
- * + слаг города для ссылки на путеводитель `/goroda/{citySlug}/`. Локализованный
+ * Per-city страницы «Где поесть» (§8.6): ключ → URL-слаг страницы (`/food/{slug}/`)
+ * + слаг города для ссылки на путеводитель `/cities/{citySlug}/`. Локализованный
  * контент — в словарях (`eda.cityPages.items[key]`). Порядок = порядок ссылок
- * на хабе /eda/ и в getStaticPaths шаблона CityFoodPage.
+ * на хабе /food/ и в getStaticPaths шаблона CityFoodPage.
  */
 export const EDA_CITY_PAGES = [
-  { key: 'tbilisi', slug: 'gde-poest-tbilisi', citySlug: 'tbilisi' },
-  { key: 'batumi', slug: 'gde-poest-batumi', citySlug: 'batumi' },
-  { key: 'kutaisi', slug: 'gde-poest-kutaisi', citySlug: 'kutaisi' },
+  { key: 'tirana', slug: 'where-to-eat-tirana', citySlug: 'tirana' },
+  { key: 'durres', slug: 'where-to-eat-durres', citySlug: 'durres' },
+  { key: 'sarande', slug: 'where-to-eat-sarande', citySlug: 'sarande' },
 ] as const satisfies ReadonlyArray<{ key: EdaCityKey; slug: string; citySlug: string }>;
 
 const dictionaries: Record<Lang, UIDictionary> = { ru, uk, en };

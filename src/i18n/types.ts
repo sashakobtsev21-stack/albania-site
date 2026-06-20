@@ -67,7 +67,7 @@ export type AttractionTypeSlug = (typeof ATTRACTION_TYPE_SLUGS)[number];
  * городов (/goroda/) задаются в EDA_CITY_PAGES (i18n/index.ts); локализованные
  * названия и тексты — в словарях (`eda.cityPages.items`).
  */
-export const EDA_CITY_KEYS = ['tbilisi', 'batumi', 'kutaisi'] as const;
+export const EDA_CITY_KEYS = ['tirana', 'durres', 'sarande'] as const;
 export type EdaCityKey = (typeof EDA_CITY_KEYS)[number];
 
 /**
@@ -317,7 +317,7 @@ export interface UIDictionary {
   };
   /**
    * Блок «Как доехать» (AccessFrom §8.1) — расстояние/время из крупных
-   * точек въезда. Лейблы городов-истоков по слугам tbilisi/kutaisi/batumi.
+   * точек въезда. Лейблы городов-истоков по слугам tirana/durres/sarande.
    */
   access: {
     /** Заголовок <summary> блока. */
@@ -326,9 +326,9 @@ export interface UIDictionary {
     km: string;
     /** Локализованные названия городов-истоков. */
     origins: {
-      tbilisi: string;
-      kutaisi: string;
-      batumi: string;
+      tirana: string;
+      durres: string;
+      sarande: string;
     };
   };
   /** Блок «Вход и часы работы» места (VisitInfo §8.1). */

@@ -136,7 +136,7 @@ const cuisineKeys: CuisineKeySlug[] = CUISINE_KEY_SLUGS.filter((k) =>
   places.some((p) => p.data.cuisineKey === k),
 );
 /** Ценники — в фиксированном порядке возрастания, только реально встречающиеся. */
-const PRICE_ORDER = ['₾', '₾₾', '₾₾₾'];
+const PRICE_ORDER = ['€', '€€', '€€€'];
 const prices = PRICE_ORDER.filter((lvl) => places.some((p) => p.data.priceLevel === lvl));
 
 /** Опция фасета: value — для data-атрибута и матчинга, label — видимый текст. */
@@ -174,7 +174,7 @@ const hasFilters = filterDefs.length > 0;
 
 /** Маппинг ценника в schema.org priceRange (§14). */
 const priceRangeFor = (lvl: string): string =>
-  lvl === '₾' ? 'inexpensive' : lvl === '₾₾' ? 'moderate' : 'expensive';
+  lvl === '€' ? 'inexpensive' : lvl === '€€' ? 'moderate' : 'expensive';
 
 /**
  * JSON-LD (§14): ItemList с Restaurant-элементами + BreadcrumbList.
