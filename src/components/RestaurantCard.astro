@@ -5,7 +5,7 @@
  * hover-подъём на transform/opacity (ноль CLS, как у ArticleCard/SectionTile).
  *
  * Состав (§8.6): название (Unbounded) → строка-мета (район · кухня · ценник
- * ₾/₾₾/₾₾₾) → 1–2 строки нашего описания (summary) → строка-ориентир рейтинга
+ * €/€€/€€€) → 1–2 строки нашего описания (summary) → строка-ориентир рейтинга
  * (ratingNote, текстом) → VerifiedBadge «Проверено · {дата}» → ссылка «На карте».
  *
  * ВАЖНО (ToS, §15): чужие рейтинги и число отзывов дословно НЕ публикуем —
@@ -27,7 +27,7 @@ import coverVariants from '../data/cover-variants.json';
 interface Props {
   lang: Lang;
   name: string;
-  /** Ценник-ориентир: ₾ / ₾₾ / ₾₾₾ (§11). */
+  /** Ценник-ориентир: € / €€ / €€€ (§11). */
   priceLevel: string;
   district?: string;
   cuisine?: string;
@@ -104,18 +104,20 @@ const slides = [
 ---
 
 <article class="rcard" id={anchorId}>
-  {qualityMark && (
-    <img
-      class="rcard__quality"
-      src="/images/quality/seal-gold.webp"
-      alt=""
-      aria-hidden="true"
-      width="62"
-      height="62"
-      loading="lazy"
-      decoding="async"
-    />
-  )}
+  {
+    qualityMark && (
+      <img
+        class="rcard__quality"
+        src="/images/quality/seal-gold.webp"
+        alt=""
+        aria-hidden="true"
+        width="62"
+        height="62"
+        loading="lazy"
+        decoding="async"
+      />
+    )
+  }
   {
     slides.length > 0 && (
       <div
@@ -137,24 +139,22 @@ const slides = [
               data-credit={s.credit ?? ''}
               aria-label={s.alt}
             >
-            <img
-              class="rcard__photo"
-              src={s.src}
-              srcset={(coverVariants as Record<string, string>)[s.src]}
-              sizes="(max-width: 600px) 100vw, 380px"
-              alt={s.alt}
-              width="640"
-              height="360"
-              loading="lazy"
-              decoding="async"
-            />
+              <img
+                class="rcard__photo"
+                src={s.src}
+                srcset={(coverVariants as Record<string, string>)[s.src]}
+                sizes="(max-width: 600px) 100vw, 380px"
+                alt={s.alt}
+                width="640"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
             </button>
             {s.credit && <figcaption class="rcard__credit">{s.credit}</figcaption>}
           </figure>
         ))}
-        {coverIllustrative && (
-          <span class="rcard__illustrative">{dict.eda.illustrativeBadge}</span>
-        )}
+        {coverIllustrative && <span class="rcard__illustrative">{dict.eda.illustrativeBadge}</span>}
         {slides.length > 1 && (
           <>
             <button
@@ -244,18 +244,27 @@ const slides = [
         <span>{dict.eda.onMap}</span>
         <Icon name="arrow-right" size={16} class="rcard__map-arrow" />
       </a>
-      {website && (
-        <a class="rcard__map rcard__site" href={website} target="_blank" rel="noopener nofollow">
-          <Icon name={isInstagram ? 'instagram' : 'globe'} size={16} />
-          <span>{isInstagram ? 'Instagram' : dict.eda.website}</span>
-        </a>
-      )}
-      {instagram && (
-        <a class="rcard__map rcard__site" href={instagram} target="_blank" rel="noopener nofollow">
-          <Icon name="instagram" size={16} />
-          <span>Instagram</span>
-        </a>
-      )}
+      {
+        website && (
+          <a class="rcard__map rcard__site" href={website} target="_blank" rel="noopener nofollow">
+            <Icon name={isInstagram ? 'instagram' : 'globe'} size={16} />
+            <span>{isInstagram ? 'Instagram' : dict.eda.website}</span>
+          </a>
+        )
+      }
+      {
+        instagram && (
+          <a
+            class="rcard__map rcard__site"
+            href={instagram}
+            target="_blank"
+            rel="noopener nofollow"
+          >
+            <Icon name="instagram" size={16} />
+            <span>Instagram</span>
+          </a>
+        )
+      }
     </div>
   </div>
 </article>

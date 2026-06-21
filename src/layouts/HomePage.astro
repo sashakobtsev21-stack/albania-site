@@ -117,28 +117,21 @@ const showcaseRestaurants = await getCollectionSafe(
   (entry) => entry.data.lang === lang && entry.data.draft !== true,
 );
 // Заведения перемешаны со статьями/маршрутами (не подряд) — решение владельца.
-const showcasePicks = [
-  { kind: 'article', category: 'cities', slug: 'tbilisi', kicker: 'city' },
-  { kind: 'restaurant', slug: 'guinness-by-sinori', edaSlug: 'gde-poest-batumi', kicker: 'food' },
-  { kind: 'route', slug: 'tbilisi-kazbegi-2-dnya', kicker: 'route' },
-  // Teatro — статья «Развлечения» как place-карточка (поповер: адрес/часы/карта/сайт)
-  // со знаком качества; всё по запросу владельца.
-  {
-    kind: 'article',
-    category: 'entertainment',
-    slug: 'teatro-batumi',
-    kicker: 'nightlife',
-    quality: true,
-    place: true,
-    cardTitle: 'Teatro',
-    mapUrl: 'https://maps.app.goo.gl/qMh9Kj2rMURoVfLy5',
-  },
-  { kind: 'article', category: 'attractions', slug: 'vardzia', kicker: 'sight' },
-  { kind: 'restaurant', slug: 'sushiman-batumi', edaSlug: 'gde-poest-batumi', kicker: 'food' },
-  { kind: 'article', category: 'food', slug: 'what-to-try', kicker: 'food' },
-  { kind: 'route', slug: 'gomismta-iz-batumi', kicker: 'route' },
-  { kind: 'article', category: 'cities', slug: 'batumi', kicker: 'city' },
-] as const;
+// Витрина пуста до R3: албанского featured-контента (города/маршруты/места) ещё
+// нет — грузинские пики удалены. Машинерия резолвинга ниже сохранена: при наполнении
+// вернуть подборку по албанским слагам. Пустой массив → лента скрыта (см. рендер §8.4).
+const showcasePicks: ReadonlyArray<{
+  kind: 'article' | 'route' | 'restaurant';
+  category: string;
+  slug: string;
+  edaSlug?: string;
+  kicker: keyof typeof dict.home.showcase.kickers;
+  quality?: boolean;
+  place?: boolean;
+  city?: string;
+  cardTitle?: string;
+  mapUrl?: string;
+}> = [];
 const showcaseItems: ShowcaseItem[] = [];
 for (const pick of showcasePicks) {
   if (pick.kind === 'restaurant') {
@@ -182,13 +175,13 @@ for (const pick of showcasePicks) {
   if (p.place) {
     // Статья-место (Teatro): рендерим как place-карточку витрины с поповером
     // (адрес/часы/карта/сайт) и каруселью фото — как у заведений.
-    const batumiCity = lang === 'uk' ? 'Батумі' : lang === 'en' ? 'Batumi' : 'Батуми';
+    const defaultCity = lang === 'uk' ? 'Тирана' : lang === 'en' ? 'Tirana' : 'Тирана';
     showcaseItems.push({
       href: articleHref(lang, category, entry.data.slug),
       title: p.cardTitle ?? entry.data.title,
       cover: entry.data.cover,
       kicker: dict.home.showcase.kickers[pick.kicker],
-      city: p.city ?? batumiCity,
+      city: p.city ?? defaultCity,
       place: true,
       quality: p.quality === true,
       hours: entry.data.visit?.hours,
@@ -233,7 +226,9 @@ for (const pick of showcasePicks) {
        при .js-anim и разрешённом движении (FOUC-safe, см. global.css). */
   }
   <section class="hero">
-    {/* Фото Албанской Ривьеры (CC); морской градиент в CSS — фолбэк под фото. Скрим — контраст текста. */}
+    {
+      /* Фото Албанской Ривьеры (CC); морской градиент в CSS — фолбэк под фото. Скрим — контраст текста. */
+    }
     <img
       class="hero__bg"
       src="/images/hero/riviera.webp"
@@ -286,24 +281,28 @@ for (const pick of showcasePicks) {
     )
   }
 
-  {/* 2. Витрина — золотая лента партнёров/материалов (заменяет «С чего начать»).
+  {
+    /* 2. Витрина — золотая лента партнёров/материалов (заменяет «С чего начать»).
        Лента и её заголовок показываются только при наличии featured-контента
        (showcaseItems). Пока его нет (R3 — города/маршруты/места Албании), секция
-       несёт лишь строку доверия, а не зияет пустой лентой. */}
+       несёт лишь строку доверия, а не зияет пустой лентой. */
+  }
   <section class="block block--showcase">
     <div class="container">
-      {showcaseItems.length > 0 && (
-        <>
-          <h2 class="block__heading" data-reveal>
-            {dict.home.showcase.heading}
-          </h2>
-          <p class="showcase-lead" data-reveal>
-            {dict.home.showcase.lead}{' '}
-            <span class="showcase-lead__partner">{dict.home.showcase.partnerNote}</span>
-          </p>
-          <ShowcaseRail lang={lang} items={showcaseItems} label={dict.home.showcase.aria} />
-        </>
-      )}
+      {
+        showcaseItems.length > 0 && (
+          <>
+            <h2 class="block__heading" data-reveal>
+              {dict.home.showcase.heading}
+            </h2>
+            <p class="showcase-lead" data-reveal>
+              {dict.home.showcase.lead}{' '}
+              <span class="showcase-lead__partner">{dict.home.showcase.partnerNote}</span>
+            </p>
+            <ShowcaseRail lang={lang} items={showcaseItems} label={dict.home.showcase.aria} />
+          </>
+        )
+      }
       <p class="trust-line" data-reveal>
         {dict.home.trustLead}{' '}
         <a class="trust-line__link" href={sectionHref(lang, 'about')}>

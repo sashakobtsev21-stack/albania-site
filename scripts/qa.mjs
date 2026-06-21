@@ -1,4 +1,4 @@
-// Финальный QA-оркестратор Georgia Guidebook (ROADMAP #21).
+// Финальный QA-оркестратор Albania Guidebook (ROADMAP #21).
 // Запуск: node scripts/qa.mjs   (или npm run qa)
 //
 // Делает два прохода и печатает отчёт GO/NO-GO с разбивкой
@@ -19,7 +19,7 @@ import { readFileSync, statSync, readdirSync, existsSync, rmSync } from 'node:fs
 import { join, relative } from 'node:path';
 
 const ORIGIN = 'https://albaniaguidebook.com';
-const TITLE_SUFFIX = ' — Georgia Guidebook';
+const TITLE_SUFFIX = ' — Albania Guidebook';
 const DIST = 'dist';
 
 const findings = []; // {sev:'critical'|'medium'|'minor', area, where, msg}
@@ -37,7 +37,9 @@ function walk(dir, ext, out = []) {
   return out;
 }
 const fileToUrl = (f) => {
-  const rel = relative(DIST, f).replace(/\\/g, '/').replace(/index\.html$/, '');
+  const rel = relative(DIST, f)
+    .replace(/\\/g, '/')
+    .replace(/index\.html$/, '');
   return ORIGIN + '/' + rel;
 };
 const matchAll = (s, re) => [...s.matchAll(re)].map((m) => m[1]);
@@ -87,7 +89,12 @@ try {
   execSync('npm audit --omit=dev --audit-level=high', { stdio: 'pipe', encoding: 'utf8' });
   console.log('  ✓ npm audit (prod): high/critical нет');
 } catch {
-  add('medium', 'security', 'npm audit', 'prod-дерево: high/critical (esbuild/vite — build-tooling Astro, в прод-бандл не входят; фикс = мажорный апгрейд). Не блокирует GO для статики.');
+  add(
+    'medium',
+    'security',
+    'npm audit',
+    'prod-дерево: high/critical (esbuild/vite — build-tooling Astro, в прод-бандл не входят; фикс = мажорный апгрейд). Не блокирует GO для статики.',
+  );
   console.log('  ⚠ npm audit (prod): high/critical в build-tooling (esbuild/vite) — см. note');
 }
 try {
@@ -98,7 +105,8 @@ try {
     auditJson = e.stdout; // npm audit выходит !=0 при наличии уязвимостей — JSON в stdout
   }
   const v = JSON.parse(auditJson)?.metadata?.vulnerabilities;
-  if (v && v.total) console.log(`  ⚠ npm audit (вкл. dev): ${v.total} уязвимостей (dev-tooling, не в прод-бандл)`);
+  if (v && v.total)
+    console.log(`  ⚠ npm audit (вкл. dev): ${v.total} уязвимостей (dev-tooling, не в прод-бандл)`);
 } catch {
   /* npm audit недоступен/офлайн — пропускаем инфо-строку */
 }
@@ -124,11 +132,13 @@ if (!existsSync(DIST)) {
     if (!title) add('medium', 'seo', f, 'нет <title>');
     else {
       const core = title.endsWith(TITLE_SUFFIX) ? title.slice(0, -TITLE_SUFFIX.length) : title;
-      if (core.length > 60) add('medium', 'seo', f, `title (без суффикса) ${core.length}>60: «${core}»`);
+      if (core.length > 60)
+        add('medium', 'seo', f, `title (без суффикса) ${core.length}>60: «${core}»`);
     }
     const descRaw = (html.match(/<meta name="description" content="([^"]*)"/i) || [])[1];
     const desc = descRaw == null ? null : decode(descRaw);
-    if (!isUtility && (desc == null || desc.trim() === '')) add('medium', 'seo', f, 'нет meta description');
+    if (!isUtility && (desc == null || desc.trim() === ''))
+      add('medium', 'seo', f, 'нет meta description');
     else if (desc && desc.length > 155) add('medium', 'seo', f, `description ${desc.length}>155`);
     const canon = matchAll(html, /<link rel="canonical" href="([^"]*)"/gi);
     if (!isUtility && canon.length === 0) add('critical', 'seo', f, 'нет canonical');
@@ -143,7 +153,8 @@ if (!existsSync(DIST)) {
       if (!altMap.has('x-default')) add('medium', 'hreflang', f, 'нет x-default');
       const self = canon[0];
       const listsSelf = self && [...altMap.values()].some((u) => u === self);
-      if (self && !listsSelf) add('medium', 'hreflang', f, 'hreflang не содержит собственный canonical');
+      if (self && !listsSelf)
+        add('medium', 'hreflang', f, 'hreflang не содержит собственный canonical');
     }
     pageMap.set(url, { file: f, altMap, canon: canon[0] });
 
@@ -176,7 +187,9 @@ if (!existsSync(DIST)) {
     }
 
     // --- schema.org JSON-LD ---
-    const ld = [...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)];
+    const ld = [
+      ...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi),
+    ];
     for (const m of ld) {
       try {
         const data = JSON.parse(m[1]);
@@ -185,7 +198,8 @@ if (!existsSync(DIST)) {
           if (!root['@context']) add('medium', 'schema', f, 'JSON-LD без @context');
           // форма @graph: типы у дочерних узлов, а не у корня
           const typed = Array.isArray(root['@graph']) ? root['@graph'] : [root];
-          for (const n of typed) if (!n['@type']) add('medium', 'schema', f, 'узел JSON-LD без @type');
+          for (const n of typed)
+            if (!n['@type']) add('medium', 'schema', f, 'узел JSON-LD без @type');
         }
       } catch {
         add('critical', 'schema', f, 'JSON-LD не парсится (битый schema.org)');
@@ -197,7 +211,14 @@ if (!existsSync(DIST)) {
       .replace(/<script[\s\S]*?<\/script>/gi, '')
       .replace(/<style[\s\S]*?<\/style>/gi, '')
       .replace(/<!--[\s\S]*?-->/g, '');
-    for (const bad of ['[object Object]', 'Invalid Date', '>undefined<', '>NaN<', '>TODO', 'NaN%']) {
+    for (const bad of [
+      '[object Object]',
+      'Invalid Date',
+      '>undefined<',
+      '>NaN<',
+      '>TODO',
+      'NaN%',
+    ]) {
       if (visible.includes(bad)) add('critical', 'smoke', f, `в видимом тексте найдено «${bad}»`);
     }
 
@@ -222,11 +243,22 @@ if (!existsSync(DIST)) {
       if (lang === 'x-default') continue;
       const tp = pageMap.get(target) || pageMap.get(target.endsWith('/') ? target : target + '/');
       if (!tp) {
-        add('critical', 'hreflang', p.file, `hreflang ${lang} → ${target} — целевой страницы нет в dist`);
+        add(
+          'critical',
+          'hreflang',
+          p.file,
+          `hreflang ${lang} → ${target} — целевой страницы нет в dist`,
+        );
         continue;
       }
       const back = [...tp.altMap.values()].some((u) => u === url || u === p.canon);
-      if (!back) add('critical', 'hreflang', p.file, `hreflang не взаимный: ${target} не ссылается назад на ${url}`);
+      if (!back)
+        add(
+          'critical',
+          'hreflang',
+          p.file,
+          `hreflang не взаимный: ${target} не ссылается назад на ${url}`,
+        );
     }
   }
 
@@ -273,7 +305,9 @@ function summarize(list) {
 console.log('\n========== QA-ОТЧЁТ ==========');
 const gateLine = gates.map(([n]) => `${gateResult[n] ? '✓' : '✗'}${n}`).join(' · ');
 console.log(`Гейты: ${gateLine}`);
-console.log(`Находки: критических ${crit.length} · средних ${med.length} · минорных ${minor.length}\n`);
+console.log(
+  `Находки: критических ${crit.length} · средних ${med.length} · минорных ${minor.length}\n`,
+);
 
 for (const [label, list] of [
   ['КРИТИЧЕСКИЕ (блокируют публикацию)', crit],
@@ -283,7 +317,9 @@ for (const [label, list] of [
   if (!list.length) continue;
   console.log(`— ${label}:`);
   for (const [key, { count, sample }] of summarize(list)) {
-    const at = sample.where ? `  [${relative('.', String(sample.where)).replace(/\\/g, '/')}${count > 1 ? ` +${count - 1}` : ''}]` : '';
+    const at = sample.where
+      ? `  [${relative('.', String(sample.where)).replace(/\\/g, '/')}${count > 1 ? ` +${count - 1}` : ''}]`
+      : '';
     console.log(`  • ${key}${at}`);
     if (count === 1 && sample.msg.length > 80) console.log(`      ${sample.msg.split('\n')[0]}`);
   }
@@ -292,5 +328,7 @@ for (const [label, list] of [
 
 const go = crit.length === 0;
 console.log(`ВЕРДИКТ: ${go ? 'GO ✅ — критических нет' : 'NO-GO ⛔ — есть критические'}`);
-console.log('(Браузерный слой — `npm run qa:browser`: mobile Lighthouse по ключевым страницам, D8 ✅.)');
+console.log(
+  '(Браузерный слой — `npm run qa:browser`: mobile Lighthouse по ключевым страницам, D8 ✅.)',
+);
 process.exit(go ? 0 : 1);

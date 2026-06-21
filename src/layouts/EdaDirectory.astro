@@ -105,10 +105,10 @@ const ogImage = places.find((p) => p.data.cover)?.data.cover?.src;
  */
 const CITY_ORDER =
   lang === 'uk'
-    ? ['Тбілісі', 'Батумі', 'Кутаїсі', 'У дорозі']
+    ? ['Тирана', 'Дуррес', 'Саранда', 'У дорозі']
     : lang === 'en'
-      ? ['Tbilisi', 'Batumi', 'Kutaisi', 'En route']
-      : ['Тбилиси', 'Батуми', 'Кутаиси', 'По дороге'];
+      ? ['Tirana', 'Durrës', 'Sarandë', 'En route']
+      : ['Тирана', 'Дуррес', 'Саранда', 'По дороге'];
 const cityRank = (city: string): number => {
   const i = CITY_ORDER.indexOf(city);
   return i === -1 ? CITY_ORDER.length : i;
@@ -590,7 +590,7 @@ const breadcrumbLd = {
     flex-wrap: wrap;
     gap: var(--space-2);
   }
-  /* Видимая легенда ценового фильтра (₾/₾₾/₾₾₾) — tooltip на тач не всплывает. */
+  /* Видимая легенда ценового фильтра (€/€€/€€€) — tooltip на тач не всплывает. */
   .facet__hint {
     margin: var(--space-2) 0 0;
     font-size: var(--text-sm);
@@ -698,5 +698,4 @@ const breadcrumbLd = {
     margin-top: var(--space-12);
     max-width: var(--container-prose);
   }
-
 </style>

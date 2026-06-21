@@ -15,14 +15,32 @@ import { join, extname } from 'node:path';
 import { chromium } from 'playwright-core';
 
 const DIST = 'dist';
-const PAGES = ['/', '/goroda/tbilisi/', '/arenda-avto/kak-arendovat-avto/', '/eda/', '/razvlecheniya/', '/strahovka/', '/marshruty/', '/novosti/'];
+const PAGES = [
+  '/',
+  '/planning/albania-visa/',
+  '/car-rental/how-to-rent-a-car/',
+  '/food/',
+  '/entertainment/',
+  '/insurance/',
+  '/routes/',
+  '/news/',
+];
 const WIDTHS = [320, 360, 414, 768, 1280];
 const TOLERANCE = 1; // субпиксели/округления
 const MIME = {
-  '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css',
-  '.webp': 'image/webp', '.avif': 'image/avif', '.jpg': 'image/jpeg', '.png': 'image/png',
-  '.svg': 'image/svg+xml', '.json': 'application/json', '.xml': 'application/xml',
-  '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.webmanifest': 'application/manifest+json',
+  '.html': 'text/html; charset=utf-8',
+  '.js': 'text/javascript',
+  '.css': 'text/css',
+  '.webp': 'image/webp',
+  '.avif': 'image/avif',
+  '.jpg': 'image/jpeg',
+  '.png': 'image/png',
+  '.svg': 'image/svg+xml',
+  '.json': 'application/json',
+  '.xml': 'application/xml',
+  '.woff2': 'font/woff2',
+  '.ico': 'image/x-icon',
+  '.webmanifest': 'application/manifest+json',
 };
 
 if (!existsSync(join(DIST, 'index.html'))) {
@@ -39,7 +57,10 @@ const server = http.createServer(async (q, s) => {
     await access(f, constants.F_OK);
     s.writeHead(200, { 'content-type': MIME[extname(p)] || 'application/octet-stream' });
     s.end(await readFile(f));
-  } catch { s.writeHead(404); s.end('x'); }
+  } catch {
+    s.writeHead(404);
+    s.end('x');
+  }
 });
 await new Promise((r) => server.listen(0, '127.0.0.1', r));
 const base = `http://127.0.0.1:${server.address().port}`;
@@ -63,7 +84,11 @@ try {
             const r = el.getBoundingClientRect();
             if (r.width > 0 && r.right > cw + tol) {
               off.push({
-                sel: el.tagName.toLowerCase() + (el.className && typeof el.className === 'string' ? '.' + el.className.trim().split(/\s+/).slice(0, 2).join('.') : ''),
+                sel:
+                  el.tagName.toLowerCase() +
+                  (el.className && typeof el.className === 'string'
+                    ? '.' + el.className.trim().split(/\s+/).slice(0, 2).join('.')
+                    : ''),
                 right: Math.round(r.right),
               });
             }
@@ -87,7 +112,9 @@ try {
 
 console.log('\n========== RESPONSIVE (scrollWidth ≤ clientWidth) ==========');
 if (!findings.length) {
-  console.log(`✅ GO: горизонтального переполнения нет на ${PAGES.length} шаблонах × ${WIDTHS.length} ширин.`);
+  console.log(
+    `✅ GO: горизонтального переполнения нет на ${PAGES.length} шаблонах × ${WIDTHS.length} ширин.`,
+  );
   process.exit(0);
 }
 console.log(`⛔ NO-GO: переполнение на ${findings.length} комбинациях:\n`);

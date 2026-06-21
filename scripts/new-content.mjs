@@ -1,4 +1,4 @@
-// Скаффолдер контента Georgia Guidebook (ROADMAP #20b).
+// Скаффолдер контента Albania Guidebook (ROADMAP #20b).
 // Генерирует ТРИ языковые версии (ru/uk/en) скелета с корректным по
 // content.config.ts frontmatter + папку фото public/images/<slug>/ + .gitkeep.
 //
@@ -48,7 +48,9 @@ if (!type || !slug) {
   process.exit(1);
 }
 if (!/^[a-z0-9-]+$/.test(slug)) {
-  console.error(`✗ slug «${slug}» — только строчные латиница/цифры/дефис (URL стабильны, правило 3).`);
+  console.error(
+    `✗ slug «${slug}» — только строчные латиница/цифры/дефис (URL стабильны, правило 3).`,
+  );
   process.exit(1);
 }
 
@@ -145,7 +147,7 @@ days: 1
 distanceKm: 1
 budgetFrom:
   amount: 0
-  currency: 'GEL'
+  currency: 'EUR'
 stops: [] # TODO: заполнить остановки (name/km/coord), затем build-route-geometry.mjs
 bestSeason: []
 gallery: []
@@ -168,7 +170,7 @@ lang: '${lang}'
 city: '${city}'
 district: ''
 cuisine: ''
-priceLevel: '₾₾'
+priceLevel: '€€'
 geo:
   coord: [0, 0] # TODO: реальные координаты
   address: 'TODO'
@@ -219,7 +221,10 @@ ${dodComment('city')}
 }
 
 const PLAN = {
-  article: { coll: 'articles', build: (l) => buildArticle(l, { category: opts.category || 'dostoprimechatelnosti' }) },
+  article: {
+    coll: 'articles',
+    build: (l) => buildArticle(l, { category: opts.category || 'dostoprimechatelnosti' }),
+  },
   news: { coll: 'articles', build: (l) => buildArticle(l, { category: 'novosti' }) },
   route: { coll: 'routes', build: buildRoute },
   restaurant: { coll: 'restaurants', build: buildRestaurant },

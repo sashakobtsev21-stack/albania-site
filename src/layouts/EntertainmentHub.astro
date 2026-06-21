@@ -82,21 +82,21 @@ interface HubCard {
   gallery?: { src: string; alt: string; credit?: string }[];
 }
 
-/** Город места — по суффиксу slug (-tbilisi/-batumi/-kutaisi), иначе «другое». */
+/** Город места — по суффиксу slug (-tirana/-durres/-sarande), иначе «другое». */
 const CITY_NAMES: Record<string, string> = {
-  tbilisi: lang === 'uk' ? 'Тбілісі' : lang === 'en' ? 'Tbilisi' : 'Тбилиси',
-  batumi: lang === 'uk' ? 'Батумі' : lang === 'en' ? 'Batumi' : 'Батуми',
-  kutaisi: lang === 'uk' ? 'Кутаїсі' : lang === 'en' ? 'Kutaisi' : 'Кутаиси',
+  tirana: lang === 'uk' ? 'Тирана' : lang === 'en' ? 'Tirana' : 'Тирана',
+  durres: lang === 'uk' ? 'Дуррес' : lang === 'en' ? 'Durrës' : 'Дуррес',
+  sarande: lang === 'uk' ? 'Саранда' : lang === 'en' ? 'Sarandë' : 'Саранда',
   other: lang === 'uk' ? 'Інше' : lang === 'en' ? 'Elsewhere' : 'Другое',
 };
-const CITY_ORDER = ['tbilisi', 'batumi', 'kutaisi', 'other'];
+const CITY_ORDER = ['tirana', 'durres', 'sarande', 'other'];
 const cityKeyOf = (slug: string): string =>
-  slug.endsWith('-tbilisi')
-    ? 'tbilisi'
-    : slug.endsWith('-batumi')
-      ? 'batumi'
-      : slug.endsWith('-kutaisi')
-        ? 'kutaisi'
+  slug.endsWith('-tirana')
+    ? 'tirana'
+    : slug.endsWith('-durres')
+      ? 'durres'
+      : slug.endsWith('-sarande')
+        ? 'sarande'
         : 'other';
 
 const cards: HubCard[] = places.map((entry) => {
@@ -174,7 +174,11 @@ const itemListLd = hasPlaces
 ---
 
 <BaseLayout title={pageTitle} description={description} lang={lang} image={ogImage}>
-  {itemListLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListLd)} />}
+  {
+    itemListLd && (
+      <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListLd)} />
+    )
+  }
   <div class="ent" data-eda>
     <div class="container">
       <Breadcrumbs lang={lang} items={[{ label: heading }]} />

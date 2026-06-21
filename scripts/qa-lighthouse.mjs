@@ -1,4 +1,4 @@
-// Браузерный слой QA Georgia Guidebook (ROADMAP #21, решение владельца D8).
+// Браузерный слой QA Albania Guidebook (ROADMAP #21, решение владельца D8).
 // Запуск: node scripts/qa-lighthouse.mjs   (или npm run qa:browser)
 //
 // Mobile-Lighthouse по ключевым страницам собранного сайта. Чтобы не зависеть от
@@ -25,10 +25,10 @@ const DIST = 'dist';
 // Репрезентативный срез шаблонов (не все 294 страницы — это долго):
 const PAGES = [
   ['/', 'главная (hero, витрина)'],
-  ['/goroda/tbilisi/', 'город (фото-тяжёлая статья)'],
-  ['/arenda-avto/kak-arendovat-avto/', 'статья (#16/#17, figure+карта)'],
-  ['/eda/', 'директория «Где поесть» (фильтры)'],
-  ['/marshruty/', 'хаб маршрутов'],
+  ['/planning/albania-visa/', 'статья (виза, обложка)'],
+  ['/car-rental/how-to-rent-a-car/', 'статья (аренда авто)'],
+  ['/food/', 'директория «Где поесть» (фильтры)'],
+  ['/routes/', 'хаб маршрутов'],
 ];
 const HARD = ['accessibility', 'seo', 'best-practices'];
 const THRESHOLD = 90;
@@ -88,7 +88,12 @@ try {
   for (const [path, label] of PAGES) {
     const rr = await lighthouse(
       base + path,
-      { port: chrome.port, output: 'json', logLevel: 'error', onlyCategories: ['performance', ...HARD] },
+      {
+        port: chrome.port,
+        output: 'json',
+        logLevel: 'error',
+        onlyCategories: ['performance', ...HARD],
+      },
       undefined,
     );
     const c = rr.lhr.categories;
@@ -135,7 +140,10 @@ for (const r of results) {
   );
 }
 console.log('');
-if (perfWarn) console.log(`⚠ performance <${THRESHOLD} на ${perfWarn} стр. (лабораторный скор зависит от машины — перепроверьте локально).`);
+if (perfWarn)
+  console.log(
+    `⚠ performance <${THRESHOLD} на ${perfWarn} стр. (лабораторный скор зависит от машины — перепроверьте локально).`,
+  );
 if (hardFail) {
   console.log(`⛔ NO-GO: accessibility/seo/best-practices <${THRESHOLD} — ${hardFail} нарушений.`);
   process.exit(1);
