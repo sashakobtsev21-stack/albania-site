@@ -424,22 +424,7 @@ export const en: UIDictionary = {
         'Albania uses the European emergency number 112 (ambulance, police, rescue). In a serious situation, call for help first and sort things out with the insurer afterwards.',
       ],
     },
-    photos: [
-      {
-        src: '/images/insurance/g1.webp',
-        alt: 'A mountain pass and green valley in the Albanian Alps',
-        caption:
-          'For active travel in remote mountains it’s well worth getting insurance with the right coverage: help can be a long way off here.',
-        credit: 'Photo: Andrew Dubok / Wikimedia Commons, CC BY-SA 3.0',
-      },
-      {
-        src: '/images/insurance/g2.webp',
-        alt: 'A forest trail in the Albanian Alps near Theth',
-        caption:
-          'A basic policy may not cover trekking, skiing or rafting — for active travel you need a separate option.',
-        credit: 'Photo: FingerWiki / Wikimedia Commons, CC BY-SA 4.0',
-      },
-    ],
+    photos: [],
     sources: {
       heading: 'Sources',
       items: [
@@ -543,11 +528,11 @@ export const en: UIDictionary = {
       heading: 'What’s already on the site',
       lead: 'Practical sections that come in handy when relocating:',
       items: [
-        { section: 'strahovka', text: 'medical insurance with coverage abroad' },
-        { section: 'arenda-avto', text: 'car rental: how, where, and without overpaying' },
+        { section: 'insurance', text: 'medical insurance with coverage abroad' },
+        { section: 'car-rental', text: 'car rental: how, where, and without overpaying' },
         { section: 'transport', text: 'how to get there and travel between cities' },
-        { section: 'goroda', text: 'Albania’s cities — where to live and what’s nearby' },
-        { section: 'eda', text: 'where to eat: vetted places by city' },
+        { section: 'cities', text: 'Albania’s cities — where to live and what’s nearby' },
+        { section: 'food', text: 'where to eat: vetted places by city' },
       ],
     },
     regulatory: {

@@ -44,7 +44,7 @@ const cfg = EDA_CITY_PAGES.find((p) => p.key === cityKey)!;
 const pageTitle = `${city.heading} — ${dict.siteName}`;
 const description = clampDesc(city.lead);
 
-const SITE = Astro.site ?? new URL('https://georgiaguidebook.com');
+const SITE = Astro.site ?? new URL('https://albaniaguidebook.com');
 const pageUrl = new URL(Astro.url.pathname, SITE).href;
 const homeUrl = new URL(sectionHref(lang, 'home'), SITE).href;
 const edaUrl = new URL(sectionHref(lang, 'food'), SITE).href;
@@ -58,9 +58,9 @@ const hasArticle = (category: string, slug: string): boolean =>
     (e) => e.data.lang === lang && e.data.category === category && e.data.slug === slug,
   );
 const cuisineHref = articleHref(
-  hasArticle('food', 'chto-poprobovat') ? lang : DEFAULT_LANG,
+  hasArticle('food', 'what-to-try') ? lang : DEFAULT_LANG,
   'food',
-  'chto-poprobovat',
+  'what-to-try',
 );
 const cityGuideHref = articleHref(
   hasArticle('cities', cfg.citySlug) ? lang : DEFAULT_LANG,

@@ -18,7 +18,7 @@ import { execSync } from 'node:child_process';
 import { readFileSync, statSync, readdirSync, existsSync, rmSync } from 'node:fs';
 import { join, relative } from 'node:path';
 
-const ORIGIN = 'https://georgiaguidebook.com';
+const ORIGIN = 'https://albaniaguidebook.com';
 const TITLE_SUFFIX = ' — Georgia Guidebook';
 const DIST = 'dist';
 

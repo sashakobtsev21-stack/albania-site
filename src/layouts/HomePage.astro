@@ -210,7 +210,7 @@ const showcasePicks = [
   },
   { kind: 'article', category: 'attractions', slug: 'vardzia', kicker: 'sight' },
   { kind: 'restaurant', slug: 'sushiman-batumi', edaSlug: 'gde-poest-batumi', kicker: 'food' },
-  { kind: 'article', category: 'food', slug: 'chto-poprobovat', kicker: 'food' },
+  { kind: 'article', category: 'food', slug: 'what-to-try', kicker: 'food' },
   { kind: 'route', slug: 'gomismta-iz-batumi', kicker: 'route' },
   { kind: 'article', category: 'cities', slug: 'batumi', kicker: 'city' },
 ] as const;
@@ -422,7 +422,7 @@ for (const pick of showcasePicks) {
         <h2 class="services-band__title">{dict.relocation.uslugi.heading}</h2>
         <p class="services-band__lead">{dict.relocation.uslugi.text}</p>
       </div>
-      <a class="services-band__cta" href={`${sectionHref(lang, 'relocation')}uslugi/`}>
+      <a class="services-band__cta" href={`${sectionHref(lang, 'relocation')}services/`}>
         {dict.relocation.uslugi.cta}
         <Icon name="arrow-right" size={18} />
       </a>

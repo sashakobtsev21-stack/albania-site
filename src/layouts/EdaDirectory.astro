@@ -49,7 +49,7 @@ const dict = t(lang);
 const pageTitle = `${dict.eda.heading} — ${dict.siteName}`;
 const description = clampDesc(dict.eda.lead);
 
-const SITE = Astro.site ?? new URL('https://georgiaguidebook.com');
+const SITE = Astro.site ?? new URL('https://albaniaguidebook.com');
 const pageUrl = new URL(Astro.url.pathname, SITE).href;
 const homeUrl = new URL(sectionHref(lang, 'home'), SITE).href;
 
@@ -63,12 +63,12 @@ const places = await getCollectionSafe(
 const articlesAll = await getCollectionSafe('articles', (entry) => entry.data.draft !== true);
 const cuisineHref = articleHref(
   articlesAll.some(
-    (e) => e.data.lang === lang && e.data.category === 'food' && e.data.slug === 'chto-poprobovat',
+    (e) => e.data.lang === lang && e.data.category === 'food' && e.data.slug === 'what-to-try',
   )
     ? lang
     : DEFAULT_LANG,
   'food',
-  'chto-poprobovat',
+  'what-to-try',
 );
 
 /**
