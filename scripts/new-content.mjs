@@ -22,16 +22,17 @@ import { dirname } from 'node:path';
 const LANGS = ['ru', 'uk', 'en'];
 
 const ARTICLE_CATEGORIES = [
-  'dostoprimechatelnosti',
-  'goroda',
-  'eda',
-  'razvlecheniya',
-  'marshruty',
+  'attractions',
+  'cities',
+  'food',
+  'entertainment',
+  'routes',
   'transport',
-  'arenda-avto',
-  'relokatsiya',
-  'strahovka',
-  'novosti',
+  'car-rental',
+  'relocation',
+  'insurance',
+  'news',
+  'planning',
 ];
 
 // --- argv --------------------------------------------------------------
@@ -111,7 +112,7 @@ function articleBody(lang, category) {
       : lang === 'uk'
         ? 'TODO: вступний абзац — жваво й по суті, без вигаданих фактів.'
         : 'TODO: intro paragraph — lively and to the point, no invented facts.';
-  return `${dodComment(category === 'novosti' ? 'news' : 'route' === category ? 'route' : type)}\n\n${intro}\n`;
+  return `${dodComment(category === 'news' ? 'news' : type)}\n\n${intro}\n`;
 }
 
 function buildArticle(lang, { category }) {
@@ -139,7 +140,7 @@ title: '${title}'
 description: 'TODO: описание ≤155 символов'
 slug: '${slug}'
 lang: '${lang}'
-category: 'marshruty'
+category: 'routes'
 publishedAt: ${today}
 updatedAt: ${today}
 ${coverBlock}
@@ -192,7 +193,7 @@ function buildService(lang) {
 name: '${title}'
 slug: '${slug}'
 lang: '${lang}'
-rubric: 'zhilyo-rieltory' # TODO: zhilyo-rieltory|klining|pereezd|remont|dokumenty|perevodchiki
+rubric: 'housing-realtors' # TODO: housing-realtors|cleaning|moving|repairs|documents|translators
 city: '${city}'
 summary: 'TODO: краткое описание услуги'
 tags: []
@@ -223,9 +224,9 @@ ${dodComment('city')}
 const PLAN = {
   article: {
     coll: 'articles',
-    build: (l) => buildArticle(l, { category: opts.category || 'dostoprimechatelnosti' }),
+    build: (l) => buildArticle(l, { category: opts.category || 'attractions' }),
   },
-  news: { coll: 'articles', build: (l) => buildArticle(l, { category: 'novosti' }) },
+  news: { coll: 'articles', build: (l) => buildArticle(l, { category: 'news' }) },
   route: { coll: 'routes', build: buildRoute },
   restaurant: { coll: 'restaurants', build: buildRestaurant },
   service: { coll: 'services', build: buildService },

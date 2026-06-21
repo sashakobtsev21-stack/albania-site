@@ -52,13 +52,13 @@ export interface HubSectionContent {
  * (`attractionTypes`), порядок здесь = порядок чипов/опций фильтра каталога.
  */
 export const ATTRACTION_TYPE_SLUGS = [
-  'gory-priroda',
-  'vodopady-kanony-ozera',
-  'peschery',
-  'hramy-monastyri',
-  'kreposti-zamki',
-  'kurorty-termy',
-  'muzei-gorodskoe',
+  'mountains-nature',
+  'waterfalls-canyons-lakes',
+  'caves',
+  'churches-monasteries',
+  'fortresses-castles',
+  'resorts-springs',
+  'museums-landmarks',
 ] as const;
 export type AttractionTypeSlug = (typeof ATTRACTION_TYPE_SLUGS)[number];
 
@@ -94,13 +94,7 @@ export type RegionSlug = (typeof REGION_SLUGS)[number];
  * Слаги подкатегорий «Развлечений» (§7) — совпадают с enum RAZVL_TYPES в
  * content.config.ts (поле `razvlType`). Лейблы — в словарях (`razvlTypes`).
  */
-export const RAZVL_TYPE_SLUGS = [
-  'nochnaya-zhizn',
-  'afisha',
-  'aktivnyy',
-  'kazino',
-  'mesta',
-] as const;
+export const RAZVL_TYPE_SLUGS = ['nightlife', 'events', 'active', 'casino', 'places'] as const;
 export type RazvlTypeSlug = (typeof RAZVL_TYPE_SLUGS)[number];
 
 /**
@@ -109,12 +103,12 @@ export type RazvlTypeSlug = (typeof RAZVL_TYPE_SLUGS)[number];
  * (`serviceRubrics`).
  */
 export const SERVICE_RUBRIC_SLUGS = [
-  'zhilyo-rieltory',
-  'klining',
-  'pereezd',
-  'remont',
-  'dokumenty',
-  'perevodchiki',
+  'housing-realtors',
+  'cleaning',
+  'moving',
+  'repairs',
+  'documents',
+  'translators',
 ] as const;
 export type ServiceRubricSlug = (typeof SERVICE_RUBRIC_SLUGS)[number];
 

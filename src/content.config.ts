@@ -57,13 +57,13 @@ const CUISINE_KEYS = [
  * лейблы в i18n (`attractionTypes`); набор финализирован: 7 типов.
  */
 const ATTRACTION_TYPES = [
-  'gory-priroda', // горы / перевалы / природа
-  'vodopady-kanony-ozera', // водопады / каньоны / озёра
-  'peschery', // пещеры / пещерные города
-  'hramy-monastyri', // храмы / монастыри
-  'kreposti-zamki', // крепости / замки
-  'kurorty-termy', // курорты / термы
-  'muzei-gorodskoe', // музеи / городские объекты
+  'mountains-nature', // горы / перевалы / природа
+  'waterfalls-canyons-lakes', // водопады / каньоны / озёра
+  'caves', // пещеры / пещерные города
+  'churches-monasteries', // храмы / монастыри
+  'fortresses-castles', // крепости / замки
+  'resorts-springs', // курорты / термы
+  'museums-landmarks', // музеи / городские объекты
 ] as const;
 
 /**
@@ -93,11 +93,11 @@ const REGIONS = [
  * Опционально. Слаги ↔ ru/uk лейблы в i18n (`razvlTypes`). 5 подкатегорий.
  */
 const RAZVL_TYPES = [
-  'nochnaya-zhizn', // клубы, бары, лаунж
-  'afisha', // квизы, киновечера, концерты
-  'aktivnyy', // велопрокат, аквапарки, активный отдых
-  'kazino', // казино (игорные заведения; выделено в отдельную подкатегорию)
-  'mesta', // пляжи, парки, музеи, рынки
+  'nightlife', // клубы, бары, лаунж
+  'events', // квизы, киновечера, концерты
+  'active', // велопрокат, аквапарки, активный отдых
+  'casino', // казино (игорные заведения; выделено в отдельную подкатегорию)
+  'places', // пляжи, парки, музеи, рынки
 ] as const;
 
 /**
@@ -106,12 +106,12 @@ const RAZVL_TYPES = [
  * (`serviceRubrics`).
  */
 const SERVICE_RUBRICS = [
-  'zhilyo-rieltory', // жильё / риелторы
-  'klining', // клининг / уборка
-  'pereezd', // переезд / грузоперевозки
-  'remont', // ремонт / мастера
-  'dokumenty', // документы / юристы
-  'perevodchiki', // переводчики / нотариат
+  'housing-realtors', // жильё / риелторы
+  'cleaning', // клининг / уборка
+  'moving', // переезд / грузоперевозки
+  'repairs', // ремонт / мастера
+  'documents', // документы / юристы
+  'translators', // переводчики / нотариат
 ] as const;
 
 const MONTHS = [
