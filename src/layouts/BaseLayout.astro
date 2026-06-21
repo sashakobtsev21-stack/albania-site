@@ -132,9 +132,13 @@ const siteLd = {
       />
     )}
 
-    {/* GA4 отключён (TODO R1.5, §17): грузинский property-ID убран — нужен Albania GA4.
-        При подключении вернуть gtag-loader + инлайн-инициализацию с новым ID и
-        ПЕРЕСЧИТАТЬ sha256-хеш инлайна в public/_headers (script-src, §18). */}
+    {/* Google Analytics 4 (§17, правило 8 — единственная аналитика на сайте).
+        gtag.js грузится async из googletagmanager.com (script-src, _headers);
+        инициализация — внешним /js/ga-init.js со 'self' (без инлайна → не нужен
+        sha256-хэш в CSP, как и все скрипты проекта, §18). Property: G-9FTVJ00X41. */}
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-9FTVJ00X41"
+    ></script>
+    <script is:inline src="/js/ga-init.js"></script>
 
 
     <!--
