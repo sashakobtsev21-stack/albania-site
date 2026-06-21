@@ -1,5 +1,5 @@
 /*
- * Дизайн-токены — Georgia Guidebook (SPEC §10).
+ * Дизайн-токены — Albania Guidebook (SPEC §10). Направление «Адриатика / Ривьера» (R2).
  * Значения утверждены владельцем в §10; R2 (ui-ux-pro-max) их уточнит.
  * Единственный источник цветов/отступов/радиусов/типографики.
  * Хардкод hex в компонентах запрещён — только var(--...) отсюда.
@@ -9,11 +9,11 @@
  */
 
 :root {
-  /* --- Палитра (§10) --- */
-  --color-wine: #6b1f2e; /* вино-саперави: акцент / CTA-альтернатива */
-  --color-sun: #e8a33d; /* солнце: CTA, AffiliateBox */
-  --color-slate: #23282e; /* сланец: текст */
-  --color-stone: #f2efe9; /* камень: фон секций */
+  /* --- Палитра «Адриатика / Ривьера» (имена переменных сохранены) --- */
+  --color-wine: #1e88c7; /* лазурь моря: основной акцент (ссылки/CTA/фокус) */
+  --color-sun: #2bb3a3; /* бирюза: вторичный акцент / хайлайты */
+  --color-slate: #16263a; /* глубокий синий: текст */
+  --color-stone: #f3ecdd; /* тёплый песок: фон секций */
   --color-white: #ffffff;
 
   /* --- Шрифты (§10) --- */
@@ -66,15 +66,19 @@
   --surface-raised: var(--color-white);
 
   /* Текст. */
-  --text-body: var(--color-slate); /* body — сланец */
-  --text-heading: var(--color-wine); /* H1/H2 — вино-саперави */
+  --text-body: var(--color-slate); /* body — глубокий синий */
+  --text-heading: color-mix(
+    in srgb,
+    var(--color-wine) 70%,
+    #06243b
+  ); /* H1/H2 — глубокая лазурь (текст-safe ≥4.5) */
   --text-muted: color-mix(in srgb, var(--color-slate) 70%, var(--color-stone)); /* приглушённый */
-  --text-on-cta: var(--color-slate); /* текст на солнечной кнопке (контраст ≥4.5) */
-  --text-on-wine: var(--color-white); /* текст на вине */
+  --text-on-cta: var(--color-white); /* текст на лазурной кнопке */
+  --text-on-wine: var(--color-white); /* текст на лазури */
 
-  /* Ссылки — вино. */
-  --link: var(--color-wine);
-  --link-hover: color-mix(in srgb, var(--color-wine) 80%, black);
+  /* Ссылки — лазурь (затемнённая для текст-контраста ≥4.5 на белом). */
+  --link: color-mix(in srgb, var(--color-wine) 82%, black);
+  --link-hover: color-mix(in srgb, var(--color-wine) 62%, black);
 
   /* Разделительные линии — вино/сланец на низкой альфе (тонкие). */
   --border-hairline: color-mix(in srgb, var(--color-slate) 12%, transparent);
@@ -82,12 +86,15 @@
   --border-card: color-mix(in srgb, var(--color-slate) 14%, transparent);
   --border-card-hover: color-mix(in srgb, var(--color-wine) 35%, transparent);
 
-  /* CTA — солнце ТОЛЬКО для кнопок и AffiliateBox (не декоративно). */
-  --cta-bg: var(--color-sun);
-  --cta-bg-hover: color-mix(in srgb, var(--color-sun) 88%, black);
-  /* Граница CTA/AffiliateBox: солнце на белом = ~2.1:1 — провал WCAG 1.4.11 (UI ≥3:1).
-     Затемнённый вариант для ВИДИМОЙ границы виджета (аудит 2026-06-17, a11y). */
-  --border-cta: #b87520; /* ~3.5:1 на белом */
+  /* CTA — лазурь ТОЛЬКО для кнопок и AffiliateBox (не декоративно). Текст белый. */
+  --cta-bg: color-mix(
+    in srgb,
+    var(--color-wine) 90%,
+    black
+  ); /* затемнённая лазурь → белый текст ≥4.5 */
+  --cta-bg-hover: color-mix(in srgb, var(--color-wine) 72%, black);
+  /* Видимая граница CTA/AffiliateBox (UI ≥3:1 на белом). */
+  --border-cta: color-mix(in srgb, var(--color-wine) 85%, black);
 
   /* Ховер-фон плиток/интерактива (лёгкий камень). */
   --surface-hover: color-mix(in srgb, var(--color-stone) 60%, var(--color-white));
@@ -142,7 +149,7 @@
     0 6px 16px color-mix(in srgb, var(--color-slate) 9%, transparent);
   --shadow-cta:
     0 2px 4px color-mix(in srgb, var(--color-slate) 8%, transparent),
-    0 8px 20px color-mix(in srgb, var(--color-sun) 22%, transparent);
+    0 8px 20px color-mix(in srgb, var(--color-wine) 24%, transparent);
 
   /*
    * --- Hero на фото (§6 контраст ≥4.5, §15 LCP) ---
