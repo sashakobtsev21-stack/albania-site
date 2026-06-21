@@ -53,14 +53,14 @@ const {
   meta = [],
   qualityMark = false,
   gallery,
-} = Astro.props;
+} = Astro.props as Props;
 const dict = t(lang);
 
 /** Слайды карусели: обложка + доп. фото (макс. 5). Карусель — только если >1. */
-const slides = [
-  ...(cover ? [{ src: cover.src, alt: cover.alt }] : []),
-  ...(gallery ?? []),
-].slice(0, 5);
+const slides = [...(cover ? [{ src: cover.src, alt: cover.alt }] : []), ...(gallery ?? [])].slice(
+  0,
+  5,
+);
 const hasCarousel = slides.length > 1;
 const variants = coverVariants as Record<string, string>;
 ---
@@ -98,10 +98,20 @@ const variants = coverVariants as Record<string, string>;
             </figure>
           ))}
         </a>
-        <button type="button" class="card__nav card__nav--prev" data-rcard-prev aria-label={dict.gallery.prev}>
+        <button
+          type="button"
+          class="card__nav card__nav--prev"
+          data-rcard-prev
+          aria-label={dict.gallery.prev}
+        >
           <Icon name="arrow-right" size={18} />
         </button>
-        <button type="button" class="card__nav card__nav--next" data-rcard-next aria-label={dict.gallery.next}>
+        <button
+          type="button"
+          class="card__nav card__nav--next"
+          data-rcard-next
+          aria-label={dict.gallery.next}
+        >
           <Icon name="arrow-right" size={18} />
         </button>
         <div class="card__dots" aria-hidden="true">
@@ -123,7 +133,9 @@ const variants = coverVariants as Record<string, string>;
               ))}
             </ul>
           )}
-          {date && <VerifiedBadge lang={lang} date={date} variant={verified} photo={verifiedPhoto} />}
+          {date && (
+            <VerifiedBadge lang={lang} date={date} variant={verified} photo={verifiedPhoto} />
+          )}
           {description && <p class="card__desc">{description}</p>}
         </div>
       </a>

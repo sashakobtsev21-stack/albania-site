@@ -95,7 +95,13 @@ export const SECTION_KEYS: SectionKey[] = [
 ];
 
 /** 5 главных плиток входа на главной (§8.4): + «Развлечения» (решение владельца 2026-06-16). */
-export const PRIMARY_TILE_KEYS = ['attractions', 'cities', 'food', 'entertainment', 'routes'] as const;
+export const PRIMARY_TILE_KEYS = [
+  'attractions',
+  'cities',
+  'food',
+  'entertainment',
+  'routes',
+] as const;
 
 /** Все разделы для футера и блока «Все разделы» на главной (§8.4): хабы + «О проекте» + «Обратная связь». */
 export const ALL_SECTION_KEYS: SectionKey[] = [...SECTION_KEYS, 'about', 'contact'];
@@ -167,18 +173,18 @@ export function articleHref(lang: Lang, category: string, slug: string): string 
  * по нему берётся локализованное название из словаря (`route.months`).
  */
 export const MONTH_SLUGS = [
-  'yanvar',
-  'fevral',
-  'mart',
-  'aprel',
+  'january',
+  'february',
+  'march',
+  'april',
   'may',
-  'iyun',
-  'iyul',
-  'avgust',
-  'sentyabr',
-  'oktyabr',
-  'noyabr',
-  'dekabr',
+  'june',
+  'july',
+  'august',
+  'september',
+  'october',
+  'november',
+  'december',
 ] as const;
 
 /** Локализованное название месяца по его слугу (§11 bestSeason → §12 словарь). */

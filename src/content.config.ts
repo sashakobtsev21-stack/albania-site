@@ -115,18 +115,18 @@ const SERVICE_RUBRICS = [
 ] as const;
 
 const MONTHS = [
-  'yanvar',
-  'fevral',
-  'mart',
-  'aprel',
+  'january',
+  'february',
+  'march',
+  'april',
   'may',
-  'iyun',
-  'iyul',
-  'avgust',
-  'sentyabr',
-  'oktyabr',
-  'noyabr',
-  'dekabr',
+  'june',
+  'july',
+  'august',
+  'september',
+  'october',
+  'november',
+  'december',
 ] as const;
 
 /** [lat, lng] — гео-координата (§11). */

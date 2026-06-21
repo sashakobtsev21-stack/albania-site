@@ -120,7 +120,7 @@ try {
   // На Windows chrome-launcher.kill() иногда падает EPERM при удалении temp-профиля
   // (Chrome ещё не отпустил папку) — аудиты к этому моменту завершены, ошибку глушим.
   try {
-    await chrome.kill();
+    chrome.kill();
   } catch {
     /* temp-cleanup гонка на Windows — несущественно */
   }
