@@ -132,16 +132,11 @@ const siteLd = {
       />
     )}
 
-    <!-- Google tag (gtag.js) — GA4. Внешний loader + инлайн-инициализация. Под строгим
-         CSP (§18, без 'unsafe-inline') инлайн-скрипт разрешён по sha256-хешу в
-         public/_headers → script-src. Меняешь содержимое инлайна/ID — пересчитай хеш. -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PV88LQSD3W"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-PV88LQSD3W');
-    </script>
+    <!-- GA4 отключён (TODO R1.5, §17): грузинский ID G-PV88LQSD3W убран — нужен
+         Albania GA4-property. При подключении вернуть gtag-loader + инлайн-инициализацию
+         с новым ID и ПЕРЕСЧИТАТЬ sha256-хеш инлайна в public/_headers → script-src (§18). -->
+    <!-- TODO(R1.5): <script async src="https://www.googletagmanager.com/gtag/js?id={ALBANIA_GA4_ID}"></script> + gtag config (с новым ID + хеш в _headers). -->
+
 
     <!--
       Гейт движения (ui-ux-pro-max §7): СИНХРОННЫЙ внешний модуль со 'self'
