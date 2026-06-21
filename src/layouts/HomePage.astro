@@ -233,13 +233,30 @@ for (const pick of showcasePicks) {
        при .js-anim и разрешённом движении (FOUC-safe, см. global.css). */
   }
   <section class="hero">
-    {/* Морской градиент-фон задаётся в CSS (.hero); скрим усиливает контраст текста. */}
+    {/* Фото Албанской Ривьеры (CC); морской градиент в CSS — фолбэк под фото. Скрим — контраст текста. */}
+    <img
+      class="hero__bg"
+      src="/images/hero/riviera.webp"
+      width="1920"
+      height="860"
+      alt=""
+      decoding="async"
+      fetchpriority="high"
+    />
     <div class="hero__scrim"></div>
     <div class="container hero__content" data-hero-stagger>
       <h1 class="hero__title">{dict.home.heroTitle}</h1>
       <p class="hero__subtitle">{dict.home.heroSubtitle}</p>
       <SearchBox lang={lang} items={searchItems} />
     </div>
+    <a
+      class="hero__credit"
+      href="https://commons.wikimedia.org/wiki/File:Ilias_Albanian_Riviera.jpg"
+      target="_blank"
+      rel="noopener nofollow"
+    >
+      Фото: Albinfo / Wikimedia Commons, CC BY 4.0
+    </a>
   </section>
 
   {/* Новости — свежие за 2 дня; блок скрывается, если свежего нет (§8.4). */}
