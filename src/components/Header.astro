@@ -58,11 +58,9 @@ const secondaryKeys = SECTION_KEYS.filter((key) => !primarySet.includes(key));
       </ul>
     </nav>
 
-    <div class="bar__lang">
-      <LangSwitcher lang={lang} availableLangs={availableLangs} />
-    </div>
-
-    {/* Кнопка-меню + компактный блок-выпадашка с остальными разделами. */}
+    {/* Кнопка-меню + выпадашка: разделы + переключатель языка. Язык убран из
+        строки шапки (решение владельца): сайт EN-first, смена языка — вторичное
+        действие, ему место в меню, а не на главном экране. */}
     <div class="menu">
       <button
         type="button"
@@ -109,6 +107,11 @@ const secondaryKeys = SECTION_KEYS.filter((key) => !primarySet.includes(key));
             })
           }
         </ul>
+        {/* Переключатель языка — в подвале выпадашки, отделён линией. */}
+        <div class="nav__lang">
+          <span class="nav__lang-label">{dict.lang.label}</span>
+          <LangSwitcher lang={lang} availableLangs={availableLangs} />
+        </div>
       </nav>
     </div>
   </div>
@@ -218,14 +221,11 @@ const secondaryKeys = SECTION_KEYS.filter((key) => !primarySet.includes(key));
     font-weight: 600;
   }
 
-  /* Группа «язык» прижата вправо (бренд и основные разделы — слева). */
-  .bar__lang {
-    margin-left: auto;
-  }
-
-  /* Кнопка-меню + выпадашка. */
+  /* Кнопка-меню + выпадашка. Прижата вправо (бренд и разделы — слева); раньше
+     эту роль играла группа языка, теперь убранная из строки в выпадашку. */
   .menu {
     position: relative;
+    margin-left: auto;
   }
   .menu-toggle {
     display: inline-flex;
@@ -348,6 +348,23 @@ const secondaryKeys = SECTION_KEYS.filter((key) => !primarySet.includes(key));
     }
   }
 
+  /* Переключатель языка в подвале выпадашки: метка сверху, языки снизу,
+     отделено тонкой линией от списка разделов. */
+  .nav__lang {
+    margin-top: var(--space-2);
+    padding: var(--space-3) var(--space-3) var(--space-1);
+    border-top: 1px solid var(--border-hairline);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+  }
+  .nav__lang-label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
   /*
    * Компактная шапка на узких экранах (§15: 70%+ трафика — телефоны).
    * Бренд (широкий шрифт Unbounded) + 3-язычный переключатель + кнопка-меню
@@ -376,7 +393,6 @@ const secondaryKeys = SECTION_KEYS.filter((key) => !primarySet.includes(key));
       width: 32px;
       height: 21px;
     }
-    .bar__lang,
     .menu {
       flex: 0 0 auto;
     }
