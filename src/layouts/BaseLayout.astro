@@ -191,7 +191,10 @@ const siteLd = {
     <script is:inline type="application/ld+json" set:html={JSON.stringify(siteLd)} />
 
     <meta name="generator" content={Astro.generator} />
+    {/* Favicon (вкладка + сниппет Google): SVG для совр. браузеров + PNG-фолбэк
+        (Google/старые браузеры). Альбанский флаг — public/favicon.svg + /icons/. */}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/icons/icon-192.png" type="image/png" sizes="192x192" />
 
     {/* PWA: манифест + иконки + цвет темы. theme-color = --color-wine (meta требует литерал). */}
     <link rel="manifest" href="/manifest.webmanifest" />
