@@ -6,7 +6,11 @@ lang: 'en'
 category: 'planning'
 publishedAt: 2026-06-21
 updatedAt: 2026-06-21
-draft: true
+draft: false
+cover:
+  src: '/images/albania-visa/cover.webp'
+  alt: "Tirana skyline, the capital of Albania"
+coverCredit: 'Фото: Albnext / Wikimedia Commons, CC BY-SA 4.0'
 sources:
   - 'punetejashtme.gov.al'
   - 'travel.state.gov'

@@ -6,7 +6,11 @@ lang: 'uk'
 category: 'insurance'
 publishedAt: 2026-06-21
 updatedAt: 2026-06-21
-draft: true
+draft: false
+cover:
+  src: '/images/do-you-need-insurance/cover.webp'
+  alt: "Албанські Альпи біля села Тет"
+coverCredit: 'Фото: Alexkom000 / Wikimedia Commons, CC BY 4.0'
 sources:
   - 'gov.uk'
   - 'travel.state.gov'

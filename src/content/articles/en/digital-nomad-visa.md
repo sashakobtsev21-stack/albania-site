@@ -6,7 +6,11 @@ lang: 'en'
 category: 'relocation'
 publishedAt: 2026-06-21
 updatedAt: 2026-06-21
-draft: true
+draft: false
+cover:
+  src: '/images/digital-nomad-visa/cover.webp'
+  alt: "Colourful buildings in central Tirana"
+coverCredit: 'Фото: Justin W Flory / Wikimedia Commons, CC BY-SA 3.0'
 sources:
   - 'e-albania.al'
   - 'qkb.gov.al'

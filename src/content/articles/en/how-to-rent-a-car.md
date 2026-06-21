@@ -6,7 +6,11 @@ lang: 'en'
 category: 'car-rental'
 publishedAt: 2026-06-21
 updatedAt: 2026-06-21
-draft: true
+draft: false
+cover:
+  src: '/images/how-to-rent-a-car/cover.webp'
+  alt: "The Llogara Pass mountain road in Albania"
+coverCredit: 'Фото: godo godaj / Wikimedia Commons, CC BY 2.0'
 sources:
   - 'lonelyplanet.com'
 affiliate:

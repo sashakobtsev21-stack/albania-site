@@ -6,7 +6,11 @@ lang: 'en'
 category: 'planning'
 publishedAt: 2026-06-21
 updatedAt: 2026-06-21
-draft: true
+draft: false
+cover:
+  src: '/images/best-time-to-visit/cover.webp'
+  alt: "A turquoise beach at Ksamil on the Albanian Riviera"
+coverCredit: 'Фото: Aktron / Wikimedia Commons, CC BY-SA 4.0'
 sources:
   - 'lonelyplanet.com'
   - 'wander-lush.org'
