@@ -28,12 +28,7 @@ import SearchBox, { type SearchItem } from '../components/SearchBox.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import Icon from '../components/Icon.astro';
 import EmptyHint from '../components/EmptyHint.astro';
-import { getImage } from 'astro:assets';
-import heroGergeti from '../assets/hero/gergeti-kazbek-2.jpg';
-import heroUshguli from '../assets/hero/ushguli.jpg';
-import heroMestia from '../assets/hero/mestia-ushba.jpg';
-import heroTbilisi from '../assets/hero/tbilisi-colorful.jpg';
-import heroKakheti from '../assets/hero/kakheti-vineyards.jpg';
+// Hero-фон — морской градиент Адриатики (CSS .hero), фото убраны (R2 редизайн).
 
 interface Props {
   lang: Lang;
@@ -44,80 +39,8 @@ const dict = t(lang);
 const pageTitle = `${dict.siteName} — ${dict.tagline}`;
 const description = dict.home.heroSubtitle;
 
-/**
- * Hero-фон с ротацией: кадр меняется каждые 3 часа (по 3-часовому окну
- * времени, floor(now / 3ч) % N) — чистая статика, без бэкенда. Исходники —
- * Unsplash (бесплатная лицензия); атрибуция (автор · Unsplash) и ссылка на фото —
- * в credit под кадром, меняются вместе с фото. astro:assets даёт адаптивный
- * webp (responsive widths). LCP (§15): <img> рендерится без src, инлайн-скрипт
- * сразу за ним ставит srcset выбранного кадра (без двойной загрузки),
- * fetchpriority=high; <noscript> — дефолтный кадр для отключённого JS.
- */
-// Hero — full-bleed фон со СКРИМОМ. Раньше упирался в 1280px webp: на широком
-// десктопе кадр апскейлился до ~1920 и мылил. Чинится разрешением (битрейт под
-// тёмным скримом вторичен), но жёсткий бюджет §15 (каждая картинка ≤200КБ, гейт qa)
-// не даёт детальным кадрам влезть в 1600+ на webp. Поэтому AVIF (сжимает заметно
-// плотнее) до 1600px + webp-фолбэк до 1280px для ~5% браузеров без AVIF (<picture>).
-// `sizes="100vw"`: мобайл (70%+ трафика, §15) и Lighthouse-mobile берут 640/960/1280;
-// 1600 уезжает только на десктоп. quality AVIF — per-image (q): детальный снежный
-// Гергети жмём сильнее, мягкий градиент Кахетии — мягче; так каждый вариант ≤~175КБ.
-const AVIF_WIDTHS = [640, 960, 1280, 1600];
-const WEBP_WIDTHS = [640, 960, 1280];
-const heroSources = [
-  {
-    img: heroGergeti,
-    q: 40,
-    credit: 'Deogyeon Hwang · Unsplash',
-    href: 'https://unsplash.com/photos/vep3LTkwuwo',
-    focus: '50% 50%',
-  },
-  {
-    img: heroUshguli,
-    q: 50,
-    credit: 'Patrick Schneider · Unsplash',
-    href: 'https://unsplash.com/photos/8bPJ0vagphw',
-    focus: '50% 55%',
-  },
-  {
-    img: heroMestia,
-    q: 48,
-    credit: 'Mike Swigunski · Unsplash',
-    href: 'https://unsplash.com/photos/oqWb_tOK7ns',
-    focus: '50% 50%',
-  },
-  {
-    img: heroTbilisi,
-    q: 52,
-    credit: 'Inna Nasonova · Unsplash',
-    href: 'https://unsplash.com/photos/VcbjEhgdR9A',
-    focus: '50% 45%',
-  },
-  {
-    img: heroKakheti,
-    q: 62,
-    credit: 'Giga Goriashvili · Unsplash',
-    href: 'https://unsplash.com/photos/Lf__9L2SHVQ',
-    focus: '50% 55%',
-  },
-];
-const heroVariants = await Promise.all(
-  heroSources.map(async (s) => {
-    const [avif, webp] = await Promise.all([
-      getImage({ src: s.img, width: 1600, widths: AVIF_WIDTHS, format: 'avif', quality: s.q }),
-      // webp-фолбэк ≤1280px — держит каждый вариант ≤200КБ (§15) для браузеров без AVIF
-      getImage({ src: s.img, width: 1280, widths: WEBP_WIDTHS, format: 'webp', quality: 64 }),
-    ]);
-    return {
-      avifSrcset: avif.srcSet.attribute,
-      webpSrcset: webp.srcSet.attribute,
-      src: webp.src,
-      focus: s.focus,
-      href: s.href,
-      credit: s.credit,
-    };
-  }),
-);
-const heroDefault = heroVariants[0];
+// Hero-фон (R2): морской градиент Адриатики в CSS (.hero) — без фото. Реальный hero-кадр
+// (свои/CC албанские фото) вернём позже: <picture> + ротация (см. git-историю).
 
 /**
  * Индекс для клиентского поиска (§8.4): берём опубликованные статьи этого
@@ -126,8 +49,7 @@ const heroDefault = heroVariants[0];
  */
 const articles = await getCollectionSafe(
   'articles',
-  (entry) =>
-    entry.data.lang === lang && entry.data.draft !== true && entry.data.demo !== true,
+  (entry) => entry.data.lang === lang && entry.data.draft !== true && entry.data.demo !== true,
 );
 const searchItems: SearchItem[] = articles.map((entry) => ({
   title: entry.data.title,
@@ -167,7 +89,10 @@ const NEWS_HOME_WINDOW = 2;
 const homeNews = articles
   .filter((entry) => entry.data.category === 'news')
   .sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime())
-  .filter((entry) => Math.floor((Date.now() - entry.data.publishedAt.getTime()) / 86400000) <= NEWS_HOME_WINDOW)
+  .filter(
+    (entry) =>
+      Math.floor((Date.now() - entry.data.publishedAt.getTime()) / 86400000) <= NEWS_HOME_WINDOW,
+  )
   .slice(0, 5)
   .map((entry) => ({
     href: articleHref(lang, 'news', entry.data.slug),
@@ -299,7 +224,6 @@ for (const pick of showcasePicks) {
 // Открытое рекламное место («Разместите своё заведение») убрано с витрины по
 // решению владельца 2026-06-17. Поддержка ad-слота в ShowcaseRail оставлена
 // спящей — чтобы вернуть, снова добавить сюда showcaseItems.push({ ad:true, ... }).
-
 ---
 
 <BaseLayout title={pageTitle} description={description} lang={lang}>
@@ -309,46 +233,13 @@ for (const pick of showcasePicks) {
        при .js-anim и разрешённом движении (FOUC-safe, см. global.css). */
   }
   <section class="hero">
-    <picture>
-      <source id="heroAvif" type="image/avif" srcset={heroDefault.avifSrcset} sizes="100vw" />
-      <img
-        class="hero__bg"
-        id="heroBg"
-        src={heroDefault.src}
-        srcset={heroDefault.webpSrcset}
-        sizes="100vw"
-        alt=""
-        decoding="async"
-        fetchpriority="high"
-        style={`object-position:${heroDefault.focus}`}
-      />
-    </picture>
-    <script
-      is:inline
-      type="application/json"
-      id="hero-variants"
-      set:html={JSON.stringify({
-        variants: heroVariants,
-        periodMs: 3 * 60 * 60 * 1000,
-        prefix: dict.home.photoPrefix,
-      })}
-    />
-    <script is:inline src="/js/hero-rotate.js"></script>
+    {/* Морской градиент-фон задаётся в CSS (.hero); скрим усиливает контраст текста. */}
     <div class="hero__scrim"></div>
     <div class="container hero__content" data-hero-stagger>
       <h1 class="hero__title">{dict.home.heroTitle}</h1>
       <p class="hero__subtitle">{dict.home.heroSubtitle}</p>
       <SearchBox lang={lang} items={searchItems} />
     </div>
-    <a
-      class="hero__credit"
-      id="heroCredit"
-      href={heroDefault.href}
-      target="_blank"
-      rel="noopener nofollow"
-    >
-      {dict.home.photoPrefix}: {heroDefault.credit}
-    </a>
   </section>
 
   {/* Новости — свежие за 2 дня; блок скрывается, если свежего нет (§8.4). */}
@@ -397,20 +288,24 @@ for (const pick of showcasePicks) {
     </div>
   </section>
 
-  {/* 2b. Разделы путеводителя — on-page входы во ВСЕ разделы, включая «денежные»
-       (Транспорт/Аренда/Страховки/Новости), иначе зарытые в ☰/футер (аудит NAV-2). */}
+  {
+    /* 2b. Разделы путеводителя — on-page входы во ВСЕ разделы, включая «денежные»
+       (Транспорт/Аренда/Страховки/Новости), иначе зарытые в ☰/футер (аудит NAV-2). */
+  }
   <section class="block block--sections">
     <div class="container">
       <h2 class="block__heading" data-reveal>{dict.home.sectionsHeading}</h2>
       <ul class="home-sections" data-reveal>
-        {ALL_SECTION_KEYS.map((key) => (
-          <li>
-            <a class="home-section" href={sectionHref(lang, key)}>
-              <span>{dict.nav[key]}</span>
-              <Icon name="arrow-right" size={16} />
-            </a>
-          </li>
-        ))}
+        {
+          ALL_SECTION_KEYS.map((key) => (
+            <li>
+              <a class="home-section" href={sectionHref(lang, key)}>
+                <span>{dict.nav[key]}</span>
+                <Icon name="arrow-right" size={16} />
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </section>
@@ -451,7 +346,9 @@ for (const pick of showcasePicks) {
             ))}
           </div>
         ) : (
-          <div data-reveal><EmptyHint text={dict.home.freshEmpty} /></div>
+          <div data-reveal>
+            <EmptyHint text={dict.home.freshEmpty} />
+          </div>
         )
       }
     </div>
@@ -487,8 +384,13 @@ for (const pick of showcasePicks) {
     align-items: center;
     min-height: clamp(440px, 72vh, 660px);
     overflow: hidden;
-    /* Тёмный фон-заглушка под фото (до загрузки / без JS) — светлый текст читаем. */
-    background-color: var(--color-slate);
+    /* Морской градиент Адриатики (R2): глубокая лазурь (слева, под текстом) → азур → бирюза. */
+    background: linear-gradient(
+      125deg,
+      color-mix(in srgb, var(--color-wine) 58%, var(--color-slate)) 0%,
+      var(--color-wine) 52%,
+      var(--color-sun) 100%
+    );
   }
   .hero__bg {
     position: absolute;
