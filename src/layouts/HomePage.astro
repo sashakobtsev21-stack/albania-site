@@ -286,15 +286,24 @@ for (const pick of showcasePicks) {
     )
   }
 
-  {/* 2. Витрина — золотая лента партнёров/материалов (заменяет «С чего начать»). */}
+  {/* 2. Витрина — золотая лента партнёров/материалов (заменяет «С чего начать»).
+       Лента и её заголовок показываются только при наличии featured-контента
+       (showcaseItems). Пока его нет (R3 — города/маршруты/места Албании), секция
+       несёт лишь строку доверия, а не зияет пустой лентой. */}
   <section class="block block--showcase">
     <div class="container">
-      <h2 class="block__heading" data-reveal>{dict.home.showcase.heading}</h2>
-      <p class="showcase-lead" data-reveal>
-        {dict.home.showcase.lead}{' '}
-        <span class="showcase-lead__partner">{dict.home.showcase.partnerNote}</span>
-      </p>
-      <ShowcaseRail lang={lang} items={showcaseItems} label={dict.home.showcase.aria} />
+      {showcaseItems.length > 0 && (
+        <>
+          <h2 class="block__heading" data-reveal>
+            {dict.home.showcase.heading}
+          </h2>
+          <p class="showcase-lead" data-reveal>
+            {dict.home.showcase.lead}{' '}
+            <span class="showcase-lead__partner">{dict.home.showcase.partnerNote}</span>
+          </p>
+          <ShowcaseRail lang={lang} items={showcaseItems} label={dict.home.showcase.aria} />
+        </>
+      )}
       <p class="trust-line" data-reveal>
         {dict.home.trustLead}{' '}
         <a class="trust-line__link" href={sectionHref(lang, 'about')}>
@@ -636,6 +645,11 @@ for (const pick of showcasePicks) {
     font-size: var(--text-sm);
     color: var(--text-muted);
     max-width: 70ch;
+  }
+  /* Витрина пуста → строка доверия единственная в секции: верхний отступ
+     (он отделял её от ленты) лишний, убираем. */
+  .trust-line:first-child {
+    margin-top: 0;
   }
   .trust-line__link {
     display: inline-flex;
