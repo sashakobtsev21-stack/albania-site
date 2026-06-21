@@ -1,44 +1,45 @@
 /*
- * Ротация hero-фона главной — внешний модуль (CSP script-src 'self', §18).
- * Инлайн-JS на сайте запрещён, поэтому логика тут, а данные приходят из
- * <script type="application/json" id="hero-variants"> (data-блок, не исполняется
- * → CSP-безопасен, как JSON-LD).
- *
- * Кадр выбирается по текущему 3-часовому окну времени (floor(now/periodMs) % N):
- * меняется каждые 3 часа, без бэкенда. Скрипт подключён сразу за <img id="heroBg">
- * (классический, не defer) → src ставится рано (LCP §15). Кредит #heroCredit ниже
- * по DOM → обновляем на DOMContentLoaded.
+ * Ротация hero-фото на главной (§8.4) — внешний vanilla-модуль со 'self' (§18).
+ * Кросс-фейд нескольких кадров Албании по очереди + смена кредита под активным фото.
+ * Принципы: уважает prefers-reduced-motion (не крутит), пауза при скрытой вкладке
+ * (без фоновых таймеров вхолостую). Деградирует без JS — первый кадр уже .is-active
+ * (виден из HTML), ротации просто нет. Анимация — только opacity (CSS), 0 CLS.
+ * Первый кадр eager (LCP §15), остальные lazy → вес догрузки вне критического пути.
  */
-(function () {
-  const el = document.getElementById('hero-variants');
-  const img = document.getElementById('heroBg');
-  const avifSource = document.getElementById('heroAvif');
-  if (!el || !img) return;
+const root = document.querySelector('[data-hero-rotate]');
+if (root) {
+  const slides = [...root.querySelectorAll('.hero__bg')];
+  const credit = root.querySelector('[data-hero-credit]');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  let cfg;
-  try {
-    cfg = JSON.parse(el.textContent || '{}');
-  } catch {
-    return;
+  if (slides.length > 1 && !reduce) {
+    const INTERVAL = 7000;
+    let i = 0;
+    let timer = null;
+
+    const show = (n) => {
+      slides[i].classList.remove('is-active');
+      i = n;
+      slides[i].classList.add('is-active');
+      if (credit) {
+        const text = slides[i].getAttribute('data-credit');
+        const href = slides[i].getAttribute('data-credit-href');
+        if (text) credit.textContent = text;
+        if (href) credit.setAttribute('href', href);
+      }
+    };
+    const tick = () => show((i + 1) % slides.length);
+    const start = () => {
+      if (!timer) timer = setInterval(tick, INTERVAL);
+    };
+    const stop = () => {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    };
+
+    document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
+    start();
   }
-  const list = cfg.variants || [];
-  if (!list.length) return;
-
-  const i = Math.floor(Date.now() / (cfg.periodMs || 10800000)) % list.length;
-  const v = list[i];
-
-  if (avifSource && v.avifSrcset) avifSource.srcset = v.avifSrcset;
-  img.srcset = v.webpSrcset;
-  img.src = v.src;
-  if (v.focus) img.style.objectPosition = v.focus;
-
-  const setCredit = () => {
-    const c = document.getElementById('heroCredit');
-    if (c) {
-      c.href = v.href;
-      c.textContent = (cfg.prefix || 'Photo') + ': ' + v.credit;
-    }
-  };
-  if (document.readyState !== 'loading') setCredit();
-  else document.addEventListener('DOMContentLoaded', setCredit);
-})();
+}

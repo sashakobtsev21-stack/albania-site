@@ -39,8 +39,37 @@ const dict = t(lang);
 const pageTitle = `${dict.siteName} — ${dict.tagline}`;
 const description = dict.home.heroSubtitle;
 
-// Hero-фон (R2): морской градиент Адриатики в CSS (.hero) — без фото. Реальный hero-кадр
-// (свои/CC албанские фото) вернём позже: <picture> + ротация (см. git-историю).
+// Hero-кадры (§8.4): несколько CC-фото Албании, кросс-фейд по очереди
+// (/js/hero-rotate.js). Первый — LCP (eager/high), остальные lazy; морской градиент
+// Адриатики в CSS (.hero) — фолбэк под фото. Кредит меняется под активным кадром.
+const heroImages = [
+  {
+    src: '/images/hero/riviera.webp',
+    w: 1920,
+    h: 860,
+    author: 'Albinfo',
+    license: 'CC BY 4.0',
+    href: 'https://commons.wikimedia.org/wiki/File:Ilias_Albanian_Riviera.jpg',
+  },
+  {
+    src: '/images/hero/ksamil.webp',
+    w: 1120,
+    h: 630,
+    author: 'Marcin Szala (Pudelek)',
+    license: 'CC BY-SA 3.0',
+    href: 'https://commons.wikimedia.org/wiki/File:Ksamil_-_promenade.JPG',
+  },
+  {
+    src: '/images/hero/berat.webp',
+    w: 1920,
+    h: 860,
+    author: 'Arianit',
+    license: 'CC BY-SA 4.0',
+    href: 'https://commons.wikimedia.org/wiki/File:140_Air_view_of_the_neighbhorhood_towards_Helveti_Tekke_Berat.jpg',
+  },
+];
+const heroCredit = (img: (typeof heroImages)[number]): string =>
+  `${dict.home.photoPrefix}: ${img.author} / Wikimedia Commons, ${img.license}`;
 
 /**
  * Индекс для клиентского поиска (§8.4): берём опубликованные статьи этого
@@ -225,19 +254,26 @@ for (const pick of showcasePicks) {
        data-hero-stagger: мягкий вход H1→подзаголовок→поиск (≤450мс), только
        при .js-anim и разрешённом движении (FOUC-safe, см. global.css). */
   }
-  <section class="hero">
+  <section class="hero" data-hero-rotate>
     {
-      /* Фото Албанской Ривьеры (CC); морской градиент в CSS — фолбэк под фото. Скрим — контраст текста. */
+      /* Кадры Албании (CC) кросс-фейдом; морской градиент в CSS — фолбэк. Скрим — контраст текста. */
     }
-    <img
-      class="hero__bg"
-      src="/images/hero/riviera.webp"
-      width="1920"
-      height="860"
-      alt=""
-      decoding="async"
-      fetchpriority="high"
-    />
+    {
+      heroImages.map((img, idx) => (
+        <img
+          class:list={['hero__bg', { 'is-active': idx === 0 }]}
+          src={img.src}
+          width={img.w}
+          height={img.h}
+          alt=""
+          decoding="async"
+          loading={idx === 0 ? 'eager' : 'lazy'}
+          fetchpriority={idx === 0 ? 'high' : undefined}
+          data-credit={heroCredit(img)}
+          data-credit-href={img.href}
+        />
+      ))
+    }
     <div class="hero__scrim"></div>
     <div class="container hero__content" data-hero-stagger>
       <h1 class="hero__title">{dict.home.heroTitle}</h1>
@@ -246,12 +282,14 @@ for (const pick of showcasePicks) {
     </div>
     <a
       class="hero__credit"
-      href="https://commons.wikimedia.org/wiki/File:Ilias_Albanian_Riviera.jpg"
+      data-hero-credit
+      href={heroImages[0].href}
       target="_blank"
       rel="noopener nofollow"
     >
-      Фото: Albinfo / Wikimedia Commons, CC BY 4.0
+      {heroCredit(heroImages[0])}
     </a>
+    <script is:inline type="module" src="/js/hero-rotate.js"></script>
   </section>
 
   {/* Новости — свежие за 2 дня; блок скрывается, если свежего нет (§8.4). */}
@@ -425,6 +463,13 @@ for (const pick of showcasePicks) {
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
+    /* Кросс-фейд ротации (/js/hero-rotate.js): неактивные кадры прозрачны. Первый
+       приходит с .is-active из HTML → виден сразу (LCP, без fade-in на загрузке). */
+    opacity: 0;
+    transition: opacity 1100ms var(--ease-standard);
+  }
+  .hero__bg.is-active {
+    opacity: 1;
   }
   /*
    * Скрим направленный: тёмный слева (под текстом) → прозрачный справа, чтобы
