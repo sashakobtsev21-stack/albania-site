@@ -132,10 +132,10 @@ const siteLd = {
       />
     )}
 
-    <!-- GA4 отключён (TODO R1.5, §17): грузинский ID G-PV88LQSD3W убран — нужен
-         Albania GA4-property. При подключении вернуть gtag-loader + инлайн-инициализацию
-         с новым ID и ПЕРЕСЧИТАТЬ sha256-хеш инлайна в public/_headers → script-src (§18). -->
-    <!-- TODO(R1.5): <script async src="https://www.googletagmanager.com/gtag/js?id={ALBANIA_GA4_ID}"></script> + gtag config (с новым ID + хеш в _headers). -->
+    {/* GA4 отключён (TODO R1.5, §17): грузинский property-ID убран — нужен Albania GA4.
+        При подключении вернуть gtag-loader + инлайн-инициализацию с новым ID и
+        ПЕРЕСЧИТАТЬ sha256-хеш инлайна в public/_headers → script-src (§18). Astro-комментарий
+        {/* */} в HTML-вывод не попадает (в отличие от <!-- -->). */}
 
 
     <!--
