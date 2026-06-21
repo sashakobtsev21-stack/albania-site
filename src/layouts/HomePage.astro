@@ -10,7 +10,7 @@
  * персональной личности автора.
  *
  * Состав: hero+поиск → витрина (золотая лента) + строка доверия → бэнд
- * «Услуги для жизни в Грузии» (CTA) → свежие материалы → о проекте → footer (в Base).
+ * «Услуги для жизни в Албании» (CTA) → свежие материалы → о проекте → footer (в Base).
  */
 import { getCollectionSafe } from '../loaders/getCollectionSafe';
 import BaseLayout from './BaseLayout.astro';
@@ -28,7 +28,8 @@ import SearchBox, { type SearchItem } from '../components/SearchBox.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import Icon from '../components/Icon.astro';
 import EmptyHint from '../components/EmptyHint.astro';
-// Hero-фон — морской градиент Адриатики (CSS .hero), фото убраны (R2 редизайн).
+// Hero-фон — кросс-фейд CC-фото Албании (.hero__bg) поверх морского градиента
+// Адриатики (.hero — фолбэк под фото).
 
 interface Props {
   lang: Lang;
@@ -373,7 +374,7 @@ for (const pick of showcasePicks) {
     </div>
   </section>
 
-  {/* 3. Услуги для жизни в Грузии — заметный CTA-бэнд (продаваемый инвентарь, §16). */}
+  {/* 3. Услуги для жизни в Албании — заметный CTA-бэнд (продаваемый инвентарь, §16). */}
   <section class="services-band">
     <div class="container services-band__inner" data-reveal>
       <div class="services-band__text">
@@ -437,9 +438,9 @@ for (const pick of showcasePicks) {
     padding-inline: var(--space-4);
   }
 
-  /* Hero — фотофон Грузии (Гергети+Казбек) + тёмный скрим, светлый текст.
-     Картинка — LCP-элемент: astro:assets даёт адаптивные avif/webp, грузим
-     eager+high. Скрим обеспечивает контраст ≥4.5 (§6). Параллакса нет → §15. */
+  /* Hero — кросс-фейд CC-кадров Албании (/js/hero-rotate.js) + тёмный скрим,
+     светлый текст. Первый кадр — LCP-элемент (eager+high), остальные lazy. Скрим
+     обеспечивает контраст ≥4.5 (§6). Движение — opacity, параллакса нет → §15. */
   .hero {
     position: relative;
     isolation: isolate;
