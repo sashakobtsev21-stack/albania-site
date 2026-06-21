@@ -35,7 +35,16 @@ const secondaryKeys = SECTION_KEYS.filter((key) => !primarySet.includes(key));
   <RatesBar lang={lang} />
   <div class="bar">
     <a href={homeHref} class="brand">
-      {/* TODO(R2 брендинг): флаг Албании — /images/al-flag.svg (был грузинский ge-flag.svg, удалён). */}
+      {/* Флаг Албании у названия (декоративный — alt пуст, смысл несёт текст бренда). */}
+      <img
+        class="brand__flag"
+        src="/images/al-flag.svg"
+        width="35"
+        height="25"
+        alt=""
+        loading="eager"
+        decoding="async"
+      />
       <span>{dict.siteName}</span>
     </a>
 
@@ -177,12 +186,12 @@ const secondaryKeys = SECTION_KEYS.filter((key) => !primarySet.includes(key));
     /* даёт бренду сжиматься в флексе, чтобы строка шапки не уезжала за экран. */
     min-width: 0;
   }
-  /* Флаг Грузии у названия: тонкая рамка, чтобы белый край был виден на белой шапке. */
+  /* Флаг Албании у названия (7:5): тонкая рамка/скругление — аккуратный «чип». */
   .brand__flag {
     flex: none;
     display: block;
-    width: 48px;
-    height: 32px;
+    width: 35px;
+    height: 25px;
     border: 1px solid var(--border-hairline);
     border-radius: 2px;
   }
@@ -390,8 +399,8 @@ const secondaryKeys = SECTION_KEYS.filter((key) => !primarySet.includes(key));
       min-width: 0;
     }
     .brand__flag {
-      width: 32px;
-      height: 21px;
+      width: 28px;
+      height: 20px;
     }
     .menu {
       flex: 0 0 auto;
