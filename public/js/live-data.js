@@ -1,5 +1,5 @@
 /**
- * live-data.js — клиентский слой блока «Сейчас в Грузии» (§8.4, Фаза 6).
+ * live-data.js — клиентский слой блока «Сейчас в Албании» (§8.4, Фаза 6).
  *
  * Дотягивает свежие погоду/море/курс поверх build-time снапшота. Принципы:
  *  - один fetch на загрузку (НЕ polling, §15/правило 8 — без фоновых таймеров);
@@ -12,12 +12,14 @@
   const root = document.querySelector('[data-live]');
   if (!root) return;
 
+  // Тирана / Дуррес / Саранда — те же координаты, что в src/lib/liveSnapshot.ts.
   const AIR_URL =
-    'https://api.open-meteo.com/v1/forecast?latitude=41.6938,42.2679,41.6168&longitude=44.8015,42.6946,41.6367&current=temperature_2m';
+    'https://api.open-meteo.com/v1/forecast?latitude=41.3275,41.3231,39.8756&longitude=19.8187,19.4414,20.0050&current=temperature_2m';
   const SEA_URL =
-    'https://marine-api.open-meteo.com/v1/marine?latitude=41.645&longitude=41.63&current=sea_surface_temperature';
-  const FX_URL = 'https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/en/json/';
-  const CACHE_KEY = 'gg-live-v1';
+    'https://marine-api.open-meteo.com/v1/marine?latitude=39.87&longitude=20.00&current=sea_surface_temperature';
+  // Курс с базой USD: rates[X] = X за 1 USD; лек (ALL) — кросс-курсом.
+  const FX_URL = 'https://open.er-api.com/v6/latest/USD';
+  const CACHE_KEY = 'al-live-v1'; // префикс al- + версия: старый грузинский кэш игнорируется
   const TTL = 30 * 60 * 1000; // 30 минут
 
   const set = (key, val) => {
@@ -26,14 +28,14 @@
     if (el) el.textContent = val;
   };
   const fmtT = (n) => (typeof n === 'number' ? Math.round(n) + '°' : null);
-  const fmtFx = (n) => (typeof n === 'number' ? n.toFixed(2) + ' ₾' : null);
+  const fmtFx = (n) => (typeof n === 'number' ? n.toFixed(2) + ' L' : null);
 
   function render(d) {
     if (!d) return;
-    set('air-tbilisi', fmtT(d.air && d.air.tbilisi));
-    set('air-kutaisi', fmtT(d.air && d.air.kutaisi));
-    set('air-batumi', fmtT(d.air && d.air.batumi));
-    set('sea-batumi', fmtT(d.sea));
+    set('air-tirana', fmtT(d.air && d.air.tirana));
+    set('air-durres', fmtT(d.air && d.air.durres));
+    set('air-sarande', fmtT(d.air && d.air.sarande));
+    set('sea-sarande', fmtT(d.sea));
     set('fx-usd', fmtFx(d.fx && d.fx.usd));
     set('fx-eur', fmtFx(d.fx && d.fx.eur));
     set('fx-rub', fmtFx(d.fx && d.fx.rub));
@@ -85,19 +87,26 @@
         ? x.current.temperature_2m
         : null;
     const airArr = Array.isArray(air) ? air : [];
-    const fxArr =
-      Array.isArray(fx) && fx[0] && fx[0].currencies ? fx[0].currencies : [];
-    const per = (code) => {
-      const c = fxArr.find((x) => x.code === code);
-      return c && typeof c.rate === 'number' ? c.rate : null;
+    // open.er-api.com: rates[X] = X за 1 USD; лек за единицу = ALL/X × quantity.
+    const rates = fx && fx.rates ? fx.rates : null;
+    const lekPer = (code, qty) => {
+      const all = rates && typeof rates.ALL === 'number' ? rates.ALL : null;
+      const cur = rates && typeof rates[code] === 'number' ? rates[code] : null;
+      if (all == null || cur == null || cur === 0) return null;
+      return (all / cur) * qty;
     };
     const d = {
-      air: { tbilisi: temp(airArr[0]), kutaisi: temp(airArr[1]), batumi: temp(airArr[2]) },
+      air: { tirana: temp(airArr[0]), durres: temp(airArr[1]), sarande: temp(airArr[2]) },
       sea:
         sea && sea.current && typeof sea.current.sea_surface_temperature === 'number'
           ? sea.current.sea_surface_temperature
           : null,
-      fx: { usd: per('USD'), eur: per('EUR'), rub: per('RUB'), uah: per('UAH') },
+      fx: {
+        usd: lekPer('USD', 1),
+        eur: lekPer('EUR', 1),
+        rub: lekPer('RUB', 100),
+        uah: lekPer('UAH', 10),
+      },
     };
     render(d);
     try {

@@ -1,7 +1,7 @@
 ---
 /**
  * RatesBar (§8.4, Фаза 6) — тонкая utility-полоса в самом верху шапки:
- * курс лари (USD/EUR/RUB/UAH) + погода (Тбилиси/Кутаиси/Батуми/море) — ОБА
+ * курс лека (USD/EUR/RUB/UAH) + погода (Тирана/Дуррес/Саранда/море) — ОБА
  * закреплены инлайн единым стилем (решение владельца 2026-06-16: погоду из
  * выпадашки в закреплённый вид, по аналогии с курсом). Полезно на любой
  * странице → в глобальный хедер, компактно и без CLS.
@@ -9,7 +9,7 @@
  * Гибрид: значения зашиваются снапшотом на сборке (getLiveSnapshot, мемо — 1
  * запрос на билд даже при рендере на всех страницах), клиент (/js/live-data.js)
  * дотягивает свежие по тем же data-live ключам. Источник недоступен → снапшот,
- * нет и его → «—». Курс по конвенции НБ Грузии: USD/EUR за 1, RUB за 100, UAH за 10.
+ * нет и его → «—». Конвенция показа: лек за 1$, за 1€, за 100₽, за 10₴.
  */
 import { t, type Lang } from '../i18n';
 import { getLiveSnapshot } from '../lib/liveSnapshot';
@@ -24,7 +24,7 @@ const ld = dict.liveData;
 const snap = await getLiveSnapshot();
 
 const fmtT = (n: number | null): string => (typeof n === 'number' ? `${Math.round(n)}°` : '—');
-const fmtFx = (n: number | null): string => (typeof n === 'number' ? `${n.toFixed(2)} ₾` : '—');
+const fmtFx = (n: number | null): string => (typeof n === 'number' ? `${n.toFixed(2)} L` : '—');
 
 const locale = lang === 'uk' ? 'uk-UA' : lang === 'en' ? 'en-US' : 'ru-RU';
 let buildTime = '';
@@ -32,7 +32,7 @@ try {
   buildTime = new Intl.DateTimeFormat(locale, {
     hour: '2-digit',
     minute: '2-digit',
-    timeZone: 'Asia/Tbilisi',
+    timeZone: 'Europe/Tirane',
   }).format(new Date());
 } catch {
   buildTime = '';
@@ -63,26 +63,27 @@ try {
     <div class="wx">
       <ul class="rates rates--wx" aria-label={ld.weather}>
         <li class="rates__item">
-          <span class="rates__cur">{ld.cities.tbilisi}</span>
-          <b data-live="air-tbilisi">{fmtT(snap.air.tbilisi)}</b>
+          <span class="rates__cur">{ld.cities.tirana}</span>
+          <b data-live="air-tirana">{fmtT(snap.air.tirana)}</b>
         </li>
         <li class="rates__item">
-          <span class="rates__cur">{ld.cities.kutaisi}</span>
-          <b data-live="air-kutaisi">{fmtT(snap.air.kutaisi)}</b>
+          <span class="rates__cur">{ld.cities.durres}</span>
+          <b data-live="air-durres">{fmtT(snap.air.durres)}</b>
         </li>
         <li class="rates__item">
-          <span class="rates__cur">{ld.cities.batumi}</span>
-          <b data-live="air-batumi">{fmtT(snap.air.batumi)}</b>
+          <span class="rates__cur">{ld.cities.sarande}</span>
+          <b data-live="air-sarande">{fmtT(snap.air.sarande)}</b>
         </li>
         <li class="rates__item">
           <span class="rates__cur">{ld.sea}</span>
-          <b data-live="sea-batumi">{fmtT(snap.sea)}</b>
+          <b data-live="sea-sarande">{fmtT(snap.sea)}</b>
         </li>
       </ul>
       <details class="wx__info">
         <summary class="wx__info-q" aria-label={ld.source}>?</summary>
         <p class="wx__info-panel">
-          {ld.updated} <time data-live="updated">{buildTime}</time> · {ld.source}
+          {ld.updated}
+          <time data-live="updated">{buildTime}</time> · {ld.source}
         </p>
       </details>
     </div>

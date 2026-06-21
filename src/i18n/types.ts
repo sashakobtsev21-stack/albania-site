@@ -94,7 +94,13 @@ export type RegionSlug = (typeof REGION_SLUGS)[number];
  * Слаги подкатегорий «Развлечений» (§7) — совпадают с enum RAZVL_TYPES в
  * content.config.ts (поле `razvlType`). Лейблы — в словарях (`razvlTypes`).
  */
-export const RAZVL_TYPE_SLUGS = ['nochnaya-zhizn', 'afisha', 'aktivnyy', 'kazino', 'mesta'] as const;
+export const RAZVL_TYPE_SLUGS = [
+  'nochnaya-zhizn',
+  'afisha',
+  'aktivnyy',
+  'kazino',
+  'mesta',
+] as const;
 export type RazvlTypeSlug = (typeof RAZVL_TYPE_SLUGS)[number];
 
 /**
@@ -135,7 +141,7 @@ export interface UIDictionary {
   backToTop: string;
   /** Страница 404 (не найдена) — единая на сайт, рендерится на языке по умолчанию. */
   notFound: { heading: string; text: string; home: string };
-  /** Блок «Сейчас в Грузии» на главной (§8.4): погода + курс лари. */
+  /** Блок «Сейчас в Албании» на главной (§8.4): погода + курс лека. */
   liveData: {
     heading: string;
     /** Короткое описание слева от панели (вёрстка «сбоку»). */
@@ -143,7 +149,7 @@ export interface UIDictionary {
     weather: string;
     sea: string;
     fx: string;
-    cities: { tbilisi: string; kutaisi: string; batumi: string };
+    cities: { tirana: string; durres: string; sarande: string };
     updated: string;
     source: string;
   };

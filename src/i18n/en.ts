@@ -16,14 +16,14 @@ export const en: UIDictionary = {
     home: 'Go to homepage',
   },
   liveData: {
-    heading: 'Right now in Georgia',
-    desc: 'Weather in the main cities and the lari exchange rate — check before you travel.',
+    heading: 'Right now in Albania',
+    desc: 'Weather in the main cities and the lek exchange rate — check before you travel.',
     weather: 'Weather',
-    sea: 'Sea, Batumi',
-    fx: 'Lari rate',
-    cities: { tbilisi: 'Tbilisi', kutaisi: 'Kutaisi', batumi: 'Batumi' },
+    sea: 'Sea, Sarandë',
+    fx: 'Lek rate',
+    cities: { tirana: 'Tirana', durres: 'Durrës', sarande: 'Sarandë' },
     updated: 'updated',
-    source: 'weather: open-meteo · rate: National Bank of Georgia',
+    source: 'weather: open-meteo · rate: ExchangeRate-API',
   },
   nav: {
     home: 'Home',
@@ -76,7 +76,8 @@ export const en: UIDictionary = {
     search: {
       label: 'Search the site',
       placeholder: 'Where are you headed? Theth, Tirana, car rental…',
-      emptyNoContent: 'Nothing found yet. Try another word — search runs over the articles already published.',
+      emptyNoContent:
+        'Nothing found yet. Try another word — search runs over the articles already published.',
       emptyNoMatch: 'Nothing found. Try a different query.',
       hint: 'Search runs over already published articles, right in your browser.',
     },
@@ -119,7 +120,8 @@ export const en: UIDictionary = {
     badgeSampleHeading: 'What the verification mark looks like',
     sectionsHeading: 'Guide sections',
     freshHeading: 'Latest articles',
-    freshEmpty: 'Nothing to show here right now — please check back soon. We keep adding vetted, up-to-date guides.',
+    freshEmpty:
+      'Nothing to show here right now — please check back soon. We keep adding vetted, up-to-date guides.',
     about: {
       heading: 'About the project',
       text: 'Albania Guidebook is a travel guide to Albania: attractions, cities, food, routes, and car rental. We pick places by rating, cross-check the facts, and date-stamp every article — here’s how we work.',
@@ -373,7 +375,8 @@ export const en: UIDictionary = {
     services: {
       heading: 'Where to get a policy',
       lead: 'Below are the services through which travelers most often get insurance for Albania. Whichever option you choose, check that the policy fits your trip: a comfortable coverage limit for the entire stay, ideally a policy in English, and accident insurance included (basic plans often don’t have it — it’s added as a separate option). Prices depend on age, duration, and the coverage set, so we give only guidelines, without exact amounts.',
-      ctaPlaceholder: 'Sign up on the service’s website. Before buying, verify the current terms and rate.',
+      ctaPlaceholder:
+        'Sign up on the service’s website. Before buying, verify the current terms and rate.',
       items: [
         {
           name: 'EKTA',
@@ -626,7 +629,8 @@ export const en: UIDictionary = {
     website: 'Website',
     resultsCount: 'Places shown: {count}',
     emptyFiltered: 'Nothing matches the selected filters. Reset some of the conditions.',
-    emptyNoData: 'This section is being filled in: vetted places with honest descriptions and a check date will appear here soon.',
+    emptyNoData:
+      'This section is being filled in: vetted places with honest descriptions and a check date will appear here soon.',
     selectionHeading: 'How we pick these places',
     selectionNote:
       'Places make it here on merit: we take venues with high ratings (4+★) across several sources and cross-check them with experienced travelers, guides and locals. A rating is a selection criterion, not the write-up itself — we don’t reprint other sites’ scores word for word; see the exact rating on the map. We write every description ourselves. The gold medal on a card is our seal of quality: only places we have checked in person that meet a high standard of service and food quality receive it.',
@@ -731,7 +735,8 @@ export const en: UIDictionary = {
     resultsCount: 'Places shown: {count}',
     listHeading: 'Attractions',
     emptyFiltered: 'Nothing matches the selected filters. Reset some of the conditions.',
-    emptyNoData: 'This section is being filled in: vetted places with honest descriptions and a check date will appear here soon.',
+    emptyNoData:
+      'This section is being filled in: vetted places with honest descriptions and a check date will appear here soon.',
   },
   uslugi: {
     heading: 'Services in Albania: for living and relocating',
@@ -750,9 +755,11 @@ export const en: UIDictionary = {
     siteLabel: 'Website',
     demoLabel: 'Sample',
     emptyFiltered: 'Nothing yet for the selected category. Reset the filter.',
-    emptyNoData: 'This section is being filled in: vetted services for living in Albania will appear here soon.',
+    emptyNoData:
+      'This section is being filled in: vetted services for living in Albania will appear here soon.',
     ctaHeading: 'Is your service here?',
-    ctaText: 'Real estate agents, cleaning, tradespeople, and other services for those living in Albania — write to us and we’ll tell you about placement.',
+    ctaText:
+      'Real estate agents, cleaning, tradespeople, and other services for those living in Albania — write to us and we’ll tell you about placement.',
     ctaLabel: 'Ask about placement',
   },
   coordCopy: {
