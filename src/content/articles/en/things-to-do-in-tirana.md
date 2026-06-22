@@ -132,7 +132,7 @@ To feel the everyday city, spend an hour at **Pazari i Ri** (the New Bazaar), a 
 Most visitors base themselves within walking distance of Skanderbeg Square, and for a short trip that’s the right call — you’ll be a few minutes from the sights and the nightlife.
 
 - **The centre (around Skanderbeg Square and the boulevard).** Closest to the museums and mosque, with the widest range of hotels. Convenient and walkable, if a little less atmospheric in the evenings.
-- **Blloku.** Once the sealed-off quarter reserved for the communist elite, now the city’s buzziest district — packed with cafés, cocktail bars and restaurants. The best base if you want to be in the middle of the going-out scene.
+- **Blloku.** Once the sealed-off quarter reserved for the communist elite, now the city’s buzziest district — packed with cafés, cocktail bars and restaurants. The best base if you want to be in the middle of the going-out scene; see our guide to [Tirana nightlife](/entertainment/tirana-nightlife/) for where to drink and dance.
 - **Pazari i Ri / New Bazaar.** A characterful pocket around the market, strong on places to eat and a short walk from the centre.
 
 Rates swing with the season, so it pays to compare a few options for your dates rather than booking the first result.
@@ -172,6 +172,7 @@ Tirana isn’t a city of grand monuments so much as one of energy and reinventio
 
 ## What’s nearby and read also
 
+- Going out after dark? See our guide to [Tirana nightlife](/entertainment/tirana-nightlife/).
 - Browse more [Albanian city guides](/cities/) for your next stop.
 - Planning to drive onward? See [how to rent a car in Albania](/car-rental/how-to-rent-a-car/).
 - Staying longer to work remotely? Read about the [digital nomad visa](/relocation/digital-nomad-visa/).
