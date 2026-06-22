@@ -14,7 +14,10 @@
 - **Контент:** 5 статей ×3 языка (`planning/albania-visa`, `planning/best-time-to-visit`,
   `car-rental/how-to-rent-a-car`, `insurance/do-you-need-insurance`,
   `relocation/digital-nomad-visa`) — только обложки, без инлайн-фото (норма ≥5 → ROADMAP-FIX).
-  Коллекции `routes/restaurants/services/cities` пусты, новостей 0.
+  Коллекции `routes/restaurants/services/cities` пусты.
+- **Новости:** 2 опубликованы ×3 языка (`news/durres-folklore-festival-june-2026`,
+  `news/vlora-airport-closed-summer-2026`) — cover ≤200КБ + инлайн-figure + gallery, CC/CC0 Wikimedia,
+  EN-first, факты из EAFF / Albanian Daily News, даты 2026. `npm run qa` → GO.
 
 ## Повторный прогон + `/full-audit` (2026-06-22)
 Запущен `/full-audit` (11 агентов, адверсариальная проверка) — нашёл и закрыто: 🔴 инлайн `/go/`
