@@ -25,7 +25,7 @@
 
 ## Неделя 4 (15–21.07) — Ривьера-кластер (пик сезона) + страховка
 - Ср 15.07 — [Статья] Albanian Riviera Guide: Best Towns & Beaches · `albanian riviera guide` · /albanian-riviera-guide/ · категория routes/attractions · фото ≥10 · 💰 отели/аренда авто · перелинк: хаб Ривьеры → Saranda, Ksamil, Himara-сравнение
-- Пт 17.07 — [Статья] Ksamil, Albania: Beaches, Islands & Where to Stay · `ksamil albania` · /ksamil-albania-guide/ · категория attractions · фото ≥10 · 💰 отели/туры на лодке · перелинк: ← Riviera guide, ← Saranda
+- ✅ Ksamil, Albania: Beaches, Islands & Where to Stay · `ksamil albania` · /attractions/ksamil-albania-guide/ · категория **attractions** (`attractionType: resorts-springs`, `region: vlore`) · фото 6 (cover+3 инлайн+2 gallery, CC Wikimedia ≤200КБ) · 💰 trip-hotels/trip-tours · ОПУБЛИКОВАНО (en, qa=GO; третья статья attractions; в витрине главной, kicker `sight`; перелинк ← Saranda / ← Albanian Riviera / ← Butrint). Цены лежаков/лодок — «уточняйте» (TODO `visit`/цены, когда даст владелец). Прим.: выполнено в категории `attractions`/URL `/attractions/ksamil-albania-guide/` (не голый `/ksamil-albania-guide/` из наброска).
 - Вс 19.07 — [Статья] Do You Need Travel Insurance for Albania? · `albania travel insurance` · /albania-travel-insurance/ · категория transactional · фото ≥5 · 💰 страховка · перелинк: ← is albania safe, ← driving safety
 - Пн 20.07 — 📊 Замер GA/GSC (15 мин)
 
