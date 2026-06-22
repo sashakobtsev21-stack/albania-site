@@ -3,13 +3,13 @@
 Темп: Ср / Пт / Вс. Слаги — английские, из SEO-отчёта. 💰 = денежная связка.
 
 ## Неделя 1 (24–30.06) — Стартовое ядро: столица + доверие + деньги
-- ✅ Ср 24.06 — [Статья] Best Things to Do in Tirana · `things to do in tirana` · /cities/things-to-do-in-tirana/ · категория cities · фото 18 (cover+17, CC/CC0 Wikimedia) · 💰 trip-hotels/trip-tours · ОПУБЛИКОВАНО (en/ru/uk, qa=GO). Перелинк на airport transfers/day trips добавить, когда выйдут (Нед.2/Нед.8).
+- ✅ Ср 24.06 — [Статья] Best Things to Do in Tirana · `things to do in tirana` · /cities/things-to-do-in-tirana/ · категория cities · фото 18 (cover+17, CC/CC0 Wikimedia) · 💰 trip-hotels/trip-tours · ОПУБЛИКОВАНО (en, qa=GO). Перелинк на airport transfers/day trips добавить, когда выйдут (Нед.2/Нед.8).
 - ✅ Пт 26.06 — [Статья] Is Albania Safe to Visit in 2026? · `is albania safe` · /planning/is-albania-safe/ · категория **planning** · фото 6 (cover Skanderbeg Square + 3 инлайн + 2 gallery, CC/CC0 Wikimedia ≤200КБ) · 💰 safetywing (страховка) · ОПУБЛИКОВАНО (en, qa=GO; добавлена в витрину главной, kicker `sight`). Перелинк → driving in albania safety / → travel insurance добрать встречными ссылками, когда выйдут (Нед.5 / Нед.4). Прим.: категория planning (не attractions/info, как в исходном наброске) — раздел /planning/.
 - Вс 28.06 — [Статья] Is Albania Expensive? Real 2026 Daily Costs · `is albania expensive` · /is-albania-expensive/ · категория info (хаб) · фото ≥5 · 💰 нет (хаб) · перелинк: → travel budget, → car rental; обратная ссылка из Tirana
 - Пн 29.06 — 📊 Замер GA/GSC (15 мин: первые индексируемые страницы, baseline)
 
 ## Неделя 2 (01–07.07) — Стартовое ядро: первый город Ривьеры + логистика прибытия
-- ✅ Ср 01.07 — [Статья] Saranda Travel Guide: Beaches, Butrint & Blue Eye Day Trips · `saranda albania` · /cities/saranda-albania-guide/ · категория cities · фото 14 (cover+8 инлайн+5 gallery, CC/CC0/PD Wikimedia) · 💰 trip-hotels/trip-tours · ОПУБЛИКОВАНО (en/ru/uk, qa=GO). Перелинк → Ksamil / → Albanian Riviera добавить, когда выйдут (Нед.4).
+- ✅ Ср 01.07 — [Статья] Saranda Travel Guide: Beaches, Butrint & Blue Eye Day Trips · `saranda albania` · /cities/saranda-albania-guide/ · категория cities · фото 14 (cover+8 инлайн+5 gallery, CC/CC0/PD Wikimedia) · 💰 trip-hotels/trip-tours · ОПУБЛИКОВАНО (en, qa=GO). Перелинк → Ksamil / → Albanian Riviera добавить, когда выйдут (Нед.4).
 - Пт 03.07 — [Статья] Tirana Airport to City Centre: Transfers & Options · `tirana airport to city centre` · /tirana-airport-transfers/ · категория info/transactional · фото ≥5 · 💰 трансфер/аренда авто · перелинк: ← Tirana things to do, → car rental
 - Вс 05.07 — [Статья] Renting a Car in Albania: Costs, Insurance & Tips · `car rental albania` · /car-rental-albania-guide/ · категория info/transactional · фото ≥5 · 💰 аренда авто/страховка · перелинк: → road trip itinerary, ← is albania expensive
 - Пн 06.07 — 📊 Замер GA/GSC (15 мин)
