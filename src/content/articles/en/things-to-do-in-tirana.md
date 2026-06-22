@@ -151,7 +151,7 @@ The **Rinas Express** airport bus is the cheap, no-fuss choice and drops you rig
 
 ## Where to eat
 
-Tirana eats well and cheaply by Western European standards. The centre and **Blloku** are thick with cafés and restaurants, from traditional Albanian grills and *byrek* (savoury pastry) to Italian-leaning trattorias and a growing wave of modern bistros. **Pazari i Ri** is the spot for casual grazing — bakeries, fresh produce and small restaurants around the market hall. For coffee, you’ll quickly notice that café culture is close to a civic institution here; expect strong espresso and pavement tables on almost every block. We don’t quote specific prices or opening hours for individual venues, because they change often — check current menus when you go.
+Tirana eats well and cheaply by Western European standards. The centre and **Blloku** are thick with cafés and restaurants, from traditional Albanian grills and *byrek* (savoury pastry) to Italian-leaning trattorias and a growing wave of modern bistros. **Pazari i Ri** is the spot for casual grazing — bakeries, fresh produce and small restaurants around the market hall. For coffee, you’ll quickly notice that café culture is close to a civic institution here; expect strong espresso and pavement tables on almost every block. For a short list of vetted places to start with, see our [where to eat in Albania](/food/) directory. We don’t quote specific prices or opening hours for individual venues, because they change often — check current menus when you go.
 
 <figure class="figure">
 <img src="/images/things-to-do-in-tirana/colorful-houses.webp" alt="Painted facades of socialist-era apartment blocks in central Tirana" width="1280" height="960" loading="lazy" decoding="async" />

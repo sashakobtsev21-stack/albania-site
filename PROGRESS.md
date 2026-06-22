@@ -11,7 +11,7 @@
 | R1 Перемоделирование | ✅ | модель, EN-слаги разделов, i18n, проза |
 | R1.5 Конфиг/идентичность | ✅ (🔑 партнёрки) | GA4, live-курсы, домен, partners-гео |
 | R2 Брендинг | ✅ | палитра/hero-ротация/флаг/фавикон/og/EN-слаги ✅; логотип — опц. |
-| R3 Контент | 🟡 | 5 статей (cover-only) + столица Тирана (18 фото, Нед.1) + город Саранда (14 фото, Нед.2) + город Берат (12 фото, Нед.3) + МАРШРУТ Albania Road Trip (6 остановок, 10 фото, Нед.3) + статья «Is Albania Safe to Visit in 2026?» (planning, 6 фото, Нед.1/P0-доверие) + достопримечательность «Butrint National Park» (attractions, 6 фото); контент-план идёт |
+| R3 Контент | 🟡 | 5 статей (cover-only) + столица Тирана (18 фото, Нед.1) + город Саранда (14 фото, Нед.2) + город Берат (12 фото, Нед.3) + МАРШРУТ Albania Road Trip (6 остановок, 10 фото, Нед.3) + статья «Is Albania Safe to Visit in 2026?» (planning, 6 фото, Нед.1/P0-доверие) + достопримечательность «Butrint National Park» (attractions, 6 фото) + **раздел «Еда» `/food/` — 3 ресторана Тираны** (Oda/Mullixhiu/Komiteti, коллекция `restaurants`); контент-план идёт |
 | R4 Запуск | 🟡 | домен/GA4/sitemap ✅; GSC ⬜ |
 | R5+ Рост | ⬜ | — |
 
@@ -19,6 +19,17 @@
 Бэклог фиксов — [ROADMAP-FIX.md](ROADMAP-FIX.md), аудит — [AUDIT-2026-06-22.md](AUDIT-2026-06-22.md).
 
 ## Лог (новые записи сверху)
+### 2026-06-22 — Контент: наполнен раздел «Еда» `/food/` — 3 реальных ресторана Тираны (коллекция `restaurants`)
+- **Первое наполнение директории «Где поесть»** (`/food/`, ранее коллекция `restaurants` была пуста). Созданы 3 карточки (одноязычные en, `restaurants/en/<slug>`), все город `Tirana`, разные по типу:
+  - `oda` — **Oda**, традиционная албанская кухня (`cuisineKey: albanian`, `€€`), Rruga Luigj Gurakuqi 3, coord `[41.32878, 19.82252]`. Консенсус >4★: Tripadvisor 4.1 / Restaurant Guru 4.8 / abillion 4.64.
+  - `mullixhiu` — **Mullixhiu**, современная албанская (`albanian`, `€€€`), Grand Park / Lasgush Poradeci Blvd, coord `[41.3134804, 19.8166599]`, шеф Bledar Kola. Источники: mullixhiu.al / World’s 50 Best Discovery / In Your Pocket / Restaurant Guru (Google 4.1, RG 4.8). `website` указан.
+  - `komiteti-kafe-muzeum` — **Komiteti – Kafe Muzeum**, кафе/раки-бар (`bar`, `€€`), Rruga Fatmir Haxhiu 2 (за Пирамидой), coord `[41.3233016, 19.8225941]`. Tripadvisor 4.3 + гиды.
+- **Факты — только проверяемые** (правило 4, §15): координаты из OpenStreetMap/Nominatim (Oda — сверка reverse-geocode на Luigj Gurakuqi), `mapUrl` — Google Maps search-ссылки. `ratingNote`/`review` (loved/watch) написаны СВОИМИ словами, чужие отзывы дословно НЕ копировались. Часы/цены/телефоны НЕ выдуманы — не указаны, в теле «confirm on arrival». `verifiedAt: 2026-06-22`, `verifiedNoDate: true` (метка «Проверено» без даты, §13).
+- **Cover каждой — ЛЕГАЛЬНОЕ CC фото-иллюстрация** (webp ≤200КБ, `coverIllustrative: true` + честный кредит «illustrative»): Oda → fërgesë (Leeturtle / Wikimedia, CC BY-SA 4.0, 94КБ); Mullixhiu → tavë kosi (MirelaAndoni / Wikimedia, CC BY-SA 4.0, 45КБ); Komiteti → бутылки албанского раки (Klein Muçi / Wikimedia, CC BY 4.0, 69КБ). Отобраны глазами через `commons-candidates`→`build-gallery`; `build:covers` прогнан.
+- **Перелинковка:** хаб `/food/` уже линкует на путеводитель Тираны (city-pages); из статьи `things-to-do-in-tirana` добавлена ссылка на `/food/` («where to eat in Albania» в разделе «Where to eat»). schema.org `/food/` → ItemList из 3× Restaurant + GeoCoordinates.
+- **Гейты:** `npm run qa` → **GO ✅** (check 0/0/0 · build ✓ · test [enums/parity 13 en/photos/interlinks] ✓ · test:links ✓ · lint ✓ · npm audit prod чисто; 0 крит / 0 сред). Закоммичено + запушено в `main`.
+- **Дальше:** добрать места по Дурресу/Саранде (per-city страницы `/food/where-to-eat-durres`, `…-sarande` пока без карточек); при появлении статьи `food/what-to-try` хаб сам покажет ссылку «Что попробовать».
+
 ### 2026-06-22 — Контент: опубликована статья-достопримечательность «Butrint National Park» (attractions, P0-кластер юга)
 - **Опубликована первая статья категории `attractions`** (одноязычная en, `attractions/butrint-national-park`): EN ~1700 слов, лид = прямой ответ (Бутринт — UNESCO-город у Саранды/Ксамила). Разделы: что это/UNESCO+Рамсар → история (греки→римляне→византийцы→венецианцы/османы) → что посмотреть (театр, баптистерий с мозаиками, Львиные ворота+Скейские, акрополь+музей, Венецианская башня/канал) → как добраться (таблица: Саранда ~18 км/бус/такси, Ксамил ~4 км, Тирана ~300 км) → билеты/часы (только «уточняйте» + источник, TODO на точную цену) → совмещение с Голубым глазом/Ксамилом → практика. Без FAQ. Факты — UNESCO WHC / Wikipedia / butrint.al; цены/часы не выдуманы.
 - **Фото: 6 уникальных** CC Wikimedia (webp ≤200КБ, отобраны глазами через `commons-candidates`→`build-gallery`): cover (театр+крепость, Marcin Konsek CC BY-SA 4.0) + 4 инлайн-figure [театр — Radosław Botev CC BY 3.0; баптистерий-мозаики — Albinfo CC BY-SA 4.0; Львиные ворота — Piotrus CC BY-SA 3.0; Венецианская башня — Cosal CC BY-SA 4.0] + 1 gallery [вид с крепости на канал Vivari/Корфу — Calistemon CC BY-SA 4.0]. `build:covers` прогнан.
