@@ -170,7 +170,7 @@ Base here for two nights so you can fit in Butrint and the Blue Eye without a ru
 
 Just **20 minutes / ~17 km** south of Saranda, **Ksamil** is the postcard end of the Riviera: shallow turquoise bays and a cluster of tiny offshore **islands** close enough to swim or paddle out to. It's the busiest beach scene in Albania in July and August, so come early for a spot. Many travellers stay in Saranda and visit Ksamil as a day trip, or base directly in Ksamil for the beaches.
 
-Combine the morning at Ksamil's beaches with an afternoon at nearby **Butrint**, which sits on the same peninsula just south.
+Combine the morning at Ksamil's beaches with an afternoon at nearby **Butrint**, which sits on the same peninsula just south — see our [Butrint National Park guide](/attractions/butrint-national-park/) for the ruins and visiting tips.
 
 <figure class="figure">
 <img src="/images/albania-road-trip-itinerary/stop-ksamil.webp" alt="A turquoise cove and small islands off the beach at Ksamil" width="1280" height="964" loading="lazy" decoding="async" />

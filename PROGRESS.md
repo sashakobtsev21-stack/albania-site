@@ -11,7 +11,7 @@
 | R1 Перемоделирование | ✅ | модель, EN-слаги разделов, i18n, проза |
 | R1.5 Конфиг/идентичность | ✅ (🔑 партнёрки) | GA4, live-курсы, домен, partners-гео |
 | R2 Брендинг | ✅ | палитра/hero-ротация/флаг/фавикон/og/EN-слаги ✅; логотип — опц. |
-| R3 Контент | 🟡 | 5 статей (cover-only) + столица Тирана (18 фото, Нед.1) + город Саранда (14 фото, Нед.2) + город Берат (12 фото, Нед.3) + МАРШРУТ Albania Road Trip (6 остановок, 10 фото, Нед.3) + статья «Is Albania Safe to Visit in 2026?» (planning, 6 фото, Нед.1/P0-доверие); контент-план идёт |
+| R3 Контент | 🟡 | 5 статей (cover-only) + столица Тирана (18 фото, Нед.1) + город Саранда (14 фото, Нед.2) + город Берат (12 фото, Нед.3) + МАРШРУТ Albania Road Trip (6 остановок, 10 фото, Нед.3) + статья «Is Albania Safe to Visit in 2026?» (planning, 6 фото, Нед.1/P0-доверие) + достопримечательность «Butrint National Park» (attractions, 6 фото); контент-план идёт |
 | R4 Запуск | 🟡 | домен/GA4/sitemap ✅; GSC ⬜ |
 | R5+ Рост | ⬜ | — |
 
@@ -19,6 +19,14 @@
 Бэклог фиксов — [ROADMAP-FIX.md](ROADMAP-FIX.md), аудит — [AUDIT-2026-06-22.md](AUDIT-2026-06-22.md).
 
 ## Лог (новые записи сверху)
+### 2026-06-22 — Контент: опубликована статья-достопримечательность «Butrint National Park» (attractions, P0-кластер юга)
+- **Опубликована первая статья категории `attractions`** (одноязычная en, `attractions/butrint-national-park`): EN ~1700 слов, лид = прямой ответ (Бутринт — UNESCO-город у Саранды/Ксамила). Разделы: что это/UNESCO+Рамсар → история (греки→римляне→византийцы→венецианцы/османы) → что посмотреть (театр, баптистерий с мозаиками, Львиные ворота+Скейские, акрополь+музей, Венецианская башня/канал) → как добраться (таблица: Саранда ~18 км/бус/такси, Ксамил ~4 км, Тирана ~300 км) → билеты/часы (только «уточняйте» + источник, TODO на точную цену) → совмещение с Голубым глазом/Ксамилом → практика. Без FAQ. Факты — UNESCO WHC / Wikipedia / butrint.al; цены/часы не выдуманы.
+- **Фото: 6 уникальных** CC Wikimedia (webp ≤200КБ, отобраны глазами через `commons-candidates`→`build-gallery`): cover (театр+крепость, Marcin Konsek CC BY-SA 4.0) + 4 инлайн-figure [театр — Radosław Botev CC BY 3.0; баптистерий-мозаики — Albinfo CC BY-SA 4.0; Львиные ворота — Piotrus CC BY-SA 3.0; Венецианская башня — Cosal CC BY-SA 4.0] + 1 gallery [вид с крепости на канал Vivari/Корфу — Calistemon CC BY-SA 4.0]. `build:covers` прогнан.
+- **Frontmatter:** `attractionType: museums-landmarks`, `region: vlore`, `geo.coord`, `accessFrom.tirana`, `featuredOrder:2`. schema.org → Article + **TouristAttraction** + GeoCoordinates + BreadcrumbList.
+- **Перелинковка (двунаправленный кластер):** 4 внутр. цели — хаб `/attractions/` + Саранда (`saranda-albania-guide`) + маршрут (`albania-road-trip-itinerary`) + аренда авто (`how-to-rent-a-car`). Встречные ссылки добавлены ИЗ Saranda guide и road-trip itinerary → на Бутринт. 2 AffiliateBox через `/go/`: `trip-tours` + `trip-transfers`.
+- **Витрина:** добавлен пик в `showcasePicks` (`HomePage.astro`): `{kind:'article',category:'attractions',slug:'butrint-national-park',kicker:'sight'}`.
+- **Гейты:** `npm run qa` → **GO ✅** (check 0/0/0 · build ✓ · test ✓ · test:links ✓ · lint ✓ · npm audit prod чисто). Закоммичено + запушено в `main`.
+
 ### 2026-06-22 — UI-фикс v2: крутилка витрины переведена на чистый CSS (ShowcaseRail)
 - **Проблема:** прежняя JS-крутилка (`scrollLeft` + rAF, рантайм-клонирование) могла «не ехать» из-за кэша `/js/showcase-rail.js` или `prefers-reduced-motion`. Движение перенесено на CSS-анимацию в самом компоненте → деплоится со страницей, кэш JS больше ни на что не влияет.
 - **Компонент (`ShowcaseRail.astro`)** теперь рендерит **2 копии** набора (`cells = [...clone:false, ...clone:true]`) — вторая копия `aria-hidden` (уже обрабатывается полем `clone` в разметке). В `<style>`: `.showcase__viewport` → `overflow: hidden` (было `overflow-x: auto`); `.showcase__track` → `animation: showcase-marquee var(--showcase-dur, 60s) linear infinite`; добавлены `@keyframes showcase-marquee { translateX(0) → translateX(-50%) }` (одна копия = 50% дорожки → бесшовно); пауза `.showcase:hover .showcase__track, .showcase__track:focus-within { animation-play-state: paused }`; в блок `prefers-reduced-motion` добавлено `.showcase__track { animation:none; transform:none }` + `.showcase__viewport { overflow-x:auto }`.

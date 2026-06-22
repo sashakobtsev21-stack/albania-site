@@ -20,6 +20,9 @@
 - Вс 12.07 — [Статья] Albania 1-Year Visa-Free for US Citizens: How It Works · `albania visa free 1 year us citizens` · /albania-1-year-visa-free-us-citizens/ · категория info · фото ≥5 · 💰 страховка/жильё long-stay · перелинк: → digital nomad visa, → cost of living
 - Пн 13.07 — 📊 Замер GA/GSC (15 мин: что из стартового пакета индексируется; первая корректировка хвоста)
 
+## Поддерживающие POI (вне основного темпа, по мере подбора фото)
+- ✅ Butrint National Park · `butrint national park` · /attractions/butrint-national-park/ · категория **attractions** (`attractionType: museums-landmarks`, `region: vlore`) · фото 6 (cover+4 инлайн+1 gallery, CC Wikimedia ≤200КБ) · 💰 trip-tours/trip-transfers · ОПУБЛИКОВАНО (en, qa=GO; первая статья attractions; в витрине главной, kicker `sight`; встречные ссылки из Saranda guide и road-trip itinerary). Цена/часы билета — TODO (внести `visit`, когда даст владелец/официальный источник). Перелинк ← Ksamil / ← Blue Eye добрать, когда выйдут (Нед.4).
+
 ## Неделя 4 (15–21.07) — Ривьера-кластер (пик сезона) + страховка
 - Ср 15.07 — [Статья] Albanian Riviera Guide: Best Towns & Beaches · `albanian riviera guide` · /albanian-riviera-guide/ · категория routes/attractions · фото ≥10 · 💰 отели/аренда авто · перелинк: хаб Ривьеры → Saranda, Ksamil, Himara-сравнение
 - Пт 17.07 — [Статья] Ksamil, Albania: Beaches, Islands & Where to Stay · `ksamil albania` · /ksamil-albania-guide/ · категория attractions · фото ≥10 · 💰 отели/туры на лодке · перелинк: ← Riviera guide, ← Saranda

@@ -89,7 +89,7 @@ Saranda's real value is as a base. Three of southern Albania's top sights are al
 
 ### Butrint: the UNESCO ruins
 
-About 18 km south of Saranda, **Butrint** is one of the Mediterranean's great archaeological sites and a UNESCO World Heritage Site. Set on a wooded peninsula between a lagoon and the Vivari Channel, it layers Greek, Roman, Byzantine, Venetian and Ottoman remains in one walkable park — an ancient theatre, Roman baths and mosaics, a baptistery, and a later fortress, all threaded by a shaded loop trail through the trees. Allow two to three hours, bring water and go early in summer for the cooler light. A local bus runs from Saranda's seafront, or it's a quick taxi.
+About 18 km south of Saranda, **Butrint** is one of the Mediterranean's great archaeological sites and a UNESCO World Heritage Site. Set on a wooded peninsula between a lagoon and the Vivari Channel, it layers Greek, Roman, Byzantine, Venetian and Ottoman remains in one walkable park — an ancient theatre, Roman baths and mosaics, a baptistery, and a later fortress, all threaded by a shaded loop trail through the trees. Allow two to three hours, bring water and go early in summer for the cooler light. A local bus runs from Saranda's seafront, or it's a quick taxi. See our full guide to [Butrint National Park](/attractions/butrint-national-park/) for the monuments, tickets and how to combine it with Ksamil.
 
 <figure class="figure">
 <img src="/images/saranda-albania-guide/butrint-theatre.webp" alt="The ancient Greek and Roman theatre carved into the hillside at Butrint" width="1280" height="853" loading="lazy" decoding="async" />
