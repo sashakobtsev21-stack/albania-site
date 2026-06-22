@@ -19,6 +19,20 @@
 Бэклог фиксов — [ROADMAP-FIX.md](ROADMAP-FIX.md), аудит — [AUDIT-2026-06-22.md](AUDIT-2026-06-22.md).
 
 ## Лог (новые записи сверху)
+### 2026-06-22 — Структурно: сайт переведён на ОДИН язык — английский (en)
+- **Решение владельца:** убрать ru и uk полностью, оставить только en на корне `/`. Сайт стал одноязычным.
+- **Конфиг:** `LANGS = ['en']` (`src/i18n/types.ts`, `src/content.config.ts`), `DEFAULT_LANG = 'en'`. `i18n/index.ts`: убраны импорты/словари ru/uk, `langPrefix`/`mirrorPath` упрощены (префикса нет, зеркал нет), `LOCALE`/`OG_LOCALE` → только en.
+- **Удалено:** дерево `src/pages/ru/` и `src/pages/uk/` целиком; словари `src/i18n/ru.ts`, `src/i18n/uk.ts`; контент `src/content/*/ru` и `.../uk` (реально были только `articles/ru`+`articles/uk` по 9 файлов + пустые `.gitkeep` коллекций); ru/uk-ветки локалей в layout/компонентах.
+- **hreflang:** BaseLayout теперь эмитит self `hreflang="en"` + `x-default` на тот же URL (других alternate нет). Cyrillic-preload шрифтов убран (нужна только латиница).
+- **LangSwitcher:** превращён в no-op заглушку (один язык — переключать нечего); пропсы приняты для совместимости Header/Footer.
+- **sitemap (astro.config):** убран i18n-режим (locales/hreflang-alternates), фильтр `/relocation/services/` без ru/uk-префикса.
+- **Гейт паритета (`scripts/check-parity.mjs`):** переписан под один язык — требует, чтобы весь контент лежал в `/en/` (любой файл вне `/en/` = ошибка), title ≤60.
+- **`public/_redirects`:** добавлены `/ru/* /:splat 301` и `/uk/* /:splat 301` (старые языковые URL → en на корне); `/en/* → :splat` сохранён.
+- **`scripts/new-content.mjs`:** генерит только en-версию.
+- **Доки:** `CLAUDE.md`, `CONTENT_GUIDE.md`, `SPEC.md`, `package.json` — указано «сайт только на английском (en)».
+- **Сборка:** 28 страниц, все на корне (нет `/ru/`, `/uk/`). В sitemap и HTML нет ru/uk-hreflang и ссылок на удалённые языки.
+- **Гейты:** `npm run check` 0/0/0 · `npm run build` ✓ (28 стр., без предупреждений) · `npm test` (enums/parity[9 en]/photos/interlinks) ✓ · `test:links` ✓ (1289 ссылок, 0 битых) · `lint` ✓. Закоммичено + запушено в `main`.
+
 ### 2026-07-01 — Контент: статья-ГОРОД Саранда (KALENDAR Нед.2, Ср 01.07)
 - Опубликована тройка en/ru/uk `cities/saranda-albania-guide` (целевой запрос `saranda albania`), EN-first, паритет (тот же slug, взаимные hreflang en↔ru↔uk + x-default→en).
 - **Объём:** EN-ведущая ~1500 слов (норма 1200–2000); ru/uk — полноценные зеркала под русский/украинский запрос (живая мова), факты идентичны.

@@ -4,6 +4,15 @@
 фиксов — [ROADMAP-FIX.md](ROADMAP-FIX.md), аудит — [AUDIT-2026-06-22.md](AUDIT-2026-06-22.md),
 статус-лог — [PROGRESS.md](PROGRESS.md), правила — [CLAUDE.md](CLAUDE.md).
 
+## Снимок (2026-06-22, структурно: сайт стал одноязычным — только EN)
+- **Сайт переведён на ОДИН язык — английский (en).** ru и uk удалены полностью: дерево `src/pages/ru/` + `src/pages/uk/`, словари `i18n/ru.ts`+`uk.ts`, контент `src/content/*/{ru,uk}` (реально были только 9+9 файлов в `articles/ru` и `articles/uk`), ru/uk-ветки в layout/компонентах. `LANGS=['en']`, `DEFAULT_LANG='en'`.
+- **hreflang:** self `hreflang="en"` + `x-default` на тот же URL (других alternate нет). sitemap без i18n-locales. `LangSwitcher` — no-op заглушка.
+- **`public/_redirects`:** `/ru/*` и `/uk/*` → 301 на корень (плюс прежний `/en/*`). Старые проиндексированные языковые URL переезжают на en.
+- **`check-parity`** переписан под один язык (весь контент обязан быть в `/en/`). **`new-content.mjs`** генерит только en.
+- **Сборка:** 28 страниц, все на корне (нет `/ru/`, `/uk/`); в sitemap/HTML нет ru/uk-hreflang и ссылок на удалённые языки.
+- **Гейты:** `check` 0/0/0 · `build` ✓ (28 стр., без предупреждений) · `npm test` ✓ · `test:links` ✓ (1289 ссылок, 0 битых) · `lint` ✓. Закоммичено + запушено в `main`.
+- **Дальше:** весь новый контент (статьи/новости/`/content`/`/news`) — только на английском. Доки `CLAUDE.md`/`CONTENT_GUIDE.md`/`SPEC.md` могут содержать устаревшие упоминания ru/uk ниже шапок — приоритет у шапок-баннеров «только en».
+
 ## Снимок (2026-07-01, контент-план Нед.2)
 - **Опубликована статья-ГОРОД Саранда** (тройка en/ru/uk, `cities/saranda-albania-guide`, KALENDAR Нед.2/Ср 01.07): EN-ведущая ~1500 слов, **14 уникальных фото** CC/CC0/PD Wikimedia (cover+8 инлайн+5 gallery, ≤200КБ, отобраны глазами), факты из надёжных источников (Wikipedia/UNESCO), цена/часы Бутринта оставлены TODO+«уточняйте» (правило 4). ≥2 внутр. ссылки + хаб `/cities/` + перелинк на Тирану, аренду авто, best-time. 2 AffiliateBox `/go/` (trip-hotels/trip-tours), `hotelWidget`, `accessFrom.tirana`. `featuredOrder: 3`. `npm run qa` → **GO**.
 - Дальше по KALENDAR Нед.2: Пт 03.07 «Tirana Airport Transfers» (info/transactional), Вс 05.07 «Renting a Car in Albania» (базовый `how-to-rent-a-car` уже есть — сверить с темой). Перелинк Саранда↔Ksamil/Albanian Riviera добавить, когда выйдут (Нед.4).

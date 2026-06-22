@@ -1,31 +1,24 @@
 ---
 /**
- * Динамический маршрут статьи (en — язык по умолчанию на корне): /{category}/{slug}/ (§7, §8.1).
+ * Динамический маршрут статьи (en — язык сайта на корне): /{category}/{slug}/ (§7, §8.1).
  * getStaticPaths берёт только опубликованные en-статьи из коллекции `articles`;
- * URL строится из frontmatter (category + slug). availableLangs — языки, на
- * которых есть этот slug (для hreflang, §12; en раскатывается батчами).
+ * URL строится из frontmatter (category + slug). Сайт одноязычный — en.
  */
 import type { GetStaticPaths } from 'astro';
 import { getCollectionSafe } from '../../loaders/getCollectionSafe';
 import ArticlePage from '../../layouts/ArticlePage.astro';
+import type { Lang } from '../../i18n';
 
 export const getStaticPaths = (async () => {
   const all = await getCollectionSafe('articles', (entry) => entry.data.draft !== true);
-  const ORDER = ['ru', 'uk', 'en'] as const;
   const en = all.filter((entry) => entry.data.lang === 'en');
+  const availableLangs: Lang[] = ['en'];
   return en.map((entry) => ({
     params: { category: entry.data.category, slug: entry.data.slug },
     props: {
       entry,
       siblings: en,
-      availableLangs: ORDER.filter((l) =>
-        all.some(
-          (e) =>
-            e.data.lang === l &&
-            e.data.slug === entry.data.slug &&
-            e.data.category === entry.data.category,
-        ),
-      ),
+      availableLangs,
     },
   }));
 }) satisfies GetStaticPaths;

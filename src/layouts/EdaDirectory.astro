@@ -106,12 +106,7 @@ const ogImage = places.find((p) => p.data.cover)?.data.cover?.src;
  * порядок наследуется из places.sort (спонсоры выше, затем по названию).
  * Заменяет фильтр по городу — город теперь виден как заголовок секции.
  */
-const CITY_ORDER =
-  lang === 'uk'
-    ? ['Тирана', 'Дуррес', 'Саранда', 'У дорозі']
-    : lang === 'en'
-      ? ['Tirana', 'Durrës', 'Sarandë', 'En route']
-      : ['Тирана', 'Дуррес', 'Саранда', 'По дороге'];
+const CITY_ORDER = ['Tirana', 'Durrës', 'Sarandë', 'En route'];
 const cityRank = (city: string): number => {
   const i = CITY_ORDER.indexOf(city);
   return i === -1 ? CITY_ORDER.length : i;

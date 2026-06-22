@@ -52,8 +52,8 @@ const visibleItems = items.filter(
 );
 const hasNews = visibleItems.length > 0;
 
-/** Локаль для заголовков месяцев («Июнь 2026»). */
-const LOCALE: Record<Lang, string> = { ru: 'ru-RU', uk: 'uk-UA', en: 'en-US' };
+/** Локаль для заголовков месяцев («June 2026»). */
+const LOCALE: Record<Lang, string> = { en: 'en-US' };
 const monthLabel = (d: Date): string => {
   const s = new Intl.DateTimeFormat(LOCALE[lang], {
     month: 'long',

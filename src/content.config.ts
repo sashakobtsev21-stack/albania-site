@@ -14,7 +14,7 @@ import { contentGlob } from './loaders/contentGlob';
  * хранит флаг.
  */
 
-const LANGS = ['ru', 'uk', 'en'] as const;
+const LANGS = ['en'] as const;
 
 const CATEGORIES = [
   'attractions',

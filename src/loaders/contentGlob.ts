@@ -16,12 +16,9 @@ import type { Loader, LoaderContext } from 'astro/loaders';
  * возникать; обёртка остаётся безвредной.
  */
 export function contentGlob(options: Parameters<typeof glob>[0]): Loader {
-  // Пары ru/uk имеют ОДИНАКОВЫЙ frontmatter-slug (§11). Дефолтный generateId
-  // глоб-лоадера берёт id = data.slug → ru- и uk-файлы коллидируют по id, и
-  // одна версия молча перетирает другую (warn «Duplicate id»). Поэтому строим
-  // id из пути относительно base (entry) — он включает префикс языка
-  // (`ru/…`, `uk/…`), что делает id уникальным, не трогая общий slug (его
-  // читаем из data в коде). Расширение отбрасываем.
+  // Сайт одноязычный (en). id строим из пути относительно base (entry,
+  // включает префикс `en/…`), а не из data.slug — устойчиво и не зависит от
+  // совпадений slug. Расширение отбрасываем.
   const base = glob({
     ...options,
     generateId: ({ entry }) => entry.replace(/\.[^/.]+$/, ''),

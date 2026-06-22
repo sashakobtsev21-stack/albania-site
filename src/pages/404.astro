@@ -1,9 +1,8 @@
 ---
 /**
  * Кастомная 404 (§7; аудит 2026-06-17 — закрыта «слепая зона»). Cloudflare отдаёт
- * один 404.html на любой ненайденный путь, поэтому рендерим на языке по умолчанию
- * (en). Полная навигация и переключатель языка — в шапке (Header из BaseLayout),
- * так что ru/uk-читатель сразу переключится на свой язык/раздел. noindex.
+ * один 404.html на любой ненайденный путь, рендерим на языке сайта (en). Полная
+ * навигация — в шапке (Header из BaseLayout). noindex.
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { t, sectionHref, DEFAULT_LANG } from '../i18n';
@@ -12,16 +11,8 @@ import Icon from '../components/Icon.astro';
 const lang = DEFAULT_LANG;
 const dict = t(lang);
 const nf = dict.notFound;
-/**
- * На 404 переключатель языка и hreflang ограничиваем одним языком (en): зеркальных
- * /ru/404, /uk/404 не существует — иначе шапка/hreflang дадут битые ссылки. Вместо
- * свитчера даём в теле явные входы на главную всех языков (эти страницы существуют).
- */
-const homes = [
-  { href: sectionHref('en', 'home'), label: t('en').notFound.home },
-  { href: sectionHref('ru', 'home'), label: t('ru').notFound.home },
-  { href: sectionHref('uk', 'home'), label: t('uk').notFound.home },
-];
+/** Сайт одноязычный — единственный явный вход на главную (en). */
+const homes = [{ href: sectionHref('en', 'home'), label: t('en').notFound.home }];
 ---
 
 <BaseLayout title={`404 — ${dict.siteName}`} description={nf.text} lang={lang} utility>

@@ -18,10 +18,10 @@ import Icon from './Icon.astro';
 
 interface Props {
   lang: Lang;
-  /** Языки, доступные для текущей страницы (→ LangSwitcher, §12). По умолчанию все 3. */
+  /** Языки, доступные для текущей страницы (→ LangSwitcher, §12). Сайт одноязычный — en. */
   availableLangs?: Lang[];
 }
-const { lang, availableLangs = ['ru', 'uk', 'en'] } = Astro.props;
+const { lang, availableLangs = ['en'] } = Astro.props;
 const dict = t(lang);
 const homeHref = sectionHref(lang, 'home');
 const currentPath = Astro.url.pathname;

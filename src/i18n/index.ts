@@ -1,12 +1,9 @@
 /**
- * Точка входа i18n (SPEC §12). Язык определяется путём (`/uk/...` → uk,
- * иначе ru), без автодетекта и редиректов по гео/Accept-Language.
+ * Точка входа i18n (SPEC §12). Сайт одноязычный — только английский (en) на
+ * корне `/`. Без автодетекта и редиректов по гео/Accept-Language.
  */
-import { ru } from './ru';
-import { uk } from './uk';
 import { en } from './en';
 import {
-  LANGS,
   DEFAULT_LANG,
   ATTRACTION_TYPE_SLUGS,
   REGION_SLUGS,
@@ -60,7 +57,7 @@ export const EDA_CITY_PAGES = [
   { key: 'sarande', slug: 'where-to-eat-sarande', citySlug: 'sarande' },
 ] as const satisfies ReadonlyArray<{ key: EdaCityKey; slug: string; citySlug: string }>;
 
-const dictionaries: Record<Lang, UIDictionary> = { ru, uk, en };
+const dictionaries: Record<Lang, UIDictionary> = { en };
 
 /** Словарь UI-строк для языка. */
 export function t(lang: Lang): UIDictionary {
@@ -115,37 +112,19 @@ export function format(template: string, vars: Record<string, string>): string {
 }
 
 /**
- * Префикс пути для языка: ru — корень, uk — `/uk`.
+ * Префикс пути для языка. Сайт одноязычный (en на корне) — префикса нет.
  * Финальный слэш добавляется на уровне URL (trailingSlash: 'always').
  */
-export function langPrefix(lang: Lang): string {
-  return lang === DEFAULT_LANG ? '' : `/${lang}`;
+export function langPrefix(_lang: Lang): string {
+  return '';
 }
 
 /**
- * Зеркальный путь текущей страницы на другом языке (§12): снимает любой
- * языковой префикс с пути и ставит префикс целевого языка. Используется для
- * взаимных hreflang (BaseLayout) и переключателя языка (LangSwitcher).
+ * Зеркальный путь текущей страницы на другом языке (§12). Сайт одноязычный —
+ * зеркал нет, путь возвращается без изменений.
  */
-export function mirrorPath(currentPath: string, targetLang: Lang): string {
-  let base = currentPath;
-  for (const l of LANGS) {
-    if (l === DEFAULT_LANG) continue;
-    const pre = `/${l}`;
-    if (currentPath === `${pre}/`) {
-      base = '/';
-      break;
-    }
-    if (currentPath.startsWith(`${pre}/`)) {
-      base = currentPath.slice(pre.length);
-      break;
-    }
-  }
-  return targetLang === DEFAULT_LANG
-    ? base
-    : base === '/'
-      ? `/${targetLang}/`
-      : `/${targetLang}${base}`;
+export function mirrorPath(currentPath: string, _targetLang: Lang): string {
+  return currentPath;
 }
 
 /**
@@ -159,9 +138,8 @@ export function sectionHref(lang: Lang, section: SectionKey): string {
 }
 
 /**
- * URL статьи: `/{category}/{slug}/` (ru) или `/{lang}/{category}/{slug}/` (uk).
- * Всегда с завершающим слэшем (§7). Используется в карточках, хабах,
- * перелинковке и getStaticPaths шаблона статьи.
+ * URL статьи: `/{category}/{slug}/`. Всегда с завершающим слэшем (§7).
+ * Используется в карточках, хабах, перелинковке и getStaticPaths шаблона статьи.
  */
 export function articleHref(lang: Lang, category: string, slug: string): string {
   return `${langPrefix(lang)}/${category}/${slug}/`;
@@ -223,7 +201,7 @@ export function serviceRubricLabel(lang: Lang, slug: string): string {
 }
 
 /** BCP-47 локаль для Intl по языку версии (§12). */
-const LOCALE: Record<Lang, string> = { ru: 'ru-RU', uk: 'uk-UA', en: 'en-US' };
+const LOCALE: Record<Lang, string> = { en: 'en-US' };
 
 /**
  * Видимая дата для бейджей «Проверено · {дата}» (§9). Дата приходит из

@@ -38,9 +38,8 @@ interface Props {
    */
   utility?: boolean;
   /**
-   * Языки, на которых СУЩЕСТВУЕТ эта страница (для hreflang, §12). По умолчанию
-   * все 3 (статические страницы/хабы есть на всех языках). Контентные шаблоны
-   * (ArticlePage/RoutePage) передают вычисленный список — en только если перевод есть.
+   * Языки, на которых СУЩЕСТВУЕТ эта страница (для hreflang, §12). Сайт
+   * одноязычный — только en. Оставлен для совместимости сигнатур шаблонов.
    */
   availableLangs?: Lang[];
 }
@@ -53,9 +52,9 @@ const {
   ogType = 'website',
   noindex = false,
   utility = false,
-  availableLangs = ['ru', 'uk', 'en'],
+  availableLangs = ['en'],
 } = Astro.props;
-const OG_LOCALE: Record<Lang, string> = { ru: 'ru_RU', uk: 'uk_UA', en: 'en_US' };
+const OG_LOCALE: Record<Lang, string> = { en: 'en_US' };
 const dict = t(lang);
 /**
  * Языки для переключателя в шапке/подвале. На служебной утилите (404) зеркал нет —
@@ -114,8 +113,8 @@ const siteLd = {
 
     {
       /* Перф (аудит 2026-06-20): preload дисплей-шрифта Unbounded — он рисует H1/бренд
-        над сгибом (часто LCP-элемент). Латиница нужна всегда (бренд + EN H1), кириллица —
-        на ru/uk (их H1). font-display:swap уже стоит; preload убирает позднюю подмену. */
+        над сгибом (часто LCP-элемент). Сайт одноязычный (en) — нужна только латиница.
+        font-display:swap уже стоит; preload убирает позднюю подмену. */
     }
     <link
       rel="preload"
@@ -124,17 +123,6 @@ const siteLd = {
       type="font/woff2"
       crossorigin
     />
-    {
-      lang !== 'en' && (
-        <link
-          rel="preload"
-          href="/fonts/unbounded-cyrillic-600-normal.woff2"
-          as="font"
-          type="font/woff2"
-          crossorigin
-        />
-      )
-    }
 
     {
       /* Google Analytics 4 (§17, правило 8 — единственная аналитика на сайте).
@@ -215,20 +203,13 @@ const siteLd = {
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180.png" />
 
     <!--
-      Preload LCP-критичных шрифтов (§15): cyrillic-сабсеты для ru/uk —
-      Unbounded 600 (H1) и Manrope 400 (body). Латиница и веса 500/600
-      подтянутся по факту использования (font-display: swap, без CLS).
+      Preload LCP-критичного body-шрифта (§15): Manrope 400 latin — основной
+      текст над сгибом. Unbounded 600 latin уже предзагружен выше (H1/бренд).
+      Веса 500/600 подтянутся по факту использования (font-display: swap, без CLS).
     -->
     <link
       rel="preload"
-      href="/fonts/unbounded-cyrillic-600-normal.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/fonts/manrope-cyrillic-400-normal.woff2"
+      href="/fonts/manrope-latin-400-normal.woff2"
       as="font"
       type="font/woff2"
       crossorigin
