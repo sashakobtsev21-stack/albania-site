@@ -16,7 +16,7 @@
 
 ## Неделя 3 (08–14.07) — Стартовое ядро: маршрут-магнит + второй город + US-хук
 - Ср 08.07 — [Статья] 10 Days in Albania: Ultimate Road Trip Itinerary + Map · `albania road trip itinerary` · /albania-road-trip-itinerary/ · категория routes · фото каждой остановки (Tirana→Berat→Saranda→Ksamil→Gjirokaster→Theth) · 💰 аренда авто/страховка · перелинк: связывает ВСЕ города-якоря; → car rental
-- Пт 10.07 — [Статья] Berat, Albania: City of a Thousand Windows Guide · `berat albania` · /berat-albania-guide/ · категория cities · фото ≥10 · 💰 отели/туры · перелинк: ← road trip itinerary, → day trips from Tirana
+- ✅ Пт 10.07 — [Статья] Berat, Albania: City of a Thousand Windows Guide · `berat albania` · /cities/berat-albania-guide/ · категория cities · фото 12 (cover+8 инлайн+3 gallery, CC/CC0 Wikimedia) · 💰 trip-hotels/trip-tours · ОПУБЛИКОВАНО (en, qa=GO; `featuredOrder:4`, в витрине главной). Перелинк ← road trip itinerary / → day trips from Tirana добавить, когда выйдут (Нед.3 Ср / Нед.8).
 - Вс 12.07 — [Статья] Albania 1-Year Visa-Free for US Citizens: How It Works · `albania visa free 1 year us citizens` · /albania-1-year-visa-free-us-citizens/ · категория info · фото ≥5 · 💰 страховка/жильё long-stay · перелинк: → digital nomad visa, → cost of living
 - Пн 13.07 — 📊 Замер GA/GSC (15 мин: что из стартового пакета индексируется; первая корректировка хвоста)
 

@@ -4,6 +4,12 @@
 фиксов — [ROADMAP-FIX.md](ROADMAP-FIX.md), аудит — [AUDIT-2026-06-22.md](AUDIT-2026-06-22.md),
 статус-лог — [PROGRESS.md](PROGRESS.md), правила — [CLAUDE.md](CLAUDE.md).
 
+## Снимок (2026-07-10, контент-план Нед.3 — город Берат)
+- **Опубликована статья-ГОРОД Берат** (одноязычная en, `cities/berat-albania-guide`, KALENDAR Нед.3/Пт 10.07): EN ~1620 слов, **12 уникальных фото** CC/CC0 Wikimedia (cover + 8 инлайн + 3 gallery, webp ≤200КБ, отобраны глазами). Структура города (Мангалем «тысяча окон» / замок Кала + Онуфри / Горица + Османский мост + Свинцовая мечеть / каньон Осуми + вино-ракия / жильё / как добраться / еда / практика), без FAQ. Факты из Wikipedia/UNESCO; цена/часы Онуфри — TODO+«уточняйте» (правило 4). 5 внутр. ссылок (хаб `/cities/` + Саранда/Тирана/аренда авто/best-time), 2 AffiliateBox `/go/`, `hotelWidget`, `accessFrom.tirana`, `geo`, `featuredOrder:4`.
+- **Витрина:** Берат — третий пик в `showcasePicks` (`HomePage.astro`): `{kind:'article',category:'cities',slug:'berat-albania-guide',kicker:'city',city:'Berat'}`. Лента на главной — три города. `build:covers` прогнан.
+- **Гейты:** `npm run qa` → **GO ✅** (check 0/0/0 · build ✓ 29 стр. · test [parity 10 en] ✓ · test:links ✓ · lint ✓). Закоммичено + запушено в `main`.
+- **Дальше по KALENDAR Нед.3:** Вс 12.07 «Albania 1-Year Visa-Free for US Citizens» (info). Перелинк Берат ← road trip itinerary / → day trips from Tirana добавить, когда выйдут (Нед.3 Ср / Нед.8). ROADMAP-FIX: добор фото при желании — текущих 12 достаточно (норма города ≥10 выполнена).
+
 ## Снимок (2026-06-22, UI: убран «Language» + витрина наполнена)
 - **Меню без переключателя языка.** `Header.astro` — удалён блок `.nav__lang` (подпись `dict.lang.label` + `<LangSwitcher/>`) из мобильной выпадашки, мёртвый CSS и неиспользуемый импорт; `Footer.astro` — удалён `<LangSwitcher/>` и его импорт. `availableLangs` оставлен в обоих интерфейсах (совместимость с `BaseLayout`, не используется). В `dist/` нет `nav__lang`/`>Language<`/`lang-switch`.
 - **Витрина главной наполнена.** `HomePage.astro` → `showcasePicks` теперь содержит 2 пика: `things-to-do-in-tirana` и `saranda-albania-guide` (`category:'cities'`, kicker `'city'`, city-чипы Tirana/Saranda; у обоих cover). На `dist/index.html` — секция `block--showcase` с `showcase-rail` и двумя карточками городов. Условие «пусто → скрыто» сохранено: при опустошении массива лента снова исчезнет.
