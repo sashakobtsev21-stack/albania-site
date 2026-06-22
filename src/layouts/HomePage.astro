@@ -147,9 +147,10 @@ const showcaseRestaurants = await getCollectionSafe(
   (entry) => entry.data.lang === lang && entry.data.draft !== true,
 );
 // Заведения перемешаны со статьями/маршрутами (не подряд) — решение владельца.
-// Витрина пуста до R3: албанского featured-контента (города/маршруты/места) ещё
-// нет — грузинские пики удалены. Машинерия резолвинга ниже сохранена: при наполнении
-// вернуть подборку по албанским слагам. Пустой массив → лента скрыта (см. рендер §8.4).
+// Витрина наполняется по мере публикации албанского featured-контента: сейчас два
+// опубликованных города-гайда (Тирана, Саранда; category: 'cities', оба с cover).
+// Обложка/заголовок берутся из коллекции — реальные данные (CLAUDE правило 4).
+// Пустой массив → лента скрыта (см. рендер §8.4). По мере роста — добавлять слаги.
 const showcasePicks: ReadonlyArray<{
   kind: 'article' | 'route' | 'restaurant';
   category: string;
@@ -161,7 +162,10 @@ const showcasePicks: ReadonlyArray<{
   city?: string;
   cardTitle?: string;
   mapUrl?: string;
-}> = [];
+}> = [
+  { kind: 'article', category: 'cities', slug: 'things-to-do-in-tirana', kicker: 'city', city: 'Tirana' },
+  { kind: 'article', category: 'cities', slug: 'saranda-albania-guide', kicker: 'city', city: 'Saranda' },
+];
 const showcaseItems: ShowcaseItem[] = [];
 for (const pick of showcasePicks) {
   if (pick.kind === 'restaurant') {

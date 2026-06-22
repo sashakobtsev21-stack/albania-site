@@ -4,6 +4,12 @@
 фиксов — [ROADMAP-FIX.md](ROADMAP-FIX.md), аудит — [AUDIT-2026-06-22.md](AUDIT-2026-06-22.md),
 статус-лог — [PROGRESS.md](PROGRESS.md), правила — [CLAUDE.md](CLAUDE.md).
 
+## Снимок (2026-06-22, UI: убран «Language» + витрина наполнена)
+- **Меню без переключателя языка.** `Header.astro` — удалён блок `.nav__lang` (подпись `dict.lang.label` + `<LangSwitcher/>`) из мобильной выпадашки, мёртвый CSS и неиспользуемый импорт; `Footer.astro` — удалён `<LangSwitcher/>` и его импорт. `availableLangs` оставлен в обоих интерфейсах (совместимость с `BaseLayout`, не используется). В `dist/` нет `nav__lang`/`>Language<`/`lang-switch`.
+- **Витрина главной наполнена.** `HomePage.astro` → `showcasePicks` теперь содержит 2 пика: `things-to-do-in-tirana` и `saranda-albania-guide` (`category:'cities'`, kicker `'city'`, city-чипы Tirana/Saranda; у обоих cover). На `dist/index.html` — секция `block--showcase` с `showcase-rail` и двумя карточками городов. Условие «пусто → скрыто» сохранено: при опустошении массива лента снова исчезнет.
+- **Гейты:** `build` ✓ (28 стр.) · `check` 0/0/0 · `npm test` ✓ · `test:links` ✓ (1293 ссылки) · `lint` ✓. Закоммичено + запушено в `main`.
+- **Дальше:** по мере публикации новых городов/маршрутов/мест — добавлять их слаги в `showcasePicks` (формат пика — в комментарии над массивом); при добавлении place-карточек (поповер адрес/часы/карта) использовать `place:true`.
+
 ## Снимок (2026-06-22, структурно: сайт стал одноязычным — только EN)
 - **Сайт переведён на ОДИН язык — английский (en).** ru и uk удалены полностью: дерево `src/pages/ru/` + `src/pages/uk/`, словари `i18n/ru.ts`+`uk.ts`, контент `src/content/*/{ru,uk}` (реально были только 9+9 файлов в `articles/ru` и `articles/uk`), ru/uk-ветки в layout/компонентах. `LANGS=['en']`, `DEFAULT_LANG='en'`.
 - **hreflang:** self `hreflang="en"` + `x-default` на тот же URL (других alternate нет). sitemap без i18n-locales. `LangSwitcher` — no-op заглушка.

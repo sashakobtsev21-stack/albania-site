@@ -2,9 +2,10 @@
 /**
  * Header (§9, §10) — направление «Полевой журнал».
  * Тонкая белая sticky-шапка: сверху utility-полоса с курсом/погодой (RatesBar),
- * ниже — бренд слева, ОСНОВНЫЕ разделы в строке (десктоп), переключатель языка
- * и кнопка-меню справа. Кнопка ☰ открывает компактный блок-выпадашку с
- * остальными разделами (а на мобайле — со всеми). Меню — нативный JS (минимум).
+ * ниже — бренд слева, ОСНОВНЫЕ разделы в строке (десктоп) и кнопка-меню справа.
+ * Кнопка ☰ открывает компактный блок-выпадашку с остальными разделами (а на
+ * мобайле — со всеми). Сайт одноязычный (en) — переключателя языка нет.
+ * Меню — нативный JS (минимум).
  *
  * Раскладка разделов (решение владельца): основные (PRIMARY_TILE_KEYS) вынесены
  * в строку на десктопе; вторичные — всегда в выпадашке. На мобайле строка
@@ -12,16 +13,15 @@
  * .nav__primary и показываются только на мобайле).
  */
 import { t, sectionHref, SECTION_KEYS, PRIMARY_TILE_KEYS, type Lang } from '../i18n';
-import LangSwitcher from './LangSwitcher.astro';
 import RatesBar from './RatesBar.astro';
 import Icon from './Icon.astro';
 
 interface Props {
   lang: Lang;
-  /** Языки, доступные для текущей страницы (→ LangSwitcher, §12). Сайт одноязычный — en. */
+  /** Принимается для совместимости с BaseLayout; сайт одноязычный — переключателя нет. */
   availableLangs?: Lang[];
 }
-const { lang, availableLangs = ['en'] } = Astro.props;
+const { lang } = Astro.props;
 const dict = t(lang);
 const homeHref = sectionHref(lang, 'home');
 const currentPath = Astro.url.pathname;
@@ -67,9 +67,8 @@ const secondaryKeys = SECTION_KEYS.filter((key) => !primarySet.includes(key));
       </ul>
     </nav>
 
-    {/* Кнопка-меню + выпадашка: разделы + переключатель языка. Язык убран из
-        строки шапки (решение владельца): сайт EN-first, смена языка — вторичное
-        действие, ему место в меню, а не на главном экране. */}
+    {/* Кнопка-меню + выпадашка: разделы. Сайт одноязычный (en) — переключателя
+        языка нет (удалён 2026-06-22). */}
     <div class="menu">
       <button
         type="button"
@@ -116,11 +115,6 @@ const secondaryKeys = SECTION_KEYS.filter((key) => !primarySet.includes(key));
             })
           }
         </ul>
-        {/* Переключатель языка — в подвале выпадашки, отделён линией. */}
-        <div class="nav__lang">
-          <span class="nav__lang-label">{dict.lang.label}</span>
-          <LangSwitcher lang={lang} availableLangs={availableLangs} />
-        </div>
       </nav>
     </div>
   </div>
@@ -355,23 +349,6 @@ const secondaryKeys = SECTION_KEYS.filter((key) => !primarySet.includes(key));
     .nav__primary {
       display: none;
     }
-  }
-
-  /* Переключатель языка в подвале выпадашки: метка сверху, языки снизу,
-     отделено тонкой линией от списка разделов. */
-  .nav__lang {
-    margin-top: var(--space-2);
-    padding: var(--space-3) var(--space-3) var(--space-1);
-    border-top: 1px solid var(--border-hairline);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-1);
-  }
-  .nav__lang-label {
-    font-size: var(--text-sm);
-    font-weight: 600;
-    color: var(--text-muted);
   }
 
   /*

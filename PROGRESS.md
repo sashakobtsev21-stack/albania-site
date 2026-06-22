@@ -19,6 +19,11 @@
 Бэклог фиксов — [ROADMAP-FIX.md](ROADMAP-FIX.md), аудит — [AUDIT-2026-06-22.md](AUDIT-2026-06-22.md).
 
 ## Лог (новые записи сверху)
+### 2026-06-22 — UI: убран пункт «Language» из меню + наполнена витрина главной городами
+- **Правка 1 (одноязычность в UI):** из `Header.astro` удалён блок переключателя языка в мобильной выпадашке (`.nav__lang`/`.nav__lang-label` + подпись `dict.lang.label` + `<LangSwitcher/>`), убран неиспользуемый импорт `LangSwitcher`, удалён мёртвый CSS `.nav__lang*`, поправлены комментарии. Из `Footer.astro` удалён `<LangSwitcher/>` и его импорт. Пропс `availableLangs` оставлен в обоих интерфейсах для совместимости с `BaseLayout` (не деструктурируется). `dict.lang.label` больше нигде в шапке/подвале не рендерится. В `dist/` — 0 вхождений `nav__lang` и `>Language<`.
+- **Правка 2 (витрина):** в `HomePage.astro` массив `showcasePicks` (был пуст `[]`) заполнен двумя опубликованными городами-гайдами: `things-to-do-in-tirana` и `saranda-albania-guide` (оба `category: 'cities'`, kicker `'city'` → «City», city-чип Tirana/Saranda, у обоих есть cover). Машинерия резолвинга не тронута; условие «пусто → лента скрыта» сохранено. На главной появилась золотая лента витрины (`block--showcase` + `showcase-rail` с двумя карточками городов).
+- **Гейты:** `npm run build` ✓ (28 стр., без предупреждений; `/cities/things-to-do-in-tirana/`+`/cities/saranda-albania-guide/` на месте) · `npm run check` 0/0/0 · `npm test` (enums/parity[9 en]/photos/interlinks) ✓ · `test:links` ✓ (1293 ссылки, 0 битых) · `lint` ✓. Закоммичено + запушено в `main`.
+
 ### 2026-06-22 — Структурно: сайт переведён на ОДИН язык — английский (en)
 - **Решение владельца:** убрать ru и uk полностью, оставить только en на корне `/`. Сайт стал одноязычным.
 - **Конфиг:** `LANGS = ['en']` (`src/i18n/types.ts`, `src/content.config.ts`), `DEFAULT_LANG = 'en'`. `i18n/index.ts`: убраны импорты/словари ru/uk, `langPrefix`/`mirrorPath` упрощены (префикса нет, зеркал нет), `LOCALE`/`OG_LOCALE` → только en.
