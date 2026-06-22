@@ -147,8 +147,10 @@ const showcaseRestaurants = await getCollectionSafe(
   (entry) => entry.data.lang === lang && entry.data.draft !== true,
 );
 // Заведения перемешаны со статьями/маршрутами (не подряд) — решение владельца.
-// Витрина наполняется по мере публикации албанского featured-контента: сейчас два
-// опубликованных города-гайда (Тирана, Саранда; category: 'cities', оба с cover).
+// Витрина наполняется по мере публикации албанского featured-контента: сейчас три
+// города-гайда (Тирана/Саранда/Берат) + ключевые статьи (визы, аренда авто, сезон,
+// страховки, цифровой кочевник) — всего 8 уникальных карточек, чтобы лента крутилась
+// непрерывно и без видимых повторов (клоны добавляет /js/showcase-rail.js в рантайме).
 // Обложка/заголовок берутся из коллекции — реальные данные (CLAUDE правило 4).
 // Пустой массив → лента скрыта (см. рендер §8.4). По мере роста — добавлять слаги.
 const showcasePicks: ReadonlyArray<{
@@ -166,6 +168,11 @@ const showcasePicks: ReadonlyArray<{
   { kind: 'article', category: 'cities', slug: 'things-to-do-in-tirana', kicker: 'city', city: 'Tirana' },
   { kind: 'article', category: 'cities', slug: 'saranda-albania-guide', kicker: 'city', city: 'Saranda' },
   { kind: 'article', category: 'cities', slug: 'berat-albania-guide', kicker: 'city', city: 'Berat' },
+  { kind: 'article', category: 'planning', slug: 'albania-visa', kicker: 'sight' },
+  { kind: 'article', category: 'car-rental', slug: 'how-to-rent-a-car', kicker: 'sight' },
+  { kind: 'article', category: 'planning', slug: 'best-time-to-visit', kicker: 'sight' },
+  { kind: 'article', category: 'insurance', slug: 'do-you-need-insurance', kicker: 'sight' },
+  { kind: 'article', category: 'relocation', slug: 'digital-nomad-visa', kicker: 'sight' },
 ];
 const showcaseItems: ShowcaseItem[] = [];
 for (const pick of showcasePicks) {

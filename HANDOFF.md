@@ -4,6 +4,14 @@
 фиксов — [ROADMAP-FIX.md](ROADMAP-FIX.md), аудит — [AUDIT-2026-06-22.md](AUDIT-2026-06-22.md),
 статус-лог — [PROGRESS.md](PROGRESS.md), правила — [CLAUDE.md](CLAUDE.md).
 
+## Снимок (2026-07-10, UI-фикс — бесшовная крутилка витрины)
+- **Витрина крутится непрерывно по кругу.** `public/js/showcase-rail.js` заменён на эталонную бесшовную реализацию: JS клонирует уникальный набор до ширины дорожки ≥2.5× вьюпорта и заворачивает петлю на ширину одного набора → не останавливается при малом числе карточек, без рывка; клоны `aria-hidden`/вне фокус-порядка. Пауза при hover/focus, drag/свайп, reduced-motion, клик-vs-drag, тач-поповер — сохранены.
+- **Без статических клонов в разметке.** `ShowcaseRail.astro`: `const cells = items.map((it) => ({ ...it, clone: false }));` (раньше рендерил набор дважды). Клонированием теперь занимается только JS; поле `clone` всегда false, стили/разметка не тронуты.
+- **Набор витрины — 8 уникальных карточек.** `showcasePicks` (`HomePage.astro`): 3 города (Тирана/Саранда/Берат, kicker `city`) + 5 статей с cover — `albania-visa`/`best-time-to-visit` (planning), `how-to-rent-a-car` (car-rental), `do-you-need-insurance` (insurance), `digital-nomad-visa` (relocation), все kicker `sight`. Дедуп по slug, категория из frontmatter. Хватает на полный вьюпорт без повторов.
+- **Верификация `dist/index.html`:** в `showcase__track` 8 ячеек, 0 `data-clone`, 8 уникальных hrefs, нет двух одинаковых подряд (клоны добавляет JS в рантайме).
+- **Гейты:** `build` ✓ (30 стр.) · `check` 0/0/0 · `npm test` ✓ · `test:links` ✓ (1412 ссылок) · `lint` ✓. Закоммичено + запушено в `main`.
+- **Дальше:** при добавлении новых городов/статей — добавлять слаги в `showcasePicks` (валидные kicker-ключи: `city`/`route`/`sight`/`food`/`nightlife`); JS-крутилка масштабируется автоматически.
+
 ## Снимок (2026-07-10, контент-план Нед.3 — город Берат)
 - **Опубликована статья-ГОРОД Берат** (одноязычная en, `cities/berat-albania-guide`, KALENDAR Нед.3/Пт 10.07): EN ~1620 слов, **12 уникальных фото** CC/CC0 Wikimedia (cover + 8 инлайн + 3 gallery, webp ≤200КБ, отобраны глазами). Структура города (Мангалем «тысяча окон» / замок Кала + Онуфри / Горица + Османский мост + Свинцовая мечеть / каньон Осуми + вино-ракия / жильё / как добраться / еда / практика), без FAQ. Факты из Wikipedia/UNESCO; цена/часы Онуфри — TODO+«уточняйте» (правило 4). 5 внутр. ссылок (хаб `/cities/` + Саранда/Тирана/аренда авто/best-time), 2 AffiliateBox `/go/`, `hotelWidget`, `accessFrom.tirana`, `geo`, `featuredOrder:4`.
 - **Витрина:** Берат — третий пик в `showcasePicks` (`HomePage.astro`): `{kind:'article',category:'cities',slug:'berat-albania-guide',kicker:'city',city:'Berat'}`. Лента на главной — три города. `build:covers` прогнан.
