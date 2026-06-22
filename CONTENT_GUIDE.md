@@ -254,7 +254,7 @@ title: 'Целевой запрос в заголовке ≤60 символов
 description: 'Ответ на запрос в 1–2 предложениях, ≤155 символов.'
 slug: 'url-slug-latinicej'
 lang: 'ru'
-category: 'cities' # attractions|cities|transport|car-rental|relocation|insurance|entertainment|news
+category: 'cities' # attractions|cities|food|entertainment|routes|transport|car-rental|relocation|insurance|news|planning
 publishedAt: 2026-06-18
 updatedAt: 2026-06-18
 cover:

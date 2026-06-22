@@ -16,6 +16,13 @@
   `relocation/digital-nomad-visa`) — только обложки, без инлайн-фото (норма ≥5 → ROADMAP-FIX).
   Коллекции `routes/restaurants/services/cities` пусты, новостей 0.
 
+## Повторный прогон + `/full-audit` (2026-06-22)
+Запущен `/full-audit` (11 агентов, адверсариальная проверка) — нашёл и закрыто: 🔴 инлайн `/go/`
+без rel/?c= (+ check-links теперь гейтит); 🟠 `offline.html` Georgia, тонкие хабы → noindex,
+«Фото:»→«Photo:» на EN; 🟡 мёртвый CSS `.eda→.food`, грузинские комментарии, SPEC/CONTENT_GUIDE
+категории→11 EN; 🔵 twitter:alt/ga-init defer/js-кэш/go-security/guard жилья. Отложено (ROADMAP-FIX):
+адаптивные обложки, коллизия маршрутов food/cities, CI-гейты, объём статей, контраст. См. AUDIT-2026-06-22 §H.
+
 ## Что закрыто в Этапе 1 (2026-06-22)
 - **qa = GO:** 24 битых forward-ссылки из хабов → условный рендер (рендерятся при наличии цели).
 - **schema.org** `addressCountry GE→AL`; удалён `bash.exe.stackdump` (+ в .gitignore); убраны

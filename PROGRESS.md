@@ -19,6 +19,15 @@
 Бэклог фиксов — [ROADMAP-FIX.md](ROADMAP-FIX.md), аудит — [AUDIT-2026-06-22.md](AUDIT-2026-06-22.md).
 
 ## Лог (новые записи сверху)
+### 2026-06-22 — Этап 1: повторный прогон + `/full-audit` (11 агентов)
+- Запущен заказанный `/full-audit` (адверсариальная проверка в исходниках + dist) — нашёл реальные дефекты мимо гейтов. Закрыто:
+  - 🔴 инлайн `/go/safetywing` без rel/?c= (×3) → убран + **check-links гейтит** rel+?c= на всех `/go/`.
+  - 🟠 `offline.html` «Georgia Guidebook» (уезжал в dist через SW) → Albania; тонкие хабы → `noindex={!hasContent}` (6 шаблонов) + hreflang снят на noindex; «Фото:»→«Photo:» на 5 EN-обложках.
+  - 🟡 мёртвый CSS `.eda→.food`; грузинские комментарии (matsne→punetejashtme, Тбилиси→Тирана, Батуми→Саранда, палитра→азур); SPEC/CONTENT_GUIDE: категории → 11 EN, §25 п.6 закрыт.
+  - 🔵 twitter:image:alt; ga-init defer; /js Cache-Control; /go security-заголовки; guard жилья на пустой city-food.
+- Отложено в `ROADMAP-FIX.md`: адаптивные обложки (мёртвый srcset-пайплайн), коллизия маршрутов food/cities, CI/daily-news мимо гейтов, объём статей <1200 слов, контраст --color-wine, контентные правки. Детали — `AUDIT-2026-06-22.md` блок H.
+- Сверено: Этап 1 цел (ничего не регрессировало). `astro check` 0/0/0, `npm run qa` → GO.
+
 ### 2026-06-22 — Этап 1 (техбаза, чистка, доки)
 - **qa = GO:** 24 битых forward-ссылки из хабов (food/city/insurance) → условный рендер
   (рендерятся только при наличии целевой статьи). `check-links` 0 битых (71 стр, 3511 ссылок).
