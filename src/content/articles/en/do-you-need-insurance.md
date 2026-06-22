@@ -23,8 +23,6 @@ affiliate:
 
 Travel insurance is strongly recommended for a trip to Albania, but for most visa-free tourists it is not a hard entry requirement. You will not normally be asked to show a policy at the border. That said, every major government travel advisory urges visitors to arrange medical and evacuation cover before they arrive, because Albania has no reciprocal healthcare agreement with the UK, the US, Australia or the EU — so any treatment you need is something you pay for yourself.
 
-<!-- TODO: фото -->
-
 ## Is travel insurance required to enter Albania?
 
 For short tourist visits, no. The UK government's [foreign travel advice for Albania](https://www.gov.uk/foreign-travel-advice/albania) sets out the entry rules, and its entry-requirements section does not list travel insurance as a condition of entry for visa-free visitors. The US State Department and Australia's Smartraveller both **recommend** comprehensive insurance — and specifically medical and evacuation cover — but neither makes it a precondition for entering the country as a tourist.

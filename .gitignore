@@ -30,6 +30,7 @@ scripts/_*.mjs
 # OS / editor
 .DS_Store
 Thumbs.db
+*.stackdump
 
 # временный контакт-лист фото главной (для просмотра владельцем)
 home-photos.html

@@ -24,8 +24,6 @@ affiliate:
 
 For most of Albania, a rental car is less a luxury than the key that unlocks the country. The famous corridors are easy enough on public transport, but the places travellers come for — the Accursed Mountains above Theth and Valbona, the string of beach villages along the Riviera — sit at the end of roads that buses barely serve. If you want to set your own pace and reach the scenic edges, you either drive yourself or hire a private driver. This guide walks through where to pick a car up, the paperwork worth checking, and how to drive sensibly once you have the keys.
 
-<!-- TODO: фото -->
-
 ## Why a car makes sense in Albania
 
 Albania has effectively no passenger rail network to speak of, so the backbone of getting around is the road. On the main routes — Tirana to Shkoder in the north, or south down to Vlore, Sarande and inland to Korce — comfortable buses and shared minibuses run often enough that you don't strictly need your own wheels. For that kind of point-to-point travel, public transport is genuinely fine, and you can read more about the options in our [getting around Albania](/transport/) overview.
@@ -42,8 +40,6 @@ Two other pickups are worth knowing:
 - **Sarande** — useful in the deep south, near the Riviera and the Greek border crossing, so you can start exploring the coast without first backtracking to Tirana.
 
 Picking up where you actually begin your trip saves both time and one-way fees. If you plan to drive the Riviera and the south, collecting a car in Sarande can make more sense than driving all the way down from Tirana and back.
-
-<!-- TODO: фото -->
 
 ## Paperwork: licence and the IDP question
 

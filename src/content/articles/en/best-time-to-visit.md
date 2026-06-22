@@ -22,8 +22,6 @@ affiliate:
 
 If you only remember three words about timing a trip here, make them **May, June and September**. These months hit the sweet spot: warm enough for the coast, settled enough for the mountains, and far calmer than the July–August crush. Albania rewards travellers who think in seasons rather than dates, because the country is really two climates in one — a hot Mediterranean coastline and a cool, alpine north — and the "best" month depends entirely on which one you're chasing.
 
-<!-- TODO: фото -->
-
 ## The short answer: May, June, September
 
 Peak season is **July and August**: hottest, busiest, and the only time coastal prices roughly double. If your dates are flexible, aim for the shoulder windows of **May–June** and **September–October** instead. You get most of the good weather, a fraction of the crowds, and far better value on rooms and transport. June and September in particular let you combine beach days with mountain hikes without compromising much on either.

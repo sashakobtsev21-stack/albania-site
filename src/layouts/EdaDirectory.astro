@@ -61,6 +61,9 @@ const places = await getCollectionSafe(
 
 // Кросс-ссылка на «Что попробовать» с фолбэком на ru, если en-перевода ещё нет (§12).
 const articlesAll = await getCollectionSafe('articles', (entry) => entry.data.draft !== true);
+const hasCuisineArticle = articlesAll.some(
+  (e) => e.data.category === 'food' && e.data.slug === 'what-to-try',
+);
 const cuisineHref = articleHref(
   articlesAll.some(
     (e) => e.data.lang === lang && e.data.category === 'food' && e.data.slug === 'what-to-try',
@@ -249,11 +252,16 @@ const breadcrumbLd = {
       <header class="head" data-reveal>
         <h1 class="head__title">{dict.eda.heading}</h1>
         <p class="head__lead">{dict.eda.lead}</p>
-        <a class="head__guide" href={cuisineHref}>
-          <Icon name="utensils" size={18} class="head__guide-icon" />
-          <span>{dict.eda.cuisineGuide}</span>
-          <Icon name="arrow-right" size={16} />
-        </a>
+        {/* Ссылку «Что попробовать» рендерим только если статья есть (иначе битая). */}
+        {
+          hasCuisineArticle && (
+            <a class="head__guide" href={cuisineHref}>
+              <Icon name="utensils" size={18} class="head__guide-icon" />
+              <span>{dict.eda.cuisineGuide}</span>
+              <Icon name="arrow-right" size={16} />
+            </a>
+          )
+        }
       </header>
 
       {/* По городам — ссылки на per-city страницы (§8.6, воронка + перелинковка). */}

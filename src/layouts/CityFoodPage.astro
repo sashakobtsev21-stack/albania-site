@@ -67,6 +67,13 @@ const cityGuideHref = articleHref(
   'cities',
   cfg.citySlug,
 );
+/** Кросс-ссылки рендерим только при наличии целевой статьи (любой язык) — иначе битые. */
+const hasCuisineArticle = articlesAll.some(
+  (e) => e.data.category === 'food' && e.data.slug === 'what-to-try',
+);
+const hasCityGuide = articlesAll.some(
+  (e) => e.data.category === 'cities' && e.data.slug === cfg.citySlug,
+);
 
 /** Места этого города, не черновики (§11). */
 const places = await getCollectionSafe(
@@ -157,11 +164,15 @@ const breadcrumbLd = {
         <div class="head__intro">
           {city.intro.map((p: string) => <p>{p}</p>)}
         </div>
-        <a class="head__guide" href={cuisineHref}>
-          <Icon name="utensils" size={18} class="head__guide-icon" />
-          <span>{dict.eda.cuisineGuide}</span>
-          <Icon name="arrow-right" size={16} />
-        </a>
+        {
+          hasCuisineArticle && (
+            <a class="head__guide" href={cuisineHref}>
+              <Icon name="utensils" size={18} class="head__guide-icon" />
+              <span>{dict.eda.cuisineGuide}</span>
+              <Icon name="arrow-right" size={16} />
+            </a>
+          )
+        }
       </header>
 
       {
@@ -221,11 +232,17 @@ const breadcrumbLd = {
           <span class="u-underline">{cp.backToAll}</span>
           <Icon name="arrow-right" size={16} />
         </a>
-        <a class="more__link" href={cityGuideHref}>
-          <Icon name="building" size={18} />
-          <span class="u-underline">{cp.cityGuideLink}: {city.cityName}</span>
-          <Icon name="arrow-right" size={16} />
-        </a>
+        {
+          hasCityGuide && (
+            <a class="more__link" href={cityGuideHref}>
+              <Icon name="building" size={18} />
+              <span class="u-underline">
+                {cp.cityGuideLink}: {city.cityName}
+              </span>
+              <Icon name="arrow-right" size={16} />
+            </a>
+          )
+        }
       </nav>
     </div>
   </div>
@@ -337,7 +354,6 @@ const breadcrumbLd = {
       grid-template-columns: repeat(3, 1fr);
     }
   }
-
 
   /* Бокс жилья на city-странице (воронка §16). */
   .city-lodging {
