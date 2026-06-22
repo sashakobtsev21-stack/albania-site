@@ -4,6 +4,13 @@
 фиксов — [ROADMAP-FIX.md](ROADMAP-FIX.md), аудит — [AUDIT-2026-06-22.md](AUDIT-2026-06-22.md),
 статус-лог — [PROGRESS.md](PROGRESS.md), правила — [CLAUDE.md](CLAUDE.md).
 
+## Снимок (2026-06-22, UI-фикс v2 — крутилка витрины на чистом CSS)
+- **Витрина едет на CSS, а не на JS.** Движение перенесено в `@keyframes showcase-marquee` (translateX 0 → −50%) на `.showcase__track` в `ShowcaseRail.astro`; компонент рендерит **2 копии** набора (`cells = [...clone:false, ...clone:true]`, вторая `aria-hidden`) → одна копия = 50% дорожки, петля бесшовна. `.showcase__viewport` → `overflow: hidden`. Пауза при hover/focus — `animation-play-state: paused` (CSS, без JS). `prefers-reduced-motion` → `animation:none; transform:none` + viewport `overflow-x:auto`.
+- **Почему так:** прежняя JS-крутилка (`scrollLeft`+rAF) могла «не ехать» из-за кэша `/js/showcase-rail.js`. Теперь анимация в scoped-CSS компонента (бандл `_astro/*.css`, грузится со страницей) — кэш JS ни на что не влияет. `public/js/showcase-rail.js` усечён до минимума: задаёт `--showcase-dur` ∝ ширине набора (~40 px/с) + тач-тап поповера.
+- **Верификация:** `dist/_astro/index.*.css` — `.showcase__track{…animation:showcase-marquee…}`, `@keyframes showcase-marquee{0%{translate(0)}to{translate(-50%)}}`, `.showcase__viewport{overflow:hidden}`, пауза на hover/focus-within. `dist/index.html` — 18 `showcase__cell` = 9 уникальных + 9 клонов `aria-hidden="true"`.
+- **Гейты:** `build` ✓ (31 стр.) · `check` 0/0/0 · `npm test` ✓ · `test:links` ✓ (1478 ссылок) · `lint` ✓. Закоммичено + запушено в `main`.
+- **Дальше:** при добавлении карточек в `showcasePicks` ничего не нужно — скорость подстраивается под ширину набора через `--showcase-dur`; CSS-петля масштабируется автоматически.
+
 ## Снимок (2026-06-22, контент-план Нед.1 — P0-доверие «Is Albania Safe»)
 - **Опубликована статья «Is Albania Safe to Visit in 2026?»** (одноязычная en, `planning/is-albania-safe`, KALENDAR Нед.1/Пт 26.06, P0-кластер «безопасность/доверие»): EN ~1500 слов, лид = прямой ответ (да, в целом безопасно — низкая преступность, дружелюбные люди, нюансы). Разделы: общая безопасность/преступность → соло-женщины → дороги/вождение (главный риск) → пляжи/море → деньги/мошенничество → ЧС/телефон 112/здоровье → страховка. Факты только из травел-адвайзери (US State Dept / UK FCDO / AU Smartraveller) + «уточняйте/сверяйтесь с актуальной официальной страницей»; без выдуманных цифр; без FAQ. Валюта — ALL.
 - **Фото: 6 уникальных** CC/CC0 Wikimedia (cover Skanderbeg Square + 3 инлайн-figure [Tirana street / mountain road in rain / Tirana crossing] + 2 gallery [Ksamil beach / mountain road], webp ≤200КБ, отобраны глазами через `commons-candidates`→`build-gallery`). `build:covers` прогнан.

@@ -48,7 +48,10 @@ const dict = t(lang);
 
 const QUALITY_MARK = '/images/quality/seal-gold.webp';
 
-const cells = items.map((it) => ({ ...it, clone: false }));
+const cells = [
+  ...items.map((it) => ({ ...it, clone: false })),
+  ...items.map((it) => ({ ...it, clone: true })),
+];
 ---
 
 <section class="showcase" aria-label={label} data-reveal data-showcase>
@@ -280,8 +283,7 @@ const cells = items.map((it) => ({ ...it, clone: false }));
     position: relative;
   }
   .showcase__viewport {
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: hidden;
     scrollbar-width: none;
     cursor: grab;
     -webkit-mask-image: linear-gradient(
@@ -309,6 +311,20 @@ const cells = items.map((it) => ({ ...it, clone: false }));
        нельзя сделать visible при overflow-x:auto, резервируем высоту паддингом). */
     padding: 22px 0 198px;
     list-style: none;
+    animation: showcase-marquee var(--showcase-dur, 60s) linear infinite;
+  }
+  @keyframes showcase-marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  /* Пауза при наведении/фокусе — вместо JS. */
+  .showcase:hover .showcase__track,
+  .showcase__track:focus-within {
+    animation-play-state: paused;
   }
   .showcase__cell {
     flex: 0 0 auto;
@@ -634,6 +650,13 @@ const cells = items.map((it) => ({ ...it, clone: false }));
     .scard:hover .scard__img,
     .scard--place:hover .scard__img {
       transform: none;
+    }
+    .showcase__track {
+      animation: none;
+      transform: none;
+    }
+    .showcase__viewport {
+      overflow-x: auto;
     }
   }
 </style>
