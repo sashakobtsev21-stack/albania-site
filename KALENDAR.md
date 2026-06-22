@@ -37,7 +37,7 @@
 
 ## Неделя 6 (29.07–04.08) — Хайкинг-кластер (окно mid-June–mid-Sep) + третий город
 - Ср 29.07 — [Статья] Theth to Valbona Hike: Complete 2026 Guide · `theth to valbona hike` · /theth-to-valbona-hike/ · категория routes · фото каждой остановки (Shkoder→Theth→Valbona Pass→Koman) · 💰 туры/трансфер/жильё · перелинк: → Theth guide, → Lake Koman ferry, → Shkoder
-- Пт 31.07 — [Статья] Gjirokaster Travel Guide: The Stone City · `gjirokaster albania` · /gjirokaster-albania-guide/ · категория cities · фото ≥10 · 💰 отели/туры · перелинк: ← road trip itinerary, ← Saranda (day trip)
+- ✅ Пт 31.07 — [Статья] Gjirokaster Travel Guide: The Stone City · `gjirokaster albania` · /cities/gjirokaster-albania-guide/ · категория cities · фото 13 (cover+8 инлайн+4 gallery, CC Wikimedia ≤200КБ) · 💰 trip-hotels/trip-tours · ОПУБЛИКОВАНО (en, qa=GO; `featuredOrder:5`, `hotelWidget:true`, в витрине главной, kicker `city`). Перелинк ИЗ статьи → хаб /cities/ + Саранда + Берат + road-trip + car-rental + best-time. Встречные ссылки на Гирокастру из Саранды/road-trip — добрать при апдейте.
 - Вс 02.08 — [Статья] Albania Digital Nomad Visa (Unique Permit): Requirements & How to Apply · `albania digital nomad visa` · /albania-digital-nomad-visa/ · категория transactional · фото ≥5 · 💰 страховка/жильё · перелинк: ← 1-year visa-free, → Tirana nomad guide
 - Пн 03.08 — 📊 Замер GA/GSC (15 мин: середина плана — крупная корректировка приоритетов P1/P2)
 
