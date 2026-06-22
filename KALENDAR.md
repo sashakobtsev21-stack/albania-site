@@ -3,7 +3,7 @@
 Темп: Ср / Пт / Вс. Слаги — английские, из SEO-отчёта. 💰 = денежная связка.
 
 ## Неделя 1 (24–30.06) — Стартовое ядро: столица + доверие + деньги
-- Ср 24.06 — [Статья] Best Things to Do in Tirana · `things to do in tirana` · /things-to-do-in-tirana/ · категория cities · фото ≥15 · 💰 отели/туры · перелинк: hub недели — линкует на Tirana airport transfers и (будущ.) day trips from Tirana
+- ✅ Ср 24.06 — [Статья] Best Things to Do in Tirana · `things to do in tirana` · /cities/things-to-do-in-tirana/ · категория cities · фото 18 (cover+17, CC/CC0 Wikimedia) · 💰 trip-hotels/trip-tours · ОПУБЛИКОВАНО (en/ru/uk, qa=GO). Перелинк на airport transfers/day trips добавить, когда выйдут (Нед.2/Нед.8).
 - Пт 26.06 — [Статья] Is Albania Safe to Visit in 2026? Honest Guide · `is albania safe` · /is-albania-safe/ · категория attractions/info · фото ≥5 · 💰 страховка · перелинк: → driving in albania safety, → travel insurance
 - Вс 28.06 — [Статья] Is Albania Expensive? Real 2026 Daily Costs · `is albania expensive` · /is-albania-expensive/ · категория info (хаб) · фото ≥5 · 💰 нет (хаб) · перелинк: → travel budget, → car rental; обратная ссылка из Tirana
 - Пн 29.06 — 📊 Замер GA/GSC (15 мин: первые индексируемые страницы, baseline)

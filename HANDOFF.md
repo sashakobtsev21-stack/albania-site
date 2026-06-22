@@ -4,6 +4,10 @@
 фиксов — [ROADMAP-FIX.md](ROADMAP-FIX.md), аудит — [AUDIT-2026-06-22.md](AUDIT-2026-06-22.md),
 статус-лог — [PROGRESS.md](PROGRESS.md), правила — [CLAUDE.md](CLAUDE.md).
 
+## Снимок (2026-06-24, контент-план Нед.1)
+- **Опубликована статья-СТОЛИЦА Тирана** (тройка en/ru/uk, `cities/things-to-do-in-tirana`, KALENDAR Нед.1/Ср 24.06): EN-ведущая ~1593 слова, **18 уникальных фото** CC/CC0 Wikimedia (cover+10 инлайн+7 gallery, ≤200КБ), факты из надёжных источников, ≥4 внутр. ссылки + 2 AffiliateBox `/go/`. Первая статья в категории `cities` → хаб `/cities/` не пуст. `npm run qa` → GO.
+- Дальше по KALENDAR Нед.1: Пт 26.06 «Is Albania Safe» (attractions/info), Вс 28.06 «Is Albania Expensive» (info).
+
 ## Снимок (2026-06-22, после Этапа 1)
 - **Ветка `main`**, задеплоено на Cloudflare. **Сайт live** — `https://albaniaguidebook.com`.
 - **Сборка:** `astro check` 0 ошибок / 0 warnings / 0 hints · `build` зелёный (~70 страниц) ·
