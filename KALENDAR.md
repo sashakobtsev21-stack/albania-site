@@ -4,7 +4,7 @@
 
 ## Неделя 1 (24–30.06) — Стартовое ядро: столица + доверие + деньги
 - ✅ Ср 24.06 — [Статья] Best Things to Do in Tirana · `things to do in tirana` · /cities/things-to-do-in-tirana/ · категория cities · фото 18 (cover+17, CC/CC0 Wikimedia) · 💰 trip-hotels/trip-tours · ОПУБЛИКОВАНО (en/ru/uk, qa=GO). Перелинк на airport transfers/day trips добавить, когда выйдут (Нед.2/Нед.8).
-- Пт 26.06 — [Статья] Is Albania Safe to Visit in 2026? Honest Guide · `is albania safe` · /is-albania-safe/ · категория attractions/info · фото ≥5 · 💰 страховка · перелинк: → driving in albania safety, → travel insurance
+- ✅ Пт 26.06 — [Статья] Is Albania Safe to Visit in 2026? · `is albania safe` · /planning/is-albania-safe/ · категория **planning** · фото 6 (cover Skanderbeg Square + 3 инлайн + 2 gallery, CC/CC0 Wikimedia ≤200КБ) · 💰 safetywing (страховка) · ОПУБЛИКОВАНО (en, qa=GO; добавлена в витрину главной, kicker `sight`). Перелинк → driving in albania safety / → travel insurance добрать встречными ссылками, когда выйдут (Нед.5 / Нед.4). Прим.: категория planning (не attractions/info, как в исходном наброске) — раздел /planning/.
 - Вс 28.06 — [Статья] Is Albania Expensive? Real 2026 Daily Costs · `is albania expensive` · /is-albania-expensive/ · категория info (хаб) · фото ≥5 · 💰 нет (хаб) · перелинк: → travel budget, → car rental; обратная ссылка из Tirana
 - Пн 29.06 — 📊 Замер GA/GSC (15 мин: первые индексируемые страницы, baseline)
 

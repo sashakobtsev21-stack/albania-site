@@ -4,6 +4,14 @@
 фиксов — [ROADMAP-FIX.md](ROADMAP-FIX.md), аудит — [AUDIT-2026-06-22.md](AUDIT-2026-06-22.md),
 статус-лог — [PROGRESS.md](PROGRESS.md), правила — [CLAUDE.md](CLAUDE.md).
 
+## Снимок (2026-06-22, контент-план Нед.1 — P0-доверие «Is Albania Safe»)
+- **Опубликована статья «Is Albania Safe to Visit in 2026?»** (одноязычная en, `planning/is-albania-safe`, KALENDAR Нед.1/Пт 26.06, P0-кластер «безопасность/доверие»): EN ~1500 слов, лид = прямой ответ (да, в целом безопасно — низкая преступность, дружелюбные люди, нюансы). Разделы: общая безопасность/преступность → соло-женщины → дороги/вождение (главный риск) → пляжи/море → деньги/мошенничество → ЧС/телефон 112/здоровье → страховка. Факты только из травел-адвайзери (US State Dept / UK FCDO / AU Smartraveller) + «уточняйте/сверяйтесь с актуальной официальной страницей»; без выдуманных цифр; без FAQ. Валюта — ALL.
+- **Фото: 6 уникальных** CC/CC0 Wikimedia (cover Skanderbeg Square + 3 инлайн-figure [Tirana street / mountain road in rain / Tirana crossing] + 2 gallery [Ksamil beach / mountain road], webp ≤200КБ, отобраны глазами через `commons-candidates`→`build-gallery`). `build:covers` прогнан.
+- **Перелинковка:** 6 внутр. ссылок — хаб `/planning/` + Тирана/Саранда/Берат (города) + маршрут `albania-road-trip-itinerary` + страховка `do-you-need-insurance`. 1 AffiliateBox `/go/safetywing?c=is-albania-safe` (страховка — естественная связка, `position: body-end`).
+- **Витрина:** добавлена 9-м пиком в `showcasePicks` (`HomePage.astro`): `{kind:'article',category:'planning',slug:'is-albania-safe',kicker:'sight'}`.
+- **Гейты:** `npm run qa` → **GO ✅** (check 0/0/0 · build ✓ · test [parity 12 en] ✓ · test:links ✓ · lint ✓ · npm audit prod чисто). Закоммичено + запушено в `main`.
+- **Дальше по KALENDAR Нед.1:** Вс 28.06 «Is Albania Expensive? Real 2026 Daily Costs» (planning/info-хаб). Перелинк → driving in albania safety (Нед.5) / → travel insurance (Нед.4) добрать встречными ссылками, когда выйдут.
+
 ## Снимок (2026-07-08, контент-план Нед.3 — МАРШРУТ Albania Road Trip)
 - **Опубликован первый МАРШРУТ** (одноязычный en, коллекция `routes`, `routes/albania-road-trip-itinerary`, KALENDAR Нед.3/Ср 08.07 «10 Days in Albania: Ultimate Road Trip Itinerary»): EN ~1670 слов, 8-дневное кольцо **Тирана → Берат → Влёра/Ривьера (Llogara) → Саранда → Ксамил → Гирокастра → Тирана**, `days:8`, `distanceKm:620`, `budgetFrom:60 EUR`, `bestSeason` may/june/sep/oct. По дням: что смотреть, ночёвки, расстояния/время; таблица плеч; практика (аренда/сезон/дороги/деньги ALL/страховка). Без выдуманных цен.
 - **Фото каждой остановки:** все 6 `stops[].photo` заполнены + cover + 3 gallery = **10 уникальных CC/CC0 Wikimedia** (webp ≤200КБ). RouteTimeline показывает миниатюру у каждого стопа; инлайн-figure у каждого дня.
