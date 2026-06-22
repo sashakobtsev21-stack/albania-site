@@ -10,7 +10,7 @@ draft: false
 cover:
   src: '/images/digital-nomad-visa/cover.webp'
   alt: "Colourful buildings in central Tirana"
-coverCredit: 'Фото: Justin W Flory / Wikimedia Commons, CC BY-SA 3.0'
+coverCredit: 'Photo: Justin W Flory / Wikimedia Commons, CC BY-SA 3.0'
 sources:
   - 'e-albania.al'
   - 'qkb.gov.al'
@@ -44,7 +44,7 @@ The exact paperwork is confirmed during the application, but the **categories of
 - **Accommodation** in Albania (a rental contract or proof of address).
 - **A clean criminal record**, typically apostilled and translated.
 
-You will see specific figures circulating — a commonly cited minimum monthly income of around EUR 450 and an insurance coverage figure of around EUR 30,000. Treat these as **secondary-source numbers, not settled rules**: they come from third-party write-ups rather than the statute, and they change. Confirm the current thresholds directly with the migration authority before you rely on them. A good travel-insurance policy is also worth lining up early — see our guide on [whether you need travel insurance for Albania](/insurance/do-you-need-insurance/), and SafetyWing offers a [health insurance plan built for nomads](/go/safetywing) if you do not already have cover.
+You will see specific figures circulating — a commonly cited minimum monthly income of around EUR 450 and an insurance coverage figure of around EUR 30,000. Treat these as **secondary-source numbers, not settled rules**: they come from third-party write-ups rather than the statute, and they change. Confirm the current thresholds directly with the migration authority before you rely on them. A good travel-insurance policy is also worth lining up early — see our guide on [whether you need travel insurance for Albania](/insurance/do-you-need-insurance/), and SafetyWing offers a health insurance plan built for nomads if you do not already have cover (see the box below).
 
 ## How the application works
 

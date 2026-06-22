@@ -154,8 +154,18 @@ const itemListLd = hasArticles
   : null;
 ---
 
-<BaseLayout title={pageTitle} description={description} lang={lang} image={ogImage}>
-  {itemListLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListLd)} />}
+<BaseLayout
+  title={pageTitle}
+  description={description}
+  lang={lang}
+  image={ogImage}
+  noindex={!hasArticles}
+>
+  {
+    itemListLd && (
+      <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListLd)} />
+    )
+  }
   <div class="hub">
     <div class="container">
       <Breadcrumbs lang={lang} items={[{ label: heading }]} />
@@ -278,5 +288,4 @@ const itemListLd = hasArticles
       grid-template-columns: repeat(3, 1fr);
     }
   }
-
 </style>

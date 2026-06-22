@@ -173,7 +173,13 @@ const itemListLd = hasPlaces
   : null;
 ---
 
-<BaseLayout title={pageTitle} description={description} lang={lang} image={ogImage}>
+<BaseLayout
+  title={pageTitle}
+  description={description}
+  lang={lang}
+  image={ogImage}
+  noindex={!hasPlaces}
+>
   {
     itemListLd && (
       <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListLd)} />

@@ -10,7 +10,7 @@ draft: false
 cover:
   src: '/images/do-you-need-insurance/cover.webp'
   alt: "The Albanian Alps near Theth"
-coverCredit: 'Фото: Alexkom000 / Wikimedia Commons, CC BY 4.0'
+coverCredit: 'Photo: Alexkom000 / Wikimedia Commons, CC BY 4.0'
 sources:
   - 'gov.uk'
   - 'travel.state.gov'

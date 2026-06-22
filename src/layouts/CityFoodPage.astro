@@ -140,7 +140,7 @@ const breadcrumbLd = {
 };
 ---
 
-<BaseLayout title={pageTitle} description={description} lang={lang}>
+<BaseLayout title={pageTitle} description={description} lang={lang} noindex={!hasPlaces}>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
   {
     hasPlaces && (
@@ -213,17 +213,24 @@ const breadcrumbLd = {
         )
       }
 
-      {/* Воронка §16: где остановиться в этом городе (trip-hotels). */}
-      <div class="city-lodging">
-        <AffiliateBox
-          lang={lang}
-          partner="trip-hotels"
-          slug={cfg.citySlug}
-          title={format(dict.eda.lodgingInCity, { city: city.cityName })}
-          label={dict.actions.more}
-          note={dict.eda.lodgingNote}
-        />
-      </div>
+      {
+        /* Воронка §16: где остановиться (trip-hotels). Только если в городе есть места —
+          не показываем коммерческий блок на пустой странице (аудит 2026-06-22). */
+      }
+      {
+        hasPlaces && (
+          <div class="city-lodging">
+            <AffiliateBox
+              lang={lang}
+              partner="trip-hotels"
+              slug={cfg.citySlug}
+              title={format(dict.eda.lodgingInCity, { city: city.cityName })}
+              label={dict.actions.more}
+              note={dict.eda.lodgingNote}
+            />
+          </div>
+        )
+      }
 
       {/* Перелинковка: вся директория + путеводитель города (воронка §14). */}
       <nav class="more" aria-label={cp.navHeading}>

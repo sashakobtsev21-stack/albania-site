@@ -111,10 +111,28 @@ async function main() {
 
   const brokenInternal = [];
   const unknownPartners = new Set();
+  const goViolations = [];
   let checked = 0;
 
   for (const file of htmlFiles) {
     const html = await readFile(file, 'utf8');
+    // Унификация (CLAUDE правило 2 / §16): каждая /go/-ссылка в выводе обязана нести
+    // rel="sponsored nofollow noopener" + непустой ?c= (атрибуция). Ловит сырые инлайн-
+    // /go/-ссылки в .md (dofollow-утечка + нулевая атрибуция), которые extractHrefs не видит.
+    for (const m of html.matchAll(/<a\b[^>]*href="(\/go\/[^"]*)"[^>]*>/gi)) {
+      const tag = m[0];
+      const goHref = m[1];
+      const relMatch = tag.match(/\srel="([^"]*)"/i);
+      const rel = relMatch ? relMatch[1].toLowerCase() : '';
+      const hasRel = ['sponsored', 'nofollow', 'noopener'].every((tk) => rel.includes(tk));
+      const hasSub = /[?&]c=[^&"#]+/.test(goHref);
+      if (!hasRel || !hasSub) {
+        const missing = [!hasRel && 'rel(sponsored/nofollow/noopener)', !hasSub && '?c=']
+          .filter(Boolean)
+          .join(', ');
+        goViolations.push({ file: file.replace(DIST, 'dist'), href: goHref, missing });
+      }
+    }
     const hrefs = extractHrefs(html);
     for (const href of hrefs) {
       if (isExternalOrSpecial(href)) continue;
@@ -147,6 +165,16 @@ async function main() {
     );
   }
 
+  if (goViolations.length > 0) {
+    console.error(
+      `[test:links] /go/-ссылки без rel/?c= (${goViolations.length}) — нарушение CLAUDE правило 2 / §16:`,
+    );
+    for (const v of goViolations) {
+      console.error(`  ${v.file}  →  ${v.href}  [нет: ${v.missing}]`);
+    }
+    process.exit(1);
+  }
+
   if (brokenInternal.length > 0) {
     console.error(`[test:links] битые внутренние ссылки (${brokenInternal.length}):`);
     for (const b of brokenInternal) {
@@ -155,7 +183,7 @@ async function main() {
     process.exit(1);
   }
 
-  console.log('[test:links] OK — битых внутренних ссылок нет.');
+  console.log('[test:links] OK — битых внутренних ссылок нет, /go/-ссылки с rel+?c=.');
   process.exit(0);
 }
 

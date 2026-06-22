@@ -231,7 +231,13 @@ const breadcrumbLd = {
 };
 ---
 
-<BaseLayout title={pageTitle} description={description} lang={lang} image={ogImage}>
+<BaseLayout
+  title={pageTitle}
+  description={description}
+  lang={lang}
+  image={ogImage}
+  noindex={!hasPlaces}
+>
   {/* schema.org: ItemList(Restaurant) + BreadcrumbList (§14) */}
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
   {
@@ -424,7 +430,7 @@ const breadcrumbLd = {
     margin: 0 auto;
     padding-inline: var(--space-4);
   }
-  .eda {
+  .food {
     padding-block: var(--space-8) var(--space-12);
   }
 

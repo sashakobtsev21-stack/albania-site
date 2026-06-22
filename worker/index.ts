@@ -52,13 +52,28 @@ function isValidTarget(url: string): boolean {
   }
 }
 
+/**
+ * 302-редирект со security-заголовками. Response.redirect их НЕ ставит, а ответ
+ * воркера минует env.ASSETS/_headers — иначе slug-путь утечёт партнёру в Referer (§18).
+ */
+function secureRedirect(location: string): Response {
+  return new Response(null, {
+    status: 302,
+    headers: {
+      Location: location,
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'X-Content-Type-Options': 'nosniff',
+    },
+  });
+}
+
 function handleGo(url: URL): Response {
   const rest = url.pathname.slice('/go/'.length).replace(/\/+$/, '');
   const partnerKey = rest.split('/')[0] ?? '';
 
   const entry = partnerKey ? DATA.partners[partnerKey] : undefined;
   if (!entry || typeof entry.urlTemplate !== 'string') {
-    return Response.redirect(safeFallback(url.origin), 302);
+    return secureRedirect(safeFallback(url.origin));
   }
 
   // SubID (slug-источник клика) подставляем только если партнёр это допускает
@@ -67,9 +82,9 @@ function handleGo(url: URL): Response {
   const subId = entry.allowSubId !== false ? (url.searchParams.get('c') ?? '') : '';
   const target = buildTarget(entry.urlTemplate, subId);
   if (!isValidTarget(target)) {
-    return Response.redirect(safeFallback(url.origin), 302);
+    return secureRedirect(safeFallback(url.origin));
   }
-  return Response.redirect(target, 302);
+  return secureRedirect(target);
 }
 
 export default {

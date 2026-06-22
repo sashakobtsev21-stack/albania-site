@@ -49,9 +49,7 @@ const description = clampDesc(c.intro[0]);
 const places = await getCollectionSafe(
   'articles',
   (entry) =>
-    entry.data.lang === lang &&
-    entry.data.category === 'attractions' &&
-    entry.data.draft !== true,
+    entry.data.lang === lang && entry.data.category === 'attractions' && entry.data.draft !== true,
 );
 
 /** Детерминированный порядок (§21): новее → старее, при равенстве по slug. */
@@ -173,8 +171,18 @@ const itemListLd = hasPlaces
   : null;
 ---
 
-<BaseLayout title={pageTitle} description={description} lang={lang} image={ogImage}>
-  {itemListLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListLd)} />}
+<BaseLayout
+  title={pageTitle}
+  description={description}
+  lang={lang}
+  image={ogImage}
+  noindex={!hasPlaces}
+>
+  {
+    itemListLd && (
+      <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListLd)} />
+    )
+  }
   <div class="catalog" data-catalog>
     <div class="container">
       <Breadcrumbs lang={lang} items={[{ label: dict.nav.attractions }]} />

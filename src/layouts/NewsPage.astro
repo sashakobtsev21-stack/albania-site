@@ -26,7 +26,7 @@ const dict = t(lang);
 const intro = dict.hub.sections.news?.intro ?? [];
 
 const pageTitle = `${dict.nav.news} — ${dict.siteName}`;
-const description = clampDesc((intro[0] ?? dict.nav.news));
+const description = clampDesc(intro[0] ?? dict.nav.news);
 
 /** Новости этого языка, не черновики (§11); свежие сверху. */
 const items = await getCollectionSafe(
@@ -47,7 +47,8 @@ items.sort((a, b) => {
  */
 const NEWS_SECTION_WINDOW = 10;
 const visibleItems = items.filter(
-  (entry) => Math.floor((Date.now() - entry.data.publishedAt.getTime()) / 86400000) <= NEWS_SECTION_WINDOW,
+  (entry) =>
+    Math.floor((Date.now() - entry.data.publishedAt.getTime()) / 86400000) <= NEWS_SECTION_WINDOW,
 );
 const hasNews = visibleItems.length > 0;
 
@@ -79,7 +80,7 @@ for (const entry of visibleItems) {
 }
 ---
 
-<BaseLayout title={pageTitle} description={description} lang={lang}>
+<BaseLayout title={pageTitle} description={description} lang={lang} noindex={!hasNews}>
   <div class="news">
     <div class="container">
       <Breadcrumbs lang={lang} items={[{ label: dict.nav.news }]} />
@@ -109,7 +110,10 @@ for (const entry of visibleItems) {
                     const href = articleHref(lang, 'news', d.slug);
                     return (
                       <li
-                        class:list={['news-item', { 'news-item--featured': entry === visibleItems[0] }]}
+                        class:list={[
+                          'news-item',
+                          { 'news-item--featured': entry === visibleItems[0] },
+                        ]}
                         data-news-item
                         data-published={d.publishedAt.toISOString().slice(0, 10)}
                       >
@@ -140,7 +144,9 @@ for (const entry of visibleItems) {
                 </ol>
               </section>
             ))}
-            <p class="news-empty" data-news-empty hidden>{dict.newsFeed.recentEmpty}</p>
+            <p class="news-empty" data-news-empty hidden>
+              {dict.newsFeed.recentEmpty}
+            </p>
           </div>
         ) : (
           <EmptyHint text={dict.hub.empty} />

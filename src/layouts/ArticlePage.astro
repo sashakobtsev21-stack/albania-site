@@ -203,8 +203,10 @@ const attractionLd = data.geo
         <p class="head__lead">{data.description}</p>
       </header>
 
-      {/* Демо-дисклеймер убран (решение владельца 2026-06-17): демо-карточки
-          показываются как обычные; demo → только noindex (см. noindex выше). */}
+      {
+        /* Демо-дисклеймер убран (решение владельца 2026-06-17): демо-карточки
+          показываются как обычные; demo → только noindex (см. noindex выше). */
+      }
 
       {
         /*
@@ -271,7 +273,11 @@ const attractionLd = data.geo
          * (перф §15), self-host без Google/cookie (§18). 0 CLS (16:9-резерв).
          */
         data.geo && (
-          <MapEmbed lang={lang} variant="place" stops={[{ name: data.title, coord: data.geo.coord }]} />
+          <MapEmbed
+            lang={lang}
+            variant="place"
+            stops={[{ name: data.title, coord: data.geo.coord }]}
+          />
         )
       }
 
@@ -289,8 +295,13 @@ const attractionLd = data.geo
           <p class="article-website">
             {data.website && (
               <a href={data.website} target="_blank" rel="noopener nofollow">
-                <Icon name={data.website.includes('instagram.com') ? 'instagram' : 'globe'} size={18} />
-                <span>{data.website.includes('instagram.com') ? 'Instagram' : dict.eda.website}</span>
+                <Icon
+                  name={data.website.includes('instagram.com') ? 'instagram' : 'globe'}
+                  size={18}
+                />
+                <span>
+                  {data.website.includes('instagram.com') ? 'Instagram' : dict.eda.website}
+                </span>
                 <Icon name="arrow-right" size={16} />
               </a>
             )}
@@ -319,21 +330,22 @@ const attractionLd = data.geo
            инкапсулировано в самом компоненте AffiliateBox (CLAUDE правило 2).
            Дедуп hotel-интента (аудит 2026-06-20): при hotelWidget текстовый
            бокс trip-hotels убираем — виджет ниже и есть поиск отелей. */
-        data.affiliate.filter((box) => !(data.hotelWidget && box.partner === 'trip-hotels')).length > 0 && (
+        data.affiliate.filter((box) => !(data.hotelWidget && box.partner === 'trip-hotels'))
+          .length > 0 && (
           <div class="affiliates" data-reveal>
             {data.affiliate
               .filter((box) => !(data.hotelWidget && box.partner === 'trip-hotels'))
               .slice(0, 3)
               .map((box) => (
-              <AffiliateBox
-                lang={lang}
-                partner={box.partner}
-                slug={data.slug}
-                title={box.label}
-                label={dict.actions.more}
-                priceFrom={box.priceFrom ? String(box.priceFrom) : undefined}
-              />
-            ))}
+                <AffiliateBox
+                  lang={lang}
+                  partner={box.partner}
+                  slug={data.slug}
+                  title={box.label}
+                  label={dict.actions.more}
+                  priceFrom={box.priceFrom ? String(box.priceFrom) : undefined}
+                />
+              ))}
           </div>
         )
       }

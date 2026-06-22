@@ -112,9 +112,11 @@ const siteLd = {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    {/* Перф (аудит 2026-06-20): preload дисплей-шрифта Unbounded — он рисует H1/бренд
+    {
+      /* Перф (аудит 2026-06-20): preload дисплей-шрифта Unbounded — он рисует H1/бренд
         над сгибом (часто LCP-элемент). Латиница нужна всегда (бренд + EN H1), кириллица —
-        на ru/uk (их H1). font-display:swap уже стоит; preload убирает позднюю подмену. */}
+        на ru/uk (их H1). font-display:swap уже стоит; preload убирает позднюю подмену. */
+    }
     <link
       rel="preload"
       href="/fonts/unbounded-latin-600-normal.woff2"
@@ -122,24 +124,26 @@ const siteLd = {
       type="font/woff2"
       crossorigin
     />
-    {lang !== 'en' && (
-      <link
-        rel="preload"
-        href="/fonts/unbounded-cyrillic-600-normal.woff2"
-        as="font"
-        type="font/woff2"
-        crossorigin
-      />
-    )}
+    {
+      lang !== 'en' && (
+        <link
+          rel="preload"
+          href="/fonts/unbounded-cyrillic-600-normal.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin
+        />
+      )
+    }
 
-    {/* Google Analytics 4 (§17, правило 8 — единственная аналитика на сайте).
+    {
+      /* Google Analytics 4 (§17, правило 8 — единственная аналитика на сайте).
         gtag.js грузится async из googletagmanager.com (script-src, _headers);
         инициализация — внешним /js/ga-init.js со 'self' (без инлайна → не нужен
-        sha256-хэш в CSP, как и все скрипты проекта, §18). Property: G-9FTVJ00X41. */}
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-9FTVJ00X41"
-    ></script>
-    <script is:inline src="/js/ga-init.js"></script>
-
+        sha256-хэш в CSP, как и все скрипты проекта, §18). Property: G-9FTVJ00X41. */
+    }
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-9FTVJ00X41"></script>
+    <script is:inline defer src="/js/ga-init.js"></script>
 
     <!--
       Гейт движения (ui-ux-pro-max §7): СИНХРОННЫЙ внешний модуль со 'self'
@@ -153,12 +157,18 @@ const siteLd = {
     <title>{headTitle}</title>
     <meta name="description" content={description} />
     {(noindex || utility) && <meta name="robots" content="noindex, nofollow" />}
+    {
+      /* Self-canonical есть всегда (кроме utility). hreflang НЕ эмитим на noindex-хабах:
+        noindex-страница не должна быть зеркалом hreflang (смешанный сигнал, аудит 2026-06-22). */
+    }
     {!utility && <link rel="canonical" href={canonical} />}
 
-    {/* Взаимные hreflang по доступным языкам + x-default → en (DEFAULT_LANG, §12).
-        Служебные утилиты (404) — без hreflang: зеркал нет, иначе битые цели. */}
     {
-      !utility && (
+      /* Взаимные hreflang по доступным языкам + x-default → en (DEFAULT_LANG, §12).
+        Служебные утилиты (404) и пустые noindex-хабы — без hreflang (иначе битые/смешанные цели). */
+    }
+    {
+      !utility && !noindex && (
         <>
           {availableLangs.map((l) => (
             <link rel="alternate" hreflang={l} href={hrefForLang(l)} />
@@ -186,13 +196,16 @@ const siteLd = {
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={title} />
 
     {/* Site-wide JSON-LD: Organization + WebSite (§14, E-E-A-T) */}
     <script is:inline type="application/ld+json" set:html={JSON.stringify(siteLd)} />
 
     <meta name="generator" content={Astro.generator} />
-    {/* Favicon (вкладка + сниппет Google): SVG для совр. браузеров + PNG-фолбэк
-        (Google/старые браузеры). Альбанский флаг — public/favicon.svg + /icons/. */}
+    {
+      /* Favicon (вкладка + сниппет Google): SVG для совр. браузеров + PNG-фолбэк
+        (Google/старые браузеры). Альбанский флаг — public/favicon.svg + /icons/. */
+    }
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/icons/icon-192.png" type="image/png" sizes="192x192" />
 
@@ -221,13 +234,15 @@ const siteLd = {
       crossorigin
     />
 
-    {/*
+    {
+      /*
       Аналитика (§17, правило 8 «одна аналитика») — соблюдено (2026-06-19):
       единственная аналитика — Google Analytics 4 (gtag.js, тег в начале <head>).
       Cloudflare Web Analytics ОТКЛЮЧЕНА владельцем (Real User Measurements → Disable
       в дашборде), cloudflareinsights убран из CSP (public/_headers).
       Тег-менеджеры не используем. Этот комментарий — JSX, в HTML не попадает.
-    */}
+    */
+    }
   </head>
   <body>
     <a href="#main" class="sr-only focus:not-sr-only">{dict.skipToContent}</a>
@@ -237,8 +252,10 @@ const siteLd = {
     </main>
     <Footer lang={lang} availableLangs={navLangs} />
 
-    {/* Плавающая «наверх» на длинных страницах (аудит 2026-06-20): шапка не sticky
-        по решению владельца — даём быстрый возврат к навигации/языку/поиску. */}
+    {
+      /* Плавающая «наверх» на длинных страницах (аудит 2026-06-20): шапка не sticky
+        по решению владельца — даём быстрый возврат к навигации/языку/поиску. */
+    }
     <button type="button" class="to-top" data-to-top aria-label={dict.backToTop} hidden>
       <svg
         width="22"
@@ -251,7 +268,7 @@ const siteLd = {
         stroke-linejoin="round"
         aria-hidden="true"
       >
-        <path d="M12 19V5M5 12l7-7 7 7" />
+        <path d="M12 19V5M5 12l7-7 7 7"></path>
       </svg>
     </button>
 
