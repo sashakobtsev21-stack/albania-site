@@ -13,7 +13,7 @@
 import { readFile, readdir, writeFile, mkdir } from 'node:fs/promises';
 import { dirname } from 'node:path';
 
-const ROUTES_DIR = 'src/content/routes/ru';
+const ROUTES_DIR = 'src/content/routes/en';
 const OUT = 'src/data/route-geometry.json';
 const COORD_RE = /coord:\s*\[\s*([\d.+-]+)\s*,\s*([\d.+-]+)\s*\]/g;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
