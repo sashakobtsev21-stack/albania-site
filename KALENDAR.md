@@ -9,7 +9,7 @@
 - Пн 29.06 — 📊 Замер GA/GSC (15 мин: первые индексируемые страницы, baseline)
 
 ## Неделя 2 (01–07.07) — Стартовое ядро: первый город Ривьеры + логистика прибытия
-- Ср 01.07 — [Статья] Saranda Travel Guide: Beaches, Butrint & Blue Eye Day Trips · `saranda albania` · /saranda-albania-guide/ · категория cities · фото ≥10 · 💰 туры/отели · перелинк: → Ksamil, → Albanian Riviera guide
+- ✅ Ср 01.07 — [Статья] Saranda Travel Guide: Beaches, Butrint & Blue Eye Day Trips · `saranda albania` · /cities/saranda-albania-guide/ · категория cities · фото 14 (cover+8 инлайн+5 gallery, CC/CC0/PD Wikimedia) · 💰 trip-hotels/trip-tours · ОПУБЛИКОВАНО (en/ru/uk, qa=GO). Перелинк → Ksamil / → Albanian Riviera добавить, когда выйдут (Нед.4).
 - Пт 03.07 — [Статья] Tirana Airport to City Centre: Transfers & Options · `tirana airport to city centre` · /tirana-airport-transfers/ · категория info/transactional · фото ≥5 · 💰 трансфер/аренда авто · перелинк: ← Tirana things to do, → car rental
 - Вс 05.07 — [Статья] Renting a Car in Albania: Costs, Insurance & Tips · `car rental albania` · /car-rental-albania-guide/ · категория info/transactional · фото ≥5 · 💰 аренда авто/страховка · перелинк: → road trip itinerary, ← is albania expensive
 - Пн 06.07 — 📊 Замер GA/GSC (15 мин)
