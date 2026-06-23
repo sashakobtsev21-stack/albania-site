@@ -4,8 +4,8 @@ description: 'Gjirokaster guide: the UNESCO stone city, the hilltop castle and w
 slug: 'gjirokaster-albania-guide'
 lang: 'en'
 category: 'cities'
-publishedAt: 2026-07-31
-updatedAt: 2026-07-31
+publishedAt: 2026-06-23
+updatedAt: 2026-06-23
 featuredOrder: 5
 geo:
   coord: [40.0758, 20.1389]

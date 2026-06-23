@@ -44,7 +44,7 @@ The Albanian Riviera (Bregdeti) is the stretch of Ionian Sea coast in southern A
 
 The Riviera is the coastal strip of the **Vlorë and Sarandë districts**, facing the Ionian Sea and, across the water, the Greek island of Corfu. Geographically it is defined by the **Ceraunian Mountains** (Karaburun's "thunder mountains") dropping almost straight into clear water, which is why the beaches here are coves and shingle bays rather than the long flat sands of the Adriatic around Durres. The water is famously clear and a deep turquoise, partly because most of these beaches are pebble or coarse sand, not silt.
 
-Everything threads onto a single coastal road, the **SH8**, which was rebuilt in 2009 and turned a remote, hard-to-reach shore into one of the Mediterranean's last comparatively affordable beach destinations. Driving it — or being driven — is half the experience: the road clings to the mountainside, dipping into each village bay before climbing back over the next headland.
+Everything threads onto a single coastal road, the **SH8**, which was rebuilt in the late 2000s and turned a remote, hard-to-reach shore into one of the Mediterranean's last comparatively affordable beach destinations. Driving it — or being driven — is half the experience: the road clings to the mountainside, dipping into each village bay before climbing back over the next headland.
 
 <figure class="figure">
 <img src="/images/albanian-riviera/dhermi-beach.webp" alt="The clear turquoise water and pebble shore of Dhermi beach backed by green hills" width="1280" height="960" loading="lazy" decoding="async" />

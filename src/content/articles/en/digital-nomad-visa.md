@@ -24,6 +24,8 @@ affiliate:
 
 If you have searched for an "Albania digital nomad visa," here is the first thing to know: Albania does not have a standalone product with that exact name. Remote workers settle here through the **Unique Permit** (Albanian: *Leje Unike*) — a single biometric card that combines a **work permit and a residence permit** in one document. Within that system there is a dedicated category for the **Digital Mobile Worker / Digital Nomad**, which is what most location-independent professionals use. The Unique Permit replaced the older patchwork of separate Type A, B and C permits, so a lot of advice you find online is out of date.
 
+> **General information, not legal or tax advice.** Immigration, tax, and residence rules change and depend on your nationality and circumstances. Verify the current requirements with the official source ([e-albania.al](https://e-albania.al) or your nearest Albanian embassy) before you apply or relocate.
+
 ## What the Unique Permit actually is
 
 The legal foundation is **Law No. 79/2021 "On Foreigners"** plus its implementing decisions. The law was adopted in 2021 and the new permit became operational from around 2022, which is why you will see both years quoted. Instead of applying separately for permission to work and permission to reside, you now receive **one biometric card** that covers both. For a digital nomad, that means a single application track rather than two parallel bureaucracies.

@@ -19,6 +19,8 @@ sources:
 
 Albania is one of the easiest countries in Europe to enter, and for some travellers the rules are surprisingly generous: U.S. citizens can stay **visa-free for up to one full year — 365 days — with no residence permit at all**, a window unmatched almost anywhere else on the continent (per travel.state.gov). For most other Western travellers the country gives a familiar 90 days, and a few nationalities follow special schemes. Below is a clear, nationality-by-nationality breakdown of who needs a visa for Albania, how long you can stay, and the entry conditions to get right before you fly.
 
+> **General information, not legal or immigration advice.** Entry and visa rules change and depend on your nationality and circumstances. Always confirm the current rules with the official source — your nearest Albanian embassy or the Ministry for Europe and Foreign Affairs ([punetejashtme.gov.al](https://punetejashtme.gov.al)) — before you travel.
+
 ## Who can enter Albania visa-free
 
 Albania does not belong to the EU or the Schengen Area, so its entry rules are its own — and on the whole they are welcoming. Citizens of the **EU, the wider Schengen/EEA bloc, the United Kingdom, Canada and Australia** may enter without a visa and stay **90 days within any 180-day period**. EU, Schengen and EEA nationals have an extra convenience: they may cross the border on a **national ID card** rather than a passport.
@@ -27,7 +29,7 @@ The standout case is the **United States**. According to the U.S. State Departme
 
 ## Ukraine: visa-free with an extended-stay scheme
 
-Ukrainian citizens enter Albania **visa-free**. Beyond the standard short-stay allowance, a **special scheme lets Ukrainians stay for an extended period without obtaining a residence permit until 30 March 2027**. To use it you must hold a **biometric passport valid for at least three months**. Because such liberalisation measures are renewed by government decision and carry a fixed end date, confirm the current terms with Albania's Ministry for Europe and Foreign Affairs ([punetejashtme.gov.al](https://punetejashtme.gov.al)) before relying on the extended period.
+Ukrainian citizens enter Albania **visa-free**. Beyond the standard short-stay allowance, a **special scheme lets Ukrainians stay for an extended period without obtaining a residence permit, currently reported as until 30 March 2027**. To use it you must hold a **biometric passport valid for at least three months**. Because such liberalisation measures are renewed by government decision and carry a fixed end date, confirm the current terms with Albania's Ministry for Europe and Foreign Affairs ([punetejashtme.gov.al](https://punetejashtme.gov.al)) before relying on the extended period.
 
 ## Russia: an e-Visa is usually required
 
