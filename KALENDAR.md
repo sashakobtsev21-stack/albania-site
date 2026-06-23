@@ -11,7 +11,7 @@
 ## Неделя 1 (24–30.06) — Стартовое ядро: столица + доверие + деньги
 - ✅ Ср 24.06 — [Статья] Best Things to Do in Tirana · `things to do in tirana` · /cities/things-to-do-in-tirana/ · категория cities · фото 18 (cover+17, CC/CC0 Wikimedia) · 💰 trip-hotels/trip-tours · ОПУБЛИКОВАНО (en, qa=GO). Перелинк на airport transfers/day trips добавить, когда выйдут (Нед.2/Нед.8).
 - ✅ Пт 26.06 — [Статья] Is Albania Safe to Visit in 2026? · `is albania safe` · /planning/is-albania-safe/ · категория **planning** · фото 6 (cover Skanderbeg Square + 3 инлайн + 2 gallery, CC/CC0 Wikimedia ≤200КБ) · 💰 safetywing (страховка) · ОПУБЛИКОВАНО (en, qa=GO; добавлена в витрину главной, kicker `sight`). Перелинк → driving in albania safety / → travel insurance добрать встречными ссылками, когда выйдут (Нед.5 / Нед.4). Прим.: категория planning (не attractions/info, как в исходном наброске) — раздел /planning/.
-- Вс 28.06 — [Статья] Is Albania Expensive? Real 2026 Daily Costs · `is albania expensive` · /is-albania-expensive/ · категория info (хаб) · фото ≥5 · 💰 нет (хаб) · перелинк: → travel budget, → car rental; обратная ссылка из Tirana
+- ⭐ Вс 28.06 — [Статья] Is Albania Expensive? Real 2026 Daily Costs (budget per day) · `is albania expensive` / `albania budget per day` · /is-albania-expensive/ · категория info (хаб) · фото ≥5 · 💰 нет (хаб) · перелинк: → travel budget, → car rental, → where to stay, → how to get around; обратная ссылка из Tirana · **SEO-ГОЛОВА (высокочастотный, не опубликован): держим в прайм-слоте Нед.1; именно сюда вешаем перелинки бюджет-кластера.**
 - Сб 27.06 — 📰 /news
 - Вт 30.06 — 📰 /news (дайджест на согласование, НЕ daily)
 - Пн 29.06 — 📊 Замер GA/GSC (15 мин: первые индексируемые страницы, baseline)
@@ -28,8 +28,8 @@
 ## Неделя 3 (08–14.07) — Стартовое ядро: маршрут-магнит + второй город + US-хук
 - ✅ Ср 08.07 — [МАРШРУТ] 10 Days in Albania: Ultimate Road Trip Itinerary · `albania road trip itinerary` · /routes/albania-road-trip-itinerary/ · коллекция routes · 6 остановок Tirana→Berat→Vlora/Riviera(Llogara)→Saranda→Ksamil→Gjirokaster, фото КАЖДОЙ остановки + cover + 3 gallery (10 фото CC/CC0 Wikimedia ≤200КБ); days:8 / distanceKm:620 / budgetFrom:60 EUR; OSRM-геометрия запечена · 💰 trip-carhire/trip-hotels · ОПУБЛИКОВАН (en, qa=GO). Перелинк: хаб /routes/ + Tirana/Berat/Saranda + car rental/best-time/insurance. Прим.: финальный stop — Gjirokastër (не Theth, как в исходном наброске); скрипт build-route-geometry поправлен на routes/en.
 - ✅ Пт 10.07 — [Статья] Berat, Albania: City of a Thousand Windows Guide · `berat albania` · /cities/berat-albania-guide/ · категория cities · фото 12 (cover+8 инлайн+3 gallery, CC/CC0 Wikimedia) · 💰 trip-hotels/trip-tours · ОПУБЛИКОВАНО (en, qa=GO; `featuredOrder:4`, в витрине главной). Перелинк ← road trip itinerary / → day trips from Tirana добавить, когда выйдут (Нед.3 Ср / Нед.8).
-- Вс 12.07 — [Статья] Albania 1-Year Visa-Free for US Citizens: How It Works · `albania visa free 1 year us citizens` · /albania-1-year-visa-free-us-citizens/ · категория info · фото ≥5 · 💰 страховка/жильё long-stay · перелинк: ← **общая visa/entry-страница `/planning/albania-visa/` (ОПУБЛИКОВАНА 21.06 — закрывает топ-запрос «do I need a visa for Albania» по гражданствам; этот US-слот = узкий long-stay-угол, делать как дочернюю к visa-хабу, не дублировать таблицу)**, → digital nomad visa, → cost of living
-  - ℹ️ Дедуп-примечание: общий visa/entry-запрос уже закрыт страницей `/planning/albania-visa/` (nationality-by-nationality, включая US 365 дней). Отдельную «Do I need a visa for Albania» НЕ создаём — каннибализация; нужный апсайд берём перелинковкой US-слота и nomad-визы на этот хаб.
+- ⭐ Вс 12.07 — [Статья] Where to Stay in Albania: Best Areas & Hotels · `where to stay in albania` / `best areas to stay albania` · /where-to-stay-in-albania/ · категория planning (хаб) · фото ≥8 · 💰 **trip-hotels (топ-ROI hotel-affiliate)** · перелинк: → Tirana / Saranda / Ksamil / Berat / Gjirokaster guides + ← Riviera guide + → is albania expensive · **SEO-ГОЛОВА ВЫНЕСЕНА ВПЕРЁД (planning, не опубл.): перенесена из Нед.4 в этот прайм-слот Нед.3 — лучший hotel-affiliate-якорь, нужен в высокий сезон как можно раньше. Дубля нет.**
+  - 🔻 ДЕПРИ/ПЕРЕУГОЛ: US 1-Year Visa-Free-слот (`albania-1-year-visa-free-us-citizens`) — отдельную страницу НЕ создаём (каннибализация): общий visa/entry-запрос уже закрыт опубл. `/planning/albania-visa/` (nationality-by-nationality, включая US 365 дней). Узкий US long-stay-угол сводим в **перелинк** на `/planning/albania-visa/` + раздел внутри digital-nomad-visa. Прайм-слот освобождён под SEO-голову where-to-stay.
 - Ср 08.07 — 📰 /news (пик)
 - Сб 11.07 — 📰 /news
 - Вт 14.07 — 📰 /news (дайджест на согласование, НЕ daily)
@@ -48,7 +48,7 @@
 
 ## Неделя 4 (15–21.07) — Ривьера-кластер (пик сезона) + страховка + где жить
 - [x] ОПУБЛИКОВАНО (slug: `albanian-riviera`, category attractions, /attractions/albanian-riviera/) — [Статья] Albanian Riviera Guide: Best Towns & Beaches · `albanian riviera guide` · 💰 отели/аренда авто · перелинк: хаб Ривьеры → Saranda, Ksamil, Himara-сравнение. Прим.: опубликовано под slug `albanian-riviera` (не `albanian-riviera-guide` из наброска), category `attractions`. /work НЕ создаёт заново.
-- ➕ Чт 16.07 — [Статья] Where to Stay in Albania: Best Areas & Hotels · `where to stay in albania` · /where-to-stay-in-albania/ · категория planning (хаб) · фото ≥8 · 💰 **trip-hotels (топ-ROI по hotel-affiliate)** · перелинк: → Tirana / Saranda / Ksamil / Berat / Gjirokaster guides + ← Riviera guide + → is albania expensive · **НОВЫЙ СЛОТ (B2): дубля нет — отдельной hotel/where-to-stay страницы в репо не было; лучший hotel-affiliate-якорь, ставим на пик сезона.**
+- ⭐ Чт 16.07 — [Статья] How to Get Around Albania: Buses, Furgons & Ferries · `how to get around albania` / `albania furgon buses` · /how-to-get-around-albania/ · категория info (transport) · фото ≥5 · 💰 аренда авто/трансфер · перелинк: ← car rental, → road trip itinerary, → 7-day itinerary, → itinerary by bus (депри) · **SEO-ГОЛОВА ВЫНЕСЕНА ВПЕРЁД (transport, не опубл.): перенесена из Нед.9 — у сайта ВООБЩЕ НЕТ транспортной статьи, это критичный пробел кластера. Where-to-stay, ранее стоявшая в этом слоте, переехала в прайм Нед.3.**
 - ✅ Ksamil, Albania: Beaches, Islands & Where to Stay · `ksamil albania` · /attractions/ksamil-albania-guide/ · категория **attractions** (`attractionType: resorts-springs`, `region: vlore`) · фото 6 (cover+3 инлайн+2 gallery, CC Wikimedia ≤200КБ) · 💰 trip-hotels/trip-tours · ОПУБЛИКОВАНО (en, qa=GO; третья статья attractions; в витрине главной, kicker `sight`; перелинк ← Saranda / ← Albanian Riviera / ← Butrint). Цены лежаков/лодок — «уточняйте» (TODO `visit`/цены, когда даст владелец). Прим.: выполнено в категории `attractions`/URL `/attractions/ksamil-albania-guide/` (не голый `/ksamil-albania-guide/` из наброска).
 - [x] ОПУБЛИКОВАНО (slug: `do-you-need-insurance`, category insurance, /insurance/do-you-need-insurance/) — [Статья] Do You Need Travel Insurance for Albania? · `albania travel insurance` · 💰 страховка · перелинк: ← is albania safe, ← driving safety. Прим.: опубликовано под slug `do-you-need-insurance` (не `albania-travel-insurance`), category `insurance`. /work НЕ создаёт заново.
 - Ср 15.07 — 📰 /news (пик)
@@ -57,7 +57,7 @@
 - Пн 20.07 — 📊 Замер GA/GSC (15 мин)
 
 ## Неделя 5 (22–28.07) — Ривьера-сравнения + бюджет + дорожная безопасность
-- Ср 22.07 — [Статья] Himara vs Saranda vs Ksamil: Which Beach Town Is Right for You? · `himara vs saranda vs ksamil` · /himara-saranda-ksamil-comparison/ · категория info · фото ≥5 · 💰 отели · перелинк: ← Riviera guide, ← Saranda/Ksamil
+- ⭐ Ср 22.07 — [МАРШРУТ] The Perfect 7-Day Albania Itinerary (First-Timers) · `albania 7 day itinerary` / `albania itinerary 7 days` · /albania-7-day-itinerary/ · коллекция routes · фото каждой остановки · 💰 аренда авто/отели · перелинк: ← 10-day road trip, → car rental, → where to stay, → how to get around · **SEO-ГОЛОВА ВЫНЕСЕНА ВПЕРЁД (routes, не опубл.): перенесена из Нед.8 — высокочастотный планировочный запрос, нужен в высокий сезон раньше; опирается на уже опубл. 10-day road-trip. Himara-сравнение, ранее в этом слоте, переехало в Нед.8.**
 - Пт 24.07 — [Статья] Albania Travel Budget: How Much Money per Day · `albania travel budget` · /albania-travel-budget/ · категория info · фото ≥5 · 💰 аренда авто/отели · перелинк: ← is albania expensive (хаб), → cost of living
 - Вс 26.07 — [Статья] Driving in Albania: Road Safety & Rules for Tourists · `driving in albania safe` · /driving-in-albania-safety/ · категория info · фото ≥5 · 💰 аренда авто/страховка · перелинк: ← is albania safe, ← car rental
 - Ср 22.07 — 📰 /news (пик)
@@ -84,7 +84,7 @@
 - Пн 10.08 — 📊 Замер GA/GSC (15 мин)
 
 ## Неделя 8 (12–18.08) — Маршруты-альтернативы + Shkoder (ворота в Альпы)
-- Ср 12.08 — [Статья] The Perfect 7-Day Albania Itinerary (First-Timers) · `albania itinerary 7 days` · /albania-7-day-itinerary/ · категория routes · фото каждой остановки · 💰 аренда авто/отели · перелинк: ← 10-day road trip, → car rental
+- Ср 12.08 — [Статья] Himara vs Saranda vs Ksamil: Which Beach Town Is Right for You? · `himara vs saranda vs ksamil` · /himara-saranda-ksamil-comparison/ · категория info · фото ≥5 · 💰 отели · перелинк: ← Riviera guide, ← Saranda/Ksamil · Прим.: переехало сюда из Нед.5 (на её прайм-слот вынесена SEO-голова 7-day itinerary).
 - Пт 14.08 — [Статья] Shkoder: Gateway to the Albanian Alps · `shkoder albania` · /shkoder-albania-guide/ · категория cities · фото ≥10 · 💰 жильё/аренда авто · перелинк: ← Theth–Valbona, ← Lake Koman ferry
 - Вс 16.08 — [Статья] Best Day Trips from Tirana · `day trips from tirana` · /day-trips-from-tirana/ · категория routes · фото каждой остановки · 💰 туры/аренда авто · перелинк: ← Tirana things to do, → Berat
 - Ср 12.08 — 📰 /news (пик)
@@ -93,7 +93,7 @@
 - Пн 17.08 — 📊 Замер GA/GSC (15 мин)
 
 ## Неделя 9 (19–25.08) — Транспорт без авто + бэкпекер-маршрут + nomad-жильё
-- Ср 19.08 — [Статья] How to Get Around Albania: Buses, Furgons & Ferries · `how to get around albania` · /how-to-get-around-albania/ · категория info · фото ≥5 · 💰 аренда авто/трансфер · перелинк: ← car rental, → itinerary by bus
+- Ср 19.08 — ⤴️ ПЕРЕНЕСЕНО В Нед.4 (Чт 16.07): How to Get Around Albania — SEO-голова transport вынесена вперёд (см. Нед.4). Слот Нед.9 свободен под растущий по GA запрос (кандидаты: bus routes по городам, Tirana–Saranda bus, ferry to Corfu).
 - Пт 21.08 — [Статья] Albania Without a Car: One-Week Itinerary by Bus · `albania itinerary by bus` · /albania-itinerary-by-bus/ · категория routes · фото каждой остановки · 💰 трансфер/туры · перелинк: ← how to get around, ← 7-day itinerary · 🔻 **ДЕПРИ: каннибализация/низкий объём — 4-й itinerary-угол (10-day road-trip + 7-day + day-trips + этот). Спрос «itinerary by bus» узкий; логистику без авто закрывает `how to get around albania`. Слот свободен под растущий по GA запрос; не удаляю, но не приоритет.**
 - Вс 23.08 — [Статья] Living in Tirana as a Digital Nomad: Cost & Coworking · `tirana digital nomad` · /tirana-digital-nomad-guide/ · категория mixed · фото ≥5 · 💰 жильё long-stay/eSIM · перелинк: ← digital nomad visa, ← best eSIM
 - Ср 19.08 — 📰 /news (пик)
@@ -146,6 +146,14 @@
 - ℹ️ Общий visa/entry-запрос УЖЕ закрыт страницей `/planning/albania-visa/` (опубл. 21.06, по гражданствам) — новую «Do I need a visa for Albania» НЕ создаём (каннибализация); US-слот сведён в перелинковку на этот хаб.
 - 🔻 Депри (не удалены, помечены каннибализация/низкий объём): `albania-itinerary-by-bus` (4-й itinerary-угол), `albania-esim-remote-work` (дубль eSIM, ведущий — `best-esim-for-albania`), `albania-tap-water-safe` (низкий объём, 💰 нет).
 - 📰 Добавлен блок News schedule: Албания Вт + Сб (пик Jul–Aug +Ср = 3×/нед; низкий сезон — weekly); collect→filter→owner preview→OK→publish, publish только при прохождении фильтра, НЕ daily.
+
+**Правки SEO от 23.06.2026 (высокочастотные «головы» вперёд + дедуп):**
+- ⭐ `is-albania-expensive` / `albania budget per day` (planning) — высокочастотная голова, НЕ опубл.; закреплена в прайм-слоте Нед.1 (Вс 28.06), на неё повешен бюджет-кластер.
+- ⭐ `how-to-get-around-albania` / furgon / buses (transport) — у сайта ВООБЩЕ нет транспорт-статьи; вынесена из Нед.9 → Нед.4 (Чт 16.07). Старый слот Нед.9 освобождён под растущий GA-запрос.
+- ⭐ `where-to-stay-in-albania` / best areas (planning) — top-ROI hotel-affiliate; вынесена из Нед.4 → прайм Нед.3 (Вс 12.07).
+- ⭐ `albania-7-day-itinerary` (routes) — вынесена из Нед.8 → Нед.5 (Ср 22.07); Himara-сравнение переехало в Нед.8.
+- 🔻 Дедуп/трим (депри, уже помечены ранее, подтверждены): `albania-itinerary-by-bus` (4-й itinerary-угол), `albania-esim-remote-work` (дубль eSIM, ведущий `best-esim-for-albania`), `albania-tap-water-safe` (низкий объём, 💰 нет).
+- 🔻 Узкий US «visa-free 1 year» в прайм-слоте Нед.3 — переуглён в перелинк на опубл. `/planning/albania-visa/` (+ раздел в digital-nomad-visa); отдельную страницу НЕ создаём (каннибализация). Освобождённый прайм отдан SEO-голове where-to-stay.
 
 ЗА ОКНО 13 недель (на будущее): обновление itinerary/Riviera под Llogara Tunnel к МАРТУ-АПРЕЛЮ 2027; October harvest festivals & wine tastings — контент-повод (конец сентября-октябрь); Ноябрь/зимний budget-контент — низкий сезон; Apollonia, Permet hot springs — поддерживающие city/POI-статьи в Q4 для углубления кластеров.
 
