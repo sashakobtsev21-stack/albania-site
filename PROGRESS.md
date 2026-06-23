@@ -23,6 +23,11 @@
 - **Достоверность:** дата украинской схемы смягчена («currently reported as until 30 March 2027»); `albanian-riviera` — SH8 «rebuilt in 2009» → «in the late 2000s» (точная дата без источника); `gjirokaster-albania-guide` — publishedAt/updatedAt 2026-07-31 → 2026-06-23 (была будущая дата). Гейты build/check/test/links/lint — зелёные.
 
 ## Лог (новые записи сверху)
+### 2026-06-23 — Добор `best-time-to-visit.md` до ≥1200 слов (выверенный контент)
+- **Что:** статья выросла 751 → 1654 слов. Добавлены разделы: «Komani ferry logistics and the snow line» (тайминги парома 09:00/13:00 с komaniferry.com + хедж; снеговая линия Qafa e Valbonës — поздний май/нач. июня, варьируется по годам, совет писать в гестхаусы); «Coast versus mountains: two calendars, side by side» (помесячное наложение побережье↔горы — темпы/толпы/что открыто); «Festivals and seasonal events» (Gjirokastër Folklore Festival — многолетний цикл; июль–август события — всё хеджировано, даты «verify»); «Why the shoulder seasons win» (май + сентябрь–октябрь с конкретикой). Структура/фото не тронуты. `sources` += `en.wikipedia.org`, `komaniferry.com`.
+- **Факты:** только из источников (komaniferry.com тайминги; Wikipedia Visa policy/Komani; темпы/цены — диапазоны/хедж). Не выдумано.
+- **Гейты:** build (36 стр, 0/0) · check 0/0/0 · test ✓ · test:links (1796) ✓ · lint ✓ → GO.
+
 ### 2026-06-23 — SEO-гигиена: rehype-external-links (rel на все внешние ссылки тела)
 - **Что:** подключён `rehype-external-links` в `astro.config.mjs` — блок `markdown.rehypePlugins: [[rehypeExternalLinks, { rel: ['nofollow','noopener','noreferrer'] }]]` (без `target` — внешние открываются в той же вкладке). Все внешние ссылки в теле .md теперь получают `rel="nofollow noopener noreferrer"` на этапе сборки.
 - **Зачем:** не передаём вес/референсный сигнал чужим доменам и не утекаем referrer — стандартная SEO-гигиена для outbound-ссылок в контенте.

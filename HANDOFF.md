@@ -4,6 +4,11 @@
 фиксов — [ROADMAP-FIX.md](ROADMAP-FIX.md), аудит — [AUDIT-2026-06-22.md](AUDIT-2026-06-22.md),
 статус-лог — [PROGRESS.md](PROGRESS.md), правила — [CLAUDE.md](CLAUDE.md).
 
+## Снимок (2026-06-23, добор `best-time-to-visit.md` до ≥1200 слов)
+- **Что сделано:** статья 751 → 1654 слов. Новые разделы: логистика Komani ferry + снеговая линия (тайминги 09:00/13:00 с komaniferry.com; Qafa e Valbonës — поздний май/нач. июня, хедж); помесячное наложение побережье↔горы (темпы/толпы/что открыто); фестивали (Gjirokastër Folklore Festival — многолетний цикл, всё хеджировано, даты «verify»); «почему шолдер-сезоны выигрывают» (май/сентябрь–октябрь). Структура/фото не тронуты; `sources` += en.wikipedia.org, komaniferry.com.
+- **Гейты:** build (36 стр, 0/0) · check 0/0/0 · test ✓ · test:links (1796) ✓ · lint ✓ → **GO**. Закоммичено + запушено в `main`.
+- **Дальше по сессии:** добор `albania-visa.md` до ≥1200 слов (YMYL — сохранить blockquote-дисклеймер и хеджи).
+
 ## Снимок (2026-06-23, SEO-гигиена — rehype-external-links: rel на внешние ссылки тела)
 - **Что сделано:** подключён `rehype-external-links` в `astro.config.mjs` (новый блок `markdown.rehypePlugins`), все внешние ссылки в теле статей при сборке получают `rel="nofollow noopener noreferrer"`. `target` не задаём (та же вкладка). Пакет добавлен в `dependencies` (`npm install`).
 - **Не задеты:** внутренние относительные ссылки и партнёрские `/go/` (компонент сам ставит `rel="sponsored nofollow noopener"`, ссылка относительная → rehype мимо).
