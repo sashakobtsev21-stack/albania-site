@@ -4,6 +4,13 @@
 фиксов — [ROADMAP-FIX.md](ROADMAP-FIX.md), аудит — [AUDIT-2026-06-22.md](AUDIT-2026-06-22.md),
 статус-лог — [PROGRESS.md](PROGRESS.md), правила — [CLAUDE.md](CLAUDE.md).
 
+## Снимок (2026-06-23, SEO-гигиена — rehype-external-links: rel на внешние ссылки тела)
+- **Что сделано:** подключён `rehype-external-links` в `astro.config.mjs` (новый блок `markdown.rehypePlugins`), все внешние ссылки в теле статей при сборке получают `rel="nofollow noopener noreferrer"`. `target` не задаём (та же вкладка). Пакет добавлен в `dependencies` (`npm install`).
+- **Не задеты:** внутренние относительные ссылки и партнёрские `/go/` (компонент сам ставит `rel="sponsored nofollow noopener"`, ссылка относительная → rehype мимо).
+- **Проверка `dist/`:** `albania-visa` — внешние gov-ссылки получили rel; внешних без rel — 0; внутренние `/attractions/`, `/cities/` — чистые.
+- **Гейты:** build (36 стр, 0/0) · check 0/0/0 · test ✓ · test:links (1796) ✓ · lint ✓ → **GO**. Закоммичено + запушено в `main`.
+- **Дальше по сессии:** ЭТАП 2 — бэкфилл канонических ссылок-источников в фото-кредитах (90 без URL); ЭТАП 3 — добор `best-time-to-visit.md` и `albania-visa.md` до ≥1200 слов.
+
 ## Снимок (2026-06-23, аудит-фикс — устранены 4 дубля ключевых фото + нормализация имён авторов)
 - **Что сделано:** сквозной фото-аудит нашёл байт-идентичные (одинаковый MD5) файлы, использованные как КЛЮЧЕВЫЕ кадры (обложка/инлайн-figure) в разных статьях. Заменены на РАЗНЫЕ легальные CC-кадры (Wikimedia Commons, webp ≤200КБ, автор+лицензия+ссылка на Commons в credit):
   - `albania-road-trip-itinerary/cover.webp`: Pasztilla-дубль обложки Ривьеры → **Sharon Hahn Darlin / CC BY 2.0** (Palasa/Nazar с Ллогары).

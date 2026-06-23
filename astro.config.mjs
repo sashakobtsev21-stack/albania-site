@@ -4,6 +4,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
+import rehypeExternalLinks from 'rehype-external-links';
 
 /**
  * Слаги demo-материалов (`demo: true`) — исключаются из sitemap (аудит 2026-06-17, P0):
@@ -81,6 +82,13 @@ export default defineConfig({
   build: {
     // Files emitted as directory/index.html so URLs keep a trailing slash (§7).
     format: 'directory',
+  },
+  markdown: {
+    // Все внешние ссылки в теле статей получают rel="nofollow noopener noreferrer"
+    // (SEO-гигиена: не передаём вес и не утекаем referrer на чужие домены).
+    // target НЕ задаём — ссылки открываются в той же вкладке (UX-решение владельца).
+    // Партнёрки рендерятся компонентом как относительные /go/-ссылки → rehype их не трогает.
+    rehypePlugins: [[rehypeExternalLinks, { rel: ['nofollow', 'noopener', 'noreferrer'] }]],
   },
   integrations: [
     // Карта сайта (§14). Сайт одноязычный (en на корне) — i18n-режим не нужен,

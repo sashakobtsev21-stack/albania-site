@@ -23,6 +23,13 @@
 - **Достоверность:** дата украинской схемы смягчена («currently reported as until 30 March 2027»); `albanian-riviera` — SH8 «rebuilt in 2009» → «in the late 2000s» (точная дата без источника); `gjirokaster-albania-guide` — publishedAt/updatedAt 2026-07-31 → 2026-06-23 (была будущая дата). Гейты build/check/test/links/lint — зелёные.
 
 ## Лог (новые записи сверху)
+### 2026-06-23 — SEO-гигиена: rehype-external-links (rel на все внешние ссылки тела)
+- **Что:** подключён `rehype-external-links` в `astro.config.mjs` — блок `markdown.rehypePlugins: [[rehypeExternalLinks, { rel: ['nofollow','noopener','noreferrer'] }]]` (без `target` — внешние открываются в той же вкладке). Все внешние ссылки в теле .md теперь получают `rel="nofollow noopener noreferrer"` на этапе сборки.
+- **Зачем:** не передаём вес/референсный сигнал чужим доменам и не утекаем referrer — стандартная SEO-гигиена для outbound-ссылок в контенте.
+- **Не задеты:** внутренние относительные ссылки (`/attractions/` и т.п.) и партнёрские `/go/`-ссылки (рендерятся компонентом как относительные с собственным `rel="sponsored nofollow noopener"`) — rehype их не трогает.
+- **Проверка в `dist/`:** `planning/albania-visa/index.html` — внешние `punetejashtme.gov.al`/`al.usembassy.gov` получили `rel="nofollow noopener noreferrer"`; внешних `<a>` без rel — 0; внутренние `/attractions/`, `/cities/` — без добавленного rel.
+- **Гейты:** build (36 стр, 0/0) · check 0/0/0 · test [enums/parity/photos/interlinks] ✓ · test:links (1796 ссылок) ✓ · lint ✓ — **GO**. `rehype-external-links` добавлен в `dependencies`. Закоммичено + запушено в `main`.
+
 ### 2026-06-23 — Аудит-фикс: устранены 4 дубля ключевых фото + нормализация имён авторов
 - **Проблема (сквозной фото-аудит):** один и тот же файл (идентичный MD5) использовался как КЛЮЧЕВОЙ кадр (обложка/инлайн-figure) в разных статьях — нарушение «каждое фото уникально на материал». Атрибуция везде была корректной; проблема — только в дублировании байт-идентичных файлов.
 - **Заменены 5 файлов на РАЗНЫЕ легальные CC-кадры** (Wikimedia Commons, отбор глазами, webp ≤200КБ, реальный автор+лицензия+ссылка на Commons в credit):
