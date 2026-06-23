@@ -173,3 +173,80 @@
 **Замеры:** Замер GA/GSC — каждый понедельник, 15 мин (растущие страницы, новые/поднимающиеся запросы в GSC, какие хабы получают трафик). Отдельной строкой в каждой неделе. План скользящий: после первых 3–4 замеров (≈недели 4–5) приоритет следующих недель пересматривается — темы, которые уже ранжируются и растут, обрастают поддерживающими статьями (перелинковка вглубь кластера); мёртвые запросы откладываются в P2-хвост. Сезонные окна (Ривьера/хайкинг) не двигаем по данным — они привязаны к календарю.
 
 **Сезонность:** Старт 24.06 — уже середина высокого сезона, поэтому пляжный Ривьера-кластер (Riviera guide, Ksamil, Saranda, Himara-сравнение, best beaches) и хайкинг Theth/Valbona (сезон mid-June–mid-Sep) ставим во фронт недель 1–6, пока спрос на пике и хайк-трейл открыт. Theth-to-Valbona и Lake Koman публикуем до конца августа (трейл закрывается mid-Sep). 'Best time to visit Albania' ставим в неделю 12–13 (сентябрь) как заход на планировщиков следующего сезона. Visa-free/nomad-кластер — evergreen, распределён ровно (не сезонный). ЗА окно 13 недель (отметка на будущее, публиковать к МАРТУ-АПРЕЛЮ 2027 под старт планирования): обновлённый Riviera/itinerary-контент под Llogara Tunnel к весне; 'best time' пляж-промо к зиме-весне; October harvest/wine festivals — контент-повод к концу сентября-октябрю (вне окна); зимний/budget и Ноябрь-контент (низкий сезон) — на ноябрь.
+
+---
+## Расширение плана — long-tail backlog (Этап 2, под трафик/рекламную модель)
+**Итог: 49 новых слотов** (отдедуплено против опубл./план., совпадений нет → сателлитов 0). По кластерам: Cities-towns 8 · Attractions-POI 10 · Itineraries 5 · Transport-routes 8 · Where-to-stay 4 · Food-drink 2 · Day-trips 3 · Comparisons 3 · Seasonal 2 · Practical 4. Приоритет — **EN-first, Tier-1 Запад** (весь backlog en); внутри кластеров порядок head → mid → long-tail. Это P2-хвост ПОД ОСНОВНЫМ 13-недельным планом: подаётся после замеров GA/GSC по растущим запросам, сезонные слоты (October/Summer, Riviera) привязать к окну. Каждый слот — фото ≥5 (город ≥10), факты только из источника (правило 4). Берётся в работу НЕ раньше, чем закрыт основной темп недель 1–13.
+
+### Cities (кластер cities-towns, 8)
+- [Статья] Vlora (Vlore) Travel Guide: Beaches, Old Town & Independence City · key `vlora albania` · /vlora-albania-guide/ · категория cities · фото≥5 (город≥10) · 💰trip-hotels/trip-tours · кластер cities-towns [head]
+- [Статья] Durres Travel Guide: Roman Amphitheatre, Beaches & Day Trip from Tirana · key `durres albania` · /durres-albania-guide/ · категория cities · фото≥5 (город≥10) · 💰trip-hotels · кластер cities-towns [head]
+- [Статья] Himare (Himara) Travel Guide: Beaches, Old Village & Quiet Riviera · key `himara albania` · /himare-albania-guide/ · категория cities · фото≥5 (город≥10) · 💰trip-hotels/trip-tours · кластер cities-towns [mid]
+- [Статья] Kruje (Kruja) Travel Guide: Skanderbeg Castle & Old Bazaar Day Trip · key `kruja albania` · /kruje-albania-guide/ · категория cities · фото≥5 (город≥10) · 💰trip-tours · кластер cities-towns [mid]
+- [Статья] Pogradec & Lake Ohrid (Albania Side): Beaches, Town & What to Do · key `lake ohrid albania` · /pogradec-lake-ohrid-albania/ · категория cities · фото≥5 (город≥10) · 💰trip-hotels · кластер cities-towns [mid]
+- [Статья] Dhermi & Drymades: Albania's Most Famous Riviera Beach Town · key `dhermi albania` · /dhermi-albania-guide/ · категория cities · фото≥5 (город≥10) · 💰trip-hotels · кластер cities-towns [mid]
+- [Статья] Korca (Korce) Travel Guide: Old Bazaar, Beer & Southeast Albania · key `korca albania` · /korce-albania-guide/ · категория cities · фото≥5 (город≥10) · 💰trip-hotels/trip-tours · кластер cities-towns [long-tail]
+- [Статья] Permet Travel Guide: Thermal Baths, Rafting & Southern Albania · key `permet albania` · /permet-albania-guide/ · категория cities · фото≥5 (город≥10) · 💰trip-tours · кластер cities-towns [long-tail]
+
+### Attractions (кластер attractions-poi, 10)
+- [Статья] Apollonia Archaeological Park: Ancient Ruins Near Fier · key `apollonia albania` · /apollonia-albania/ · категория attractions · фото≥5 · 💰trip-tours/trip-transfers · кластер attractions-poi [mid]
+- [Статья] Llogara Pass & National Park: Albania's Most Scenic Drive · key `llogara pass albania` · /llogara-pass-albania/ · категория attractions · фото≥5 · 💰trip-tours/trip-carhire · кластер attractions-poi [mid]
+- [Статья] Osumi Canyon: Albania's Grand Canyon & Rafting Day Trip from Berat · key `osumi canyon albania` · /osumi-canyon-albania/ · категория attractions · фото≥5 · 💰trip-tours · кластер attractions-poi [mid]
+- [Статья] Benja (Benje) Thermal Baths: Permet's Free Hot Springs Guide · key `benja thermal baths` · /benja-thermal-baths-permet/ · категория attractions · фото≥5 · 💰trip-tours · кластер attractions-poi [mid]
+- [Статья] Theth Blue Eye & Grunas Waterfall: Hike Guide · key `blue eye theth` · /theth-blue-eye-grunas-waterfall/ · категория attractions · фото≥5 · 💰trip-tours · кластер attractions-poi [mid]
+- [Статья] Dajti Mountain & Dajti Ekspres Cable Car: Tirana's Mountain Escape · key `dajti express tirana` · /dajti-express-cable-car-tirana/ · категория attractions · фото≥5 · 💰trip-tours · кластер attractions-poi [mid]
+- [Статья] Rozafa Castle, Shkoder: Legend, Views & How to Visit · key `rozafa castle shkoder` · /rozafa-castle-shkoder/ · категория attractions · фото≥5 · 💰trip-tours/trip-transfers · кластер attractions-poi [long-tail]
+- [Статья] Gjipe Beach: How to Reach Albania's Hidden Canyon Cove · key `gjipe beach albania` · /gjipe-beach-albania/ · категория attractions · фото≥5 · 💰trip-tours · кластер attractions-poi [long-tail]
+- [Статья] Karaburun-Sazan Marine Park: Boat Tours, Caves & Haxhi Ali Cave · key `karaburun sazan boat tour` · /karaburun-sazan-marine-park/ · категория attractions · фото≥5 · 💰trip-tours · кластер attractions-poi [long-tail]
+- [Статья] Porto Palermo Castle & Bay: Ali Pasha's Fortress near Himare · key `porto palermo albania` · /porto-palermo-castle/ · категория attractions · фото≥5 · 💰trip-tours/trip-transfers · кластер attractions-poi [long-tail]
+
+### Itineraries (кластер itineraries, 5)
+- [МАРШРУТ] 5 Days in Albania: The Perfect Short Itinerary · key `albania 5 day itinerary` · /albania-5-day-itinerary/ · категория routes · фото каждой остановки · 💰trip-carhire/trip-hotels · кластер itineraries [head]
+- [МАРШРУТ] 3 Days in Albania: Tirana, Berat & the South in a Long Weekend · key `albania 3 day itinerary` · /albania-3-day-itinerary/ · категория routes · фото каждой остановки · 💰trip-hotels · кластер itineraries [mid]
+- [МАРШРУТ] Southern Albania Road Trip: Riviera, Gjirokaster & the South · key `southern albania itinerary` · /southern-albania-road-trip/ · категория routes · фото каждой остановки · 💰trip-carhire · кластер itineraries [mid]
+- [МАРШРУТ] Northern Albania & Albanian Alps Itinerary: Shkoder, Theth, Valbona, Koman · key `northern albania itinerary` · /northern-albania-alps-itinerary/ · категория routes · фото каждой остановки · 💰trip-tours/trip-transfers · кластер itineraries [mid]
+- [МАРШРУТ] Albania Family Holiday: Best Places to Go with Kids · key `albania with kids` · /albania-with-kids/ · категория routes · фото каждой остановки · 💰trip-hotels · кластер itineraries [mid]
+
+### Transport (кластер transport-routes, 8)
+- [Статья] Saranda to Corfu Ferry: Timetable, Tickets & How to Book · key `saranda to corfu ferry` · /saranda-corfu-ferry/ · категория articles · фото≥5 · 💰trip-tours (ferry) · кластер transport-routes [head]
+- [Статья] Tirana to Saranda: Bus, Car, Transfer & Travel Times · key `tirana to saranda` · /tirana-to-saranda/ · категория articles · фото≥5 · 💰trip-transfers/trip-carhire · кластер transport-routes [head]
+- [Статья] How to Get to Albania: Flights, Airports & Arriving from the UK/Europe · key `how to get to albania` · /how-to-get-to-albania/ · категория articles · фото≥5 · 💰trip-transfers (flight/transfer) · кластер transport-routes [head]
+- [Статья] Tirana to Berat: Bus, Furgon, Car & Day Trip Options · key `tirana to berat` · /tirana-to-berat/ · категория articles · фото≥5 · 💰trip-carhire/trip-transfers · кластер transport-routes [mid]
+- [Статья] Tirana to Durres: Bus, Train & Beach Day Trip · key `tirana to durres` · /tirana-to-durres/ · категория articles · фото≥5 · 💰trip-transfers · кластер transport-routes [mid]
+- [Статья] Ferry from Italy to Albania: Bari, Brindisi & Ancona to Durres/Vlore · key `ferry italy to albania` · /italy-to-albania-ferry/ · категория articles · фото≥5 · 💰trip-tours (ferry) · кластер transport-routes [mid]
+- [Статья] Tirana to Lake Ohrid (Pogradec & Ohrid): How to Get There · key `tirana to ohrid` · /tirana-to-ohrid/ · категория articles · фото≥5 · 💰trip-transfers/trip-tours · кластер transport-routes [long-tail]
+- [Статья] Tirana to Shkoder: Bus, Train & Onward to Theth · key `tirana to shkoder` · /tirana-to-shkoder/ · категория articles · фото≥5 · 💰trip-transfers · кластер transport-routes [long-tail]
+
+### Where to stay (кластер where-to-stay, 4)
+- [Статья] Where to Stay in Tirana: Best Neighbourhoods (Blloku, Centre & More) · key `where to stay in tirana` · /where-to-stay-in-tirana/ · категория planning · фото≥5 · 💰trip-hotels · кластер where-to-stay [mid]
+- [Статья] Where to Stay in Saranda: Best Areas, Beachfront & Old Town · key `where to stay in saranda` · /where-to-stay-in-saranda/ · категория planning · фото≥5 · 💰trip-hotels · кластер where-to-stay [mid]
+- [Статья] Where to Stay on the Albanian Riviera: Best Town for Your Trip · key `where to stay albanian riviera` · /where-to-stay-albanian-riviera/ · категория planning · фото≥5 · 💰trip-hotels · кластер where-to-stay [mid]
+- [Статья] Best All-Inclusive & Beach Resorts in Albania · key `albania all inclusive resorts` · /best-resorts-albania/ · категория planning · фото≥5 · 💰trip-hotels · кластер where-to-stay [mid]
+
+### Food (кластер food-drink, 2)
+- [Статья] Albanian Wine Guide: Regions, Grapes & Where to Taste · key `albanian wine` · /albanian-wine-guide/ · категория food · фото≥5 · 💰trip-tours (wine) · кластер food-drink [long-tail]
+- [Статья] Best Seafood & Where to Eat on the Albanian Riviera · key `where to eat in saranda` · /where-to-eat-albanian-riviera/ · категория food · фото≥5 · 💰trip-tours (food) · кластер food-drink [long-tail]
+
+### Day trips (кластер day-trips, 3)
+- [МАРШРУТ] Best Day Trips from Saranda: Blue Eye, Gjirokaster, Butrint & Corfu · key `day trips from saranda` · /day-trips-from-saranda/ · категория routes · фото каждой остановки · 💰trip-tours · кластер day-trips [mid]
+- [МАРШРУТ] Best Day Trips from Vlora: Riviera, Llogara, Sazan & Apollonia · key `day trips from vlore` · /day-trips-from-vlora/ · категория routes · фото каждой остановки · 💰trip-tours · кластер day-trips [long-tail]
+- [МАРШРУТ] Day Trip from Tirana to Berat: Is It Doable & How to Plan It · key `berat day trip from tirana` · /berat-day-trip-from-tirana/ · категория routes · фото каждой остановки · 💰trip-tours · кластер day-trips [long-tail]
+
+### Comparisons (кластер comparisons-worth, 3)
+- [Статья] Albania vs Greece: Which Mediterranean Beach Holiday to Choose · key `albania vs greece` · /albania-vs-greece/ · категория info · фото≥5 · 💰нет (воронка) · кластер comparisons-worth [head]
+- [Статья] Saranda vs Vlora: Which Albanian Riviera Base Is Better? · key `saranda vs vlore` · /saranda-vs-vlora/ · категория info · фото≥5 · 💰trip-hotels · кластер comparisons-worth [long-tail]
+- [Статья] Is Saranda Worth Visiting? Honest Pros, Cons & Who It Suits · key `is saranda worth visiting` · /is-saranda-worth-visiting/ · категория info · фото≥5 · 💰нет (воронка) · кластер comparisons-worth [long-tail]
+
+### Best time / Seasonal (кластер seasonal-events, 2)
+- [Статья] Albania in Summer (July & August): Heat, Crowds & Beach Tips · key `albania in august` · /albania-in-summer/ · категория planning · фото≥5 · 💰trip-hotels · кластер seasonal-events [mid]
+- [Статья] Albania in October: Weather, Sea Temperature & What's Open · key `albania in october` · /albania-in-october/ · категория planning · фото≥5 · 💰trip-hotels · кластер seasonal-events [mid]
+
+### Practical (кластер practical, 4)
+- [Статья] Do You Need Cash in Albania? Cards, ATMs & Currency Tips · key `cash or card in albania` · /cash-or-card-albania/ · категория planning · фото≥5 · 💰trip-tours (travel-card) · кластер practical [head]
+- [Статья] Do They Speak English in Albania? Language Tips & Useful Phrases · key `do they speak english in albania` · /do-they-speak-english-albania/ · категория planning · фото≥5 · 💰нет · кластер practical [mid]
+- [Статья] Power Plugs & Adapters in Albania: What Type Do You Need? · key `albania plug type` · /albania-plug-adapter/ · категория planning · фото≥5 · 💰trip-tours (adapter) · кластер practical [mid]
+- [Статья] Albania Packing List: What to Wear & Bring (Summer & Hiking) · key `albania packing list` · /albania-packing-list/ · категория planning · фото≥5 · 💰trip-tours (gear) · кластер practical [mid]
+
+### Заметка по кластерам Budget / EN-track
+- **Budget** отдельным блоком в backlog НЕ добавляем: хабы `/is-albania-expensive/`, `/albania-travel-budget/`, `/cost-of-living-albania/` уже в основном плане (каннибализация). Новые денежные long-tail (cash-or-card вынесен в Practical) вешаем перелинком на эти хабы.
+- **EN-track**: сайт одноязычный (en) — отдельного EN-трека нет, весь backlog уже en-first под Tier-1 Запад (правило хаба: Албания EN-only).
