@@ -23,6 +23,10 @@
 - **Достоверность:** дата украинской схемы смягчена («currently reported as until 30 March 2027»); `albanian-riviera` — SH8 «rebuilt in 2009» → «in the late 2000s» (точная дата без источника); `gjirokaster-albania-guide` — publishedAt/updatedAt 2026-07-31 → 2026-06-23 (была будущая дата). Гейты build/check/test/links/lint — зелёные.
 
 ## Лог (новые записи сверху)
+### 2026-06-23 — Растровый фавикон 96/48 для Google (как у эталона)
+- **Что:** сгенерил `public/icons/favicon-96.png` (96×96) и `public/icons/favicon-48.png` (48×48) из `public/favicon.svg` через sharp (одноразовый node-скрипт). В `src/layouts/BaseLayout.astro` `<head>` рядом с `favicon.svg` добавлены `<link rel="icon" sizes="96x96">` и `sizes="48x48"`; existing (svg + icon-192 + apple-touch) не тронуты. Закрывает «нет 48/96» — теперь набор как у эталона-Македонии (svg + 96 + 48).
+- **Гейты:** build (36 стр) · check 0/0/0 · test ✓ · test:links (1868) ✓ · lint ✓ → GO.
+
 ### 2026-06-23 — Добор `albania-visa.md` до ≥1200 слов (YMYL, выверенный контент)
 - **Что:** статья выросла 1010 → 1791 слов. Добавлены: сводная таблица по национальностям (EU/Schengen/UK/CA/AU/US/UA/RU — entry requirement + typical stay, с пометкой «не полный список» и «verify»); раздел «How the e-Visa works, step by step» (5 шагов: подача из-за рубежа на e-visa.al, документы, окно 90 дней, оплата+рассмотрение «working days → few weeks» БЕЗ конкретных сборов/дней, выдача по email); раздел «Crossing the border: land, sea and air» (Kakavia/Греция, Hani i Hotit/Черногория, Morina/Косово, Qafa e Thanës/С.Македония; паромы Bari/Ancona/Brindisi → Durrës/Vlorë). `sources` += `e-visa.al`, `en.wikipedia.org`.
 - **YMYL сохранён:** blockquote-дисклеймер после лида НЕ тронут; конкретные сборы/штрафы/сроки не выдуманы — везде хедж + офиц. источники (punetejashtme.gov.al, travel.state.gov, e-visa.al).
