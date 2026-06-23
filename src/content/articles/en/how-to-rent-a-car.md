@@ -18,8 +18,8 @@ affiliate:
     label: 'Compare car rental in Albania'
     position: 'inline'
   - partner: 'localrent'
-    label: 'Compare car rental in Albania'
-    position: 'inline'
+    label: 'Find a local rental agency (often lower deposits)'
+    position: 'body-end'
 ---
 
 For most of Albania, a rental car is less a luxury than the key that unlocks the country. The famous corridors are easy enough on public transport, but the places travellers come for — the Accursed Mountains above Theth and Valbona, the string of beach villages along the Riviera — sit at the end of roads that buses barely serve. If you want to set your own pace and reach the scenic edges, you either drive yourself or hire a private driver. This guide walks through where to pick a car up, the paperwork worth checking, and how to drive sensibly once you have the keys.
