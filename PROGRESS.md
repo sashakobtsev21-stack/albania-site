@@ -23,6 +23,11 @@
 - **Достоверность:** дата украинской схемы смягчена («currently reported as until 30 March 2027»); `albanian-riviera` — SH8 «rebuilt in 2009» → «in the late 2000s» (точная дата без источника); `gjirokaster-albania-guide` — publishedAt/updatedAt 2026-07-31 → 2026-06-23 (была будущая дата). Гейты build/check/test/links/lint — зелёные.
 
 ## Лог (новые записи сверху)
+### 2026-06-23 — Добор `albania-visa.md` до ≥1200 слов (YMYL, выверенный контент)
+- **Что:** статья выросла 1010 → 1791 слов. Добавлены: сводная таблица по национальностям (EU/Schengen/UK/CA/AU/US/UA/RU — entry requirement + typical stay, с пометкой «не полный список» и «verify»); раздел «How the e-Visa works, step by step» (5 шагов: подача из-за рубежа на e-visa.al, документы, окно 90 дней, оплата+рассмотрение «working days → few weeks» БЕЗ конкретных сборов/дней, выдача по email); раздел «Crossing the border: land, sea and air» (Kakavia/Греция, Hani i Hotit/Черногория, Morina/Косово, Qafa e Thanës/С.Македония; паромы Bari/Ancona/Brindisi → Durrës/Vlorë). `sources` += `e-visa.al`, `en.wikipedia.org`.
+- **YMYL сохранён:** blockquote-дисклеймер после лида НЕ тронут; конкретные сборы/штрафы/сроки не выдуманы — везде хедж + офиц. источники (punetejashtme.gov.al, travel.state.gov, e-visa.al).
+- **Гейты:** build (36 стр, 0/0) · check 0/0/0 · test ✓ · test:links (1796) ✓ · lint ✓ → GO.
+
 ### 2026-06-23 — Добор `best-time-to-visit.md` до ≥1200 слов (выверенный контент)
 - **Что:** статья выросла 751 → 1654 слов. Добавлены разделы: «Komani ferry logistics and the snow line» (тайминги парома 09:00/13:00 с komaniferry.com + хедж; снеговая линия Qafa e Valbonës — поздний май/нач. июня, варьируется по годам, совет писать в гестхаусы); «Coast versus mountains: two calendars, side by side» (помесячное наложение побережье↔горы — темпы/толпы/что открыто); «Festivals and seasonal events» (Gjirokastër Folklore Festival — многолетний цикл; июль–август события — всё хеджировано, даты «verify»); «Why the shoulder seasons win» (май + сентябрь–октябрь с конкретикой). Структура/фото не тронуты. `sources` += `en.wikipedia.org`, `komaniferry.com`.
 - **Факты:** только из источников (komaniferry.com тайминги; Wikipedia Visa policy/Komani; темпы/цены — диапазоны/хедж). Не выдумано.
