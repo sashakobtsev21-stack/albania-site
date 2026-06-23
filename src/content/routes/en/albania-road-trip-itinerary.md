@@ -8,8 +8,8 @@ publishedAt: 2026-07-08
 updatedAt: 2026-07-08
 cover:
   src: '/images/albania-road-trip-itinerary/cover.webp'
-  alt: 'The Albanian Riviera coastline seen from the Llogara Pass, with mountains dropping to the Ionian Sea'
-coverCredit: 'Photo: Pasztilla aka Attila Terbócs / Wikimedia Commons, CC BY-SA 4.0'
+  alt: 'Palasa and Nazar beaches on the Albanian Riviera seen from the descent off the Llogara Pass, with the road dropping to the Ionian Sea'
+coverCredit: 'Photo: Sharon Hahn Darlin / Wikimedia Commons, CC BY 2.0 (commons.wikimedia.org/wiki/File:Palasa_Beach_and_Nazar_Beach_seen_from_Llogara_Pass,_Albania.jpg)'
 days: 8
 distanceKm: 620
 budgetFrom:
@@ -64,8 +64,8 @@ stops:
     note: "Albania's most famous beaches and the little offshore islands you can swim out to."
     photo:
       src: '/images/albania-road-trip-itinerary/stop-ksamil.webp'
-      alt: 'A turquoise cove and small islands off the beach at Ksamil in southern Albania'
-      credit: 'Photo: DieliAlla / Wikimedia Commons, CC0'
+      alt: 'The small offshore islands of Ksamil at sunset in southern Albania'
+      credit: 'Photo: Q.marjola / Wikimedia Commons, CC BY-SA 3.0'
   - name: 'Gjirokastër'
     km: 460
     coord: [40.0758, 20.1389]
@@ -173,8 +173,8 @@ Just **20 minutes / ~17 km** south of Saranda, **Ksamil** is the postcard end of
 Combine the morning at Ksamil's beaches with an afternoon at nearby **Butrint**, which sits on the same peninsula just south — see our [Butrint National Park guide](/attractions/butrint-national-park/) for the ruins and visiting tips.
 
 <figure class="figure">
-<img src="/images/albania-road-trip-itinerary/stop-ksamil.webp" alt="A turquoise cove and small islands off the beach at Ksamil" width="1280" height="964" loading="lazy" decoding="async" />
-<figcaption>Ksamil — shallow turquoise water and little islands you can swim out to. <span class="figure__credit">Photo: DieliAlla / Wikimedia Commons, CC0</span></figcaption>
+<img src="/images/albania-road-trip-itinerary/stop-ksamil.webp" alt="The small offshore islands of Ksamil at sunset, with the bay and beach in the foreground" width="1280" height="960" loading="lazy" decoding="async" />
+<figcaption>Ksamil at sunset — the little offshore islands you can swim out to, and the busiest beach scene in Albania. <span class="figure__credit">Photo: Q.marjola / Wikimedia Commons, CC BY-SA 3.0 (commons.wikimedia.org/wiki/File:Ksamil,_Saranda_,_Albania.JPG)</span></figcaption>
 </figure>
 
 ## Day 7: Gjirokastër — the stone city

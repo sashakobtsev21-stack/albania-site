@@ -4,6 +4,19 @@
 фиксов — [ROADMAP-FIX.md](ROADMAP-FIX.md), аудит — [AUDIT-2026-06-22.md](AUDIT-2026-06-22.md),
 статус-лог — [PROGRESS.md](PROGRESS.md), правила — [CLAUDE.md](CLAUDE.md).
 
+## Снимок (2026-06-23, аудит-фикс — устранены 4 дубля ключевых фото + нормализация имён авторов)
+- **Что сделано:** сквозной фото-аудит нашёл байт-идентичные (одинаковый MD5) файлы, использованные как КЛЮЧЕВЫЕ кадры (обложка/инлайн-figure) в разных статьях. Заменены на РАЗНЫЕ легальные CC-кадры (Wikimedia Commons, webp ≤200КБ, автор+лицензия+ссылка на Commons в credit):
+  - `albania-road-trip-itinerary/cover.webp`: Pasztilla-дубль обложки Ривьеры → **Sharon Hahn Darlin / CC BY 2.0** (Palasa/Nazar с Ллогары).
+  - `albania-visa/cover.webp`: Albnext-дубль обложки Тираны → **Arianit / CC BY-SA 4.0** (терминал аэропорта Тираны — тематичнее для статьи о визах).
+  - `albanian-riviera/ksamil.webp`: DieliAlla-дубль (1/3) → **czernik.jerzy / CC BY 3.0** (бирюзовая вода Ксамиля).
+  - `albania-road-trip-itinerary/stop-ksamil.webp`: DieliAlla-дубль (2/3) → **Q.marjola / CC BY-SA 3.0** (островки на закате); обновлён и `stops[].photo` credit.
+  - `vlora-airport-closed-summer-2026/g1.webp`: Pasztilla-дубль Ллогары → **Carole Raddato / CC BY-SA 2.0** (прибрежная дорога у Дхерми).
+  - Оригиналами оставлены по плану: `saranda-albania-guide/ksamil-beach.webp` (DieliAlla) и `albania-road-trip-itinerary/llogara-panorama.webp` (Pasztilla).
+- **Имена авторов нормализованы** (по Commons): «albinfo»→«Albinfo» (things-to-do-in-tirana ×2), «Christoph Strassler»→«Christoph Strässler» (saranda; форма теперь как в berat и в Commons-Artist).
+- **MD5-уникальность подтверждена** (все ключевые кадры различны); обложки road-trip/visa перегенерированы `build:covers` (-640/-960 + манифест).
+- **Гейты:** build (36 стр, 0/0) · check 0/0/0 · test ✓ · test:links (1796) ✓ · lint ✓ → **GO**. Закоммичено + запушено в `main`.
+- **Остаток (follow-up):** `is-albania-safe/g3.webp` (gallery, не ключевой кадр) — тот же DieliAlla-файл, что и saranda; заведена отдельная задача на замену.
+
 ## Снимок (2026-06-23, контент — город «Gjirokastër» — четвёртая статья `cities`)
 - **Опубликована статья-город** (одноязычная en, `cities/gjirokaster-albania-guide`, URL `/cities/gjirokaster-albania-guide/`): EN ~1700 слов прозы, лид = прямой ответ (Гирокастра — UNESCO «каменный город», османские дома-башни под огромным замком; родина Кадарэ и Ходжи). Структура: что посмотреть (замок-крепость + Музей оружия/армамента + американский самолёт-реликт; долина Дрино; Cold War tunnel-бункер; Старый базар Pazari i Vjetër; дома-башни/Zekate/Skënduli/этнографический; каменные крыши + писательский город) → где жить → где поесть (кухня юга: qifqi, oshaf, ягнёнок) → дейтрипы (Голубой глаз, Антигонея ~14 км, осн. ~296 BC Пирром) → как добраться (таблица Саранда ~1.5ч/Тирана ~3.5–4ч/Берат) → практика. Без FAQ. Валюта ALL. `featuredOrder:5`, `hotelWidget:true`, `geo.coord [40.0758, 20.1389]`, `accessFrom.saranda`+`.tirana`. title 42 / desc 145.
 - **Факты только проверяемые** (правило 4): UNESCO с 2005, один из крупнейших замков Албании, Музей оружия в замке + американский самолёт-реликт времён Холодной войны, родина Кадарэ (*Chronicle in Stone*) и Ходжи, qifqi (рис+яйцо) — местное блюдо, Антигонея осн. ~296 BC Пирром Эпирским в честь жены Антигоны, ~120 км/~1.5ч до Саранды (с заездом на Голубой глаз). Цена/часы билета замка НЕ выдуманы — `<!-- TODO -->` + «check current rate». Cold War tunnel/туры — «ask locally».

@@ -29,7 +29,7 @@ gallery:
     credit: 'Photo: Piotrus / Wikimedia Commons, CC BY-SA 3.0'
   - src: '/images/saranda-albania-guide/blue-eye-forest.webp'
     alt: 'The turquoise pool of the Blue Eye spring framed by green forest'
-    credit: 'Photo: Christoph Strassler / Wikimedia Commons, CC BY-SA 2.0'
+    credit: 'Photo: Christoph Strässler / Wikimedia Commons, CC BY-SA 2.0'
   - src: '/images/saranda-albania-guide/ksamil-islands.webp'
     alt: 'The wooded islets and clear blue water of Ksamil bay south of Saranda'
     credit: 'Photo: Pudelek / Wikimedia Commons, CC BY-SA 4.0'

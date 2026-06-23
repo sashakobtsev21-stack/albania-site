@@ -36,8 +36,8 @@ According to Albanian Daily News (11 April 2026), the airport's launch has been 
 The knock-on effect is the **cancellation of charter flights** that had been planned for Vlora, including services from Nordic markets. Travel-trade sources quoted in the report had targeted a summer launch, then a later date, but both proved unworkable for the 2026 season.
 
 <figure class="figure">
-<img src="/images/vlora-airport-closed-summer-2026/g1.webp" alt="The Albanian Riviera seen from the Llogara Pass" width="1280" height="560" loading="lazy" decoding="async" />
-<figcaption>The Albanian Riviera from the Llogara Pass — the coast most travellers reach via Tirana for now. <span class="figure__credit">Photo: Pasztilla aka Attila Terbócs / Wikimedia Commons, CC BY-SA 4.0</span></figcaption>
+<img src="/images/vlora-airport-closed-summer-2026/g1.webp" alt="The coastal road of the Albanian Riviera winding along a green mountainside above the Ionian Sea near Dhërmi" width="1280" height="560" loading="lazy" decoding="async" />
+<figcaption>The Riviera coast road near Dhërmi — the southern beaches most travellers still reach overland via Tirana. <span class="figure__credit">Photo: Carole Raddato / Wikimedia Commons, CC BY-SA 2.0 (commons.wikimedia.org/wiki/File:View_of_the_coast_in_the_Albanian_Riviera_in_the_Dhermi_region,_Vlore,_on_the_Ionian_Coast,_Southern_Albania_(25743334358).jpg)</span></figcaption>
 </figure>
 
 ## What it means for your trip

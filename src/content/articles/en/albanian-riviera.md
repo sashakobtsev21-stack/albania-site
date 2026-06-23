@@ -82,8 +82,8 @@ A little further south, **Borsh** has the longest beach on the Albanian Ionian c
 At the far southern end, just past Saranda and near the ruins of Butrint, **Ksamil** is the Riviera's poster child: tiny offshore islets you can swim or wade out to, and water that turns an almost Caribbean turquoise over the white-pebble shallows. It is the busiest and most built-up beach destination on the coast, so it pays to come early or out of peak season — but the colour of that water is hard to beat anywhere in the Mediterranean.
 
 <figure class="figure">
-<img src="/images/albanian-riviera/ksamil.webp" alt="The turquoise shallows of Ksamil with its small wooded offshore islets" width="1280" height="964" loading="lazy" decoding="async" />
-<figcaption>Ksamil — small offshore islets and shallow turquoise water at the southern tip of the Riviera, near Butrint. <span class="figure__credit">Photo: DieliAlla / Wikimedia Commons, CC0</span></figcaption>
+<img src="/images/albanian-riviera/ksamil.webp" alt="Clear turquoise water and a rocky point at Ksamil, with a swimmer and a small boat just offshore" width="1280" height="853" loading="lazy" decoding="async" />
+<figcaption>Ksamil — calm, glass-clear water over the shallows at the southern tip of the Riviera, near Butrint. <span class="figure__credit">Photo: czernik.jerzy / Wikimedia Commons, CC BY 3.0 (commons.wikimedia.org/wiki/File:Ksamil_Albania_-_panoramio_(22).jpg)</span></figcaption>
 </figure>
 
 ### Gjipe and Porto Palermo

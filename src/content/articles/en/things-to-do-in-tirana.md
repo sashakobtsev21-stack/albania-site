@@ -24,7 +24,7 @@ gallery:
     credit: 'Photo: Terfili / Wikimedia Commons, CC BY-SA 3.0'
   - src: '/images/things-to-do-in-tirana/skanderbeg-statue.webp'
     alt: 'The equestrian statue of Skanderbeg on the main square in Tirana'
-    credit: 'Photo: albinfo / Wikimedia Commons, CC0'
+    credit: 'Photo: Albinfo / Wikimedia Commons, CC0'
   - src: '/images/things-to-do-in-tirana/sunset.webp'
     alt: 'Golden-hour view over the colourful government buildings and cathedral dome in Tirana'
     credit: 'Photo: Albinfo / Wikimedia Commons, CC BY-SA 4.0'
@@ -71,7 +71,7 @@ Everything starts at **Skanderbeg Square** (Sheshi Skënderbej), the vast pedest
 
 <figure class="figure">
 <img src="/images/things-to-do-in-tirana/skanderbeg-statue.webp" alt="The equestrian statue of Skanderbeg on the main square in Tirana" width="1280" height="851" loading="lazy" decoding="async" />
-<figcaption>The Skanderbeg statue, the city’s symbolic centre point. <span class="figure__credit">Photo: albinfo / Wikimedia Commons, CC0</span></figcaption>
+<figcaption>The Skanderbeg statue, the city’s symbolic centre point. <span class="figure__credit">Photo: Albinfo / Wikimedia Commons, CC0</span></figcaption>
 </figure>
 
 On the square’s southern side stand two of Tirana’s oldest survivors: the elegant **Et’hem Bey Mosque**, an early-19th-century building celebrated for the frescoes inside its portico, and the slender **Clock Tower** (Kulla e Sahatit) beside it, which you can usually climb for a quick view over the plaza. They make an easy first stop, a few steps from the statue.

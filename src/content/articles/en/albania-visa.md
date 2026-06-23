@@ -9,8 +9,8 @@ updatedAt: 2026-06-21
 draft: false
 cover:
   src: '/images/albania-visa/cover.webp'
-  alt: "Tirana skyline, the capital of Albania"
-coverCredit: 'Photo: Albnext / Wikimedia Commons, CC BY-SA 4.0'
+  alt: 'The passenger terminal at Tirana International Airport (Nënë Tereza), the main port of entry to Albania'
+coverCredit: 'Photo: Arianit / Wikimedia Commons, CC BY-SA 4.0 (commons.wikimedia.org/wiki/File:Tirana_Airport_Terminal.jpg)'
 sources:
   - 'punetejashtme.gov.al'
   - 'travel.state.gov'
