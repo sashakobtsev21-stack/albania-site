@@ -19,7 +19,7 @@
 ## Неделя 2 (01–07.07) — Стартовое ядро: первый город Ривьеры + логистика прибытия
 - ✅ Ср 01.07 — [Статья] Saranda Travel Guide: Beaches, Butrint & Blue Eye Day Trips · `saranda albania` · /cities/saranda-albania-guide/ · категория cities · фото 14 (cover+8 инлайн+5 gallery, CC/CC0/PD Wikimedia) · 💰 trip-hotels/trip-tours · ОПУБЛИКОВАНО (en, qa=GO). Перелинк → Ksamil / → Albanian Riviera добавить, когда выйдут (Нед.4).
 - Пт 03.07 — [Статья] Tirana Airport to City Centre: Transfers & Options · `tirana airport to city centre` · /tirana-airport-transfers/ · категория info/transactional · фото ≥5 · 💰 трансфер/аренда авто · перелинк: ← Tirana things to do, → car rental
-- Вс 05.07 — [Статья] Renting a Car in Albania: Costs, Insurance & Tips · `car rental albania` · /car-rental-albania-guide/ · категория info/transactional · фото ≥5 · 💰 аренда авто/страховка · перелинк: → road trip itinerary, ← is albania expensive
+- [x] ОПУБЛИКОВАНО (slug: `how-to-rent-a-car`, category car-rental, /car-rental/how-to-rent-a-car/) — [Статья] Renting a Car in Albania: Costs, Insurance & Tips · `car rental albania` · 💰 аренда авто/страховка · перелинк: → road trip itinerary, ← is albania expensive. Прим.: опубликовано под slug `how-to-rent-a-car` (не `car-rental-albania-guide`), category `car-rental`. /work НЕ создаёт заново.
 - Ср 01.07 — 📰 /news (пик)
 - Сб 04.07 — 📰 /news
 - Вт 07.07 — 📰 /news (дайджест на согласование, НЕ daily)
@@ -39,11 +39,18 @@
 - ✅ Butrint National Park · `butrint national park` · /attractions/butrint-national-park/ · категория **attractions** (`attractionType: museums-landmarks`, `region: vlore`) · фото 6 (cover+4 инлайн+1 gallery, CC Wikimedia ≤200КБ) · 💰 trip-tours/trip-transfers · ОПУБЛИКОВАНО (en, qa=GO; первая статья attractions; в витрине главной, kicker `sight`; встречные ссылки из Saranda guide и road-trip itinerary). Цена/часы билета — TODO (внести `visit`, когда даст владелец/официальный источник). Перелинк ← Ksamil / ← Blue Eye добрать, когда выйдут (Нед.4).
 - ➕ Blue Eye (Syri i Kaltër) · `blue eye albania` · /attractions/blue-eye-albania/ · категория **attractions** (`attractionType: resorts-springs` или `natural`, `region: vlore`) · фото ≥6 (cover+инлайн, CC Wikimedia ≤200КБ) · 💰 trip-tours/trip-transfers (день из Saranda/Gjirokaster) · перелинк: ← Saranda / ← Ksamil / ← Butrint / ← Gjirokaster / ← road-trip itinerary (сейчас везде только упоминание без своей страницы) · **НОВЫЙ СЛОТ (B2): отдельной POI-страницы нет — Blue Eye фигурирует лишь как упоминание в 5 материалах; выносим в самостоятельный POI, чтобы ловить запрос `blue eye albania` и собирать встречные ссылки кластера юга. Цена/часы — TODO (`visit` с источником+checkedAt).**
 
+## Опубликованные сироты (вне основного календаря — для трекинга перелинковки)
+Опубликованы, но не значились в плановых слотах. Помечены `[x]` для трекинга; /work их НЕ создаёт заново. Задача — добрать встречные ссылки в кластер Тираны.
+- [x] ОПУБЛИКОВАНО (slug: `tirana-nightlife`, category entertainment) — [Статья] Tirana Nightlife: Bars, Clubs & the Blloku Scene · `tirana nightlife` · 💰 туры/бронь · перелинк: ← Tirana things to do, → best restaurants Tirana, → traditional albanian food. Добрать встречные ссылки из Tirana-хаба и гастро-кластера.
+- [x] ОПУБЛИКОВАНО (slug: `komiteti-kafe-muzeum`, коллекция restaurants, city Tirana) — [Место] Komiteti – Kafe Muzeum · перелинк: ← Tirana things to do, ← tirana-nightlife, ← (будущ.) best restaurants Tirana / traditional albanian food.
+- [x] ОПУБЛИКОВАНО (slug: `mullixhiu`, коллекция restaurants, city Tirana) — [Место] Mullixhiu · перелинк: ← Tirana things to do, ← (будущ.) best restaurants Tirana / traditional albanian food.
+- [x] ОПУБЛИКОВАНО (slug: `oda`, коллекция restaurants, city Tirana) — [Место] Oda · перелинк: ← Tirana things to do, ← (будущ.) best restaurants Tirana / traditional albanian food.
+
 ## Неделя 4 (15–21.07) — Ривьера-кластер (пик сезона) + страховка + где жить
-- Ср 15.07 — [Статья] Albanian Riviera Guide: Best Towns & Beaches · `albanian riviera guide` · /albanian-riviera-guide/ · категория routes/attractions · фото ≥10 · 💰 отели/аренда авто · перелинк: хаб Ривьеры → Saranda, Ksamil, Himara-сравнение
+- [x] ОПУБЛИКОВАНО (slug: `albanian-riviera`, category attractions, /attractions/albanian-riviera/) — [Статья] Albanian Riviera Guide: Best Towns & Beaches · `albanian riviera guide` · 💰 отели/аренда авто · перелинк: хаб Ривьеры → Saranda, Ksamil, Himara-сравнение. Прим.: опубликовано под slug `albanian-riviera` (не `albanian-riviera-guide` из наброска), category `attractions`. /work НЕ создаёт заново.
 - ➕ Чт 16.07 — [Статья] Where to Stay in Albania: Best Areas & Hotels · `where to stay in albania` · /where-to-stay-in-albania/ · категория planning (хаб) · фото ≥8 · 💰 **trip-hotels (топ-ROI по hotel-affiliate)** · перелинк: → Tirana / Saranda / Ksamil / Berat / Gjirokaster guides + ← Riviera guide + → is albania expensive · **НОВЫЙ СЛОТ (B2): дубля нет — отдельной hotel/where-to-stay страницы в репо не было; лучший hotel-affiliate-якорь, ставим на пик сезона.**
 - ✅ Ksamil, Albania: Beaches, Islands & Where to Stay · `ksamil albania` · /attractions/ksamil-albania-guide/ · категория **attractions** (`attractionType: resorts-springs`, `region: vlore`) · фото 6 (cover+3 инлайн+2 gallery, CC Wikimedia ≤200КБ) · 💰 trip-hotels/trip-tours · ОПУБЛИКОВАНО (en, qa=GO; третья статья attractions; в витрине главной, kicker `sight`; перелинк ← Saranda / ← Albanian Riviera / ← Butrint). Цены лежаков/лодок — «уточняйте» (TODO `visit`/цены, когда даст владелец). Прим.: выполнено в категории `attractions`/URL `/attractions/ksamil-albania-guide/` (не голый `/ksamil-albania-guide/` из наброска).
-- Вс 19.07 — [Статья] Do You Need Travel Insurance for Albania? · `albania travel insurance` · /albania-travel-insurance/ · категория transactional · фото ≥5 · 💰 страховка · перелинк: ← is albania safe, ← driving safety
+- [x] ОПУБЛИКОВАНО (slug: `do-you-need-insurance`, category insurance, /insurance/do-you-need-insurance/) — [Статья] Do You Need Travel Insurance for Albania? · `albania travel insurance` · 💰 страховка · перелинк: ← is albania safe, ← driving safety. Прим.: опубликовано под slug `do-you-need-insurance` (не `albania-travel-insurance`), category `insurance`. /work НЕ создаёт заново.
 - Ср 15.07 — 📰 /news (пик)
 - Сб 18.07 — 📰 /news
 - Вт 21.07 — 📰 /news (дайджест на согласование, НЕ daily)
@@ -61,7 +68,7 @@
 ## Неделя 6 (29.07–04.08) — Хайкинг-кластер (окно mid-June–mid-Sep) + третий город
 - Ср 29.07 — [Статья] Theth to Valbona Hike: Complete 2026 Guide · `theth to valbona hike` · /theth-to-valbona-hike/ · категория routes · фото каждой остановки (Shkoder→Theth→Valbona Pass→Koman) · 💰 туры/трансфер/жильё · перелинк: → Theth guide, → Lake Koman ferry, → Shkoder
 - ✅ Пт 31.07 — [Статья] Gjirokaster Travel Guide: The Stone City · `gjirokaster albania` · /cities/gjirokaster-albania-guide/ · категория cities · фото 13 (cover+8 инлайн+4 gallery, CC Wikimedia ≤200КБ) · 💰 trip-hotels/trip-tours · ОПУБЛИКОВАНО (en, qa=GO; `featuredOrder:5`, `hotelWidget:true`, в витрине главной, kicker `city`). Перелинк ИЗ статьи → хаб /cities/ + Саранда + Берат + road-trip + car-rental + best-time. Встречные ссылки на Гирокастру из Саранды/road-trip — добрать при апдейте.
-- Вс 02.08 — [Статья] Albania Digital Nomad Visa (Unique Permit): Requirements & How to Apply · `albania digital nomad visa` · /albania-digital-nomad-visa/ · категория transactional · фото ≥5 · 💰 страховка/жильё · перелинк: ← 1-year visa-free, → Tirana nomad guide
+- [x] ОПУБЛИКОВАНО (slug: `digital-nomad-visa`, category relocation, /relocation/digital-nomad-visa/) — [Статья] Albania Digital Nomad Visa (Unique Permit): Requirements & How to Apply · `albania digital nomad visa` · 💰 страховка/жильё · перелинк: ← 1-year visa-free, → Tirana nomad guide. Прим.: опубликовано под slug `digital-nomad-visa` (не `albania-digital-nomad-visa`), category `relocation`. /work НЕ создаёт заново.
 - Ср 29.07 — 📰 /news (пик)
 - Сб 01.08 — 📰 /news
 - Вт 04.08 — 📰 /news (дайджест на согласование, НЕ daily)
@@ -114,7 +121,7 @@
 ## Неделя 12 (09–15.09) — Хайкинг-хаб + вода/доверие + сезонность (заход на след. сезон)
 - Ср 09.09 — [Статья] Hiking in Albania: Best Trails in the Accursed Mountains · `hiking in albania` · /hiking-in-albania/ · категория routes/attractions · фото ≥10 · 💰 туры/жильё · перелинк: ← Theth–Valbona, ← Theth/Shkoder
 - Пт 11.09 — [Статья] Is the Tap Water Safe to Drink in Albania? · `albania tap water safe to drink` · /albania-tap-water-safe/ · категория info · фото ≥5 · 💰 нет · перелинк: ← is albania safe, → travel budget · 🔻 **ДЕПРИ: низкий объём + 💰 нет (нулевая монетизация). Тонкий single-answer запрос — лучше абзацем в `is albania safe` / `is albania expensive`, чем отдельной страницей. Слот освобождаем под доходный/растущий по GA запрос; не удаляю.**
-- Вс 13.09 — [Статья] Best Time to Visit Albania: Month-by-Month · `best time to visit albania` · /best-time-to-visit-albania/ · категория info · фото ≥5 · 💰 отели/туры · перелинк: → riviera guide, → hiking in albania (заход на планировщиков 2027)
+- [x] ОПУБЛИКОВАНО (slug: `best-time-to-visit`, category planning, /planning/best-time-to-visit/) — [Статья] Best Time to Visit Albania: Month-by-Month · `best time to visit albania` · 💰 отели/туры · перелинк: → riviera guide, → hiking in albania (заход на планировщиков 2027). Прим.: опубликовано раньше плана под slug `best-time-to-visit` (не `best-time-to-visit-albania`), category `planning`. /work НЕ создаёт заново.
 - Сб 12.09 — 📰 /news
 - Вт 15.09 — 📰 /news (дайджест на согласование, НЕ daily)
 - Пн 14.09 — 📊 Замер GA/GSC (15 мин)
@@ -129,6 +136,9 @@
 
 ---
 Итого ~39 статей за 13 недель (3/нед × 13) + 2 добавленных высокоценных слота (Where to Stay — Нед.4 доп.; Blue Eye POI — поддерживающие POI) − 3 депри (bus-itinerary / eSIM-remote-work-дубль / tap-water — освобождены под растущие по GA запросы). Все слаги и целевые запросы — из SEO-отчёта albania-seo-2026-06-22.md.
+
+**Факт по репо на 23.06.2026 (опубликовано):** 16 статей + 1 маршрут + 3 ресторана = **20 материалов**.
+Статьи: things-to-do-in-tirana, is-albania-safe, saranda-albania-guide, berat-albania-guide, gjirokaster-albania-guide, ksamil-albania-guide, butrint-national-park, albanian-riviera, best-time-to-visit, how-to-rent-a-car, do-you-need-insurance, digital-nomad-visa, albania-visa, tirana-nightlife (сирота) + 2 новости (durres-folklore-festival-june-2026, vlora-airport-closed-summer-2026). Маршрут: albania-road-trip-itinerary. Рестораны: komiteti-kafe-muzeum, mullixhiu, oda (сироты). Из плановых слотов 5 закрыты под другими slug (примирены выше), плюс 4 сироты вне плана.
 
 **Правки от 23.06.2026 (ревизия плана по аудиту):**
 - ➕ Where to Stay in Albania `/where-to-stay-in-albania/` — топ-ROI hotel-affiliate; дубля не было.
