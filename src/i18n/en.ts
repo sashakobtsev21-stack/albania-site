@@ -186,7 +186,7 @@ export const en: UIDictionary = {
       insurance: {
         intro: [
           'Insurance for a trip to Albania and for living in the country is a topic that’s easy to put off and that people regret at the worst possible moment. In this section we break down which insurance policies actually work for travelers and relocators, how they differ, and what to look for when choosing.',
-          'Different readers need different solutions: a tourist staying a week needs one kind of insurance, someone living in Albania for months needs another, with regular renewal. For Ukrainian travelers we call out options that still work, such as EKTA, since some of the standard policies are off-limits to them.',
+          'Different readers need different solutions: a tourist staying a week needs one kind of policy, while someone living in Albania for months is better served by monthly, renewable cover. We focus on what works for international travelers — from short-trip travel-medical policies to nomad subscriptions — and on what to check before you buy.',
         ],
       },
       planning: {
@@ -297,7 +297,7 @@ export const en: UIDictionary = {
     heading: 'About the project',
     breadcrumb: 'About',
     intro: [
-      'Albania Guidebook is a guide to all of Albania, available in English, Russian and Ukrainian. We bring together in one place everything you need for a trip: attractions, cities, food, ready-made routes, car rental, insurance, and news. The goal is simple — to help you plan a trip without outdated advice and tourist traps.',
+      'Albania Guidebook is a guide to all of Albania, available in English. We bring together in one place everything you need for a trip: attractions, cities, food, ready-made routes, car rental, insurance, and news. The goal is simple — to help you plan a trip without outdated advice and tourist traps.',
       'We don’t write “from memory” and we don’t retell other people’s articles. The guide has a clear principle: how we select places, how we verify facts, and why each article shows the date it was checked. More on that below.',
     ],
     sections: [
@@ -360,7 +360,7 @@ export const en: UIDictionary = {
         'The policy should cover the entire trip: from the entry date to the exit date.',
         'The issuer can be either a local Albanian or a foreign insurance company.',
         'Coverage is best when it includes both medical expenses and accident insurance — a “health and accident” policy. Medical evacuation and repatriation are worth having as well.',
-        'A policy in English is the safest choice; a policy only in Russian or Ukrainian without a translation may be harder to use at the border or with a clinic.',
+        'A policy with English-language documents is the safest choice — it is the easiest to use at the border or with a clinic.',
         'A policy may be checked on entry — at the airport or at land border crossings — and airlines may ask for one as early as check-in. Requirements vary by nationality, so verify the rules that apply to you.',
         'Entry and insurance rules can change — confirm the current requirements with official Albanian sources before you travel.',
       ],
@@ -379,9 +379,9 @@ export const en: UIDictionary = {
         'Sign up on the service’s website. Before buying, verify the current terms and rate.',
       items: [
         {
-          name: 'EKTA',
-          note: 'a working option for everyone, including citizens of Ukraine',
-          text: 'Online insurance paid by card from anywhere in the world; the policy arrives by email. Coverage is easy to adjust, and the limit can be raised well above the level most travelers need. Check the provider’s terms and registration before buying.',
+          name: 'International travel insurers',
+          note: 'single-trip travel-medical cover',
+          text: 'Mainstream providers such as World Nomads or Heymondo can work well for US, UK, EU, Canadian, and Australian travelers on a fixed trip. Check that Albania is covered, that the certificate is available in English, and that your planned activities — driving, hiking, rafting, or skiing — are not excluded.',
         },
         {
           name: 'SafetyWing (Nomad Insurance)',
@@ -389,9 +389,9 @@ export const en: UIDictionary = {
           text: 'Subscription insurance billed monthly — convenient for those who live in Albania or travel for a long time and don’t want to buy a policy for a fixed period. Suits a relocation and wintering scenario. The service has changed its terms and rates — verify the current ones before buying.',
         },
         {
-          name: 'Cherehapa, Polis812',
-          note: 'aggregators for citizens of Russia',
-          text: 'Comparison services: they show offers from several insurers at once and help you pick a policy for the limit and duration you need. Handy when you want to compare terms in one place; the set of insurers and the service’s availability change over time — go by the current list on the service itself.',
+          name: 'Comparison sites',
+          note: 'compare several insurers before you buy',
+          text: 'Insurance comparison sites can help you compare limits, activity coverage, deductibles, and cancellation terms in one place. The available insurers differ by your country of residence, so treat any comparison result as a starting point and verify the final policy wording before payment.',
         },
         {
           name: 'Local Albanian insurers',
@@ -409,7 +409,7 @@ export const en: UIDictionary = {
       heading: 'What’s important to keep in mind',
       items: [
         'Check that the policy includes accident insurance. A solid travel policy is a “health and accident” one, and in basic medical plans an accident often comes as a separate option: medical coverage alone may not be enough.',
-        'Citizens of Ukraine find it more convenient to get a policy through EKTA or Ukrainian services (for example, Green Travel, Finance.ua). This is a practical recommendation based on service availability, not a ban: “Russian insurance is banned for Ukrainians” is an unconfirmed claim, and we don’t present it as a rule.',
+        'EU and UK travelers: an EHIC or UK GHIC card does not cover Albania, because Albania is outside the EU/EEA system — you still need private travel insurance here.',
         'Buy the policy before entering Albania: some services have a 5–7 day “waiting period” — the insurance doesn’t take effect immediately after payment.',
         'Visa-free entry does not replace insurance: these are different things, and being allowed in without a visa doesn’t mean your medical costs are covered.',
         'Car rental insurance is a separate matter. A medical policy doesn’t cover damage to the car: for the rental you need your own insurance (CDW / collision), which is arranged together with the rental.',
