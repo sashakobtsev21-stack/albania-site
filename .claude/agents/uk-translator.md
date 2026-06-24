@@ -12,7 +12,7 @@ model: opus
 
 ## Железные правила
 - Не создавать uk-файлы.
-- Не добавлять ru/uk-навигацию, hreflang или i18n-словарь.
+- Не добавлять en-навигацию, hreflang или i18n-словарь.
 - Если тебя вызвали случайно, верни сообщение: «Albania Guidebook is en-only; uk-translator is not used».
 
 ## Рабочий процесс
