@@ -6,7 +6,7 @@
 
 **Целевое гео:** первично Tier-1 (US/CA/UK/Зап.Европа/AU) через EN, вторично СНГ через RU/UK.
 
-> **Источник правды по продукту — [SPEC.md](SPEC.md) и [CLAUDE.md](CLAUDE.md).**
+> **Источник правды по продукту — [SPEC.md](../SPEC.md) и [CLAUDE.md](../CLAUDE.md).**
 > Этот файл их НЕ заменяет, а дополняет слоем стратегии и связан с ними ссылкой.
 > При конфликте приоритет: SPEC.md → CLAUDE.md → STRATEGY.md.
 >
@@ -157,11 +157,11 @@ RU/UA вторичен и меньше. Это **другой геотаргет
 ## 7. Связь с грузинским growth-анализом
 
 Полный growth/monetization-анализ и ROADMAP-GROWTH лежат в
-**[`docs/_georgia-reference/`](docs/_georgia-reference/)** как **шаблоны** от грузинского
+**[`docs/_georgia-reference/`](_georgia-reference/)** как **шаблоны** от грузинского
 проекта:
 
-- [`GROWTH-MONETIZATION-ANALYSIS-2026-06-20.md`](docs/_georgia-reference/GROWTH-MONETIZATION-ANALYSIS-2026-06-20.md)
-- [`ROADMAP-GROWTH-2026.md`](docs/_georgia-reference/ROADMAP-GROWTH-2026.md)
+- [`GROWTH-MONETIZATION-ANALYSIS-2026-06-20.md`](_georgia-reference/GROWTH-MONETIZATION-ANALYSIS-2026-06-20.md)
+- [`ROADMAP-GROWTH-2026.md`](_georgia-reference/ROADMAP-GROWTH-2026.md)
 
 **Переиспользовать логику, адаптируя под Албанию и EN-first.**
 
