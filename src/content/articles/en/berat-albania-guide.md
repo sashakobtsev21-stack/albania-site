@@ -4,8 +4,8 @@ description: 'Berat guide: the UNESCO castle, the Mangalem and Gorica quarters, 
 slug: 'berat-albania-guide'
 lang: 'en'
 category: 'cities'
-publishedAt: 2026-07-10
-updatedAt: 2026-07-10
+publishedAt: 2026-06-22
+updatedAt: 2026-06-22
 featuredOrder: 4
 geo:
   coord: [40.7058, 19.9522]

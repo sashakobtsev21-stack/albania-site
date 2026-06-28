@@ -4,8 +4,8 @@ description: 'Saranda travel guide: beaches and the promenade, Lëkurësi Castle
 slug: 'saranda-albania-guide'
 lang: 'en'
 category: 'cities'
-publishedAt: 2026-07-01
-updatedAt: 2026-07-01
+publishedAt: 2026-06-22
+updatedAt: 2026-06-22
 featuredOrder: 3
 geo:
   coord: [39.8753, 20.0053]
