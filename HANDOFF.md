@@ -4,6 +4,11 @@
 фиксов — [ROADMAP-FIX.md](ROADMAP-FIX.md), аудит — [AUDIT-2026-06-22.md](AUDIT-2026-06-22.md),
 статус-лог — [PROGRESS.md](PROGRESS.md), правила — [CLAUDE.md](CLAUDE.md).
 
+## Снимок (2026-06-28, PUBLISH «Where to Stay in Albania» — planning, хаб where-to-stay)
+- **Что сделано:** опубликована head-статья `where-to-stay-in-albania.md` (planning, URL `/planning/where-to-stay-in-albania/`, `draft:false`). ~1560 слов: лид-ответ + H2 по районам (Tirana / Saranda / Ksamil / Vlora+Dhermi / Berat+Gjirokaster / Durres) — кому подходит + тип жилья; без выдуманных цен (диапазоны + «check current rates», бронь через `/go/trip-hotels`). **8 фото** CC/PD (cover Vlora Lungomare — Peter Chovanec CC BY 2.0; 6 инлайн-figure + 1 gallery; все с автор+лицензия+sourceUrl на Commons, лицензии сверены по Commons API). **7 внутр. ссылок** + 2× AffiliateBox trip-hotels. title 45 / desc 138.
+- **Гейты:** `npm run qa` → **GO** (critical 0 · medium 0). check 0/0/0 · build (38 стр) · test ✓ · test:links (2136) ✓ · lint ✓. Закоммичено + запушено в `main`. KALENDAR Нед.2 Пн 29.06 → `[x]`.
+- **Дальше по календарю:** Нед.2 Вт 30.06 — «How to Get Around Albania: Buses, Furgons & Ferries» (info/transport, head); затем Чт 02.07 — МАРШРУТ «7-Day Albania Itinerary». Vlora/Durres как города-путеводители ещё НЕ опубликованы (перелинк на них из этой статьи — текстовые упоминания, не битые ссылки).
+
 ## Снимок (2026-06-23, добор `albania-visa.md` до ≥1200 слов, YMYL)
 - **Что сделано:** статья 1010 → 1791 слов. Добавлены: таблица по национальностям (EU/Schengen/UK/CA/AU/US/UA/RU); раздел «How the e-Visa works, step by step» (5 шагов через e-visa.al, без конкретных сборов/дней — хедж); раздел «Crossing the border: land, sea and air» (погранпереходы Греция/Черногория/Косово/С.Македония + паромы из Италии). `sources` += e-visa.al, en.wikipedia.org. YMYL blockquote-дисклеймер и все хеджи сохранены.
 - **Гейты:** build (36 стр, 0/0) · check 0/0/0 · test ✓ · test:links (1796) ✓ · lint ✓ → **GO**. Закоммичено + запушено в `main`.

@@ -11,7 +11,7 @@
 | R1 Перемоделирование | ✅ | модель, EN-слаги разделов, i18n, проза |
 | R1.5 Конфиг/идентичность | ✅ (🔑 партнёрки) | GA4, live-курсы, домен, partners-гео |
 | R2 Брендинг | ✅ | палитра/hero-ротация/флаг/фавикон/og/EN-слаги ✅; логотип — опц. |
-| R3 Контент | 🟡 | 5 статей (cover-only) + столица Тирана (18 фото, Нед.1) + город Саранда (14 фото, Нед.2) + город Берат (12 фото, Нед.3) + город Гирокастра (13 фото, Нед.6) + МАРШРУТ Albania Road Trip (6 остановок, 10 фото, Нед.3) + статья «Is Albania Safe to Visit in 2026?» (planning, 6 фото, Нед.1/P0-доверие) + достопримечательность «Butrint National Park» (attractions, 6 фото) + достопримечательность «Albanian Riviera» (attractions, 8 фото) + достопримечательность «Ksamil» (attractions, 6 фото) + **раздел «Еда» `/food/` — 3 ресторана Тираны** (Oda/Mullixhiu/Komiteti, коллекция `restaurants`); контент-план идёт |
+| R3 Контент | 🟡 | 5 статей (cover-only) + столица Тирана (18 фото, Нед.1) + город Саранда (14 фото, Нед.2) + город Берат (12 фото, Нед.3) + город Гирокастра (13 фото, Нед.6) + МАРШРУТ Albania Road Trip (6 остановок, 10 фото, Нед.3) + статья «Is Albania Safe to Visit in 2026?» (planning, 6 фото, Нед.1/P0-доверие) + достопримечательность «Butrint National Park» (attractions, 6 фото) + достопримечательность «Albanian Riviera» (attractions, 8 фото) + достопримечательность «Ksamil» (attractions, 6 фото) + статья «Where to Stay in Albania» (planning, хаб where-to-stay, 8 фото, Нед.2) + **раздел «Еда» `/food/` — 3 ресторана Тираны** (Oda/Mullixhiu/Komiteti, коллекция `restaurants`); контент-план идёт |
 | R4 Запуск | 🟡 | домен/GA4/sitemap ✅; GSC ⬜ |
 | R5+ Рост | ⬜ | — |
 
@@ -23,6 +23,12 @@
 - **Достоверность:** дата украинской схемы смягчена («currently reported as until 30 March 2027»); `albanian-riviera` — SH8 «rebuilt in 2009» → «in the late 2000s» (точная дата без источника); `gjirokaster-albania-guide` — publishedAt/updatedAt 2026-07-31 → 2026-06-23 (была будущая дата). Гейты build/check/test/links/lint — зелёные.
 
 ## Лог (новые записи сверху)
+### 2026-06-28 — PUBLISH: «Where to Stay in Albania» (planning, хаб where-to-stay, Нед.2 Пн 29.06)
+- **Статья опубликована** (`src/content/articles/en/where-to-stay-in-albania.md`, `draft:false`): head-term `where to stay in albania`, URL `/planning/where-to-stay-in-albania/`. ~1560 слов живого текста: лид = прямой ответ (Тирана/Ривьера/инленд), затем H2 по районам — Tirana, Saranda, Ksamil, Vlora/Dhermi, Berat (+Gjirokaster), Durres — «где жить и кому подходит» + тип жилья (guesthouse/apartment/hotel). Без FAQ, без выдуманных цен (только диапазоны-ориентиры + «check current rates»; конкретные отели/цены не указаны), бронь через `/go/trip-hotels`.
+- **Фото — 8** (CC/PD, Wikimedia, webp ≤200КБ, автор+лицензия+sourceUrl на Commons): cover Vlora Lungomare (Peter Chovanec, CC BY 2.0); инлайн Tirana (BBB2021), Saranda hillside (Wilrooij), Ksamil boardwalk (Qmccart), Vlora sunset/Sazan (Redon Skikuli), Berat thousand windows (Julianruizp), Durres promenade (GentiBehramaj) — CC BY-SA 4.0; gallery Saranda bay (Fati.Allko, CC0). Лицензии сверены по Commons API.
+- **Перелинк — 7 внутр. ссылок** (формат `/{category}/{slug}/`, EN-only): → things-to-do-in-tirana, saranda-albania-guide, ksamil-albania-guide, albanian-riviera, berat-albania-guide, gjirokaster-albania-guide, ← is-albania-expensive (×2). 2× AffiliateBox trip-hotels через `/go/`. title 45 / desc 138 символов.
+- **Гейты:** `npm run qa` → **GO** (critical 0 · medium 0; минорные — только pre-existing decorative-alt на главной). check 0/0/0 · build (38 стр) · test (enums+parity+photos+interlinks) ✓ · test:links (2136) ✓ · lint ✓. KALENDAR Нед.2 Пн 29.06 отмечен `[x]`.
+
 ### 2026-06-28 — KALENDAR v2: новости 1×/нед (Сб), мерж тонких тем, коммерция в освобождённые слоты
 - **Только календарь** (`KALENDAR.md`), src/ не тронут. Якорь 24.06.2026=среда без изменений; темп 5 статей/нед Пн–Пт.
 - **Новости → 1 дайджест/нед, только Сб:** удалены все будние (Вт) новостные строки в Нед.2–17 (16 строк), 17 субботних `/news` приведены к единому формату с фильтром «критичные инфра/виза/транспорт 2026 → превью → ок; пусто = skip». Опубликованные новости коллекции (durres-folklore, vlora-airport) не тронуты.

@@ -17,7 +17,7 @@
 - Пн 22.06 / Вт 23.06 — до 24.06: замер GA/GSC и /news не ставим (в прошлое не публикуем); baseline-замер — Пн 29.06 (Нед.2).
 
 ## Неделя 2 (29.06–05.07)
-- Пн 29.06 — ⭐ [Статья] Where to Stay in Albania: Best Areas & Hotels · `where to stay in albania` · /where-to-stay-in-albania/ · planning (хаб) · фото ≥8 · 💰 trip-hotels · кластер where-to-stay [head] · перелинк: → Tirana/Saranda/Ksamil/Berat/Gjirokaster + ← Riviera + → is albania expensive
+- [x] Пн 29.06 — ⭐ [Статья] Where to Stay in Albania: Best Areas & Hotels · `where to stay in albania` · /planning/where-to-stay-in-albania/ · planning (хаб) · фото 8 · 💰 trip-hotels · кластер where-to-stay [head] · перелинк: → Tirana/Saranda/Ksamil/Berat/Gjirokaster + ← Riviera + → is albania expensive — ОПУБЛИКОВАНО 2026-06-28 (en, qa=GO).
 - Вт 30.06 — ⭐ [Статья] How to Get Around Albania: Buses, Furgons & Ferries · `how to get around albania` / `albania furgon buses` · /how-to-get-around-albania/ · info (transport) · фото ≥5 · 💰 аренда авто/трансфер · кластер transport-routes [head] · перелинк: ← car rental, → road trip, → 7-day
 - Ср 01.07 — ✅ [Статья] Saranda Travel Guide: Beaches, Butrint & Blue Eye Day Trips · `saranda albania` · /cities/saranda-albania-guide/ · cities · фото 14 · 💰 trip-hotels/trip-tours · ОПУБЛИКОВАНО (en, qa=GO)
 - Чт 02.07 — ⭐ [МАРШРУТ] The Perfect 7-Day Albania Itinerary (First-Timers) · `albania 7 day itinerary` · /albania-7-day-itinerary/ · routes · фото каждой остановки · 💰 аренда авто/отели · кластер itineraries [head] · перелинк: ← 10-day road trip, → car rental, → where to stay
