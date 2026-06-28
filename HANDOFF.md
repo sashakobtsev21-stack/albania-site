@@ -1,10 +1,10 @@
 # HANDOFF — Albania Guidebook
 > Снимок для возобновления (обновляется после каждой доработки). Подробная история — `PROGRESS.md`; план — `ROADMAP.md`/`KALENDAR.md`; аудит — `AUDIT.md`.
 
-**Дата:** 2026-06-29 · **Фаза:** R4 наполнение · **Статей:** ~19 (цель ~80) · **Сайт:** live (`albaniaguidebook.com`) · **Язык:** en (EN-only) · **Последний коммит:** `d3f4b4b docs(albania): refresh ROADMAP -- R4 content-fill phase (19->~80, until 03.08), en-only, blockers`
+**Дата:** 2026-06-29 · **Фаза:** R4 наполнение · **Статей:** ~22 (цель ~80) · **Сайт:** live (`albaniaguidebook.com`) · **Язык:** en (EN-only) · **Последний коммит:** `publish(albania): 3 transport articles (how-to-get-around, airport transfers, Tirana–Saranda) — 29.06 slot`
 
 ## Где остановились
-- Контент: последние опубликованные — «Albania Travel Insurance Guide (2026)» (insurance, head под спрос GSC) и «Where to Stay in Albania» (planning, хаб where-to-stay). Полный лог — `PROGRESS.md`.
+- Контент: последние опубликованные — **3 транспорт-статьи на слот 29.06** (transport-routes [head], коммерция-first): «How to Get Around Albania» (`/transport/how-to-get-around-albania/`), «Tirana Airport to City Centre» (`/transport/tirana-airport-transfers/`), «Tirana to Saranda» (`/transport/tirana-to-saranda/`) — все факты диапазонами из источников 2026 (GjirafaTravel/офиц. airport/Koman ferry/Ferryhopper) + «check current», 16 фото CC/PD, fact-checker+content-editor пройдены, qa=GO. Перед ними — «Albania Travel Insurance Guide» и «Where to Stay in Albania». Полный лог — `PROGRESS.md`.
 - Календарь вычищен: будущие даты = только `○` к написанию (выполненного на будущих датах нет); план до 03.08; темп 3/будний день; маршруты по Вс.
 - Сеть: доки выровнены (ядро 12/12, STRATEGY перенесён в docs/); дашборд `grafana/dashboard.html` актуален; `/work` публикует автономно при полной уверенности.
 
