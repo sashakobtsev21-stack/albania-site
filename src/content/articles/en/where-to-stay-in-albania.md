@@ -4,8 +4,8 @@ description: 'Where to stay in Albania: best areas and hotels for first-timers, 
 slug: 'where-to-stay-in-albania'
 lang: 'en'
 category: 'planning'
-publishedAt: 2026-06-29
-updatedAt: 2026-06-29
+publishedAt: 2026-06-28
+updatedAt: 2026-06-28
 cover:
   src: '/images/where-to-stay-in-albania/cover.webp'
   alt: 'The Lungomare promenade in Vlora at golden hour with rows of seafront hotels, palm trees and a wide sandy beach'
