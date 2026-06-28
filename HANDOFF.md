@@ -1,206 +1,27 @@
-# HANDOFF.md — снимок состояния
+# HANDOFF — Albania Guidebook
+> Снимок для возобновления (обновляется после каждой доработки). Подробная история — `PROGRESS.md`; план — `ROADMAP.md`/`KALENDAR.md`; аудит — `AUDIT.md`.
 
-Снимок «где остановились» для следующей сессии. Роадмап — [ROADMAP.md](ROADMAP.md), бэклог
-фиксов — [ROADMAP-FIX.md](ROADMAP-FIX.md), аудит — [AUDIT-2026-06-22.md](AUDIT-2026-06-22.md),
-статус-лог — [PROGRESS.md](PROGRESS.md), правила — [CLAUDE.md](CLAUDE.md).
+**Дата:** 2026-06-29 · **Фаза:** R4 наполнение · **Статей:** ~19 (цель ~80) · **Сайт:** live (`albaniaguidebook.com`) · **Язык:** en (EN-only) · **Последний коммит:** `d3f4b4b docs(albania): refresh ROADMAP -- R4 content-fill phase (19->~80, until 03.08), en-only, blockers`
 
-## Снимок (2026-06-28, SEO-PUBLISH «Albania Travel Insurance Guide (2026)» — insurance, head под спрос GSC)
-- **Что сделано:** создана и опубликована head-статья `albania-travel-insurance.md` (category `insurance`, URL `/insurance/albania-travel-insurance/`, `draft:false`) под доказанный спрос GSC на `albania travel insurance` / `travel insurance albania` (60+ показов, поз. 64–94). Отдельная таргет-страница, т.к. хаб `/insurance/` (регуляторика) и `do-you-need-insurance` (вопросный intent) точный head-термин не таргетировали; self-canonical + взаимный перелинк с хабом/companion → без дубля. On-page: title/H1 «Albania Travel Insurance Guide (2026)», **первый H2 «Do you need travel insurance for Albania?»**, desc 143 — точный термин ведёт везде. ~1548 слов (Албания≠Шенген, что покрывать с приоритетом эвакуации, активности/исключения, стоимость = диапазоны + «get a live quote» без выдуманных цифр, short vs long stay). **YMYL** видимый blockquote-дисклеймер после лида; условия — gov.uk/state.gov/smartraveller. **5 фото** CC (cover Albanian Alps/Theth — Anna Ilieva-Alikaj CC BY-SA 4.0; 3 инлайн-figure + 2 gallery; автор+лицензия+sourceUrl на Commons, сверено по Commons API). **9 внутр. ссылок** (← is-albania-safe, albania-visa, is-albania-expensive, albanian-riviera, digital-nomad-visa, how-to-rent-a-car, best-time-to-visit, ↔ do-you-need-insurance, → hub) + **2× AffiliateBox safetywing** через `/go/`.
-- **Гейты:** `npm run qa` → **GO** (critical 0 · medium 0; минорные 54 — только pre-existing decorative-alt). check 0/0/0 · build (39 стр) · test ✓ · test:links ✓ · lint ✓. Закоммичено + запушено в `main`. KALENDAR Нед.14 Вт 22.09 → `[x]` (досрочно 2026-06-28).
-- **Дальше по календарю:** Нед.2 Вт 30.06 — «How to Get Around Albania» (info/transport, head); Чт 02.07 — МАРШРУТ «7-Day Albania Itinerary». Прочий план без изменений. `driving-in-albania-safety` (Нед.5) ещё не опубликован — упоминание вождения/CDW в этой статье ведёт на `how-to-rent-a-car`, не битая ссылка.
+## Где остановились
+- Контент: последние опубликованные — «Albania Travel Insurance Guide (2026)» (insurance, head под спрос GSC) и «Where to Stay in Albania» (planning, хаб where-to-stay). Полный лог — `PROGRESS.md`.
+- Календарь вычищен: будущие даты = только `○` к написанию (выполненного на будущих датах нет); план до 03.08; темп 3/будний день; маршруты по Вс.
+- Сеть: доки выровнены (ядро 12/12, STRATEGY перенесён в docs/); дашборд `grafana/dashboard.html` актуален; `/work` публикует автономно при полной уверенности.
 
-## Снимок (2026-06-28, PUBLISH «Where to Stay in Albania» — planning, хаб where-to-stay)
-- **Что сделано:** опубликована head-статья `where-to-stay-in-albania.md` (planning, URL `/planning/where-to-stay-in-albania/`, `draft:false`). ~1560 слов: лид-ответ + H2 по районам (Tirana / Saranda / Ksamil / Vlora+Dhermi / Berat+Gjirokaster / Durres) — кому подходит + тип жилья; без выдуманных цен (диапазоны + «check current rates», бронь через `/go/trip-hotels`). **8 фото** CC/PD (cover Vlora Lungomare — Peter Chovanec CC BY 2.0; 6 инлайн-figure + 1 gallery; все с автор+лицензия+sourceUrl на Commons, лицензии сверены по Commons API). **7 внутр. ссылок** + 2× AffiliateBox trip-hotels. title 45 / desc 138.
-- **Гейты:** `npm run qa` → **GO** (critical 0 · medium 0). check 0/0/0 · build (38 стр) · test ✓ · test:links (2136) ✓ · lint ✓. Закоммичено + запушено в `main`. KALENDAR Нед.2 Пн 29.06 → `[x]`.
-- **Дальше по календарю:** Нед.2 Вт 30.06 — «How to Get Around Albania: Buses, Furgons & Ferries» (info/transport, head); затем Чт 02.07 — МАРШРУТ «7-Day Albania Itinerary». Vlora/Durres как города-путеводители ещё НЕ опубликованы (перелинк на них из этой статьи — текстовые упоминания, не битые ссылки).
+## Что дальше
+- Темы из `KALENDAR.md` на ближайшие дни (транспорт A→B, где остановиться, релокация, города). SEO-актуализация по GSC ~06.07.
 
-## Снимок (2026-06-23, добор `albania-visa.md` до ≥1200 слов, YMYL)
-- **Что сделано:** статья 1010 → 1791 слов. Добавлены: таблица по национальностям (EU/Schengen/UK/CA/AU/US/UA/RU); раздел «How the e-Visa works, step by step» (5 шагов через e-visa.al, без конкретных сборов/дней — хедж); раздел «Crossing the border: land, sea and air» (погранпереходы Греция/Черногория/Косово/С.Македония + паромы из Италии). `sources` += e-visa.al, en.wikipedia.org. YMYL blockquote-дисклеймер и все хеджи сохранены.
-- **Гейты:** build (36 стр, 0/0) · check 0/0/0 · test ✓ · test:links (1796) ✓ · lint ✓ → **GO**. Закоммичено + запушено в `main`.
-- **Дальше по сессии:** sourceUrl-проход (отдельная задача); ЭТАП 2 — бэкфилл канонических ссылок-источников в фото-кредитах.
+## Блокеры владельца
+- GSC: подтвердить домен + sitemap + Request Indexing. Партнёрки (Travelpayouts: DiscoverCars/GetYourGuide/Booking + EKTA). Моат-решение (владелец не в стране). Дисплей-реклама (рек.: старт без).
 
-## Снимок (2026-06-23, добор `best-time-to-visit.md` до ≥1200 слов)
-- **Что сделано:** статья 751 → 1654 слов. Новые разделы: логистика Komani ferry + снеговая линия (тайминги 09:00/13:00 с komaniferry.com; Qafa e Valbonës — поздний май/нач. июня, хедж); помесячное наложение побережье↔горы (темпы/толпы/что открыто); фестивали (Gjirokastër Folklore Festival — многолетний цикл, всё хеджировано, даты «verify»); «почему шолдер-сезоны выигрывают» (май/сентябрь–октябрь). Структура/фото не тронуты; `sources` += en.wikipedia.org, komaniferry.com.
-- **Гейты:** build (36 стр, 0/0) · check 0/0/0 · test ✓ · test:links (1796) ✓ · lint ✓ → **GO**. Закоммичено + запушено в `main`.
-- **Дальше по сессии:** добор `albania-visa.md` до ≥1200 слов (YMYL — сохранить blockquote-дисклеймер и хеджи).
+## Не ломать (уже работает)
+- Механика новостей: раздел хранит 10 дней, блок на главной — 2 дня; `/news` не слепой автопостинг (сбор → фильтр → превью → «ок» → публикация).
+- Партнёрские ссылки только через `/go/{partner}?c={slug}` (`rel="sponsored nofollow noopener"`); ID в `src/data` публичны, не секреты.
+- `partners.json` + enum-схемы коллекций (`content.config.ts`) менять только осознанно; внутр. ссылки = `/{category}/{slug}/` со слешем.
+- hero-ротация + og/фавикон (офиц. двуглавый орёл); крутилка витрины (`showcasePicks` в `HomePage.astro`).
 
-## Снимок (2026-06-23, SEO-гигиена — rehype-external-links: rel на внешние ссылки тела)
-- **Что сделано:** подключён `rehype-external-links` в `astro.config.mjs` (новый блок `markdown.rehypePlugins`), все внешние ссылки в теле статей при сборке получают `rel="nofollow noopener noreferrer"`. `target` не задаём (та же вкладка). Пакет добавлен в `dependencies` (`npm install`).
-- **Не задеты:** внутренние относительные ссылки и партнёрские `/go/` (компонент сам ставит `rel="sponsored nofollow noopener"`, ссылка относительная → rehype мимо).
-- **Проверка `dist/`:** `albania-visa` — внешние gov-ссылки получили rel; внешних без rel — 0; внутренние `/attractions/`, `/cities/` — чистые.
-- **Гейты:** build (36 стр, 0/0) · check 0/0/0 · test ✓ · test:links (1796) ✓ · lint ✓ → **GO**. Закоммичено + запушено в `main`.
-- **Дальше по сессии:** ЭТАП 2 — бэкфилл канонических ссылок-источников в фото-кредитах (90 без URL); ЭТАП 3 — добор `best-time-to-visit.md` и `albania-visa.md` до ≥1200 слов.
-
-## Снимок (2026-06-23, аудит-фикс — устранены 4 дубля ключевых фото + нормализация имён авторов)
-- **Что сделано:** сквозной фото-аудит нашёл байт-идентичные (одинаковый MD5) файлы, использованные как КЛЮЧЕВЫЕ кадры (обложка/инлайн-figure) в разных статьях. Заменены на РАЗНЫЕ легальные CC-кадры (Wikimedia Commons, webp ≤200КБ, автор+лицензия+ссылка на Commons в credit):
-  - `albania-road-trip-itinerary/cover.webp`: Pasztilla-дубль обложки Ривьеры → **Sharon Hahn Darlin / CC BY 2.0** (Palasa/Nazar с Ллогары).
-  - `albania-visa/cover.webp`: Albnext-дубль обложки Тираны → **Arianit / CC BY-SA 4.0** (терминал аэропорта Тираны — тематичнее для статьи о визах).
-  - `albanian-riviera/ksamil.webp`: DieliAlla-дубль (1/3) → **czernik.jerzy / CC BY 3.0** (бирюзовая вода Ксамиля).
-  - `albania-road-trip-itinerary/stop-ksamil.webp`: DieliAlla-дубль (2/3) → **Q.marjola / CC BY-SA 3.0** (островки на закате); обновлён и `stops[].photo` credit.
-  - `vlora-airport-closed-summer-2026/g1.webp`: Pasztilla-дубль Ллогары → **Carole Raddato / CC BY-SA 2.0** (прибрежная дорога у Дхерми).
-  - Оригиналами оставлены по плану: `saranda-albania-guide/ksamil-beach.webp` (DieliAlla) и `albania-road-trip-itinerary/llogara-panorama.webp` (Pasztilla).
-- **Имена авторов нормализованы** (по Commons): «albinfo»→«Albinfo» (things-to-do-in-tirana ×2), «Christoph Strassler»→«Christoph Strässler» (saranda; форма теперь как в berat и в Commons-Artist).
-- **MD5-уникальность подтверждена** (все ключевые кадры различны); обложки road-trip/visa перегенерированы `build:covers` (-640/-960 + манифест).
-- **Гейты:** build (36 стр, 0/0) · check 0/0/0 · test ✓ · test:links (1796) ✓ · lint ✓ → **GO**. Закоммичено + запушено в `main`.
-- **Остаток (follow-up):** `is-albania-safe/g3.webp` (gallery, не ключевой кадр) — тот же DieliAlla-файл, что и saranda; заведена отдельная задача на замену.
-
-## Снимок (2026-06-23, контент — город «Gjirokastër» — четвёртая статья `cities`)
-- **Опубликована статья-город** (одноязычная en, `cities/gjirokaster-albania-guide`, URL `/cities/gjirokaster-albania-guide/`): EN ~1700 слов прозы, лид = прямой ответ (Гирокастра — UNESCO «каменный город», османские дома-башни под огромным замком; родина Кадарэ и Ходжи). Структура: что посмотреть (замок-крепость + Музей оружия/армамента + американский самолёт-реликт; долина Дрино; Cold War tunnel-бункер; Старый базар Pazari i Vjetër; дома-башни/Zekate/Skënduli/этнографический; каменные крыши + писательский город) → где жить → где поесть (кухня юга: qifqi, oshaf, ягнёнок) → дейтрипы (Голубой глаз, Антигонея ~14 км, осн. ~296 BC Пирром) → как добраться (таблица Саранда ~1.5ч/Тирана ~3.5–4ч/Берат) → практика. Без FAQ. Валюта ALL. `featuredOrder:5`, `hotelWidget:true`, `geo.coord [40.0758, 20.1389]`, `accessFrom.saranda`+`.tirana`. title 42 / desc 145.
-- **Факты только проверяемые** (правило 4): UNESCO с 2005, один из крупнейших замков Албании, Музей оружия в замке + американский самолёт-реликт времён Холодной войны, родина Кадарэ (*Chronicle in Stone*) и Ходжи, qifqi (рис+яйцо) — местное блюдо, Антигонея осн. ~296 BC Пирром Эпирским в честь жены Антигоны, ~120 км/~1.5ч до Саранды (с заездом на Голубой глаз). Цена/часы билета замка НЕ выдуманы — `<!-- TODO -->` + «check current rate». Cold War tunnel/туры — «ask locally».
-- **Фото: 13 уникальных** CC Wikimedia (webp ≤200КБ, каждое один раз, реальные локации): cover (крепость на хребте, Marcin Konsek CC BY-SA 4.0, 1280×720) + 8 инлайн (cobbled lane Sharon Hahn Darlin CC BY 2.0 / терраса замка+часовая башня Marcin Konsek CC BY-SA 4.0 / галерея-оружейный зал Marcin Konsek CC BY-SA 4.0 / панорама Дрино Leeturtle CC BY-SA 4.0 / Старый базар Alessandro Giangiulio Flickr CC BY 2.0 / вид из дома-башни Perigrinator CC BY-SA 4.0 / каменная крыша Wolfgang Sauber CC BY-SA 4.0 / ягнёнок Sharon Hahn Darlin CC BY 2.0) + 4 gallery (townscape Marmontel CC BY 2.0 / каменные крыши malenki CC BY-SA 3.0 / бастион David Stanley CC BY 2.0 / сумерки Wolfgang Sauber CC BY-SA 4.0). Отобраны глазами через Commons API → `build-gallery`; две вертикали ужаты sharp вручную <200КБ; `build:covers` прогнан (20 обложек).
-- **Перелинковка:** ИЗ статьи (в теле) — хаб `/cities/` + Саранда `saranda-albania-guide` + Берат `berat-albania-guide` + маршрут `albania-road-trip-itinerary` + `car-rental/how-to-rent-a-car` + `planning/best-time-to-visit`. 2 AffiliateBox только отели/туры: `/go/trip-hotels?c=gjirokaster-albania-guide` + `/go/trip-tours?c=gjirokaster-albania-guide`.
-- **Витрина:** `showcasePicks` (`HomePage.astro`, после Берата): `{kind:'article',category:'cities',slug:'gjirokaster-albania-guide',kicker:'city',city:'Gjirokastër'}` — киккер «City» + пин-чип Gjirokastër.
-- **Гейты:** `npm run qa` → **GO ✅** (check 0/0/0 · build ✓ · test ✓ · test:links ✓ · lint ✓ · audit prod чисто; 0 крит/0 сред). Закоммичено + запушено в `main`.
-- **Прим. по плану:** закрывает строку KALENDAR Нед.6 Пт 31.07 «Gjirokaster Travel Guide» (cities, ≥10 фото — выполнено 13). Встречные ссылки на Гирокастру из Саранды/road-trip — добрать при их апдейте (сейчас односторонние из новой статьи).
-
-## Снимок (2026-06-23, контент — достопримечательность «Ksamil» — третья статья `attractions`)
-- **Опубликована третья статья категории `attractions`** (одноязычная en, `attractions/ksamil-albania-guide`, URL `/attractions/ksamil-albania-guide/`): EN ~1700 слов, лид = прямой ответ (Ксамил — «албанские Мальдивы»: бирюзовые пляжи и островки, ~17 км южнее Саранды по дороге на Бутринт, часть нацпарка Бутринт). Структура: почему «албанские Мальдивы» (+ честная оговорка про застройку/толпы) → островки и как добраться (вплавь / каяк-сап-педалка / водное такси-лодка) → лучшие пляжи и бич-клубы (центральные/бухты/Пулёбардха; модель «лежак+зонт от бара») → когда ехать (sweet spot июнь/сентябрь, пик август; таблица сезонов) → где остановиться (гестхаусы/апартаменты vs база в Саранде) → как добраться (таблица Саранда/Бутринт/Тирана) → совмещение с Бутринтом (~4 км)/Голубым глазом → стоит ли. Без FAQ. Валюта ALL. `attractionType: resorts-springs`, `region: vlore`, `featuredOrder:3`. title 49 / desc 150. Источники: Wikipedia / butrint.al.
-- **Факты только проверяемые** (правило 4): Ксамил южнее Саранды на дороге к Бутринту, часть нацпарка Бутринт, Ривьера Юж. Албании; ~17 км до Саранды, ~4 км до Бутринта — сверены через Wikipedia (Ksamil). Цены лежаков/лодок/туров НЕ выдуманы — «check on the day»/«agree the fare» + 3× `<!-- TODO -->`. На островках нет инфраструктуры — указано.
-- **Фото: 6 уникальных** CC/CC0 Wikimedia (webp ≤200КБ, каждое один раз, реальные локации): cover (бирюзовые бухты+островки, Artur Malinowski CC BY 2.0, 1280×718) + 3 инлайн (островки Artur Malinowski CC BY 2.0 / лодка METOKARA CC BY-SA 3.0 / бич-клуб METOKARA CC BY-SA 3.0) + 2 gallery (променад Pudelek/Marcin Szala CC BY-SA 3.0 / закат AnisKoutsi CC BY-SA 4.0). Отобраны глазами через Commons API → `build-gallery`; `build:covers` прогнан (19 обложек).
-- **Перелинковка:** ИЗ статьи (4 цели в теле) — хаб `/attractions/` + Саранда `saranda-albania-guide` + Albanian Riviera `albanian-riviera` + `butrint-national-park` (+ `car-rental/how-to-rent-a-car`). 2 AffiliateBox только отели/туры на лодке: `/go/trip-hotels?c=ksamil-albania-guide` + `/go/trip-tours?c=ksamil-albania-guide`.
-- **Витрина:** `showcasePicks` (`HomePage.astro`, после Ривьеры): `{kind:'article',category:'attractions',slug:'ksamil-albania-guide',kicker:'sight'}` — киккер «Sight».
-- **Гейты:** `npm run qa` → **GO ✅** (check 0/0/0 · build ✓ · test ✓ · test:links ✓ · lint ✓ · audit prod чисто; 0 крит/0 сред). Закоммичено + запушено в `main`.
-- **Прим. по плану:** закрывает строку KALENDAR Нед.4 «Ksamil» (категория `attractions`, URL `/attractions/ksamil-albania-guide/`). Встречные ссылки на Ksamil из Saranda/Riviera/Himara-сравнения — добрать при их апдейте.
-
-## Снимок (2026-06-23, контент — достопримечательность «Albanian Riviera» — вторая статья `attractions`)
-- **Опубликована вторая статья категории `attractions`** (одноязычная en, `attractions/albanian-riviera`, URL `/attractions/albanian-riviera/`): EN ~1800 слов, лид = прямой ответ (Албанская Ривьера — Ионическое побережье от Влёры до Саранды: бирюзовые пляжи, перевал Ллогара). Структура: что это/география (Ионика, Керавнийские горы, дорога SH8) → лучшие пляжи/городки (Дхермы/Дримадес, Химара, Борш ~7 км, Ксамил, Гьипе, Порто-Палермо с замком) → перевал Ллогара (1027 м, нацпарк, смотровая) → как добраться/передвигаться (авто + таблица расстояний, фургоны, лодки) → когда ехать (конец мая–нач. октября, пик июль-август, sweet spot июнь/сентябрь) → где жить по зонам → практика. Без FAQ. Валюта ALL. `attractionType: mountains-nature`, `region: vlore`, `featuredOrder:1`. Источники: Wikipedia / akzm.gov.al.
-- **Факты только проверяемые** (правило 4): Ллогара 1027 м (Керавнийские горы), SH8 (рекон. 2009), Борш — самый длинный пляж Ионики ~7 км, Гьипе только пешком/лодкой, Порто-Палермо с замком Али-паши — сверены через Wikipedia (Llogara Pass / Albanian Riviera). Тоннель под Ллогарой — осторожно «planned/under construction», без даты. Цены/часы не выдуманы.
-- **Фото: 8 уникальных** CC/CC0 Wikimedia (webp ≤200КБ, каждое один раз, реальные локации): cover (панорама с Ллогары, Pasztilla/Attila Terbócs CC BY-SA 4.0, 1280×718) + 6 инлайн (Дхермы Sietske2 CC BY-SA 3.0 / Химара Albinfo CC BY-SA 4.0 / Борш Sharon Hahn Darlin CC BY 2.0 / Ксамил DieliAlla CC0 / Гьипе Pudelek CC BY-SA 3.0 / смотровая Ллогары Albinfo CC BY-SA 4.0) + 1 gallery (Порто-Палермо с замком Mario Gjashta CC BY-SA 2.0). Отобраны глазами через `commons-candidates`→`build-gallery`; `build:covers` прогнан.
-- **Перелинковка:** ИЗ статьи (4 цели в теле) — хаб `/attractions/` + Саранда `saranda-albania-guide` + маршрут `albania-road-trip-itinerary` + `butrint-national-park` (+ `car-rental/how-to-rent-a-car`). 2 AffiliateBox только отели/аренда: `/go/trip-hotels?c=albanian-riviera` + `/go/localrent?c=albanian-riviera`.
-- **Витрина:** `showcasePicks` (`HomePage.astro`, после Бутринта): `{kind:'article',category:'attractions',slug:'albanian-riviera',kicker:'sight'}` — киккер «Sight».
-- **Гейты:** `npm run qa` → **GO ✅** (check 0/0/0 · build ✓ · test ✓ · test:links ✓ · lint ✓ · audit prod чисто; 0 крит/0 сред). Закоммичено + запушено в `main`.
-- **Прим. по плану:** выполнено по запросу владельца как `attractions`/slug `albanian-riviera` (отличается от наброска KALENDAR Нед.4 `albanian-riviera-guide`). Встречные ссылки на Ривьеру из Ksamil/Himara-сравнения — добрать в Нед.4/5.
-
-## Снимок (2026-06-23, контент — развлечение «Tirana Nightlife» — первая статья `entertainment`)
-- **Опубликована первая статья категории `entertainment`** (одноязычная en, `entertainment/tirana-nightlife`, URL `/entertainment/tirana-nightlife/`, `razvlType: nightlife`): EN ~1360 слов, лид = прямой ответ (центр ночной жизни — **Блоку**; бары/коктейли/клубы). Структура: районы (Блоку / центр у Скандербега / набережная Lana+Пирамида) → типы заведений (коктейль-бары, раки/винные бары, клубы, рооф-топ) → сезонность (Чт–Сб пик; лето-террасы; весна/осень sweet spot) → безопасность+такси ночью → ориентир цен (без выдуманных чисел, ALL) → советы. Без FAQ. title 48 зн / desc 134 зн.
-- **Факты только проверяемые** (правило 4): реальные ориентиры (Блоку — экс-закрытый квартал элиты; ул. Pjetër Bogdani / Ismail Qemali; вина Kallmet, Shesh i Bardhë/i Zi; раки). Заведения/цены/часы не выдуманы — цены качественно.
-- **Фото: 5 уникальных** CC/CC0 Wikimedia (webp ≤200КБ, каждое один раз): cover (скайлайн на закате, Sani Dobroshi CC BY-SA 4.0, 89КБ 1280×720) + 3 инлайн (здание у бульвара Nushi eda CC BY-SA 4.0 / Часовая башня+мечеть Этхем-бея ночью Liridon CC0 / пл. Скандербега сумерки-пано FloriSejdiKola CC BY-SA 4.0) + 1 gallery (мокрая пл. Скандербега ночью Yastay CC BY 4.0). Отобраны глазами через `commons-candidates`→`build-gallery`; `build:covers` прогнан.
-- **Перелинковка (двунаправленный кластер):** ИЗ статьи — `things-to-do-in-tirana` + хаб `/food/` + хаб `/entertainment/` + `best-time-to-visit` + `is-albania-safe`. ВСТРЕЧНЫЕ — из `things-to-do-in-tirana` (буллет Блоку + read-also) на nightlife. 2 AffiliateBox `/go/trip-hotels?c=tirana-nightlife` + `/go/trip-tours?c=tirana-nightlife`.
-- **Витрина:** `showcasePicks` (`HomePage.astro`, 2-й пик): `{kind:'article',category:'entertainment',slug:'tirana-nightlife',kicker:'nightlife',city:'Tirana'}` — киккер «Nightlife» + пин-чип Tirana.
-- **Хаб `/entertainment/`:** группировка карточек по городу — по суффиксу slug; `tirana-nightlife` ложится в группу «Elsewhere» (slug стабилен, правило 3) — косметика, на URL/SEO/витрину не влияет.
-- **Гейты:** `npm run qa` → **GO ✅** (check 0/0/0 · build ✓ · test ✓ · test:links ✓ · lint ✓ · audit prod чисто; 0 крит/0 сред). Закоммичено + запушено в `main`.
-- **Дальше:** новые `entertainment`-статьи (events/active/casino/places) наполнят фильтр хаба; nightlife по Дурресу/Саранде — slug с городским суффиксом, чтобы лечь в свою городскую группу.
-
-## Снимок (2026-06-22, контент — раздел «Еда» `/food/`: 3 ресторана Тираны)
-- **Наполнена директория «Где поесть»** (`/food/`, коллекция `restaurants` была пуста): 3 карточки (одноязычные en, `restaurants/en/<slug>`), город `Tirana`, разные типы — **Oda** (`oda`, традиционная албанская, `€€`, Luigj Gurakuqi 3, `[41.32878, 19.82252]`), **Mullixhiu** (`mullixhiu`, современная албанская, `€€€`, Grand Park, `[41.3134804, 19.8166599]`, шеф Bledar Kola, `website`), **Komiteti – Kafe Muzeum** (`komiteti-kafe-muzeum`, кафе/раки-бар, `€€`, Fatmir Haxhiu 2 за Пирамидой, `[41.3233016, 19.8225941]`).
-- **Только реальные места, факты проверяемые** (правило 4, §15): отбор по консенсусу >4★ из нескольких источников (Tripadvisor/Restaurant Guru/abillion/In Your Pocket/World’s 50 Best Discovery); координаты — OSM/Nominatim; `mapUrl` — Google Maps. `ratingNote`/`review` своими словами (чужие отзывы дословно НЕ копировались). Часы/цены/телефон НЕ выдуманы — не указаны. `verifiedAt: 2026-06-22`, `verifiedNoDate: true`.
-- **Cover каждой — CC фото-иллюстрация** (`coverIllustrative: true`, честный «illustrative»-кредит, webp ≤200КБ): Oda → fërgesë (Leeturtle, CC BY-SA 4.0); Mullixhiu → tavë kosi (MirelaAndoni, CC BY-SA 4.0); Komiteti → бутылки раки (Klein Muçi, CC BY 4.0). `build:covers` прогнан.
-- **Перелинковка:** из статьи `things-to-do-in-tirana` → ссылка на `/food/`; хаб `/food/` уже линкует на Тирану. schema `/food/` → ItemList 3× Restaurant. Built: `/food/`, `/food/where-to-eat-tirana/` показывают карточки под группой города «Tirana».
-- **Гейты:** `npm run qa` → **GO ✅** (check 0/0/0 · build ✓ · test [parity 13 en] ✓ · test:links ✓ · lint ✓ · audit prod чисто; 0 крит/0 сред). Закоммичено + запушено в `main`.
-- **Дальше:** per-city `/food/where-to-eat-durres` и `…-sarande` пока без карточек — добрать места по Дурресу/Саранде; опц. статья `food/what-to-try` (хаб сам покажет ссылку «Что попробовать»); `instagram` заведений — спросить у владельца (§13).
-
-## Снимок (2026-06-22, контент — достопримечательность «Butrint National Park»)
-- **Опубликована первая статья категории `attractions`** (одноязычная en, `attractions/butrint-national-park`, URL `/attractions/butrint-national-park/`): EN ~1700 слов, лид = прямой ответ (Бутринт — UNESCO-город у Саранды/Ксамила). Структура: что это (UNESCO 1992 + Рамсар) → история греки→римляне→византийцы→венецианцы/османы → что посмотреть (театр, баптистерий с мозаиками, Львиные/Скейские ворота, акрополь+музей, Венецианская башня/канал Vivari) → как добраться (таблица Саранда/Ксамил/Тирана) → билеты/часы (только «уточняйте»+источник, TODO на точную цену — не выдумано) → совмещение с Голубым глазом/Ксамилом → практика. Без FAQ. Валюта ALL. Источники: UNESCO WHC / Wikipedia / butrint.al.
-- **Фото: 6 уникальных** CC Wikimedia (webp ≤200КБ, каждое один раз): cover (театр+крепость, Marcin Konsek) + 4 инлайн (театр Radosław Botev / баптистерий-мозаики Albinfo / Львиные ворота Piotrus / Венецианская башня Cosal) + 1 gallery (канал Vivari/Корфу Calistemon). Отобраны глазами через `commons-candidates`→`build-gallery`; `build:covers` прогнан.
-- **Frontmatter:** `attractionType: museums-landmarks`, `region: vlore`, `geo.coord [39.7456, 20.0203]`, `accessFrom.tirana`, `featuredOrder:2`. Built-page: canonical + hreflang en+x-default; schema Article + **TouristAttraction** + GeoCoordinates + BreadcrumbList.
-- **Перелинковка (двунаправленный кластер):** ИЗ статьи — хаб `/attractions/` + Саранда + маршрут + аренда авто (4 цели). ВСТРЕЧНЫЕ ссылки добавлены в `saranda-albania-guide` и `albania-road-trip-itinerary` → на Бутринт. 2 AffiliateBox `/go/trip-tours?c=…` + `/go/trip-transfers?c=…`.
-- **Витрина:** добавлен пик в `showcasePicks` (`HomePage.astro`, после Берата): `{kind:'article',category:'attractions',slug:'butrint-national-park',kicker:'sight'}`.
-- **Гейты:** `npm run qa` → **GO ✅** (check 0/0/0 · build ✓ 32 стр. · test ✓ · test:links ✓ · lint ✓ · audit prod чисто). Закоммичено + запушено в `main`.
-- **Дальше:** при появлении статей Ksamil / Blue Eye / Riviera (KALENDAR Нед.4) добрать встречные ссылки на Бутринт; точную цену/часы билета (`visit`) внести, когда даст владелец/официальный источник (сейчас TODO).
-
-## Снимок (2026-06-22, UI-фикс v2 — крутилка витрины на чистом CSS)
-- **Витрина едет на CSS, а не на JS.** Движение перенесено в `@keyframes showcase-marquee` (translateX 0 → −50%) на `.showcase__track` в `ShowcaseRail.astro`; компонент рендерит **2 копии** набора (`cells = [...clone:false, ...clone:true]`, вторая `aria-hidden`) → одна копия = 50% дорожки, петля бесшовна. `.showcase__viewport` → `overflow: hidden`. Пауза при hover/focus — `animation-play-state: paused` (CSS, без JS). `prefers-reduced-motion` → `animation:none; transform:none` + viewport `overflow-x:auto`.
-- **Почему так:** прежняя JS-крутилка (`scrollLeft`+rAF) могла «не ехать» из-за кэша `/js/showcase-rail.js`. Теперь анимация в scoped-CSS компонента (бандл `_astro/*.css`, грузится со страницей) — кэш JS ни на что не влияет. `public/js/showcase-rail.js` усечён до минимума: задаёт `--showcase-dur` ∝ ширине набора (~40 px/с) + тач-тап поповера.
-- **Верификация:** `dist/_astro/index.*.css` — `.showcase__track{…animation:showcase-marquee…}`, `@keyframes showcase-marquee{0%{translate(0)}to{translate(-50%)}}`, `.showcase__viewport{overflow:hidden}`, пауза на hover/focus-within. `dist/index.html` — 18 `showcase__cell` = 9 уникальных + 9 клонов `aria-hidden="true"`.
-- **Гейты:** `build` ✓ (31 стр.) · `check` 0/0/0 · `npm test` ✓ · `test:links` ✓ (1478 ссылок) · `lint` ✓. Закоммичено + запушено в `main`.
-- **Дальше:** при добавлении карточек в `showcasePicks` ничего не нужно — скорость подстраивается под ширину набора через `--showcase-dur`; CSS-петля масштабируется автоматически.
-
-## Снимок (2026-06-22, контент-план Нед.1 — P0-доверие «Is Albania Safe»)
-- **Опубликована статья «Is Albania Safe to Visit in 2026?»** (одноязычная en, `planning/is-albania-safe`, KALENDAR Нед.1/Пт 26.06, P0-кластер «безопасность/доверие»): EN ~1500 слов, лид = прямой ответ (да, в целом безопасно — низкая преступность, дружелюбные люди, нюансы). Разделы: общая безопасность/преступность → соло-женщины → дороги/вождение (главный риск) → пляжи/море → деньги/мошенничество → ЧС/телефон 112/здоровье → страховка. Факты только из травел-адвайзери (US State Dept / UK FCDO / AU Smartraveller) + «уточняйте/сверяйтесь с актуальной официальной страницей»; без выдуманных цифр; без FAQ. Валюта — ALL.
-- **Фото: 6 уникальных** CC/CC0 Wikimedia (cover Skanderbeg Square + 3 инлайн-figure [Tirana street / mountain road in rain / Tirana crossing] + 2 gallery [Ksamil beach / mountain road], webp ≤200КБ, отобраны глазами через `commons-candidates`→`build-gallery`). `build:covers` прогнан.
-- **Перелинковка:** 6 внутр. ссылок — хаб `/planning/` + Тирана/Саранда/Берат (города) + маршрут `albania-road-trip-itinerary` + страховка `do-you-need-insurance`. 1 AffiliateBox `/go/safetywing?c=is-albania-safe` (страховка — естественная связка, `position: body-end`).
-- **Витрина:** добавлена 9-м пиком в `showcasePicks` (`HomePage.astro`): `{kind:'article',category:'planning',slug:'is-albania-safe',kicker:'sight'}`.
-- **Гейты:** `npm run qa` → **GO ✅** (check 0/0/0 · build ✓ · test [parity 12 en] ✓ · test:links ✓ · lint ✓ · npm audit prod чисто). Закоммичено + запушено в `main`.
-- **Дальше по KALENDAR Нед.1:** Вс 28.06 «Is Albania Expensive? Real 2026 Daily Costs» (planning/info-хаб). Перелинк → driving in albania safety (Нед.5) / → travel insurance (Нед.4) добрать встречными ссылками, когда выйдут.
-
-## Снимок (2026-07-08, контент-план Нед.3 — МАРШРУТ Albania Road Trip)
-- **Опубликован первый МАРШРУТ** (одноязычный en, коллекция `routes`, `routes/albania-road-trip-itinerary`, KALENDAR Нед.3/Ср 08.07 «10 Days in Albania: Ultimate Road Trip Itinerary»): EN ~1670 слов, 8-дневное кольцо **Тирана → Берат → Влёра/Ривьера (Llogara) → Саранда → Ксамил → Гирокастра → Тирана**, `days:8`, `distanceKm:620`, `budgetFrom:60 EUR`, `bestSeason` may/june/sep/oct. По дням: что смотреть, ночёвки, расстояния/время; таблица плеч; практика (аренда/сезон/дороги/деньги ALL/страховка). Без выдуманных цен.
-- **Фото каждой остановки:** все 6 `stops[].photo` заполнены + cover + 3 gallery = **10 уникальных CC/CC0 Wikimedia** (webp ≤200КБ). RouteTimeline показывает миниатюру у каждого стопа; инлайн-figure у каждого дня.
-- **Геометрия:** `build-route-geometry.mjs` прогнан → 52 точки в `src/data/route-geometry.json`. **Важно:** в скрипте исправлен `ROUTES_DIR` `…/routes/ru` → `…/routes/en` (хвост от удалённых ru/uk); без фикса OSRM-геометрия для маршрутов одноязычного сайта не пеклась бы — это нужно следующим маршрутам.
-- **Перелинковка:** хаб `/routes/` + города-якоря Тирана/Берат/Саранда + аренда авто/best-time/страховка. 2 AffiliateBox `/go/` (trip-carhire/trip-hotels). TouristTrip-schema в `dist` присутствует.
-- **Гейты:** `npm run qa` → **GO ✅** (check 0/0/0 · build ✓ 30 стр. · test [parity 11 en] ✓ · test:links ✓ · lint ✓). Закоммичено + запушено в `main`.
-- **Дальше по KALENDAR Нед.3:** Пт 10.07 Берат — уже опубликован; Вс 12.07 «Albania 1-Year Visa-Free for US Citizens» (info). Перелинк Берат/города ← road trip itinerary можно добрать встречными ссылками. Маршрут связывает все города-якоря — при выходе Ksamil/Riviera/Gjirokaster-городов добавить встречные ссылки на маршрут.
-
-## Снимок (2026-07-10, UI-фикс — бесшовная крутилка витрины)
-- **Витрина крутится непрерывно по кругу.** `public/js/showcase-rail.js` заменён на эталонную бесшовную реализацию: JS клонирует уникальный набор до ширины дорожки ≥2.5× вьюпорта и заворачивает петлю на ширину одного набора → не останавливается при малом числе карточек, без рывка; клоны `aria-hidden`/вне фокус-порядка. Пауза при hover/focus, drag/свайп, reduced-motion, клик-vs-drag, тач-поповер — сохранены.
-- **Без статических клонов в разметке.** `ShowcaseRail.astro`: `const cells = items.map((it) => ({ ...it, clone: false }));` (раньше рендерил набор дважды). Клонированием теперь занимается только JS; поле `clone` всегда false, стили/разметка не тронуты.
-- **Набор витрины — 8 уникальных карточек.** `showcasePicks` (`HomePage.astro`): 3 города (Тирана/Саранда/Берат, kicker `city`) + 5 статей с cover — `albania-visa`/`best-time-to-visit` (planning), `how-to-rent-a-car` (car-rental), `do-you-need-insurance` (insurance), `digital-nomad-visa` (relocation), все kicker `sight`. Дедуп по slug, категория из frontmatter. Хватает на полный вьюпорт без повторов.
-- **Верификация `dist/index.html`:** в `showcase__track` 8 ячеек, 0 `data-clone`, 8 уникальных hrefs, нет двух одинаковых подряд (клоны добавляет JS в рантайме).
-- **Гейты:** `build` ✓ (30 стр.) · `check` 0/0/0 · `npm test` ✓ · `test:links` ✓ (1412 ссылок) · `lint` ✓. Закоммичено + запушено в `main`.
-- **Дальше:** при добавлении новых городов/статей — добавлять слаги в `showcasePicks` (валидные kicker-ключи: `city`/`route`/`sight`/`food`/`nightlife`); JS-крутилка масштабируется автоматически.
-
-## Снимок (2026-07-10, контент-план Нед.3 — город Берат)
-- **Опубликована статья-ГОРОД Берат** (одноязычная en, `cities/berat-albania-guide`, KALENDAR Нед.3/Пт 10.07): EN ~1620 слов, **12 уникальных фото** CC/CC0 Wikimedia (cover + 8 инлайн + 3 gallery, webp ≤200КБ, отобраны глазами). Структура города (Мангалем «тысяча окон» / замок Кала + Онуфри / Горица + Османский мост + Свинцовая мечеть / каньон Осуми + вино-ракия / жильё / как добраться / еда / практика), без FAQ. Факты из Wikipedia/UNESCO; цена/часы Онуфри — TODO+«уточняйте» (правило 4). 5 внутр. ссылок (хаб `/cities/` + Саранда/Тирана/аренда авто/best-time), 2 AffiliateBox `/go/`, `hotelWidget`, `accessFrom.tirana`, `geo`, `featuredOrder:4`.
-- **Витрина:** Берат — третий пик в `showcasePicks` (`HomePage.astro`): `{kind:'article',category:'cities',slug:'berat-albania-guide',kicker:'city',city:'Berat'}`. Лента на главной — три города. `build:covers` прогнан.
-- **Гейты:** `npm run qa` → **GO ✅** (check 0/0/0 · build ✓ 29 стр. · test [parity 10 en] ✓ · test:links ✓ · lint ✓). Закоммичено + запушено в `main`.
-- **Дальше по KALENDAR Нед.3:** Вс 12.07 «Albania 1-Year Visa-Free for US Citizens» (info). Перелинк Берат ← road trip itinerary / → day trips from Tirana добавить, когда выйдут (Нед.3 Ср / Нед.8). ROADMAP-FIX: добор фото при желании — текущих 12 достаточно (норма города ≥10 выполнена).
-
-## Снимок (2026-06-22, UI: убран «Language» + витрина наполнена)
-- **Меню без переключателя языка.** `Header.astro` — удалён блок `.nav__lang` (подпись `dict.lang.label` + `<LangSwitcher/>`) из мобильной выпадашки, мёртвый CSS и неиспользуемый импорт; `Footer.astro` — удалён `<LangSwitcher/>` и его импорт. `availableLangs` оставлен в обоих интерфейсах (совместимость с `BaseLayout`, не используется). В `dist/` нет `nav__lang`/`>Language<`/`lang-switch`.
-- **Витрина главной наполнена.** `HomePage.astro` → `showcasePicks` теперь содержит 2 пика: `things-to-do-in-tirana` и `saranda-albania-guide` (`category:'cities'`, kicker `'city'`, city-чипы Tirana/Saranda; у обоих cover). На `dist/index.html` — секция `block--showcase` с `showcase-rail` и двумя карточками городов. Условие «пусто → скрыто» сохранено: при опустошении массива лента снова исчезнет.
-- **Гейты:** `build` ✓ (28 стр.) · `check` 0/0/0 · `npm test` ✓ · `test:links` ✓ (1293 ссылки) · `lint` ✓. Закоммичено + запушено в `main`.
-- **Дальше:** по мере публикации новых городов/маршрутов/мест — добавлять их слаги в `showcasePicks` (формат пика — в комментарии над массивом); при добавлении place-карточек (поповер адрес/часы/карта) использовать `place:true`.
-
-## Снимок (2026-06-22, структурно: сайт стал одноязычным — только EN)
-- **Сайт переведён на ОДИН язык — английский (en).** ru и uk удалены полностью: дерево `src/pages/ru/` + `src/pages/uk/`, словари `i18n/ru.ts`+`uk.ts`, контент `src/content/*/{ru,uk}` (реально были только 9+9 файлов в `articles/ru` и `articles/uk`), ru/uk-ветки в layout/компонентах. `LANGS=['en']`, `DEFAULT_LANG='en'`.
-- **hreflang:** self `hreflang="en"` + `x-default` на тот же URL (других alternate нет). sitemap без i18n-locales. `LangSwitcher` — no-op заглушка.
-- **`public/_redirects`:** `/ru/*` и `/uk/*` → 301 на корень (плюс прежний `/en/*`). Старые проиндексированные языковые URL переезжают на en.
-- **`check-parity`** переписан под один язык (весь контент обязан быть в `/en/`). **`new-content.mjs`** генерит только en.
-- **Сборка:** 28 страниц, все на корне (нет `/ru/`, `/uk/`); в sitemap/HTML нет ru/uk-hreflang и ссылок на удалённые языки.
-- **Гейты:** `check` 0/0/0 · `build` ✓ (28 стр., без предупреждений) · `npm test` ✓ · `test:links` ✓ (1289 ссылок, 0 битых) · `lint` ✓. Закоммичено + запушено в `main`.
-- **Дальше:** весь новый контент (статьи/новости/`/content`/`/news`) — только на английском. Доки `CLAUDE.md`/`CONTENT_GUIDE.md`/`SPEC.md` могут содержать устаревшие упоминания ru/uk ниже шапок — приоритет у шапок-баннеров «только en».
-
-## Снимок (2026-07-01, контент-план Нед.2)
-- **Опубликована статья-ГОРОД Саранда** (тройка en/ru/uk, `cities/saranda-albania-guide`, KALENDAR Нед.2/Ср 01.07): EN-ведущая ~1500 слов, **14 уникальных фото** CC/CC0/PD Wikimedia (cover+8 инлайн+5 gallery, ≤200КБ, отобраны глазами), факты из надёжных источников (Wikipedia/UNESCO), цена/часы Бутринта оставлены TODO+«уточняйте» (правило 4). ≥2 внутр. ссылки + хаб `/cities/` + перелинк на Тирану, аренду авто, best-time. 2 AffiliateBox `/go/` (trip-hotels/trip-tours), `hotelWidget`, `accessFrom.tirana`. `featuredOrder: 3`. `npm run qa` → **GO**.
-- Дальше по KALENDAR Нед.2: Пт 03.07 «Tirana Airport Transfers» (info/transactional), Вс 05.07 «Renting a Car in Albania» (базовый `how-to-rent-a-car` уже есть — сверить с темой). Перелинк Саранда↔Ksamil/Albanian Riviera добавить, когда выйдут (Нед.4).
-
-## Снимок (2026-06-24, контент-план Нед.1)
-- **Опубликована статья-СТОЛИЦА Тирана** (тройка en/ru/uk, `cities/things-to-do-in-tirana`, KALENDAR Нед.1/Ср 24.06): EN-ведущая ~1593 слова, **18 уникальных фото** CC/CC0 Wikimedia (cover+10 инлайн+7 gallery, ≤200КБ), факты из надёжных источников, ≥4 внутр. ссылки + 2 AffiliateBox `/go/`. Первая статья в категории `cities` → хаб `/cities/` не пуст. `npm run qa` → GO.
-- Дальше по KALENDAR Нед.1: Пт 26.06 «Is Albania Safe» (attractions/info), Вс 28.06 «Is Albania Expensive» (info).
-
-## Снимок (2026-06-22, после Этапа 1)
-- **Ветка `main`**, задеплоено на Cloudflare. **Сайт live** — `https://albaniaguidebook.com`.
-- **Сборка:** `astro check` 0 ошибок / 0 warnings / 0 hints · `build` зелёный (~70 страниц) ·
-  **`npm run qa` → GO** (все гейты зелёные: check/build/test/links/lint).
-- **Lighthouse (mobile):** SEO 100 / Best-practices 100 везде; a11y 92–96; perf 89–91 на
-  статьях/хабах, **77 на главной** (3 hero-кадра — единственный <90, см. ROADMAP-FIX).
-- **Адаптив:** нет горизонтального переполнения (8 шаблонов × 5 ширин).
-- **Контент:** 5 статей ×3 языка (`planning/albania-visa`, `planning/best-time-to-visit`,
-  `car-rental/how-to-rent-a-car`, `insurance/do-you-need-insurance`,
-  `relocation/digital-nomad-visa`) — только обложки, без инлайн-фото (норма ≥5 → ROADMAP-FIX).
-  Коллекции `routes/restaurants/services/cities` пусты.
-- **Новости:** 2 опубликованы ×3 языка (`news/durres-folklore-festival-june-2026`,
-  `news/vlora-airport-closed-summer-2026`) — cover ≤200КБ + инлайн-figure + gallery, CC/CC0 Wikimedia,
-  EN-first, факты из EAFF / Albanian Daily News, даты 2026. `npm run qa` → GO.
-
-## Повторный прогон + `/full-audit` (2026-06-22)
-Запущен `/full-audit` (11 агентов, адверсариальная проверка) — нашёл и закрыто: 🔴 инлайн `/go/`
-без rel/?c= (+ check-links теперь гейтит); 🟠 `offline.html` Georgia, тонкие хабы → noindex,
-«Фото:»→«Photo:» на EN; 🟡 мёртвый CSS `.eda→.food`, грузинские комментарии, SPEC/CONTENT_GUIDE
-категории→11 EN; 🔵 twitter:alt/ga-init defer/js-кэш/go-security/guard жилья. Отложено (ROADMAP-FIX):
-адаптивные обложки, коллизия маршрутов food/cities, CI-гейты, объём статей, контраст. См. AUDIT-2026-06-22 §H.
-
-## Что закрыто в Этапе 1 (2026-06-22)
-- **qa = GO:** 24 битых forward-ссылки из хабов → условный рендер (рендерятся при наличии цели).
-- **schema.org** `addressCountry GE→AL`; удалён `bash.exe.stackdump` (+ в .gitignore); убраны
-  15 мёртвых `<!-- TODO: фото -->`.
-- **`/news` SKILL.md** локализован под Албанию (источники/аэропорты/лек/города/виза).
-- **Стандарты публикации** (объём/фото) + **правило дисциплины** (commit/push) в CLAUDE/CONTENT_GUIDE.
-- **Доки** синхронизированы: README, PROGRESS, AUDIT, MEMORY + новые AUDIT-2026-06-22 / ROADMAP-FIX.
-- Проверено: `uk.ts` цел (паритет), `news` — категория (не коллекция, фантома нет).
-
-## Закрыто ранее этой сессии
-GA4 (`G-9FTVJ00X41`), live-курсы/погода (Тирана/Дуррес/Саранда + лек), Cloudflare/домен,
-брендинг (палитра/hero-ротация/флаг/фавикон с офиц. орлом/og), вычистка грузинских хвостов,
-EN-first слаги (подкатегории + месяцы).
-
-## Следующий шаг
-- **Контент (R3, на паузе по решению владельца):** гайды по городам, «что попробовать», «как
-  выбрать страховку»; добор инлайн-фото до ≥5 на статью.
-- **Без владельца:** оптимизация hero (perf 77→90+); пометка декоративных alt.
-- **За владельцем (🔑):** Google Search Console (домен + sitemap), маппинг партнёрок.
-
-## Грабли
-- Перед `git push` — `git fetch && git rebase origin/main` (авто-джоб новостей пушит первым).
-- 79 QA-минорных «пустой alt» — ложные (декоративные флаг/hero, alt="" корректно).
-- В `src/data` партнёрские ID публичны (в URL), не секреты. `docs/_georgia-reference/` — шаблон, не трогать.
+## Команды
+- `npm run qa` — все гейты (check/build/test/test:links/lint); должны быть зелёными перед коммитом.
+- `npm run new -- <тип> <slug> --title "…"` — скелет контента (одна en-версия, en-only).
+- Скиллы: `/work` (утренний дирижёр), `/news` (дайджест), `/add-content` (конвейер статьи), `/full-audit` (многоагентный аудит).
+- Перед push: `git pull --rebase origin main` (авто-джоб новостей пушит первым).
