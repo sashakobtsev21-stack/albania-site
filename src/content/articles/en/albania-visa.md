@@ -17,6 +17,27 @@ sources:
   - 'al.usembassy.gov'
   - 'e-visa.al'
   - 'en.wikipedia.org'
+photoSources:
+  - src: '/images/albania-visa/cover.webp'
+    author: 'Arianit'
+    license: 'CC BY-SA 4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Tirana_Airport_Terminal.jpg'
+  - src: '/images/albania-visa/hani-i-hotit-border.webp'
+    author: 'Rakoon'
+    license: 'CC0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Albania%E2%80%93Montenegro_border_-_Bo%C5%BEaj_-_Hani_i_Hotit_border_crossing_July_2017.jpg'
+  - src: '/images/albania-visa/durres-ferry-landing.webp'
+    author: 'Albinfo'
+    license: 'CC BY-SA 4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Durres_harbor_ferry_landing.jpg'
+  - src: '/images/albania-visa/saranda-boats-dock.webp'
+    author: 'Sharon Hahn Darlin'
+    license: 'CC BY 2.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Sarand%C3%AB,_Albania_2022-11_-_Boats_at_dock.jpg'
+  - src: '/images/albania-visa/skanderbeg-square.webp'
+    author: 'Pudelek'
+    license: 'CC BY-SA 4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Tirana_-_Skanderbeg_Square_(Sheshi_Sk%C3%ABnderbej)_-_by_Pudelek.jpg'
 ---
 
 Albania is one of the easiest countries in Europe to enter, and for some travellers the rules are surprisingly generous: U.S. citizens can stay **visa-free for up to one full year — 365 days — with no residence permit at all**, a window unmatched almost anywhere else on the continent (per travel.state.gov). For most other Western travellers the country gives a familiar 90 days, and a few nationalities follow special schemes. Below is a clear, nationality-by-nationality breakdown of who needs a visa for Albania, how long you can stay, and the entry conditions to get right before you fly.
@@ -26,6 +47,11 @@ Albania is one of the easiest countries in Europe to enter, and for some travell
 ## Who can enter Albania visa-free
 
 Albania does not belong to the EU or the Schengen Area, so its entry rules are its own — and on the whole they are welcoming. Citizens of the **EU, the wider Schengen/EEA bloc, the United Kingdom, Canada and Australia** may enter without a visa and stay **90 days within any 180-day period**. EU, Schengen and EEA nationals have an extra convenience: they may cross the border on a **national ID card** rather than a passport.
+
+<figure class="figure">
+<img src="/images/albania-visa/skanderbeg-square.webp" alt="Skanderbeg Square in central Tirana, with the National History Museum and minaret of the Et'hem Bey Mosque" width="1280" height="771" loading="lazy" decoding="async" />
+<figcaption>Skanderbeg Square, Tirana — most visa-free arrivals start their trip in the capital. <span class="figure__credit">Photo: Pudelek / Wikimedia Commons, CC BY-SA 4.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Tirana_-_Skanderbeg_Square_(Sheshi_Sk%C3%ABnderbej)_-_by_Pudelek.jpg</span></figcaption>
+</figure>
 
 The standout case is the **United States**. According to the U.S. State Department (travel.state.gov), American citizens can remain in Albania **visa-free for up to one year** without applying for any residence permit — a genuine differentiator that makes the country popular with long-stay travellers and remote workers. If a long stay is your goal, it is worth reading our [relocation guide](/relocation/) and the [digital nomad visa overview](/relocation/digital-nomad-visa/) alongside this page, since the year of free entry is a stay, not a status, and does not by itself grant the right to work locally.
 
@@ -84,6 +110,11 @@ Albania regularly opens **temporary, seasonal visa-free windows** for additional
 
 Most visitors fly into **Tirana International Airport (Nënë Tereza)**, where the entry check is straightforward and your visa-free allowance or e-Visa is processed on arrival. But Albania shares land borders with four neighbours and has busy ferry links to Italy, so many travellers arrive overland or by sea — and the same entry rules apply whichever way you come.
 
+<figure class="figure">
+<img src="/images/albania-visa/hani-i-hotit-border.webp" alt="The Hani i Hotit border crossing between Albania and Montenegro" width="1280" height="848" loading="lazy" decoding="async" />
+<figcaption>Hani i Hotit, the busy Albania–Montenegro crossing north of Shkodër. The same visa-free allowance applies whether you arrive by air or land. <span class="figure__credit">Photo: Rakoon / Wikimedia Commons, CC0; sourceUrl: https://commons.wikimedia.org/wiki/File:Albania%E2%80%93Montenegro_border_-_Bo%C5%BEaj_-_Hani_i_Hotit_border_crossing_July_2017.jpg</span></figcaption>
+</figure>
+
 On the **land borders**, the main crossings are well established and used to foreign travellers:
 
 - **Greece** — *Kakavia*, near Ioannina, is the busiest southern crossing and generally operates around the clock; it is the standard route for buses between the two countries.
@@ -92,6 +123,16 @@ On the **land borders**, the main crossings are well established and used to for
 - **North Macedonia** — *Qafa e Thanës* connects Ohrid with Pogradec on Lake Ohrid's Albanian shore, popular with travellers combining the two lake destinations.
 
 By **sea**, regular car-and-passenger ferries link Italian ports — chiefly **Bari, Ancona and Brindisi** — with **Durrës** and **Vlorë** on the Adriatic coast; crossings are long (often overnight), so check current operators and timetables when you book. Whatever the entry point, carry the right document for your nationality — a passport valid for at least three months, or a national ID card if you are an EU/Schengen/EEA citizen — and have your e-Visa to hand if you needed one. Border procedures and opening hours can change, so verify your specific crossing before you set off.
+
+<figure class="figure">
+<img src="/images/albania-visa/durres-ferry-landing.webp" alt="A ferry at the harbour landing in Durrës, Albania's main Adriatic port" width="1280" height="851" loading="lazy" decoding="async" />
+<figcaption>The ferry landing at Durrës, where the Italy crossings dock. Sea arrivals clear the same border check as the airport. <span class="figure__credit">Photo: Albinfo / Wikimedia Commons, CC BY-SA 4.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Durres_harbor_ferry_landing.jpg</span></figcaption>
+</figure>
+
+<figure class="figure">
+<img src="/images/albania-visa/saranda-boats-dock.webp" alt="Boats moored at the harbour in Sarandë on the southern Albanian coast" width="1280" height="960" loading="lazy" decoding="async" />
+<figcaption>Sarandë in the deep south, the landing point for the fast ferry from Corfu and another common entry into Albania. <span class="figure__credit">Photo: Sharon Hahn Darlin / Wikimedia Commons, CC BY 2.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Sarand%C3%AB,_Albania_2022-11_-_Boats_at_dock.jpg</span></figcaption>
+</figure>
 
 ## Before you go: a short checklist
 

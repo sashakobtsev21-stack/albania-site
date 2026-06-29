@@ -16,6 +16,27 @@ sources:
   - 'wander-lush.org'
   - 'en.wikipedia.org'
   - 'komaniferry.com'
+photoSources:
+  - src: '/images/best-time-to-visit/cover.webp'
+    author: 'Aktron'
+    license: 'CC BY-SA 4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/Category:Ksamil'
+  - src: '/images/best-time-to-visit/ksamil-beach.webp'
+    author: 'Pudelek'
+    license: 'CC BY-SA 4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Ksamil,_Albania_(by_Pudelek).JPG'
+  - src: '/images/best-time-to-visit/theth-alps-view.webp'
+    author: 'Anna Ilieva-Alikaj'
+    license: 'CC BY-SA 4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Albanian_Alps_view,_Theth.jpg'
+  - src: '/images/best-time-to-visit/komani-lake-ferry.webp'
+    author: 'Tobias Klenze'
+    license: 'CC BY-SA 4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:2013-10-04_Lake_Koman,_Albania_-_Ferry_0765.jpg'
+  - src: '/images/best-time-to-visit/gjirokaster-old-town.webp'
+    author: 'Inkey'
+    license: 'CC BY-SA 3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Gjirokast%C3%ABr_Old_Town.jpg'
 affiliate:
   - partner: 'localrent'
     label: 'Compare car-rental prices'
@@ -34,9 +55,19 @@ The coast — Saranda, Ksamil, Himara, Dhermi, Vlorë — is warmest from **June
 
 The standout month is **September**. The sea has soaked up a whole summer of heat so it's at its most pleasant, yet the August crowds have thinned, prices ease, and the light turns golden. May and early June are lovely too, though the sea is still warming up. If sheer beach time is your priority, plan around the coast first and read our [Albanian Riviera route ideas](/routes/) to string the best stretches together. For getting between beach towns at your own pace, a hire car is hard to beat — see [how to rent a car in Albania](/car-rental/how-to-rent-a-car/).
 
+<figure class="figure">
+<img src="/images/best-time-to-visit/ksamil-beach.webp" alt="The turquoise water and small islands off the beach at Ksamil on the Albanian Riviera" width="1280" height="800" loading="lazy" decoding="async" />
+<figcaption>Ksamil on the southern Riviera. The sea is swimmable from roughly June to early October, warmest in July–August and most pleasant in September. <span class="figure__credit">Photo: Pudelek / Wikimedia Commons, CC BY-SA 4.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Ksamil,_Albania_(by_Pudelek).JPG</span></figcaption>
+</figure>
+
 ## The Albanian Alps and the Theth–Valbona trek
 
 The mountainous north runs on a completely different calendar. The classic **Theth–Valbona trek** is reliable from **mid-June to September**, with the broader season stretching from roughly **late May to October**. The catch is snow: it can linger on the **Valbona Pass into late May or even early June**, and how long it lasts **varies year to year**. If you're eyeing a May or early-June crossing, message guesthouses in Theth or Valbona before you commit — they'll tell you whether the pass is clear.
+
+<figure class="figure">
+<img src="/images/best-time-to-visit/theth-alps-view.webp" alt="A view across the Albanian Alps near Theth, with steep peaks and a green valley" width="1280" height="853" loading="lazy" decoding="async" />
+<figcaption>The Albanian Alps above Theth. The classic Theth–Valbona trek is reliable from mid-June to September, with snow lingering on the high pass into late spring. <span class="figure__credit">Photo: Anna Ilieva-Alikaj / Wikimedia Commons, CC BY-SA 4.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Albanian_Alps_view,_Theth.jpg</span></figcaption>
+</figure>
 
 In **winter the trek is effectively closed**. Snow blocks the high route, and most guesthouses shut for the season, so this is firmly a late-spring-to-autumn adventure.
 
@@ -47,6 +78,11 @@ Access matters too. The standard way into Valbona is the **Komani Lake ferry**, 
 The Komani Lake crossing is half the adventure and half a transport bottleneck, so it pays to understand how it works. The usual rhythm is a **morning sailing from Koman at around 09:00, reaching Fierzë at roughly 11:30**, with a **return departure from Fierzë around 13:00** (timings per the operator at komaniferry.com — confirm before you travel, as they adjust seasonally). From Fierzë a connecting minibus runs the final stretch toward Valbona. In **July and August** operators often lay on **extra sailings** to cope with demand; in the shoulder months a single daily boat is the norm, which makes missing it a genuine problem.
 
 Because the whole north depends on that one calendar, the practical planning window is narrower than the headline trek season. Aim to be on the lake **between late May and mid-October** and you'll have dependable boats, open guesthouses and staffed minibuses. Travel at the very edges — early April or late October — and you're betting on a service that may already be winding down.
+
+<figure class="figure">
+<img src="/images/best-time-to-visit/komani-lake-ferry.webp" alt="The passenger ferry crossing Lake Koman through steep gorges in northern Albania" width="1280" height="853" loading="lazy" decoding="async" />
+<figcaption>The Komani Lake ferry, the gateway to Valbona, runs roughly 10 April to 2 November — confirm the current operator dates before you plan around it. <span class="figure__credit">Photo: Tobias Klenze / Wikimedia Commons, CC BY-SA 4.0; sourceUrl: https://commons.wikimedia.org/wiki/File:2013-10-04_Lake_Koman,_Albania_-_Ferry_0765.jpg</span></figcaption>
+</figure>
 
 The snow line is the other variable that no calendar can pin down. The **Valbona Pass (Qafa e Valbonës)**, the high col linking Valbona and Theth, can stay under snow **into late May and occasionally early June**, and the melt date **swings year to year** with the winter's snowfall. Early-season hikers regularly find the pass passable on foot while patches of old snow still cling to the shaded north face — manageable with care, but not something to assume. The single most reliable source is the people who live there: **message a guesthouse in Theth or Valbona a week or two ahead** and ask directly whether the pass is clear and the ferry running. Their answer beats any general guide, this one included.
 
@@ -63,6 +99,11 @@ Through **July and August** the coast hits its loud, hot, expensive peak while t
 Albania's event calendar clusters in the warm months, which can be a reason to come or a crowd to dodge. Two long-running fixtures are worth knowing about. The **Gjirokastër National Folklore Festival**, held in the UNESCO-listed hilltop town's castle, is a major showcase of traditional music and costume, though it runs on a multi-year cycle rather than every summer — check whether an edition falls in your year. Tirana and the larger coastal towns also host summer music and cultural events that animate the **July–August** high season, particularly along the Riviera around **Dhërmi and Shëngjin**, where beach-club and festival energy peaks.
 
 Treat specific dates with caution: line-ups and timings are confirmed close to the event and shift year to year, so verify the current programme with official tourism channels before planning a trip around any single festival. If festival crowds are not your goal, the **shoulder months** sidestep them almost entirely while keeping the good weather.
+
+<figure class="figure">
+<img src="/images/best-time-to-visit/gjirokaster-old-town.webp" alt="The stone houses and slate roofs of the old town of Gjirokastër, a UNESCO World Heritage site" width="1280" height="853" loading="lazy" decoding="async" />
+<figcaption>Gjirokastër's UNESCO-listed old town, home to the long-running National Folklore Festival — held on a multi-year cycle, so check whether an edition falls in your year. <span class="figure__credit">Photo: Inkey / Wikimedia Commons, CC BY-SA 3.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Gjirokast%C3%ABr_Old_Town.jpg</span></figcaption>
+</figure>
 
 ## Why the shoulder seasons win
 

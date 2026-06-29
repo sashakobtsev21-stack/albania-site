@@ -16,6 +16,27 @@ sources:
   - 'qkb.gov.al'
   - 'tatime.gov.al'
   - 'punetejashtme.gov.al'
+photoSources:
+  - src: '/images/digital-nomad-visa/cover.webp'
+    author: 'Justin W Flory'
+    license: 'CC BY-SA 3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/Category:Tirana'
+  - src: '/images/digital-nomad-visa/skanderbeg-square.webp'
+    author: 'Pudelek'
+    license: 'CC BY-SA 4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Tirana_-_Skanderbeg_Square_(Sheshi_Sk%C3%ABnderbej)_-_by_Pudelek.jpg'
+  - src: '/images/digital-nomad-visa/blloku-neighborhood.webp'
+    author: 'Leeturtle'
+    license: 'CC BY-SA 4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Ish-Blloku_neighborhood_in_Tirana,_Albania.jpg'
+  - src: '/images/digital-nomad-visa/pyramid-of-tirana.webp'
+    author: 'BBB2021'
+    license: 'CC BY-SA 4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Pyramid_of_Tirana_October_2023.jpg'
+  - src: '/images/digital-nomad-visa/saranda-waterfront.webp'
+    author: 'Sharon Hahn Darlin'
+    license: 'CC BY 2.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Sarand%C3%AB,_Albania_2022-11_-_Boats_at_dock.jpg'
 affiliate:
   - partner: 'safetywing'
     label: 'Health insurance for nomads'
@@ -37,6 +58,11 @@ The Digital Nomad / Digital Mobile Worker category exists for people who earn th
 
 If your income comes from inside Albania, this is not the right route — you would be looking at an ordinary work permit instead.
 
+<figure class="figure">
+<img src="/images/digital-nomad-visa/skanderbeg-square.webp" alt="Skanderbeg Square in central Tirana, the hub of the Albanian capital" width="1280" height="771" loading="lazy" decoding="async" />
+<figcaption>Tirana is where most remote workers base themselves — affordable, walkable and increasingly geared to a foreign crowd on the Unique Permit. <span class="figure__credit">Photo: Pudelek / Wikimedia Commons, CC BY-SA 4.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Tirana_-_Skanderbeg_Square_(Sheshi_Sk%C3%ABnderbej)_-_by_Pudelek.jpg</span></figcaption>
+</figure>
+
 ## Who qualifies and what you need
 
 The exact paperwork is confirmed during the application, but the **categories of requirement** are stable and worth preparing in advance:
@@ -57,11 +83,21 @@ The process has two stages:
 
 Because the system is digital-first, most of the legwork happens before you ever stand in a queue. If you are still working out the entry side of things — visa-free stays, allowed durations and so on — read our [Albania visa overview](/planning/albania-visa/) first, since the Unique Permit is about *staying* rather than *entering*.
 
+<figure class="figure">
+<img src="/images/digital-nomad-visa/blloku-neighborhood.webp" alt="A street in the Blloku neighbourhood of Tirana, lined with cafés and bars" width="1280" height="958" loading="lazy" decoding="async" />
+<figcaption>Blloku, once closed to ordinary Albanians, is now Tirana's café-and-coworking district — the natural base for a remote worker settling in. <span class="figure__credit">Photo: Leeturtle / Wikimedia Commons, CC BY-SA 4.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Ish-Blloku_neighborhood_in_Tirana,_Albania.jpg</span></figcaption>
+</figure>
+
 ## The easy self-employment route: registering as a sole trader
 
 One reason Albania is attractive to freelancers is that becoming legally self-employed is genuinely simple. You register as a **"Person Fizik"** (sole trader / physical person in business) **online via e-Albania**, and the application is processed by the **National Business Center (QKB)**. Registration is generally **free** and often completed in roughly **one to two business days**.
 
 When you register, you are issued a **NIPT / NUIS** (your tax identification number), and you are **automatically enrolled with the tax administration** — there is no separate trip to a tax office to get on the books. There is one more step many people miss: after registration you must complete **"Fiskalizimi"**, Albania's mandatory **e-invoicing** setup, before you start issuing invoices. Budget a little time for that.
+
+<figure class="figure">
+<img src="/images/digital-nomad-visa/pyramid-of-tirana.webp" alt="The renovated Pyramid of Tirana, a concrete landmark turned tech and education hub" width="1120" height="840" loading="lazy" decoding="async" />
+<figcaption>The Pyramid of Tirana, reborn as a tech-and-education centre — a fitting symbol of the city's pitch to remote workers and startups. <span class="figure__credit">Photo: BBB2021 / Wikimedia Commons, CC BY-SA 4.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Pyramid_of_Tirana_October_2023.jpg</span></figcaption>
+</figure>
 
 ## Tax: verify, don't guess
 
@@ -72,5 +108,10 @@ Here is why: the **rates and thresholds are actively changing** and genuinely di
 ## Bottom line
 
 For a remote worker, "Albania digital nomad visa" really means the **Unique Permit in the Digital Nomad category** — one biometric card for work and residence, applied for online and finalised with a biometric appointment. Freelancers can additionally register as a sole trader through QKB in a day or two, almost for free, and then handle Fiskalizimi. Keep the income, insurance and tax numbers in the "verify with the official source" column, and you will avoid most of the bad advice floating around.
+
+<figure class="figure">
+<img src="/images/digital-nomad-visa/saranda-waterfront.webp" alt="Boats moored along the waterfront at Sarandë on the southern Albanian coast" width="1280" height="960" loading="lazy" decoding="async" />
+<figcaption>Many nomads split their time between Tirana and the coast — Sarandë and the southern Riviera are an easy seasonal base once the permit is sorted. <span class="figure__credit">Photo: Sharon Hahn Darlin / Wikimedia Commons, CC BY 2.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Sarand%C3%AB,_Albania_2022-11_-_Boats_at_dock.jpg</span></figcaption>
+</figure>
 
 For the wider picture on moving here — housing, banking and settling in — start from our [relocation hub](/relocation/), and pair this with the [Albania visa overview](/planning/albania-visa/) so the entry and residence pieces fit together.

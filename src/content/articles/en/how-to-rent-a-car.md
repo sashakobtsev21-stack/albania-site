@@ -13,6 +13,27 @@ cover:
 coverCredit: 'Photo: godo godaj / Wikimedia Commons, CC BY 2.0'
 sources:
   - 'lonelyplanet.com'
+photoSources:
+  - src: '/images/how-to-rent-a-car/cover.webp'
+    author: 'godo godaj'
+    license: 'CC BY 2.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Llogara.jpg'
+  - src: '/images/how-to-rent-a-car/llogara-viewpoint.webp'
+    author: 'Albinfo'
+    license: 'CC BY-SA 4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Llogara_Viewing_platform_from_above.JPG'
+  - src: '/images/how-to-rent-a-car/coastal-road-sh8-1.webp'
+    author: 'Krzysztof Dudzik (User:ToSter)'
+    license: 'CC BY-SA 3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Albania,_road_SH8_Sarande-Vlore_1.jpg'
+  - src: '/images/how-to-rent-a-car/coastal-road-sh8-5.webp'
+    author: 'Krzysztof Dudzik (User:ToSter)'
+    license: 'CC BY-SA 3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Albania,_road_SH8_Sarande-Vlore_5.jpg'
+  - src: '/images/how-to-rent-a-car/valbona-mountain-road.webp'
+    author: 'Alexkom000'
+    license: 'CC BY 4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:2024-10-14_Valbona_Valley_6.jpg'
 affiliate:
   - partner: 'trip-carhire'
     label: 'Compare car rental in Albania'
@@ -30,6 +51,11 @@ Albania has effectively no passenger rail network to speak of, so the backbone o
 
 The picture changes the moment you leave those corridors. Albania's intercity workhorse is the *furgon*, a shared minibus that runs without a fixed timetable: it leaves when it fills up, not when a clock says so. That's workable between towns, but for the dispersed villages of the Riviera or the trailheads in the Albanian Alps, furgon connections thin out or vanish. A car — or a hired private driver — turns a half-day logistical puzzle into a simple drive. This is exactly the case for trips like the ones in our [routes](/routes/) section, where the best stops rarely line up with a bus stop.
 
+<figure class="figure">
+<img src="/images/how-to-rent-a-car/llogara-viewpoint.webp" alt="The view from the Llogara Pass viewing platform down to the Albanian Riviera coast" width="1280" height="851" loading="lazy" decoding="async" />
+<figcaption>The Llogara Pass, the dramatic gateway to the Riviera. Reaching viewpoints like this on your own schedule is the case for a hire car. <span class="figure__credit">Photo: Albinfo / Wikimedia Commons, CC BY-SA 4.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Llogara_Viewing_platform_from_above.JPG</span></figcaption>
+</figure>
+
 ## Where to pick up a car
 
 The main pickup point is **Tirana International Airport (TIA)**, where most international and local rental desks cluster and where you'll find the widest choice of vehicles. It's the natural choice if you're flying in and starting your trip from the capital.
@@ -40,6 +66,11 @@ Two other pickups are worth knowing:
 - **Sarande** — useful in the deep south, near the Riviera and the Greek border crossing, so you can start exploring the coast without first backtracking to Tirana.
 
 Picking up where you actually begin your trip saves both time and one-way fees. If you plan to drive the Riviera and the south, collecting a car in Sarande can make more sense than driving all the way down from Tirana and back.
+
+<figure class="figure">
+<img src="/images/how-to-rent-a-car/coastal-road-sh8-1.webp" alt="The SH8 coastal highway curving along the cliffs of the Albanian Riviera" width="1280" height="960" loading="lazy" decoding="async" />
+<figcaption>The SH8 between Sarandë and Vlorë hugs the coast for the length of the Riviera — one of the country's great drives, and the reason many travellers pick up in the south. <span class="figure__credit">Photo: Krzysztof Dudzik (User:ToSter) / Wikimedia Commons, CC BY-SA 3.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Albania,_road_SH8_Sarande-Vlore_1.jpg</span></figcaption>
+</figure>
 
 ## Paperwork: licence and the IDP question
 
@@ -53,12 +84,22 @@ You'll also typically need a credit card in the main driver's name for the secur
 
 Once you're on the road, drive defensively and give yourself margin. A few general points worth keeping in mind:
 
+<figure class="figure">
+<img src="/images/how-to-rent-a-car/valbona-mountain-road.webp" alt="A rough mountain road running through the Valbona Valley in the northern Albanian Alps" width="1280" height="853" loading="lazy" decoding="async" />
+<figcaption>The approach to Valbona in the north. Mountain roads to villages like this are narrow and surfaces change without warning — drive with margin and plan them for daylight. <span class="figure__credit">Photo: Alexkom000 / Wikimedia Commons, CC BY 4.0; sourceUrl: https://commons.wikimedia.org/wiki/File:2024-10-14_Valbona_Valley_6.jpg</span></figcaption>
+</figure>
+
 - **Mountain and rural roads** can be narrow, winding and unfenced, with surfaces that change without warning. Slow down for blind bends, and don't assume a paved start means a paved finish — the road up to villages like Theth has long been a test of patience and tyres.
 - **Mixed traffic** is normal: expect to share the asphalt with slower vehicles, the occasional animal, and pedestrians on roads without verges. Anticipate rather than react.
 - **Fuel up before remote stretches.** Petrol stations are common in towns and along main routes, but they thin out badly in the mountains and on the quieter coast. Fill the tank before a long rural leg rather than gambling on finding the next station.
 - **Daylight helps.** Unlit roads, livestock and unexpected potholes are all easier to handle in the light, so plan the remote legs of your trip for daytime where you can.
 
 If self-driving a mountain road doesn't appeal, hiring a private driver for a day or two is a well-worn alternative — you still reach the remote spots, without taking the wheel yourself.
+
+<figure class="figure">
+<img src="/images/how-to-rent-a-car/coastal-road-sh8-5.webp" alt="A bend on the SH8 coastal road with the sea and Riviera hills beyond" width="1280" height="960" loading="lazy" decoding="async" />
+<figcaption>Even the main coastal route demands attention: blind bends, mixed traffic and changing surfaces are normal. Anticipate rather than react. <span class="figure__credit">Photo: Krzysztof Dudzik (User:ToSter) / Wikimedia Commons, CC BY-SA 3.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Albania,_road_SH8_Sarande-Vlore_5.jpg</span></figcaption>
+</figure>
 
 ## Plan around the car
 
