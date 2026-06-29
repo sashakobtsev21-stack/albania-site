@@ -156,6 +156,8 @@ export interface UIDictionary {
     /** Короткая видимая подпись кнопки-меню на десктопе («Menu»). */
     menuShort: string;
     primaryNav: string;
+    /** aria-label выпадающего меню разделов (отдельно от primaryNav — иначе два nav с одним именем). */
+    menuNav: string;
   };
   /** Переключатель языка (§12). */
   lang: {
@@ -350,6 +352,10 @@ export interface UIDictionary {
   gallery: {
     /** Заголовок секции «Фотографии». */
     heading: string;
+    /** Осмысленное имя диалога-лайтбокса (НЕ действие «Закрыть»). */
+    dialogName: string;
+    /** Глагол для aria-label кнопки-фото галереи («Открыть фото»). */
+    open: string;
     /** aria-label кнопки закрытия оверлея. */
     close: string;
     /** aria-label кнопки «предыдущее фото». */

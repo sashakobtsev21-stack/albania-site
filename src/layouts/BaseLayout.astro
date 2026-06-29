@@ -149,7 +149,7 @@ const siteLd = {
 
     <title>{headTitle}</title>
     <meta name="description" content={description} />
-    {(noindex || utility) && <meta name="robots" content="noindex, nofollow" />}
+    {(noindex || utility) && <meta name="robots" content="noindex, follow" />}
     {
       /* Self-canonical есть всегда (кроме utility). hreflang НЕ эмитим на noindex-хабах:
         noindex-страница не должна быть зеркалом hreflang (смешанный сигнал, аудит 2026-06-22). */

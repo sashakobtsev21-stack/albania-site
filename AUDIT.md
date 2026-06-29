@@ -8,6 +8,9 @@
 2026-06-21/22) с классификацией находок и статусом. Read-only диагностика → фиксы отдельно.
 Снимок — [HANDOFF.md](HANDOFF.md), роадмап — [ROADMAP.md](ROADMAP.md).
 
+## Обновление 2026-06-30 (a11y-серия с движка) — закрыто
+Портирована a11y-серия с эталонного движка Грузии (коммит `gruzia 284cb30`), **11 пунктов**: разные `aria-label` у двух `<nav>` (4.1.2); уникальные `id` заголовков gallery/visit/related/toc (нет коллизий `aria-labelledby`); контраст стрелок витрины `.scard__nav` (1.4.11); имя диалога-лайтбокса «Photo viewer» вместо «Close» (4.1.2); Esc-закрытие popover + возврат фокуса; `aria-label` на `.gallery__item`; фокус-кольцо-пилюля `.cmap__btn`/`.hero__credit`; видимый skip-link (бренд-токены лазурь); тач-таргет `.chip` ≥44px @≤600px; noindex `nofollow→follow`; резерв витрины 198→188px. **Пропущено:** тач-таргет переключателя языка (EN-only, switcher не рендерит). `npm run qa`=GO, `test:links`=OK; `qa:responsive` NO-GO — предсуществующий table-overflow (visa/car-rental), не из серии. Детали — `PROGRESS.md`/`ROADMAP-FIX.md`.
+
 ## Обновление 2026-06-22 (Этап 1) — закрыто
 `npm run qa` → **GO** (24 битых forward-ссылки → условный рендер); `addressCountry GE→AL`;
 stackdump удалён + в .gitignore; 15 мёртвых TODO-маркеров убраны; `/news` локализован;

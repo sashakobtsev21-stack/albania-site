@@ -6,6 +6,22 @@
 ## ✅ Закрыто на Этапе 1 / по `/full-audit` (2026-06-22): 15 пунктов
 Свёрнуто (детали — в `AUDIT.md`): qa=GO (битые forward-ссылки → условный рендер); `addressCountry GE→AL`; удалён stackdump + gitignore; снято 15 мёртвых TODO-фото; `/go/` rel+?c= (гейт check-links) + убран инлайн safetywing; `offline.html` Georgia→Albania + noindex; тонкие/пустые хабы `noindex={!hasContent}`; «Фото:»→«Photo:»; зачищены грузинские хвосты (CSS `.eda→.food`, комментарии); twitter:image:alt / ga defer / Cache-Control / security-заголовки /go/; `/news` SKILL локализован; стандарты+дисциплина в CLAUDE/CONTENT_GUIDE; SPEC §7/§11/§25 + 11 EN-категорий; доки синхронизированы.
 
+## ✅ a11y-серия портирована с движка (gruzia 284cb30), 2026-06-30: 11 пунктов
+Движок общий с эталоном Грузии — те же a11y-баги; портирован точный эквивалент коммита `284cb30`. Токены/i18n — этого репо (EN-only, бренд-лазурь):
+- [x] **1. Два `<nav>` с одним `aria-label`** → выпадающее меню разделов (`#primary-nav`) = `header.menuNav` («All sections»); `.nav-inline` остаётся `primaryNav` (`Header.astro`, `en.ts`, `types.ts`).
+- [x] **2. Коллизии static `id`** (`gallery`/`visit`/`related`/`toc-heading`) → уникальный `-${random36}` в `id`+`aria-labelledby` (PhotoGallery/VisitInfo/RelatedPosts/TOC).
+- [x] **3. WCAG 1.4.11 контраст `.scard__nav`** (ShowcaseRail): фон slate 42%→60% + белая обводка пилюли 40%, hover 66%→78%.
+- [x] **4. WCAG 4.1.2 имя лайтбокса** = `gallery.dialogName` («Photo viewer») → `data-dialog-name` (PhotoGallery/RestaurantCard/ShowcaseRail) → `aria-label` оверлея в `lightbox.js` (был `close`).
+- [x] **5. Esc-закрытие popover** в `showcase-rail.js` + возврат фокуса на ссылку-заголовок карточки.
+- [x] **6. `aria-label` на `.gallery__item`** (PhotoGallery): `gallery.open` («Open photo») + alt/номер.
+- [x] **7. Фокус-кольцо-пилюля** `:focus-visible{border-radius:var(--radius-pill)}` на `.cmap__btn` (CatalogMap) и `.hero__credit` (HomePage).
+- [x] **8. Skip-link видимый при фокусе** — пилюля бренд-токенами этого репо (`--color-wine` лазурь / `--text-on-wine` / `--radius-card` / `--shadow-raised`), `position:fixed` + z-index (global.css). Без хардкода грузинских цветов.
+- [x] **9. Тач-таргеты <44px**: чипы директории еды `.chip` `min-height:44px` @≤600px (EdaDirectory). Под-пункт «переключатель языка» — **ПРОПУЩЕН** (сайт EN-only, LangSwitcher ничего не рендерит — нет switcher).
+- [x] **10. noindex**: код синхронизирован с JSDoc → `noindex, follow` (был `noindex, nofollow`) в BaseLayout.
+- [x] **11. Резерв полосы под витриной** `198px`→`188px` (ShowcaseRail) — структура та же.
+
+qa=GO + test:links=GO. qa:responsive — 6 переполнений на visa/car-rental предсуществующие (широкие `<table>` в md-контенте, подтверждено на чистом дереве до правок), к a11y-серии не относятся.
+
 ## 🟠 High — техническое (можно без владельца)
 - [ ] **Адаптивные обложки (srcset) мертвы в проде:** `cover-variants.json={}`, `build:covers` не в `npm run build` → мобайл качает полноразмерные cover/hero (код-причина perf главной <90). Включить генерацию в пайплайн (закоммитить непустой манифест + прогон pre-commit, т.к. Cloudflare-сборка без sharp упадёт) ИЛИ добавить hero в генератор + `srcset/sizes`. Добавить в `qa.mjs` проверку «у каждого cover.src есть запись в манифесте».
 - [ ] **Латентная коллизия маршрутов `food`/`cities`:** `[category]/[slug].astro` строит пути для категорий `food`/`cities` без whitelist → пересечётся с `food/[city].astro` и хабом `/cities/` при наполнении. Развести namespace ДО публикации food/cities-контента (URL не менять, правило 3): исключить эти категории из `[category]/[slug]` + завести явные маршруты (`cities/[slug]` через CityGuidePage). Покрыть тестом (check-ia).
