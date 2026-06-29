@@ -73,7 +73,7 @@ For a normal holiday, a standard travel-insurance policy is the right tool. The 
 <figcaption>Valbona, deep in the north. Remote trailheads like this are hours from a major hospital — evacuation cover is the part of a policy that matters most here. <span class="figure__credit">Photo: Alexkom000 / Wikimedia Commons, CC BY 4.0; sourceUrl: https://commons.wikimedia.org/wiki/File:2024-10-14_Valbona_Valley_6.jpg</span></figcaption>
 </figure>
 
-Beyond the core, most travellers also want trip cancellation, lost or delayed baggage, and theft cover. Do not treat any specific coverage amount you see quoted online as a legal requirement — there is no official minimum for tourists, and figures vary by insurer.
+Beyond the core, most travellers also want trip cancellation, lost or delayed baggage, and theft cover. Do not treat any specific coverage amount you see quoted online as a legal requirement — there is no official minimum for tourists, and figures vary by insurer. For a closer look at the cover lines, activity exclusions and rough costs, see our fuller [Albania travel insurance guide](/insurance/albania-travel-insurance/).
 
 A couple of practical points. Buy your policy **before you enter** the country: many policies will not cover incidents that began before the start date, and some have a short waiting period before certain benefits apply. And keep a digital copy of your policy number and the insurer's emergency line on your phone.
 

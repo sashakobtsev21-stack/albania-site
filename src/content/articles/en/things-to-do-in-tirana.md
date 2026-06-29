@@ -135,7 +135,7 @@ Most visitors base themselves within walking distance of Skanderbeg Square, and 
 - **Blloku.** Once the sealed-off quarter reserved for the communist elite, now the city’s buzziest district — packed with cafés, cocktail bars and restaurants. The best base if you want to be in the middle of the going-out scene; see our guide to [Tirana nightlife](/entertainment/tirana-nightlife/) for where to drink and dance.
 - **Pazari i Ri / New Bazaar.** A characterful pocket around the market, strong on places to eat and a short walk from the centre.
 
-Rates swing with the season, so it pays to compare a few options for your dates rather than booking the first result.
+Rates swing with the season, so it pays to compare a few options for your dates rather than booking the first result. For how the capital stacks up against the coast and the old towns when you are planning a whole trip, see our [where to stay in Albania](/planning/where-to-stay-in-albania/) overview.
 
 ## How to get from the airport to the city centre
 

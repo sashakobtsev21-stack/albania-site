@@ -103,6 +103,6 @@ If self-driving a mountain road doesn't appeal, hiring a private driver for a da
 
 ## Plan around the car
 
-A rental car shapes how — and when — you travel. The condition of the high mountain roads is seasonal, and the Riviera is busiest (and the driving slowest) at the height of summer, so it pays to line up your trip with the [best time to visit Albania](/planning/best-time-to-visit/). It's also worth thinking about cover for the journey: see whether you [need travel insurance](/insurance/) for the trip, separate from any product offered at the rental desk.
+A rental car shapes how — and when — you travel. The condition of the high mountain roads is seasonal, and the Riviera is busiest (and the driving slowest) at the height of summer, so it pays to line up your trip with the [best time to visit Albania](/planning/best-time-to-visit/). It's also worth thinking about cover for the journey: our [Albania travel insurance guide](/insurance/albania-travel-insurance/) explains how a travel policy fits alongside the rental excess and CDW you are offered at the desk, so you do not double-pay or leave a gap.
 
 Used well, a car is the difference between seeing the headline towns and actually reaching the Albania most visitors picture — the alpine valleys and the half-hidden coves. Sort the licence and IDP question early, pick the car up where your trip really starts, drive with a margin, and the rest of the country opens up.

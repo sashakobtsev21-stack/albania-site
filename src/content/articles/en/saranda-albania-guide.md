@@ -124,7 +124,7 @@ Most visitors base themselves along or just behind the seafront, and for a short
 - **The upper town and hillside.** A short climb back from the water buys quieter nights and bigger views over the bay — good if you have a car or don't mind the slopes.
 - **Ksamil.** If beaches are your whole reason for coming, staying in Ksamil itself puts you on the best sand, with Saranda a short bus ride away for supplies and dinner.
 
-Rates swing hard with the season — high summer is far dearer than spring or autumn — so it pays to compare a few options for your exact dates rather than booking the first result.
+Rates swing hard with the season — high summer is far dearer than spring or autumn — so it pays to compare a few options for your exact dates rather than booking the first result. If Saranda is one stop on a longer trip, our [where to stay in Albania](/planning/where-to-stay-in-albania/) guide shows how it fits against Tirana, Ksamil and the inland towns.
 
 ## How to get to Saranda
 

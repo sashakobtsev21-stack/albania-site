@@ -23,6 +23,14 @@
 - **Достоверность:** дата украинской схемы смягчена («currently reported as until 30 March 2027»); `albanian-riviera` — SH8 «rebuilt in 2009» → «in the late 2000s» (точная дата без источника); `gjirokaster-albania-guide` — publishedAt/updatedAt 2026-07-31 → 2026-06-23 (была будущая дата). Гейты build/check/test/links/lint — зелёные.
 
 ## Лог (новые записи сверху)
+
+### 2026-06-30 — CONTENT: де-сиротинг вечнозелёных статей (входящие ссылки) + кросс-сайтовая перелинковка в доках
+- **Проблема:** две вечнозелёные статьи были орфанами (0 входящих редакционных ссылок, проверено grep'ом — только само-референсы slug/фото): `albania-travel-insurance` (insurance) и `where-to-stay-in-albania` (planning). Новости не трогались.
+- **Фикс (по 2 входящие на орфан, контекстные, в естественных предложениях):**
+  - `albania-travel-insurance` ← (1) `do-you-need-insurance` (раздел «What a good policy should cover» — ссылка на полный гайд с линиями покрытия/исключениями/ценами; пара взаимна, статья уже ссылалась обратно); (2) `how-to-rent-a-car` (раздел «Plan around the car» — заменён общий линк на хаб `/insurance/` точечной ссылкой про travel policy vs rental excess/CDW).
+  - `where-to-stay-in-albania` ← (1) `saranda-albania-guide` (раздел «Where to stay in Saranda»); (2) `things-to-do-in-tirana` (раздел «Where to stay»). Обе — как «город в контексте трипа по всей стране».
+- **Доки:** в `CLAUDE.md` добавлена заметка про кросс-сайтовую перелинковку (ссылка на хаб `docs/STANDARDS.md` §«Перелинковка»: контекстно, цель резолвится 200, `rehypeExternalLinks` авто-навешивает `rel="nofollow noopener noreferrer"`, без футер-ферм). Внутренняя перелинковка — уже в DoD, не дублируется.
+- **Гейты:** `npm run test:links` = **OK** (2565 внутр. ссылок, битых 0); `npm run qa` = **GO ✅** (критических 0 · средних 0 · минорных 62 — пре-существующие decorative-alt). Коммит `content(albania): de-orphan evergreen articles (inbound links) + document cross-site interlinking`.
 ### 2026-06-30 — FIX (B1): адаптивные контентные таблицы + перенос длинных URL-кредитов (mobile overflow)
 - **Проблема:** `qa:responsive` — NO-GO, 6 переполнений на `/planning/albania-visa/` и `/car-rental/how-to-rent-a-car/` (@320 +239/+244, @360 +199/+204, @414 +145/+150), предсуществующие.
 - **Диагностика (Playwright-зонд на dist@320):** ДВЕ причины, не одна. (а) широкие md-`<table>` в `.prose` (4 колонки, intrinsic ~317px при prose 288px) — таблица переливала; (б) доминирующая причина document-overflow (docScrollW 559 при clientW 320) — **длинный неразрывный URL-кредит фото** в `figure__credit`/`figcaption` (`sourceUrl: https://commons.wikimedia.org/wiki/File:Tirana_-_Skanderbeg_Square_(Sheshi_Sk%C3%ABnderbej)_-_by_Pudelek.jpg`, ~543px), который тянул `.prose → container → article → main` за вьюпорт. Таблица одна, фигурный кредит — главный виновник.
