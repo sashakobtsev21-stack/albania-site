@@ -23,6 +23,14 @@
 - **Достоверность:** дата украинской схемы смягчена («currently reported as until 30 March 2027»); `albanian-riviera` — SH8 «rebuilt in 2009» → «in the late 2000s» (точная дата без источника); `gjirokaster-albania-guide` — publishedAt/updatedAt 2026-07-31 → 2026-06-23 (была будущая дата). Гейты build/check/test/links/lint — зелёные.
 
 ## Лог (новые записи сверху)
+### 2026-06-30 — PLAN: темп доведён до ровно 3 статьи/будний день на весь июль (01–31.07)
+- **Только планирование** (статьи не писались). Проверены все будни 01–31.07: каждый должен иметь ровно 3 неопубликованных слота `[Статья]`/`[Маршрут]`. 19 будней уже были = 3; 4 дня с опубликованной статьёй (01.07, 08.07, 10.07, 31.07 — по 1 ✅) имели только 2 неопубликованных → добраны 4 новыми коммерческими decision-stage темами до 3:
+  1. **Ср 01.07** — Tirana to Vlora: Bus, Furgon, Car & Travel Times (`/tirana-to-vlora/`, transport, A→B, 💰 trip-transfers/trip-carhire).
+  2. **Ср 08.07** — Ksamil vs Saranda: Which Beach Base Should You Pick? (`/ksamil-vs-saranda/`, planning, сравнение X vs Y, 💰 trip-hotels).
+  3. **Пт 10.07** — Where to Stay in Ksamil: Best Beachfront Hotels & Areas (`/where-to-stay-in-ksamil/`, planning, where-to-stay, 💰 trip-hotels).
+  4. **Пт 31.07** — Where to Stay in Berat: Best Hotels in Mangalem & the Old Town (`/where-to-stay-in-berat/`, planning, where-to-stay, 💰 trip-hotels).
+- Слаги сверены: не совпадают ни с одной строкой KALENDAR.md, ни с файлами в `src/content/articles/en/`. Выходные (Сб=/news, Вс=2 маршрута) и 30.06 не тронуты. Валидатор: каждый будень 01–31.07 = ровно 3 неопубликованных слота.
+
 ### 2026-06-30 — PUBLISH: 3 транспорт-статьи на Вт 30.06 (transport-routes, 💰)
 - **Опубликованы 3 статьи** (`draft:false`, category `transport` — в плане стояло `articles`, но enum `content.config.ts` его не содержит → реальная категория `transport`, URL `/transport/<slug>/`), слот Вт 30.06, коммерция-first транспорт/въезд:
   1. **Saranda to Corfu Ferry: Timetable, Tickets & How to Book** — `/transport/saranda-corfu-ferry/`, ~1590 слов, 6 фото, кластер [head]. Fast boat ~30 мин / car ferry 50-70 мин; fare €25-40 (lead-in €20-24, car deck от €45); операторы Finikas/Ionian Seaways/Albania Luxury Ferries; летнее расписание; booking Ferryhopper/операторы/кассы на набережной; паспортный контроль обе стороны + EES fully operational 10.04.2026 + 90/180; разница во времени +1ч (Корфу); day trip. 💰 trip-tours. (Joy Lines из брифа НЕ подтверждён источниками — не упомянут.)
