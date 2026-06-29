@@ -1,10 +1,10 @@
 # HANDOFF — Albania Guidebook
 > Снимок для возобновления (обновляется после каждой доработки). Подробная история — `PROGRESS.md`; план — `ROADMAP.md`/`KALENDAR.md`; аудит — `AUDIT.md`.
 
-**Дата:** 2026-06-29 · **Фаза:** R4 наполнение · **Статей:** ~22 (цель ~80) · **Сайт:** live (`albaniaguidebook.com`) · **Язык:** en (EN-only) · **Последний коммит:** `publish(albania): 3 transport articles (how-to-get-around, airport transfers, Tirana–Saranda) — 29.06 slot`
+**Дата:** 2026-06-30 · **Фаза:** R4 наполнение · **Статей:** ~25 (цель ~80) · **Сайт:** live (`albaniaguidebook.com`) · **Язык:** en (EN-only) · **Последний коммит:** `publish(albania): Tirana to Berat — bus, furgon, car & day trip options (en)`
 
 ## Где остановились
-- Контент: последние опубликованные — **3 транспорт-статьи на слот 29.06** (transport-routes [head], коммерция-first): «How to Get Around Albania» (`/transport/how-to-get-around-albania/`), «Tirana Airport to City Centre» (`/transport/tirana-airport-transfers/`), «Tirana to Saranda» (`/transport/tirana-to-saranda/`) — все факты диапазонами из источников 2026 (GjirafaTravel/офиц. airport/Koman ferry/Ferryhopper) + «check current», 16 фото CC/PD, fact-checker+content-editor пройдены, qa=GO. Перед ними — «Albania Travel Insurance Guide» и «Where to Stay in Albania». Полный лог — `PROGRESS.md`.
+- Контент: последние опубликованные — **3 транспорт-статьи на слот 30.06** (transport-routes, коммерция-first): «Saranda to Corfu Ferry» (`/transport/saranda-corfu-ferry/`, [head]), «How to Get to Albania» (`/transport/how-to-get-to-albania/`, [head]), «Tirana to Berat» (`/transport/tirana-to-berat/`, [mid]) — факты диапазонами из источников 2026 (Ferryhopper/GjirafaTravel/Wizz Air/EU EES/tirana-airport) + «checked June 2026» + «reconfirm», 16 фото CC/PD, qa=GO каждая, забанкованы по одной (commit+push). Категория плана `articles` не существует в enum → реально `transport`. Перед ними — слот 29.06 (how-to-get-around, airport transfers, Tirana–Saranda). Полный лог — `PROGRESS.md`.
 - Календарь вычищен: будущие даты = только `○` к написанию (выполненного на будущих датах нет); план до 03.08; темп 3/будний день; маршруты по Вс.
 - Сеть: доки выровнены (ядро 12/12, STRATEGY перенесён в docs/); дашборд `grafana/dashboard.html` актуален; `/work` публикует автономно при полной уверенности.
 
