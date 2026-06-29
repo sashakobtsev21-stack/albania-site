@@ -3,24 +3,8 @@
 Технический бэклог по итогам `AUDIT-2026-06-22.md`. Порядок = приоритет (сверху — важнее).
 Контент-наполнение и SEO-стратегия — НЕ здесь (поздние этапы, см. `ROADMAP.md`).
 
-## ✅ Сделано в Этапе 1 (2026-06-22)
-- [x] **qa = GO**: 24 битых forward-ссылки (food/city/insurance хабы → ненаписанные статьи) → условный рендер (рендерятся только при наличии цели). `check-links` 0 битых.
-- [x] **addressCountry `GE`→`AL`** в schema.org (ArticlePage/CityFoodPage/EdaDirectory).
-- [x] Удалён `bash.exe.stackdump`; `*.stackdump` в `.gitignore`.
-- [x] Убраны 15 мёртвых маркеров `<!-- TODO: фото -->` из статей.
-- [x] `/news` SKILL.md локализован под Албанию (источники, аэропорты, лек, города, виза).
-- [x] Стандарты публикации (объём/фото) + правило дисциплины (commit/push) — в `CLAUDE.md`/`CONTENT_GUIDE.md`.
-- [x] Доки синхронизированы с реальностью (README/ROADMAP/PROGRESS/HANDOFF/AUDIT/MEMORY).
-- [x] Проверено: `uk.ts` цел (паритет 38 ключей), коллекция `news` — это категория статьи (фантома нет).
-
-## ✅ Сделано по находкам `/full-audit` (2026-06-22, повторный прогон)
-- [x] 🔴 Инлайн `/go/safetywing` без rel/?c= (×3) → убран; **check-links гейтит** rel+?c= на всех `/go/`.
-- [x] 🟠 `public/offline.html` «Georgia Guidebook» → Albania + robots noindex,nofollow.
-- [x] 🟠 Тонкие/пустые хабы → `noindex={!hasContent}` (6 шаблонов) + hreflang не эмитим на noindex.
-- [x] 🟠 «Фото:» → «Photo:» в coverCredit 5 EN-статей.
-- [x] 🟡 Мёртвый CSS `.eda→.food`; остаточные грузинские комментарии (matsne→punetejashtme, Тбилиси→Тирана, Батуми→Саранда, палитра→азур).
-- [x] 🔵 twitter:image:alt; ga-init.js defer; /js/* Cache-Control; /go/-редирект со security-заголовками; guard жилья на пустой city-food.
-- [x] 📝 SPEC §7/§11 + CONTENT_GUIDE: список категорий приведён к 11 EN; §25 п.6 закрыт (ПРИНЯТО EN-слаги).
+## ✅ Закрыто на Этапе 1 / по `/full-audit` (2026-06-22): 15 пунктов
+Свёрнуто (детали — в `AUDIT.md`): qa=GO (битые forward-ссылки → условный рендер); `addressCountry GE→AL`; удалён stackdump + gitignore; снято 15 мёртвых TODO-фото; `/go/` rel+?c= (гейт check-links) + убран инлайн safetywing; `offline.html` Georgia→Albania + noindex; тонкие/пустые хабы `noindex={!hasContent}`; «Фото:»→«Photo:»; зачищены грузинские хвосты (CSS `.eda→.food`, комментарии); twitter:image:alt / ga defer / Cache-Control / security-заголовки /go/; `/news` SKILL локализован; стандарты+дисциплина в CLAUDE/CONTENT_GUIDE; SPEC §7/§11/§25 + 11 EN-категорий; доки синхронизированы.
 
 ## 🟠 High — техническое (можно без владельца)
 - [ ] **Адаптивные обложки (srcset) мертвы в проде:** `cover-variants.json={}`, `build:covers` не в `npm run build` → мобайл качает полноразмерные cover/hero (код-причина perf главной <90). Включить генерацию в пайплайн (закоммитить непустой манифест + прогон pre-commit, т.к. Cloudflare-сборка без sharp упадёт) ИЛИ добавить hero в генератор + `srcset/sizes`. Добавить в `qa.mjs` проверку «у каждого cover.src есть запись в манифесте».
