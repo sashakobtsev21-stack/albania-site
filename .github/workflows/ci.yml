@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   build:
-    name: check + build
+    name: qa gates (check · build · test · links · lint · dist audit)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,17 +25,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Type & content schema check
-        run: npm run check
-
-      - name: Content gates (enums · parity · photos · interlinks)
-        run: npm test
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Build
-        run: npm run build
-
-      - name: Link check (internal + /go/)
-        run: npm run test:links
+      # Единый гейт-оркестратор: внутри прогоняет check · build · test
+      # (enums·parity·photos·interlinks) · test:links · lint, затем аудит dist/
+      # (SEO/hreflang/schema/a11y/perf/security) и печатает GO/NO-GO.
+      # Выходит !=0 при критических находках → CI краснеет на регрессии.
+      - name: QA gates (qa.mjs — GO/NO-GO)
+        run: npm run qa

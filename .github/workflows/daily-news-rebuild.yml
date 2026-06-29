@@ -34,6 +34,24 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Гейты ПЕРЕД пушем: пустой коммит триггерит прод-сборку Cloudflare, поэтому
+      # сначала убеждаемся, что текущий main здоров (типы/схемы + контент-гейты) —
+      # авто-ребилд ленты не должен запускать деплой сломанного состояния.
+      - name: Type & content schema check
+        run: npm run check
+
+      - name: Content gates (enums · parity · photos · interlinks)
+        run: npm test
+
       - name: Push empty commit (triggers Cloudflare build)
         run: |
           git config user.name "github-actions[bot]"
