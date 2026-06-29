@@ -106,7 +106,7 @@ One thing to clear up: **there is no airport at Saranda**, and no Tirana–Saran
 
 ## The Corfu ferry shortcut
 
-There's a sideways option worth knowing if you're combining countries: fly into **Corfu in Greece**, then take the **ferry from Corfu to Saranda**, a 25-to-35-minute fast crossing (or over an hour on the car ferry) from roughly **EUR 10 and up, commonly around EUR 20–25 in summer**, each way. It's not a Tirana-origin route, but if cheap flights land you in Corfu, it can be the quickest way onto the Albanian Riviera — and it pairs neatly with a Greek-island add-on. The wider ferry picture is covered in [how to get around Albania](/transport/how-to-get-around-albania/).
+There's a sideways option worth knowing if you're combining countries: fly into **Corfu in Greece**, then take the **ferry from Corfu to Saranda**, a 25-to-35-minute fast crossing (or over an hour on the car ferry) from roughly **EUR 10 and up, commonly around EUR 20–25 in summer**, each way. It's not a Tirana-origin route, but if cheap flights land you in Corfu, it can be the quickest way onto the Albanian Riviera — and it pairs neatly with a Greek-island add-on. Full timetable, fares and booking are in the [Saranda to Corfu ferry guide](/transport/saranda-corfu-ferry/), and the wider ferry picture is covered in [how to get around Albania](/transport/how-to-get-around-albania/).
 
 ## So which should you take?
 
