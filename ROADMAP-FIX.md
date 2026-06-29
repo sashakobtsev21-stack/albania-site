@@ -20,7 +20,13 @@
 - [x] **10. noindex**: код синхронизирован с JSDoc → `noindex, follow` (был `noindex, nofollow`) в BaseLayout.
 - [x] **11. Резерв полосы под витриной** `198px`→`188px` (ShowcaseRail) — структура та же.
 
-qa=GO + test:links=GO. qa:responsive — 6 переполнений на visa/car-rental предсуществующие (широкие `<table>` в md-контенте, подтверждено на чистом дереве до правок), к a11y-серии не относятся.
+qa=GO + test:links=GO.
+
+## ✅ B1 — адаптивные контентные таблицы / переполнение мобайла (2026-06-30): закрыто
+Предсуществующие 6 переполнений qa:responsive на `/planning/albania-visa/` и `/car-rental/how-to-rent-a-car/` (@320/360/414) устранены. Диагностика показала ДВЕ причины (не только таблица):
+- **широкие md-`<table>`** в `.prose` → `.prose table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}` (горизонтальный скролл вместо перелива);
+- **длинные URL-кредиты фото** (`figure__credit`/`figcaption` с `sourceUrl: https://commons.wikimedia.org/wiki/File:…` — неразрывное «слово» ~543px) → `.prose figcaption,.prose .figure__credit,.cover__credit{overflow-wrap:anywhere;word-break:break-word}`.
+Обе правки в `src/styles/global.css` (движок общий). Итог: **qa:responsive = GO — 0 переполнений** на 8 шаблонах × 5 ширин (было NO-GO на 6 комбинациях). qa=GO (ВЕРДИКТ), test:links=GO.
 
 ## 🟠 High — техническое (можно без владельца)
 - [ ] **Адаптивные обложки (srcset) мертвы в проде:** `cover-variants.json={}`, `build:covers` не в `npm run build` → мобайл качает полноразмерные cover/hero (код-причина perf главной <90). Включить генерацию в пайплайн (закоммитить непустой манифест + прогон pre-commit, т.к. Cloudflare-сборка без sharp упадёт) ИЛИ добавить hero в генератор + `srcset/sizes`. Добавить в `qa.mjs` проверку «у каждого cover.src есть запись в манифесте».

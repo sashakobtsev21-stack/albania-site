@@ -240,3 +240,20 @@ img {
     animation: none !important;
   }
 }
+
+/* Контентные таблицы: горизонтальный скролл на узких экранах */
+.prose table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Кредиты/подписи к фото содержат длинные URL источников (Wikimedia File:…) —
+   принудительный перенос, иначе одно слово даёт горизонтальный перелив на ~320px. */
+.prose figcaption,
+.prose .figure__credit,
+.cover__credit {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
