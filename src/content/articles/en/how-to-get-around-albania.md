@@ -61,7 +61,7 @@ draft: false
 
 Getting around Albania means three things in practice: shared minibuses called **furgons**, bigger intercity **buses**, and a car when you want the mountains and the coast on your own schedule. There is almost no useful train network, ride apps like Uber and Bolt do not operate here, and a few **ferries** cover the scenic or cross-border legs the roads can't. For most trips you mix a couple of these: a bus for the long hauls, a furgon for short hops, and a rental car for the parts of Albania that public transport barely reaches.
 
-Fares below are realistic 2026 ranges from operators and recent travel guides, not fixed tariffs. Albanian transport prices move with season and demand, so treat every number as a planning band, pay in **Albanian lek (ALL)**, and check the current price before you commit.
+Fares below are realistic 2026 ranges from operators and recent travel guides, not fixed tariffs. Albanian transport prices move with season and demand, so treat every number as a planning band, pay in **Albanian lek (ALL)**, and check the current price before you commit. If you're still planning how to arrive, start with [how to get to Albania](/transport/how-to-get-to-albania/) for flights, ferries and cross-border buses.
 
 ## Furgons: the shared minibuses that actually run the country
 
