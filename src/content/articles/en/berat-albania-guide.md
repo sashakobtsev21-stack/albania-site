@@ -137,7 +137,7 @@ Berat sits inland, roughly halfway between Tirana and the southern coast, which 
 | Durrës → Berat | ~1.5–2 h | Handy if you've come off a ferry or are based on the central coast. |
 | Saranda → Berat | ~3.5–4 h | Long but scenic; often paired with Gjirokastër on the way. |
 
-The usual approach is the road from **Tirana**, served by direct buses and *furgons* (shared minibuses) as well as your own car; there's no train. Coming up from the south, Berat pairs naturally with [Saranda](/cities/saranda-albania-guide/) and the Riviera, usually via Gjirokastër. Having your own wheels makes the canyon and wine country far easier to reach — see our guide to [renting a car in Albania](/car-rental/how-to-rent-a-car/) for how that works.
+The usual approach is the road from **Tirana**, served by direct buses and *furgons* (shared minibuses) as well as your own car; there's no train. For the full breakdown of times, fares, the drive and whether it works as a day trip, see [Tirana to Berat: bus, furgon, car & day trip options](/transport/tirana-to-berat/). Coming up from the south, Berat pairs naturally with [Saranda](/cities/saranda-albania-guide/) and the Riviera, usually via Gjirokastër. Having your own wheels makes the canyon and wine country far easier to reach — see our guide to [renting a car in Albania](/car-rental/how-to-rent-a-car/) for how that works.
 
 ## Where to eat
 
