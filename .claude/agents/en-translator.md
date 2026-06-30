@@ -1,5 +1,6 @@
 ---
 name: en-translator
+model: sonnet
 description: Deprecated для Albania Guidebook: сайт одноязычный en-only, статьи пишутся сразу на английском через seo-content-writer. Не создавать перевод с ru и не ожидать ru-исходник. Использовать только как native-English editor для уже существующего en-текста, если владелец явно просит вычитку языка.
 tools: Read, Write, Edit, Glob, Grep
 ---
