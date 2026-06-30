@@ -24,10 +24,10 @@ model: sonnet
 - **Безопасность (§18):** `public/_headers` — базовый CSP (self + osm-тайлы + аналитика), X-Content-Type-Options, Referrer-Policy, Permissions-Policy. Форм на сайте нет.
 
 ## Контент-модель (§11)
-zod-схемы в `src/content.config.ts` — менять только осознанно (это будущий API мобильного приложения, §23). Коллекции: `articles` (en), `routes` (наследует articles), `cities`. `draft: true` в сборку не попадает. Числовые поля пары en обязаны совпадать — кастомная проверка в `npm run check`.
+zod-схемы в `src/content.config.ts` — менять только осознанно (это будущий API мобильного приложения, §23). Коллекции: `articles` (en), `routes` (наследует articles), `cities`. `draft: true` в сборку не попадает. Сайт одноязычный — `check-parity` следит, чтобы контента вне `/en/` не было.
 
 ## CI и тестирование (§21)
-На каждый PR/push зелёными: `astro check`, ESLint, `build` (без ошибок и предупреждений), Lighthouse CI с бюджетами §15, линк-чекер (внутренние + /go/), валидация schema.org, кастомная проверка пар (для каждого ru-slug есть uk-slug и совпадают числовые поля). Без зелёного CI фаза не закрывается.
+На каждый PR/push зелёными: `astro check`, ESLint, `build` (без ошибок и предупреждений), Lighthouse CI с бюджетами §15, линк-чекер (внутренние + /go/), валидация schema.org, кастомная проверка языкового инварианта (`check-parity`: контента вне `/en/` нет — сайт одноязычный). Без зелёного CI фаза не закрывается.
 
 ## Команды (CLAUDE.md)
 `npm run dev` · `build` · `check` · `lint`/`format` · `test:links`. Перед коммитом: `npm run build && npm run check` — оба зелёные.

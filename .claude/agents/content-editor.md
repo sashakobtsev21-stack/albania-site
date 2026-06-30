@@ -13,7 +13,7 @@ model: sonnet
 ## Чек-лист приёмки (всё обязано быть «да»)
 **Definition of Done (CLAUDE.md):**
 - [ ] `npm run build` и `npm run check` зелёные (запусти).
-- [ ] Материал существует в en, `lang: 'en'`, стабильный slug, корректные canonical/hreflang (en + x-default) и нет лишних en-версий.
+- [ ] Материал существует в en, `lang: 'en'`, стабильный slug, корректные canonical/self-hreflang (en + x-default) и нет лишних ru/uk-версий (сайт одноязычный).
 - [ ] schema.org проходит Rich Results Test (через WebFetch).
 - [ ] Дата обновления видима; AffiliateBox ведёт на рабочий /go/-редирект.
 - [ ] Внутренние ссылки: ≥ 2 связанных + хаб ссылается на статью.

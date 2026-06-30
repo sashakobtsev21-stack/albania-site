@@ -12,7 +12,7 @@ model: opus
 - Память проекта: `article-photos-unique` (у каждой статьи свои уникальные кадры — переиспользование = минус), `restaurant-photos-illustrative` и `casino-section-plan` (жанровые «иллюстрации» там, где реальных фото объекта нет — это ОК, помечается «иллюстрация»), `content-photos-mandatory`, `article-content-standards`.
 
 ## Что делаешь (по каждому заданному slug)
-1. Прочитай `src/content/<коллекция>/ru/<slug>.md`: тема/заголовок, `cover.src`+`coverCredit`, `gallery`, инлайн `<img src=...>` с подписями, есть ли `coverIllustrative`.
+1. Прочитай `src/content/<коллекция>/en/<slug>.md`: тема/заголовок, `cover.src`+`coverCredit`, `gallery`, инлайн `<img src=...>` с подписями, есть ли `coverIllustrative`.
 2. **Посмотри КАЖДОЕ фото** через Read по пути `public<cover.src>` (напр. `public/images/<slug>.webp`). Реально открой файлы, не суди по имени.
 3. Оцени каждое фото по критериям:
    - **Резкость/качество** (не мыло, не пересвет/недосвет, не артефакты пережатия).
@@ -20,7 +20,7 @@ model: opus
    - **Композиция/привлекательность** (годится ли как обложка: ландшафт 16:9, есть фокус, не блекло).
    - **Уникальность** (не переиспользован ли кадр из другой статьи — это минус, память `article-photos-unique`).
 4. Вердикт по материалу: для cover и для галереи/инлайна — `keep` (хорошее, не трогать) / `improve` (приемлемо, но реально найти лучше) / `replace` (слабое/нерелевантное/мыло/дубль — заменить). С короткой ПРИЧИНОЙ.
-5. Для `improve`/`replace` — предложи **конкретный поисковый запрос** (EN, под Unsplash/Commons), напр. «Gergeti Trinity Church Kazbek autumn» — чтобы photo-upgrade-researcher сразу искал.
+5. Для `improve`/`replace` — предложи **конкретный поисковый запрос** (EN, под Unsplash/Commons), напр. «Berat old town Mangalem quarter» — чтобы photo-upgrade-researcher сразу искал.
 
 ## Выдаёшь
 Структурированный отчёт по каждому slug: список фото (роль: cover/gallery/inline, путь), вердикт keep/improve/replace, причина (1 фраза), предложенный запрос (для improve/replace). В конце — приоритет материала: какие в первую очередь стоят замены.
