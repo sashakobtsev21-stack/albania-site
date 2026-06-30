@@ -112,7 +112,7 @@ There's a sideways option worth knowing if you're combining countries: fly into 
 
 For most travellers the **direct bus wins on value and simplicity**: EUR 15–17, four to five hours, book ahead in summer. Rent a **car** if you want the Llogara coast road, a Gjirokaster stopover, or the freedom to explore the Riviera once you're south. Choose a **private transfer** if you're a group or want a door-to-door ride with stops. Whatever you pick, treat it as a half-day journey, leave in the morning, and you'll have plenty of light left for your first evening in Saranda.
 
-Once you're planning the trip in detail, line this up with the [Saranda guide](/cities/saranda-albania-guide/) for what to do when you arrive, the [Tirana airport transfers guide](/transport/tirana-airport-transfers/) for getting from your flight to the bus, and the budget overview in [is Albania expensive](/planning/is-albania-expensive/).
+Once you're planning the trip in detail, line this up with the [Saranda guide](/cities/saranda-albania-guide/) for what to do when you arrive, the shorter [Tirana to Vlora](/transport/tirana-to-vlora/) run if you're stopping at the northern end of the Riviera, the [Tirana airport transfers guide](/transport/tirana-airport-transfers/) for getting from your flight to the bus, and the budget overview in [is Albania expensive](/planning/is-albania-expensive/).
 
 ## Sources and how to read the times
 
