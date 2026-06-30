@@ -4,8 +4,8 @@ description: 'A self-drive Albania road trip: Tirana, Berat, the Riviera, Sarand
 slug: 'albania-road-trip-itinerary'
 lang: 'en'
 category: 'routes'
-publishedAt: 2026-07-08
-updatedAt: 2026-07-08
+publishedAt: 2026-06-22
+updatedAt: 2026-06-23
 cover:
   src: '/images/albania-road-trip-itinerary/cover.webp'
   alt: 'Palasa and Nazar beaches on the Albanian Riviera seen from the descent off the Llogara Pass, with the road dropping to the Ionian Sea'
