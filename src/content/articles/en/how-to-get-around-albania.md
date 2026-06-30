@@ -15,7 +15,7 @@ affiliate:
   - partner: 'localrent'
     label: 'Check Albania car-rental rates'
     position: 'inline'
-  - partner: 'trip-carhire'
+  - partner: 'localrent'
     label: 'Compare rental cars in Albania'
     position: 'body-end'
 sources:

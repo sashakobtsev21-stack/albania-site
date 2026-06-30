@@ -29,7 +29,7 @@ affiliate:
   - partner: 'trip-tours'
     label: 'Browse Butrint day trips and guided tours'
     position: 'inline'
-  - partner: 'trip-transfers'
+  - partner: 'kiwitaxi'
     label: 'Book a transfer to Butrint or Saranda'
     position: 'body-end'
 sources:

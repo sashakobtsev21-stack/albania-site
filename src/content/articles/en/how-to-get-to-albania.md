@@ -12,7 +12,7 @@ cover:
 coverCredit: 'Photo: Karelj / Wikimedia Commons, Public Domain; sourceUrl: https://commons.wikimedia.org/wiki/File:Building_of_Tirana_airpot_2018_1.jpg'
 gallery: []
 affiliate:
-  - partner: 'trip-transfers'
+  - partner: 'kiwitaxi'
     label: 'Book a Tirana airport transfer'
     position: 'inline'
 sources:

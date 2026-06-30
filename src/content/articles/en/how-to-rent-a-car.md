@@ -35,7 +35,7 @@ photoSources:
     license: 'CC BY 4.0'
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:2024-10-14_Valbona_Valley_6.jpg'
 affiliate:
-  - partner: 'trip-carhire'
+  - partner: 'localrent'
     label: 'Compare car rental in Albania'
     position: 'inline'
   - partner: 'localrent'

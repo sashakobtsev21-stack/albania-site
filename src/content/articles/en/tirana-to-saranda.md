@@ -12,7 +12,7 @@ cover:
 coverCredit: 'Photo: Krzysztof Dudzik-Górnicki (User:ToSter) / Wikimedia Commons, CC BY-SA 3.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Albania,_road_SH8_Sarande-Vlore_5.jpg'
 gallery: []
 affiliate:
-  - partner: 'trip-carhire'
+  - partner: 'localrent'
     label: 'Compare rental cars for the drive south'
     position: 'inline'
   - partner: 'kiwitaxi'

@@ -12,10 +12,10 @@ cover:
 coverCredit: 'Photo: Marmontel / Wikimedia Commons, CC BY 2.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Berat_(53099454302).jpg'
 gallery: []
 affiliate:
-  - partner: 'trip-carhire'
+  - partner: 'localrent'
     label: 'Compare rental cars for the Berat drive'
     position: 'inline'
-  - partner: 'trip-transfers'
+  - partner: 'kiwitaxi'
     label: 'Get a Tirana-Berat transfer quote'
     position: 'body-end'
 sources:

@@ -86,7 +86,7 @@ gallery:
     alt: 'The redeveloped Pyramid of Tirana with Downtown One tower rising behind Skanderbeg Square'
     credit: 'Photo: BBB2021 / Wikimedia Commons, CC BY-SA 4.0'
 affiliate:
-  - partner: 'trip-carhire'
+  - partner: 'localrent'
     label: 'Compare rental cars for your Albania road trip'
     position: 'inline'
   - partner: 'trip-hotels'
