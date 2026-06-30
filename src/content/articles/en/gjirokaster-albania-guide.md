@@ -14,7 +14,6 @@ cover:
   src: '/images/gjirokaster-albania-guide/cover.webp'
   alt: 'The grey stone fortress of Gjirokastër stretched along its ridge above the slate-roofed Ottoman houses of the stone city'
 coverCredit: 'Photo: Marcin Konsek / Wikimedia Commons, CC BY-SA 4.0'
-hotelWidget: true
 accessFrom:
   saranda:
     km: 120

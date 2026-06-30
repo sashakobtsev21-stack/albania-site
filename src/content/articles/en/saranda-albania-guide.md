@@ -14,7 +14,6 @@ cover:
   src: '/images/saranda-albania-guide/cover.webp'
   alt: 'View over Saranda bay and the Ionian Sea from the café terrace at Lëkurësi Castle'
 coverCredit: 'Photo: Jaroslaw Lichon / Wikimedia Commons, CC BY-SA 2.0'
-hotelWidget: true
 accessFrom:
   tirana:
     km: 280

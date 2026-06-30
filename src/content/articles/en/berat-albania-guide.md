@@ -14,7 +14,6 @@ cover:
   src: '/images/berat-albania-guide/cover.webp'
   alt: 'The stacked white Ottoman houses of the Mangalem quarter rising up the hillside in Berat above the Osum river'
 coverCredit: 'Photo: Christoph Strässler / Wikimedia Commons, CC BY-SA 2.0'
-hotelWidget: true
 accessFrom:
   tirana:
     km: 120

@@ -14,7 +14,6 @@ cover:
   src: '/images/things-to-do-in-tirana/cover.webp'
   alt: 'The modern skyline of Tirana with towers, green parks and Mount Dajti behind'
 coverCredit: 'Photo: Albnext / Wikimedia Commons, CC BY-SA 4.0'
-hotelWidget: true
 gallery:
   - src: '/images/things-to-do-in-tirana/skyline-night.webp'
     alt: 'Tirana skyline at dusk with new towers under a pink and purple sky'
