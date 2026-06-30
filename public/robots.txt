@@ -1,6 +1,6 @@
 # robots.txt — Albania Guidebook (SPEC §14).
 # Обход разрешён, кроме партнёрских редиректов /go/ (noindex, §16).
-# Карта сайта — индекс, который генерирует @astrojs/sitemap (en/ru/uk).
+# Карта сайта — индекс, который генерирует @astrojs/sitemap (en — сайт одноязычный).
 User-agent: *
 Allow: /
 Disallow: /go/
