@@ -1,29 +1,23 @@
 ---
 /**
- * CookieConsent — баннер согласия на cookies под GA4 (Consent Mode v2).
- * GA по умолчанию работает с analytics_storage='denied' (см. ga-init.js);
- * баннер при «Accept» поднимает consent до 'granted'. Выбор хранится в localStorage.
+ * CookieConsent (§17/§18) — баннер согласия на cookies под GA4 (Consent Mode v2).
+ * До согласия GA не пишет cookies (analytics_storage='denied' выставлен в ga-init.js);
+ * баннер при «Принять» поднимает его до 'granted'. Скрыт по умолчанию (hidden) —
+ * consent-banner.js показывает его ТОЛЬКО если выбор ещё не сделан, выбор хранит в
+ * localStorage. Весь JS/CSS — self (CSP §18, без новых origin). Текст — из словарей (§12).
  */
-import type { Lang } from '../i18n';
+import { t, langPrefix, type Lang } from '../i18n';
 
 interface Props {
   lang: Lang;
 }
-
 const { lang } = Astro.props;
-const copy = {
-  en: {
-    text: 'We use cookies only for analytics (Google Analytics) to understand what readers find useful. Analytics runs only with your consent.',
-    accept: 'Accept',
-    decline: 'Decline',
-    aria: 'Cookie consent',
-  },
-} satisfies Record<Lang, { text: string; accept: string; decline: string; aria: string }>;
-const c = copy[lang];
+const c = t(lang).cookieConsent;
+const policyHref = `${langPrefix(lang)}/privacy/`;
 ---
 
 <div class="cc" data-cookie-consent role="dialog" aria-label={c.aria} aria-live="polite" hidden>
-  <p class="cc__text">{c.text}</p>
+  <p class="cc__text">{c.text} <a class="cc__link u-underline" href={policyHref}>{c.learnMore}</a></p>
   <div class="cc__actions">
     <button type="button" class="cc__btn cc__btn--accept" data-consent-accept>{c.accept}</button>
     <button type="button" class="cc__btn" data-consent-decline>{c.decline}</button>
@@ -58,6 +52,15 @@ const c = copy[lang];
     margin: 0;
     line-height: 1.5;
   }
+  .cc__link {
+    color: var(--color-wine);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .cc__link:focus-visible {
+    outline: 2px solid var(--color-wine);
+    outline-offset: 2px;
+  }
   .cc__actions {
     display: flex;
     gap: var(--space-2);
@@ -74,12 +77,12 @@ const c = copy[lang];
     cursor: pointer;
   }
   .cc__btn--accept {
-    background: var(--color-sea);
-    border-color: var(--color-sea);
+    background: var(--color-wine);
+    border-color: var(--color-wine);
     color: var(--color-white);
   }
   .cc__btn:focus-visible {
-    outline: 2px solid var(--color-sea);
+    outline: 2px solid var(--color-wine);
     outline-offset: 2px;
   }
   @media (min-width: 480px) {
