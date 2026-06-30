@@ -28,6 +28,13 @@ qa=GO + test:links=GO.
 - **длинные URL-кредиты фото** (`figure__credit`/`figcaption` с `sourceUrl: https://commons.wikimedia.org/wiki/File:…` — неразрывное «слово» ~543px) → `.prose figcaption,.prose .figure__credit,.cover__credit{overflow-wrap:anywhere;word-break:break-word}`.
 Обе правки в `src/styles/global.css` (движок общий). Итог: **qa:responsive = GO — 0 переполнений** на 8 шаблонах × 5 ширин (было NO-GO на 6 комбинациях). qa=GO (ВЕРДИКТ), test:links=GO.
 
+## ✅ Тач-таргет стрелок витрины-карусели ≥44px (2026-06-30): закрыто
+WCAG 2.5.5/2.5.8 — кликабельная зона стрелок витрины (`.scard__nav` в `ShowcaseRail.astro`) была 30×30px (< 44px). Сделано (движок общий с Грузией, тот же паттерн):
+- `<button>` → прозрачная тач-зона `min-width:44px; min-height:44px; padding:0; background:none; border:0`, контент по центру (`display:inline-flex; align-items:center; justify-content:center`);
+- видимая пилюля ~30px вынесена в `::before` (центрирована `translate(-50%,-50%)`) — сохранён a11y-контраст-фикс (фон slate 60% + белая обводка 40%, hover 78% теперь на `::before`); иконка поднята `z-index:1` над пилюлей;
+- позиционирование `--prev/--next` сдвинуто на `-7px` (`calc(var(--space-2) - 7px)`) — компенсирует рост зоны 30→44, видимая пилюля остаётся на месте, не наезжает на карточку сильнее; `prefers-reduced-motion` гасит и `::before`.
+Итог: кликабельная кнопка 44×44, видимая иконка/пилюля ~30px. qa=GO (ВЕРДИКТ), qa:responsive=GO (0 переполнений), test:links=GO.
+
 ## 🟠 High — техническое (можно без владельца)
 - [ ] **Адаптивные обложки (srcset) мертвы в проде:** `cover-variants.json={}`, `build:covers` не в `npm run build` → мобайл качает полноразмерные cover/hero (код-причина perf главной <90). Включить генерацию в пайплайн (закоммитить непустой манифест + прогон pre-commit, т.к. Cloudflare-сборка без sharp упадёт) ИЛИ добавить hero в генератор + `srcset/sizes`. Добавить в `qa.mjs` проверку «у каждого cover.src есть запись в манифесте».
 - [ ] **Латентная коллизия маршрутов `food`/`cities`:** `[category]/[slug].astro` строит пути для категорий `food`/`cities` без whitelist → пересечётся с `food/[city].astro` и хабом `/cities/` при наполнении. Развести namespace ДО публикации food/cities-контента (URL не менять, правило 3): исключить эти категории из `[category]/[slug]` + завести явные маршруты (`cities/[slug]` через CityGuidePage). Покрыть тестом (check-ia).
