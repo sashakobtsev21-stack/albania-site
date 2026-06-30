@@ -47,7 +47,7 @@ photoSources:
     author: 'Jacopo Tofani'
     license: 'CC BY-SA 4.0'
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:AFClaudia.jpg'
-draft: true
+draft: false
 ---
 
 Ferries from Italy to Albania run on three main routes: **Bari to Durres** (about 8.5–10 hours), **Ancona to Durres** (a long 16–19 hours), and **Brindisi to Vlore** (the shortest, roughly 5–8 hours). The Bari and Ancona crossings run year-round; Brindisi to Vlore is busiest in summer. Foot-passenger fares start around **EUR 35–55** depending on route and season, and you can bring a car on all of them. There's no ferry to Saranda, so for the far south you arrive at Durres or Vlore and drive on.

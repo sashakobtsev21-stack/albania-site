@@ -45,7 +45,7 @@ photoSources:
     author: 'Timuspics'
     license: 'CC BY-SA 4.0'
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:Murachi_Mosque,_Vlora,_Albania.jpg'
-draft: true
+draft: false
 ---
 
 Tirana to Vlora is a straightforward run down the coast: about **150 km that takes two and a half to three hours**, with buses and furgons leaving roughly every half hour for around **500 ALL (EUR 4–5)**. Driving takes a similar three hours via the Durres motorway and the road through Fier, and a private transfer runs roughly **EUR 65–105**. There's no train, and despite years of headlines there's still no working airport at Vlora, so it comes down to bus, furgon, car or transfer — and the bus does the job cheaply.
@@ -60,10 +60,10 @@ Fares are low and quoted a couple of ways. A city-centre bus or furgon ticket is
 
 <figure class="figure">
 <img src="/images/tirana-to-vlora/lungomare.webp" alt="The palm-lined Lungomare seafront boulevard in Vlora with cars and the bay in the background, Albania" width="1280" height="960" loading="lazy" decoding="async" />
-<figcaption>Vlora's rebuilt Lungomare seafront. Most buses from Tirana drop you near the centre, a short way from the waterfront. <span class="figure__credit">Photo: Leeturtle / Wikimedia Commons, CC BY-SA 4.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Lungomare_area_in_Vlor%C3%AB,_south_Albania.jpg</span></figcaption>
+<figcaption>Vlora's rebuilt Lungomare seafront. Buses from Tirana now drop you at the relocated terminal by the city entrance, a short ride from the waterfront. <span class="figure__credit">Photo: Leeturtle / Wikimedia Commons, CC BY-SA 4.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Lungomare_area_in_Vlor%C3%AB,_south_Albania.jpg</span></figcaption>
 </figure>
 
-As with everywhere in Albania, the trick is the Tirana end. Buses for Vlora leave from the combined **Regional Bus Terminal (North & South Albania)** northwest of the centre, about 20 minutes out — the same terminal that handles Durres, Berat and the south, not anywhere in the city core. Take a short taxi or a local city bus toward the terminal. At the Vlora end you're dropped at the town's bus station near the centre, within easy reach of the seafront and onward furgons down the Riviera.
+As with everywhere in Albania, the trick is the Tirana end. Buses for Vlora leave from the combined **Regional Bus Terminal (North & South Albania)** northwest of the centre, about 20 minutes out — the same terminal that handles Durres, Berat and the south, not anywhere in the city core. Take a short taxi or a local city bus toward the terminal. At the Vlora end, note the terminal **relocated in early 2026 to the city entrance** (near the Kastrati petrol station), not the old central stop — it's a short taxi or local bus from the seafront, with onward furgons down the Riviera.
 
 ## Should you book, or just turn up?
 

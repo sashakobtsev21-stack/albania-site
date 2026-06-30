@@ -48,7 +48,7 @@ photoSources:
     author: 'Joseph2302'
     license: 'CC BY-SA 4.0'
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:Currila_Beach.jpg'
-draft: true
+draft: false
 ---
 
 Tirana to Durres is the easiest trip in Albania: about **35 km that takes 35 to 50 minutes** on a fast highway, with buses leaving every 20 to 30 minutes for roughly **180–300 ALL (around EUR 2–3)**. There is no working passenger train despite what old maps suggest, so it comes down to the bus, driving the A2, or a taxi. For a beach day from the capital it's the obvious target — you can be on the sand or among Roman ruins less than an hour after leaving Tirana.
@@ -84,11 +84,11 @@ The honest downside is parking and timing rather than the road. Central Durres a
 
 This is what most people actually come for. Durres pairs a walkable old core with a long sweep of Adriatic coast, and being under an hour from Tirana it works as a genuine day trip rather than an overnight. The shape of a good day: see the Roman city in the morning, eat fish by the water, then pick a beach for the afternoon.
 
-The headline sight is the **Roman amphitheatre**, built in the 2nd century AD and one of the largest in the Balkans, tucked right into the modern town with houses crowding its rim. Entry is around **400 ALL** and you'll want 30 to 45 minutes; there's a small Byzantine chapel with early mosaics inside. From there it's a short walk to the **Venetian Tower** and the surviving **Byzantine city walls**, and then the seafront promenade along **Rruga Taulantia**, lined with cafes and good for a coffee stop.
+The headline sight is the **Roman amphitheatre**, built in the 2nd century AD and one of the largest in the Balkans, tucked right into the modern town with houses crowding its rim. Entry is around **300 ALL** and you'll want 30 to 45 minutes; there's a small Byzantine chapel with early mosaics inside. From there it's a short walk to the **Venetian Tower** and the surviving **Byzantine city walls**, and then the seafront promenade along **Rruga Taulantia**, lined with cafes and good for a coffee stop.
 
 <figure class="figure">
 <img src="/images/tirana-to-durres/amphitheatre.webp" alt="The Roman amphitheatre of Durres set among modern houses and apartment blocks in Albania" width="1000" height="666" loading="lazy" decoding="async" />
-<figcaption>The 2nd-century Roman amphitheatre sits in the middle of modern Durres, ringed by houses. Entry is around 400 ALL. <span class="figure__credit">Photo: Fluisa Ismailati / Wikimedia Commons, CC BY-SA 4.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Amfiteatri_i_Durresit_2024_29.jpg</span></figcaption>
+<figcaption>The 2nd-century Roman amphitheatre sits in the middle of modern Durres, ringed by houses. Entry is around 300 ALL. <span class="figure__credit">Photo: Fluisa Ismailati / Wikimedia Commons, CC BY-SA 4.0; sourceUrl: https://commons.wikimedia.org/wiki/File:Amfiteatri_i_Durresit_2024_29.jpg</span></figcaption>
 </figure>
 
 Then the beaches, where it pays to be picky. The wide **main city beach** south of the centre is sandy and convenient but gets crowded and a bit scruffy in peak summer — fine for a quick dip, better in June or September. For clearer water, locals head north of the centre to **Currila**, where the coast turns rockier, the sea is noticeably cleaner, and there are beach bars and wooden decks to sit at. South of the city, **Golem** is the long sandy strip the package crowd uses, with a row of fish restaurants behind it; further on, **Lalzit Bay** has the softest sand and the resort developments. If swimming quality is your priority, choose Currila or head out to Lalzit; if you just want sand within walking distance of the bus, the main beach does the job.
